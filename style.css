@@ -1,0 +1,541 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-size: 15px;
+	color: rgba(0,0,0,0.85);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+input {
+	line-height: 16px;
+	font-size: 16px;
+	color: rgba(0,0,0,0.85);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+	background-color: #EFECE5;
+}
+
+h3 {
+	font-family: "SFMono-Regular",
+			Consolas,
+			"Liberation Mono",
+			Menlo,
+			Courier,
+			monospace;
+	font-size:14px;
+	font-weight:500;
+	padding-bottom:12px;
+}
+
+@media only screen and (max-width: 800px) {
+  .sidebar {
+    /* position:fixed;
+		top:0;
+		height:24px!important;
+		background-color: #EFECE5;
+		width:100%!important;
+		padding-top:16px!important;
+		padding-bottom:16px!important;
+		padding-left:16px!important;
+		overflow-y: hidden!important; */
+		display:none!important;
+  }
+	/* .logo {
+		margin:0 !important;
+	}
+	.tagline, .filter {
+		display: none !important;
+	} */
+
+	.content {
+		margin-top: 0px!important;
+		margin-left: 16px!important;
+		margin-right: 16px!important;
+		margin-bottom: 32px!important;
+	}
+	#grid {
+		margin-top: 64px!important;
+		grid-gap: 16px!important;
+		overflow: hidden;
+	}
+
+	#grid > article img {
+	height: 40vw !important;
+	}
+
+	article {
+		padding-bottom:8px!important;
+		margin-bottom:0px!important;
+		position:relative;
+	}
+
+	.search-wrapper {
+		top:0px;
+		position:fixed !important;
+		margin-top:16px!important;
+		width: calc(100% - 32px) !important;
+	}
+
+
+	.mobile-nav {
+		height: 64px!important;
+		background-color: #EFECE5!important;
+		position:fixed !important;
+		z-index:1000 !important;
+		width:100%!important;
+		top:0px!important;
+	}
+
+
+}
+
+/* @media only screen and (max-devide-width: 400px) and (-webkit-device-pixel-ratio: 3){
+	.sidebar {
+    display:none!important;
+  }
+	.content {
+		margin-left: 16px!important;
+		margin-right: 16px!important;
+		margin-top: 16px!important;
+		grid-gap: 16px!important;
+		margin-bottom: 32px!important;
+	}
+	.content > article img {
+	height: 35vw !important;
+	}
+
+	article {
+		padding-bottom:8px!important;
+		margin-bottom:0px!important;
+	}
+}
+
+@media only screen and (device-width: 375px)
+    and (device-height: 812px)
+    and (-webkit-device-pixel-ratio: 3){
+			.sidebar {
+		    display:none!important;
+		  }
+			.content {
+				margin-left: 16px!important;
+				margin-right: 16px!important;
+				margin-top: 16px!important;
+				grid-gap: 16px!important;
+				margin-bottom: 32px!important;
+			}
+			.content > article img {
+			height: 35vw !important;
+			}
+
+			article {
+				padding-bottom:8px!important;
+				margin-bottom:0px!important;
+			}
+} */
+
+article > .tag {
+		top:12px!important;
+		left:12px!important;
+		position:absolute!important;
+		background-color: #EFECE5;
+		font-size: 12px;
+		height: 18px;
+		line-height: 18px;
+		padding: 0 6px;
+		font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+		border-radius: 100px;
+		display: inline-block;
+		margin: 0 8px 8px 0;
+		cursor: pointer;
+	}
+
+article.red  > div.tag {
+	  background:rgba(255,159,129,1)!important;
+	}
+
+article.white  > div.tag{
+	  background:rgba(255,251,240,1)!important;
+	}
+
+article.rose > div.tag{
+	  background:rgba(255,185,185,1)!important;
+	}
+
+article.orange > div.tag {
+	  background:rgba(243,206,134,1)!important;
+	}
+
+article.sparkling  > div.tag {
+	  background:rgba(186,220,245,1)!important;
+	}
+
+article {
+	position:Relative;
+			/* display: none; */
+}
+
+.sidebar {
+	height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 32px;
+	float: left;
+	padding-left:40px;
+	padding-right:40px;
+	padding-bottom:32px;
+}
+
+.logo {
+	width:90px;
+	height:24px;
+	margin-bottom:24px;
+}
+
+.tagline {
+	font-family: "SFMono-Regular",
+	    Consolas,
+	    "Liberation Mono",
+	    Menlo,
+	    Courier,
+	    monospace;
+	font-size:14px;
+		color: rgba(0,0,0,0.5);
+		line-height: 160%;
+}
+
+.emojis {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: rgba(0,0,0,1);
+
+}
+
+.content {
+	width: auto;
+	margin-left: 320px;
+	margin-right: 40px;
+	margin-top:32px;
+	margin-bottom:61px;
+}
+
+#grid {
+	display: grid;
+grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+grid-gap: 40px;
+align-items: stretch;
+width: auto;
+overflow:hidden;
+}
+
+article img {
+max-width: 100%;
+border-radius:8px;
+width: 100%;
+height: 20vw;
+object-fit: cover;
+max-height:280px
+}
+
+a img {
+	cursor:pointer;
+}
+
+#grid img:hover {
+	box-shadow:0px 3px 8px 0 rgba(0,0,0,0.1);
+}
+
+.text {
+	margin-top:16px
+}
+
+.title {
+	font-weight:500;
+	margin-bottom:8px;
+	line-height: 130%;
+}
+
+a {
+	text-decoration: none;
+}
+
+.store {
+	color: rgba(0,0,0,0.5);
+	font-size:13px;
+	margin-bottom: 8px;
+}
+
+.price {
+	font-family: "SFMono-Regular",
+	    Consolas,
+	    "Liberation Mono",
+	    Menlo,
+	    Courier,
+	    monospace;
+	font-size:14px;
+}
+
+#filters div {
+	margin-top:32px;
+}
+
+#tags {
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+	font-size:14px;
+
+}
+
+#tags button {
+  float: left;
+}
+
+.tagbtn {
+  background:rgba(0,0,0,0.07);
+  border-radius: 100px;
+  display: inline-block;
+  height: 22px;
+  line-height: 22px;
+  padding: 0 8px;
+  position: relative;
+  margin: 0 8px 8px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+	cursor: pointer;
+	border:none;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	outline: none;
+}
+
+.show {
+  display: block;
+}
+
+button.all:hover {
+  background:rgba(221,215,202,0.5);
+}
+button.all.active {
+  background:rgba(221,215,202,1);
+}
+
+button.red:hover {
+  background:rgba(255,159,129,0.5);
+}
+button.red.active{
+  background:rgba(255,159,129,1);
+}
+
+
+button.white:hover {
+  background:rgba(255,251,240,0.5);
+}
+button.white.active {
+  background:rgba(255,251,240,1);
+}
+
+button.rose:hover {
+  background:rgba(255,185,185,0.5);
+}
+button.rose.active {
+  background:rgba(255,185,185,1);
+}
+
+button.orange:hover {
+  background:rgba(243,206,134,0.5);
+}
+button.orange.active {
+  background:rgba(243,206,134,1);
+}
+
+button.sparkling:hover {
+  background:rgba(221,215,202,0.5);
+}
+button.sparkling.active {
+  background:rgba(221,215,202,1);
+}
+
+a {
+		color: rgba(0,0,0,0.85);
+}
+
+a:visited {
+		color: rgba(0,0,0,0.85);
+}
+
+
+
+
+
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+	line-height: 16px;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+	border: solid rgba(0,0,0,0.25);
+	border-width: 2px;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+		border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: rgba(0,0,0,0.85);
+	border:none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 4px;
+  height: 7px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  min-width: 100px;
+	margin-bottom:32px;
+}
+
+#search {
+  border: none;
+  border-radius: 100px;
+  width: 100%;
+  padding: 8px 32px 8px 32px;
+  outline: 0;
+	background:rgba(0,0,0,0.07);
+	color: rgba(0,0,0,0.5);
+}
+
+.search-icon {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 15px;
+	height:16px;
+}
+
+.clear-icon {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  width: 12px;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+input {
+	line-height: 16px;
+	font-size: 15px;
+	color: rgba(0,0,0,0.85);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.search:hover, .search:focus {
+  /* border: 1px solid #009688; */
+  /* background-color: white; */
+}

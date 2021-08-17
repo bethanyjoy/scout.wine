@@ -1,0 +1,281 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+
+  <title>Wiine</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+
+  <script>
+
+  const clearIcon = document.querySelector(".clear-icon");
+  const searchBar = document.querySelector("#search");
+
+  searchBar.addEventListener("keyup", () => {
+    if(searchBar.value && clearIcon.style.visibility != "visible"){
+      clearIcon.style.visibility = "visible";
+    } else if(!searchBar.value) {
+      clearIcon.style.visibility = "hidden";
+    }
+  });
+
+  clearIcon.addEventListener("click", () => {
+    searchBar.value = "";
+    clearIcon.style.visibility = "hidden";
+  })
+
+  </script>
+
+
+
+  <script>
+  function myFunction() {
+      var input, filter, div, article, p, i, txtValue;
+      input = document.getElementById("search");
+      filter = input.value.toUpperCase();
+      div = document.getElementById("grid");
+      article = div.getElementsByTagName("article");
+      for (i = 0; i < article.length; i++) {
+          p = article[i].getElementsByTagName("p")[0];
+          txtValue = p.textContent || p.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              article[i].style.display = "";
+          } else {
+              article[i].style.display = "none";
+          }
+      }
+  }
+  </script>
+
+  <script>
+
+      $(function() {
+
+
+     var wine = [];
+
+     $.getJSON('data.json', function(data) {
+         $.each(data.wine, function(i, f) {
+            var tblRow =
+            "<article class=" + f.Type + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+              "<a target='_blank' href=" + f.Link + ">" +
+                "<img src=" + f.Image + ">" +
+              "</a>" +
+              "<div class='tag'>" + f.Type_text + "</div>" +
+              "<div class='text'>" +
+                "<a target='_blank' href=" + f.Link + ">" +
+                  "<p class='title'>" + f.Title + "</p>"+
+                "</a>" +
+                "<p class='store'>" + f.Store_text + "</p>" +
+                "<p class='price'>" + f.Price + "</p>" +
+              "</div>" +
+            "</article>"
+             $(tblRow).appendTo("#grid");
+       });
+
+     });
+
+  });
+
+  </script>
+
+  <script>
+
+  $(document).ready(function () {
+
+      $('#filters :checkbox').click(function () {
+          if ($('input:checkbox:checked').length) {
+              $('article').hide();
+              $('input:checkbox:checked').each(function () {
+                  $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
+              });
+          } else {
+              $('article').show();
+          }
+      });
+
+  });
+
+  </script>
+
+
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <img class="logo" src="assets/logo.svg">
+    <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
+      <!-- <div class="filter">
+        <h3>Type</h3>
+        <div id="tags">
+          <button class="tagbtn active all" onclick="filterSelection('all')">All</button>
+          <button class="tagbtn red" onclick="filterSelection('red')">Red</button>
+          <button class="tagbtn white" onclick="filterSelection('white')">White</button>
+          <button class="tagbtn rose" onclick="filterSelection('rose')">Rosé</button>
+          <button class="tagbtn orange" onclick="filterSelection('orange')">Orange</button>
+          <button class="tagbtn sparkling" onclick="filterSelection('sparkling')">Sparkling</button>
+        </div>
+      </div> -->
+      <!-- <div class="filter">
+        <h3>Maker</h3>
+          <label class="container">Scotty Boy<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Gut Oggau<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Koehnen Wine<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Good Luck Wine Shop<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Meinklang<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Broc Cellars<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Old World Winery<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Ruth Lewandowski<input type="checkbox"><span class="checkmark"></span></label>
+      </div> -->
+      <div id="filters">
+        <div id="type">
+          <h3>Type</h3>
+            <label class="container">Orange<input type="checkbox" name="type" value="orange"><span class="checkmark"></span></label>
+            <label class="container">Rose<input type="checkbox" name="type" value="rose"><span class="checkmark"></span></label>
+            <label class="container">Red<input type="checkbox" name="type" value="red"><span class="checkmark"></span></label>
+            <label class="container">White<input type="checkbox" name="type" value="white"><span class="checkmark"></span></label>
+            <label class="container">Sparkling<input type="checkbox" name="type" value="sparkling"><span class="checkmark"></span></label>
+        </div>
+        <div id="store">
+          <h3>Store</h3>
+            <label class="container">Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
+            <label class="container">Silverlake Wine<input type="checkbox" name="store" value="silverlake"><span class="checkmark"></span></label>
+            <label class="container">Everson Royce<input type="checkbox" name="store" value="eversonroyce"><span class="checkmark"></span></label>
+            <label class="container">Good Luck Wine Shop<input type="checkbox" name="store" value="goodluck"><span class="checkmark"></span></label>
+        </div>
+      </div>
+      <!-- <div class="filter" style="height:40px;width:1px;display:block;"></div> -->
+  </div>
+  <!-- <div class="mobile-header">
+    <div class="search-wrapper">
+        <img class="search-icon" src="images/search.svg" />
+        <input placeholder="Search"
+               type="text"
+               class="search">
+        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+</div>
+</div> -->
+  <div class="content">
+    <div class="mobile-nav">
+    <div class="search-wrapper">
+        <img class="search-icon" src="assets/search.svg" />
+        <input placeholder="Search" type="text" onkeyup="myFunction()" id="search">
+        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+</div>
+</div>
+<div id="grid">
+  <!-- <article class="red">
+    <a href="https://silverlakewine.ecwid.com/Lost-Moon-Red-Glow-p294332003" target="_blank"><img src="images/lost-moon.png"></a>
+    <div class="tag">Red</div>
+  <div class="text">
+    <p class="title">Lost Moon Red Glow</p>
+    <p class="store">Silverlake Wine</p>
+    <p class="price">$23.00</p>
+  </div>
+</article>
+  <article class="orange">
+    <a href="https://silverlakewine.ecwid.com/Koehnen-Marsanne-Orange-p230386177" target="_blank"><img src="images/marsanne.png"></a>
+    <div class="tag">Orange</div>
+  <div class="text">
+    <p class="title">Koehnen Marsanne Orange</p>
+      <p class="store">Silverlake Wine</p>
+    <p class="price">$25.00</p>
+  </div>
+</article>
+<article class="red">
+  <a href="https://silverlakewine.ecwid.com/Wonderwerk-Bustin-Loose-Mission-p290752941" target="_blank"><img src="images/loose.jpg"></a>
+  <div class="tag">Red</div>
+<div class="text">
+  <p class="title">Wonderwerk Bustin Loose Mission</p>
+    <p class="store">Silverlake Wine</p>
+  <p class="price">$27.00</p>
+</div>
+</article>
+<article class="orange">
+  <a href="https://silverlakewine.ecwid.com/Old-World-Winery-LAureate-Skin-Contact-p232373867" target="_blank"><img src="images/old-world.png"></a>
+  <div class="tag">Orange</div>
+<div class="text">
+  <p class="title">Old World Winery L'Aureate Skin Contacts</p>
+    <p class="store">Silverlake Wine</p>
+  <p class="price">$27.00</p>
+</div>
+</article>
+<article class="orange">
+  <a href="https://silverlakewine.ecwid.com/Cacique-Naranja-p296796043" target="_blank"><img src="images/cacique.png"></a>
+  <div class="tag">Orange</div>
+<div class="text">
+  <p class="title">Cacique Naranja<p>
+    <p class="store">Silverlake Wine</p>
+  <p class="price">$25.00</p>
+</div>
+</article>
+<article class="sparkling">
+  <a href="https://silverlakewine.ecwid.com/Ombretta-Mosso-Pet-Nat-p290791723" target="_blank"><img src="images/ombretta.jpg"></a>
+  <div class="tag">Sparkling</div>
+<div class="text">
+  <p class="title">Ombretta Mosso Pet Nat<p>
+    <p class="store">Silverlake Wine</p>
+  <p class="price">$30.00</p>
+</div>
+</article> -->
+</div>
+
+<!-- <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByTagName("article");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var tagContainer = document.getElementById("tags");
+var tags = tagContainer.getElementsByClassName("tagbtn");
+for (var i = 0; i < tags.length; i++) {
+  tags[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script> -->
+
+</body>
+</html>
