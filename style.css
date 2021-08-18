@@ -368,18 +368,19 @@ input {
   z-index: 1;
   top: 0;
   left: 0;
+	bottom: 0;
   overflow-x: hidden;
-  padding-top: 32px;
+	overflow-y: auto;
 	float: left;
 	padding-left:40px;
 	padding-right:40px;
-	padding-bottom:32px;
 }
 
 .logo {
 	width:90px;
 	height:24px;
 	margin-bottom:24px;
+	margin-top:32px;
 }
 
 .tagline {
@@ -398,8 +399,16 @@ input {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size:12px;
 	color: rgba(0,0,0,0.5);
-	bottom: 32px;
-	position:fixed;
+	margin-bottom:32px;
+	margin-top:32px;
+	/* height:100%; */
+	/* bottom: 32px; */
+	/* position:fixed; */
+}
+
+#credits-content {
+	/* height:auto; */
+	/* bottom:0px; */
 }
 
 #credits p {
