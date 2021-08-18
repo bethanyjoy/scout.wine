@@ -262,6 +262,30 @@ article {
 
 }
 
+#credits {
+	font-family: "SFMono-Regular",
+				Consolas,
+				"Liberation Mono",
+				Menlo,
+				Courier,
+				monospace;
+	font-size:12px;
+	color: rgba(0,0,0,0.5);
+	bottom: 32px;
+	position:fixed;
+}
+
+#credits p {
+	padding-bottom:6px;
+}
+
+#credits a {
+	color: rgba(0,0,0,0.5);
+	text-decoration: underline;
+}
+
+
+
 .content {
 	width: auto;
 	margin-left: 320px;
