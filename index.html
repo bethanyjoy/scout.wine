@@ -1,12 +1,15 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
+
   <meta charset="utf-8">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
   <title>Wiine</title>
+
   <meta name="description" content="Find natural wine on the eastside of LA ✌ 🦜">
   <meta name="author" content="Bethany Nuechterlein">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,179 +20,216 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
+
+
+  <!-- Controls the rendering of the wine data from the JSON file -->
+
   <script>
 
-  const clearIcon = document.querySelector(".clear-icon");
-  const searchBar = document.querySelector("#search");
+    $(function() {
 
-  searchBar.addEventListener("keyup", () => {
-    if(searchBar.value && clearIcon.style.visibility != "visible"){
-      clearIcon.style.visibility = "visible";
-    } else if(!searchBar.value) {
-      clearIcon.style.visibility = "hidden";
-    }
-  });
+      var wine = [];
 
-  clearIcon.addEventListener("click", () => {
-    searchBar.value = "";
-    clearIcon.style.visibility = "hidden";
-  })
+      $.getJSON('data.json', function(data) {
+
+        $.each(data.wine, function(i, f) {
+
+          var tblRow =
+          "<article class=" + f.Type + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+            "<a target='_blank' href=" + f.Link + ">" +
+              "<img src=" + f.Image + ">" +
+            "</a>" +
+            "<div class='tag'>" + f.Type_text + "</div>" +
+            "<div class='text'>" +
+              "<a target='_blank' href=" + f.Link + ">" +
+                "<p class='title'>" + f.Title + "</p>"+
+              "</a>" +
+              "<p class='store'>" + f.Store_text + "</p>" +
+              "<p class='price'>" + f.Price + "</p>" +
+            "</div>" +
+          "</article>"
+          $(tblRow).appendTo("#grid");
+
+        });
+
+      });
+
+    });
 
   </script>
 
 
 
+  <!-- Controls the search bar functionality -->
+
   <script>
-  function myFunction() {
+
+    const clearIcon = document.querySelector(".clear-icon");
+    const searchBar = document.querySelector("#search");
+
+    searchBar.addEventListener("keyup", () => {
+      if(searchBar.value && clearIcon.style.visibility != "visible"){
+        clearIcon.style.visibility = "visible";
+      } else if(!searchBar.value) {
+        clearIcon.style.visibility = "hidden";
+      }
+    });
+
+    clearIcon.addEventListener("click", () => {
+      searchBar.value = "";
+      clearIcon.style.visibility = "hidden";
+    })
+
+    function myFunction() {
+
       var input, filter, div, article, p, i, txtValue;
       input = document.getElementById("search");
       filter = input.value.toUpperCase();
       div = document.getElementById("grid");
       article = div.getElementsByTagName("article");
+
       for (i = 0; i < article.length; i++) {
-          p = article[i].getElementsByTagName("p")[0];
-          txtValue = p.textContent || p.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-              article[i].style.display = "";
-          } else {
-              article[i].style.display = "none";
-          }
+        p = article[i].getElementsByTagName("p")[0];
+        txtValue = p.textContent || p.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          article[i].style.display = "";
+        } else {
+          article[i].style.display = "none";
+        }
       }
-  }
-  </script>
 
-  <script>
-
-      $(function() {
-
-
-     var wine = [];
-
-     $.getJSON('data.json', function(data) {
-         $.each(data.wine, function(i, f) {
-            var tblRow =
-            "<article class=" + f.Type + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-              "<a target='_blank' href=" + f.Link + ">" +
-                "<img src=" + f.Image + ">" +
-              "</a>" +
-              "<div class='tag'>" + f.Type_text + "</div>" +
-              "<div class='text'>" +
-                "<a target='_blank' href=" + f.Link + ">" +
-                  "<p class='title'>" + f.Title + "</p>"+
-                "</a>" +
-                "<p class='store'>" + f.Store_text + "</p>" +
-                "<p class='price'>" + f.Price + "</p>" +
-              "</div>" +
-            "</article>"
-             $(tblRow).appendTo("#grid");
-       });
-
-     });
-
-  });
+    }
 
   </script>
 
+
+
+  <!-- Controls the tag filtering functionality -->
+
   <script>
 
-  $(document).ready(function () {
+    $(document).ready(function () {
 
-      $('#filters :checkbox').click(function () {
-          if ($('input:checkbox:checked').length) {
-              $('article').hide();
-              $('input:checkbox:checked').each(function () {
-                  $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
-              });
-          } else {
-              $('article').show();
-          }
+      $('.tag-filter :checkbox').click(function () {
+
+        if ($('input:checkbox:checked').length) {
+          $('article').hide();
+          $('input:checkbox:checked').each(function () {
+            $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
+          });
+        } else {
+          $('article').show();
+        }
+
       });
 
-  });
+    });
 
   </script>
+
+
+
+  <!-- Controls the string filtering functionality -->
+
+  <!-- <script>
+
+    $(document).ready(function () {
+
+      $('.string-filter :checkbox').click(function () {
+
+        if ($('input:checkbox:checked').length) {
+          $('article').hide();
+          $('input:checkbox:checked').each(function () {
+            // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
+            $('p.title:contains(Scotty)').parent().parent().show();
+          });
+        } else {
+          $('article').show();
+        }
+
+      });
+
+    });
+
+  </script> -->
 
 
 </head>
 
+
+
+
+
 <body>
 
+
   <div class="sidebar">
+
     <img class="logo" src="assets/logo.svg">
     <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
-      <!-- <div class="filter">
+
+    <div id="filters">
+
+      <div id="type" class="tag-filter">
         <h3>Type</h3>
-        <div id="tags">
-          <button class="tagbtn active all" onclick="filterSelection('all')">All</button>
-          <button class="tagbtn red" onclick="filterSelection('red')">Red</button>
-          <button class="tagbtn white" onclick="filterSelection('white')">White</button>
-          <button class="tagbtn rose" onclick="filterSelection('rose')">Rosé</button>
-          <button class="tagbtn orange" onclick="filterSelection('orange')">Orange</button>
-          <button class="tagbtn sparkling" onclick="filterSelection('sparkling')">Sparkling</button>
-        </div>
-      </div> -->
-      <!-- <div class="filter">
+          <ul id="type-filters">
+            <li><input type="checkbox" id="checkboxOne" name="type" value="orange"><label for="checkboxOne">Orange</label></li>
+            <li><input type="checkbox" id="checkboxTwo" name="type" value="rose"><label for="checkboxTwo">Ros&#233;</label></li>
+            <li><input type="checkbox" id="checkboxThree" name="type" value="red"><label for="checkboxThree">Red</label></li>
+            <li><input type="checkbox" id="checkboxFour" name="type" value="white"><label for="checkboxFour">White</label></li>
+            <li><input type="checkbox" id="checkboxFive" name="type" value="sparkling"><label for="checkboxFive">Sparkling</label></li>
+          </ul>
+      </div>
+
+      <!-- <div id="maker" class="string-filter">
         <h3>Maker</h3>
-          <label class="container">Scotty Boy<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Gut Oggau<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Koehnen Wine<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Good Luck Wine Shop<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Meinklang<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Broc Cellars<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Old World Winery<input type="checkbox"><span class="checkmark"></span></label>
-          <label class="container">Ruth Lewandowski<input type="checkbox"><span class="checkmark"></span></label>
+          <label class="container">Scotty Boy<input type="checkbox" name="maker" value="scotty"><span class="checkmark"></span></label>
+          <label class="container">Gut Oggau<input type="checkbox" name="maker" value="oggau"><span class="checkmark"></span></label>
+          <label class="container">Koehnen Wine<input type="checkbox" name="maker" value="koehnen"><span class="checkmark"></span></label>
+          <label class="container">Meinklang<input type="checkbox" name="maker" value="meinklang"><span class="checkmark"></span></label>
+          <label class="container">Ruth Lewandowski<input type="checkbox" name="maker" value="lewandowski"><span class="checkmark"></span></label>
+          <label class="container">Broc Cellars<input type="checkbox" name="maker" value="broc"><span class="checkmark"></span></label>
+          <label class="container">Swick<input type="checkbox" name="maker" value="swick"><span class="checkmark"></span></label>
+          <label class="container">Purity<input type="checkbox" name="maker" value="purity"><span class="checkmark"></span></label>
+          <label class="container">Las Jaras<input type="checkbox" name="maker" value="jaras"><span class="checkmark"></span></label>
       </div> -->
-      <div id="filters">
-        <div id="type">
-          <h3>Type</h3>
-            <ul id="type-filters">
-              <li><input type="checkbox" id="checkboxOne" name="type" value="orange"><label for="checkboxOne">Orange</label></li>
-              <li><input type="checkbox" id="checkboxTwo" name="type" value="rose"><label for="checkboxTwo">Rose</label></li>
-              <li><input type="checkbox" id="checkboxThree" name="type" value="red"><label for="checkboxThree">Red</label></li>
-              <li><input type="checkbox" id="checkboxFour" name="type" value="white"><label for="checkboxFour">White</label></li>
-              <li><input type="checkbox" id="checkboxFive" name="type" value="sparkling"><label for="checkboxFive">Sparkling</label></li>
-            </ul>
-        </div>
-        <!-- <div id="type">
-          <h3>Type</h3>
-            <label class="container">Orange<input type="checkbox" name="type" value="orange"><span class="checkmark"></span></label>
-            <label class="container">Rose<input type="checkbox" name="type" value="rose"><span class="checkmark"></span></label>
-            <label class="container">Red<input type="checkbox" name="type" value="red"><span class="checkmark"></span></label>
-            <label class="container">White<input type="checkbox" name="type" value="white"><span class="checkmark"></span></label>
-            <label class="container">Sparkling<input type="checkbox" name="type" value="sparkling"><span class="checkmark"></span></label>
-        </div> -->
-        <div id="store">
-          <h3>Store</h3>
-            <label class="container">Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
-            <label class="container">Silverlake Wine<input type="checkbox" name="store" value="silverlake"><span class="checkmark"></span></label>
-            <label class="container">Everson Royce<input type="checkbox" name="store" value="eversonroyce"><span class="checkmark"></span></label>
-            <label class="container">Good Luck Wine Shop<input type="checkbox" name="store" value="goodluck"><span class="checkmark"></span></label>
-        </div>
+
+      <div id="store" class="tag-filter">
+        <h3>Store</h3>
+          <label class="container">Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
+          <label class="container">Silverlake Wine<input type="checkbox" name="store" value="silverlake"><span class="checkmark"></span></label>
+          <label class="container">Everson Royce<input type="checkbox" name="store" value="eversonroyce"><span class="checkmark"></span></label>
+          <label class="container">Good Luck Wine Shop<input type="checkbox" name="store" value="goodluck"><span class="checkmark"></span></label>
       </div>
-      <!-- <div class="filter" style="height:40px;width:1px;display:block;"></div> -->
-      <div id="credits">
-        <p>designed & built by</p><a href="https://bethany.design/">bethany.design</a>
-      </div>
+
+    </div>
+
+    <!-- <div class="filter" style="height:40px;width:1px;display:block;"></div> -->
+
+    <div id="credits">
+      <p>designed & built by</p><a href="https://bethany.design/">bethany.design</a>
+    </div>
+
   </div>
-  <!-- <div class="mobile-header">
-    <div class="search-wrapper">
-        <img class="search-icon" src="images/search.svg" />
-        <input placeholder="Search"
-               type="text"
-               class="search">
-        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
-</div>
-</div> -->
+
+
+
   <div class="content">
+
     <div class="mobile-nav">
-    <div class="search-wrapper">
+      <div class="search-wrapper">
         <img class="search-icon" src="assets/search.svg" />
         <input placeholder="Search" type="text" onkeyup="myFunction()" id="search">
         <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
-</div>
-</div>
-<div id="grid">
-</div>
+      </div>
+    </div>
+
+    <!-- Grid is the container where the wine cards are displayed -->
+    <div id="grid">
+    </div>
+
+  </div>
 
 </body>
+
 </html>

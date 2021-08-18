@@ -260,7 +260,7 @@ for x in hlp_rose_urls:
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'rose'
-        type_text = 'Rose'
+        type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
             'Price': price,
@@ -387,7 +387,7 @@ for x in sl_rose_urls:
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'rose'
-        type_text = 'Rose'
+        type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
             'Price': price,
@@ -514,7 +514,7 @@ for x in er_rose_urls:
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'rose'
-        type_text = 'Rose'
+        type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
             'Price': price,
@@ -635,7 +635,7 @@ for x in gl_rose_urls:
         store = 'goodluck'
         store_text = 'Good Luck Wine Shop'
         type = 'rose'
-        type_text = 'Rose'
+        type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
             'Price': price,
