@@ -20,10 +20,6 @@ jobs:
           pip install -r requirements.txt
     
       - name: execute py script # run sj-gobierno.py to get the latest data
-        env: 
-          EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
-          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
         run: python parse.py
           
       - name: commit files
