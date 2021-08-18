@@ -1,7 +1,9 @@
 name: scrape
 on:
   schedule:
-    - cron: '*/30 10-20 * * *' # runs half-hour between 10am and 8pm
+    - cron: '*/20 16-23 * * *' # runs every twenty minutes between 9am and 4pm pst
+    - cron: '*/20 0-3 * * *' # runs every twenty minutes between 5pm and 8pm pst
+
 jobs:
   build:
     runs-on: ubuntu-latest
