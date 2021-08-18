@@ -418,6 +418,23 @@ a:visited {
 
 
 
+label.button-filter {
+  width: auto;
+  height: 100px;
+  background: #c5101f;
+  color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+input:checked ~ label.button-filter {
+  background: #09ff00;
+}
+
+
+
 
 
 /* Customize the label (the container) */
@@ -538,4 +555,92 @@ input {
 .search:hover, .search:focus {
   /* border: 1px solid #009688; */
   /* background-color: white; */
+}
+
+
+
+
+
+
+
+ul#type-filters {
+  list-style: none;
+	font-family: "SFMono-Regular",
+			Consolas,
+			"Liberation Mono",
+			Menlo,
+			Courier,
+			monospace;
+		font-size:14px;
+}
+ul#type-filters li{
+  display: inline;
+}
+ul#type-filters li label{
+    display: inline-block;
+    color:rgba(0,0,0,0.85);
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 4px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* transition: all .2s; */
+}
+
+ul#type-filters li label {
+    padding: 4px 8px;
+    cursor: pointer;
+    background-color:rgba(0,0,0,0.07);
+}
+
+ul#type-filters li input[type="checkbox"]:checked + label {
+    /* transition: all .2s; */
+}
+
+ul#type-filters li input[type="checkbox"] {
+  display: absolute;
+  position: absolute;
+  opacity: 0;
+}
+
+
+
+
+ul#type-filters li input[value="orange"]:hover + label {
+  background-color:rgba(243,206,134,0.5);
+}
+ul#type-filters li input[value="orange"]:checked + label {
+  background-color:rgba(243,206,134,1);
+}
+
+ul#type-filters li input[value="rose"]:hover + label {
+  background-color:rgba(255,185,185,0.5);
+}
+ul#type-filters li input[value="rose"]:checked + label {
+  background-color:rgba(255,185,185,1);
+}
+
+ul#type-filters li input[value="red"]:hover + label {
+  background-color:rgba(255,159,129,0.5);
+}
+ul#type-filters li input[value="red"]:checked + label {
+  background-color:rgba(255,159,129,1);
+}
+
+ul#type-filters li input[value="white"]:hover + label {
+  background-color:rgba(255,251,240,0.5);
+}
+ul#type-filters li input[value="white"]:checked + label {
+  background-color:rgba(255,251,240,1);
+}
+
+ul#type-filters li input[value="sparkling"]:hover + label {
+  background-color:rgba(186,220,245,0.5);
+}
+ul#type-filters li input[value="sparkling"]:checked + label {
+  background-color:rgba(186,220,245,1);
 }

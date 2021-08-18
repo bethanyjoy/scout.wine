@@ -142,12 +142,22 @@
       <div id="filters">
         <div id="type">
           <h3>Type</h3>
+            <ul id="type-filters">
+              <li><input type="checkbox" id="checkboxOne" name="type" value="orange"><label for="checkboxOne">Orange</label></li>
+              <li><input type="checkbox" id="checkboxTwo" name="type" value="rose"><label for="checkboxTwo">Rose</label></li>
+              <li><input type="checkbox" id="checkboxThree" name="type" value="red"><label for="checkboxThree">Red</label></li>
+              <li><input type="checkbox" id="checkboxFour" name="type" value="white"><label for="checkboxFour">White</label></li>
+              <li><input type="checkbox" id="checkboxFive" name="type" value="sparkling"><label for="checkboxFive">Sparkling</label></li>
+            </ul>
+        </div>
+        <!-- <div id="type">
+          <h3>Type</h3>
             <label class="container">Orange<input type="checkbox" name="type" value="orange"><span class="checkmark"></span></label>
             <label class="container">Rose<input type="checkbox" name="type" value="rose"><span class="checkmark"></span></label>
             <label class="container">Red<input type="checkbox" name="type" value="red"><span class="checkmark"></span></label>
             <label class="container">White<input type="checkbox" name="type" value="white"><span class="checkmark"></span></label>
             <label class="container">Sparkling<input type="checkbox" name="type" value="sparkling"><span class="checkmark"></span></label>
-        </div>
+        </div> -->
         <div id="store">
           <h3>Store</h3>
             <label class="container">Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
@@ -176,106 +186,7 @@
 </div>
 </div>
 <div id="grid">
-  <!-- <article class="red">
-    <a href="https://silverlakewine.ecwid.com/Lost-Moon-Red-Glow-p294332003" target="_blank"><img src="images/lost-moon.png"></a>
-    <div class="tag">Red</div>
-  <div class="text">
-    <p class="title">Lost Moon Red Glow</p>
-    <p class="store">Silverlake Wine</p>
-    <p class="price">$23.00</p>
-  </div>
-</article>
-  <article class="orange">
-    <a href="https://silverlakewine.ecwid.com/Koehnen-Marsanne-Orange-p230386177" target="_blank"><img src="images/marsanne.png"></a>
-    <div class="tag">Orange</div>
-  <div class="text">
-    <p class="title">Koehnen Marsanne Orange</p>
-      <p class="store">Silverlake Wine</p>
-    <p class="price">$25.00</p>
-  </div>
-</article>
-<article class="red">
-  <a href="https://silverlakewine.ecwid.com/Wonderwerk-Bustin-Loose-Mission-p290752941" target="_blank"><img src="images/loose.jpg"></a>
-  <div class="tag">Red</div>
-<div class="text">
-  <p class="title">Wonderwerk Bustin Loose Mission</p>
-    <p class="store">Silverlake Wine</p>
-  <p class="price">$27.00</p>
 </div>
-</article>
-<article class="orange">
-  <a href="https://silverlakewine.ecwid.com/Old-World-Winery-LAureate-Skin-Contact-p232373867" target="_blank"><img src="images/old-world.png"></a>
-  <div class="tag">Orange</div>
-<div class="text">
-  <p class="title">Old World Winery L'Aureate Skin Contacts</p>
-    <p class="store">Silverlake Wine</p>
-  <p class="price">$27.00</p>
-</div>
-</article>
-<article class="orange">
-  <a href="https://silverlakewine.ecwid.com/Cacique-Naranja-p296796043" target="_blank"><img src="images/cacique.png"></a>
-  <div class="tag">Orange</div>
-<div class="text">
-  <p class="title">Cacique Naranja<p>
-    <p class="store">Silverlake Wine</p>
-  <p class="price">$25.00</p>
-</div>
-</article>
-<article class="sparkling">
-  <a href="https://silverlakewine.ecwid.com/Ombretta-Mosso-Pet-Nat-p290791723" target="_blank"><img src="images/ombretta.jpg"></a>
-  <div class="tag">Sparkling</div>
-<div class="text">
-  <p class="title">Ombretta Mosso Pet Nat<p>
-    <p class="store">Silverlake Wine</p>
-  <p class="price">$30.00</p>
-</div>
-</article> -->
-</div>
-
-<!-- <script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByTagName("article");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var tagContainer = document.getElementById("tags");
-var tags = tagContainer.getElementsByClassName("tagbtn");
-for (var i = 0; i < tags.length; i++) {
-  tags[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script> -->
 
 </body>
 </html>

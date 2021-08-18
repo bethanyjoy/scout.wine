@@ -188,6 +188,38 @@ er_white_urls = [
 "https://eversonroycepasadena.company.site/Eastern-European-White-c55336473?offset=120"
 ]
 
+tilda_urls = [
+"https://www.toasttab.com/tilda/v3/#db025dcc7-6210-4276-809d-75b737e53506d5cbaafd1-39b5-4407-9e83-eef5eb431ef2"
+]
+
+
+# code for parsing tilda wine urls
+# for x in tilda_urls:
+#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+#     products = soup.find_all("li", class_="MenuItems-module__menuItem___3XYqJ")
+#     for product in products:
+#         title = product.find("span", class_="MenuItems-module__name___3MPgA").text.strip()
+#         price = product.find("span", class_="MenuItemPrice-module__price___2mlHx").text.strip()
+#         link = product.find("a", class_="MenuItems-module__menuItemLink___1j53q")['href'].strip("/")
+#         if product.img:
+#             image = product.find("div", class_="MenuItemImage-module__image___1J90p")['style']
+#         else:
+#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+#         store = 'goodluck'
+#         store_text = 'Good Luck Wine Shop'
+#         type = 'orange'
+#         type_text = 'Orange'
+#         wines.append({
+#             'Title': title,
+#             'Price': price,
+#             'Link': link,
+#             'Image': image,
+#             'Type': type,
+#             'Type_text': type_text,
+#             'Store': store,
+#             'Store_text': store_text,
+#         })
+
 # code for parsing highland park wine urls
 for x in hlp_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
