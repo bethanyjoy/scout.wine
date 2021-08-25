@@ -155,6 +155,20 @@
   </script>
 
 
+<script>
+
+/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+function myFunction() {
+  var x = document.getElementById("sidebar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+
 
   <!-- Controls the string filtering functionality -->
 
@@ -196,7 +210,7 @@
 </a>
 
 
-  <div class="sidebar">
+  <div id="sidebar">
 
     <img class="logo" src="assets/logo.svg">
     <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
@@ -252,6 +266,11 @@
   <div class="content">
 
     <div class="mobile-nav">
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+</svg>
+      </a>
       <div class="search-wrapper">
         <img class="search-icon" src="assets/search.svg" />
         <input placeholder="Search" type="text" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="search">

@@ -70,17 +70,21 @@ html { font-family: 'Inter', sans-serif; }
 /* Responsive style rules */
 
 @media only screen and (max-width: 800px) {
-  .sidebar {
-    /* position:fixed;
+  #sidebar {
+    position:fixed!important;
 		top:0;
-		height:24px!important;
+		height:100%!important;
 		background-color: #EFECE5;
 		width:100%!important;
-		padding-top:16px!important;
+		padding-top:0px!important;
 		padding-bottom:16px!important;
 		padding-left:16px!important;
-		overflow-y: hidden!important; */
-		display:none!important;
+		overflow-y: hidden!important;
+		z-index:200!important;
+		display:none;
+		margin-top:72px;
+		border-top: solid rgba(0,0,0,0.25);
+		border-width: 2px;
   }
 	/* .logo {
 		margin:0 !important;
@@ -111,13 +115,6 @@ html { font-family: 'Inter', sans-serif; }
 		position:relative;
 	}
 
-	.search-wrapper {
-		top:0px;
-		position:fixed !important;
-		margin-top:16px!important;
-		width: calc(100% - 32px) !important;
-	}
-
 
 	.mobile-nav {
 		height: 72px!important;
@@ -144,6 +141,54 @@ html { font-family: 'Inter', sans-serif; }
 	.search-icon {
 	  top: 11px !important;
 	}
+
+	.search-wrapper {
+		top:0px;
+		position:fixed !important;
+		margin-top:16px!important;
+		width: calc(100% - 72px) !important;
+	}
+
+
+
+
+	/* Style the hamburger menu */
+a.icon {
+  display: block;
+  position: absolute;
+  right: 32px;
+  top: 16px;
+	height:auto;
+	width:auto;
+	align:center;
+	padding:4px;
+}
+
+/* Add a grey background color on mouse-over */
+a:hover {
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  color: white;
+}
+
+.logo {
+	display:none;
+}
+
+.tagline {
+	display:none;
+}
+
+
+.mobile-nav svg {
+	width:24px;
+	height:24px;
+	display:block!important;
+	color: rgba(0,0,0,0.85)!important;
+}
 
 
 }
@@ -195,6 +240,10 @@ html { font-family: 'Inter', sans-serif; }
 
 
 /* General styles */
+
+.mobile-nav svg {
+	display:none;
+}
 
 body {
   padding: 0;
@@ -387,7 +436,7 @@ input {
 
 /* Sidebar styles */
 
-.sidebar {
+#sidebar {
 	height: 100%;
   width: 220px;
   position: fixed;
