@@ -96,7 +96,7 @@ html { font-family: 'Inter', sans-serif; }
 		margin-bottom: 32px!important;
 	}
 	#grid {
-		margin-top: 64px!important;
+		margin-top: 80px!important;
 		grid-gap: 16px!important;
 		overflow: hidden;
 	}
