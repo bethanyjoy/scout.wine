@@ -131,7 +131,11 @@ html { font-family: 'Inter', sans-serif; }
 	#button {
 	  width: 64px !important;
 	  height: 64px !important;
-	}
+		position: fixed;
+		bottom: 50px!important;
+		right: 50%!important;
+		margin-right: -32px!important; /* Negative half of width. */
+		}
 	#button::after {
 	  font-size: 2.5em !important;
 	  line-height: 64px !important;
