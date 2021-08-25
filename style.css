@@ -141,6 +141,10 @@ html { font-family: 'Inter', sans-serif; }
 	  line-height: 64px !important;
 	}
 
+	.search-icon {
+	  top: 10px !important;
+	}
+
 
 }
 
