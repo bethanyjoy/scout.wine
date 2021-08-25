@@ -637,7 +637,7 @@ ul#type-filters li input[value="sparkling"]:checked + label {
   z-index: 1000;
 }
 #button::after {
-  content: "\1F51D";
+  content: "\261D";
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
