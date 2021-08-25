@@ -128,6 +128,15 @@ html { font-family: 'Inter', sans-serif; }
 		top:0px!important;
 	}
 
+	#button {
+	  width: 64px !important;
+	  height: 64px !important;
+	}
+	#button::after {
+	  font-size: 2.5em !important;
+	  line-height: 64px !important;
+	}
+
 
 }
 
