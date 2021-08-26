@@ -16,8 +16,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	font-size: 15px;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -34,7 +33,7 @@ body {
 
 input {
 	line-height: 16px;
-	font-size: 16px;
+	font-size: 15px;
 	color: rgba(0,0,0,0.85);
 	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -71,6 +70,22 @@ html { font-family: 'Inter', sans-serif; }
 /* Responsive style rules */
 
 @media only screen and (max-width: 800px) {
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video, body, input {
+		font-size:17px;
+	}
 
   #sidebar {
 		width: calc(100% - 16px)!important;
@@ -117,7 +132,7 @@ html { font-family: 'Inter', sans-serif; }
 	}
 
 	#topButton::after {
-	  font-size: 2.5em !important;
+	  font-size: 2.5rem !important;
 	  line-height: 64px !important;
 	}
 
@@ -278,7 +293,7 @@ html { font-family: 'Inter', sans-serif; }
 /* General styles */
 
 h1 {
-	font-size:20px;
+	font-size:1.333rem;
 	font-weight:500;
 }
 
@@ -308,13 +323,8 @@ body {
 }
 
 h3 {
-	font-family: "SFMono-Regular",
-			Consolas,
-			"Liberation Mono",
-			Menlo,
-			Courier,
-			monospace;
-	font-size:14px;
+	font-family: "SFMono-Regular", Consolas, "Liberation Mono",	Menlo, Courier, monospace;
+	font-size:0.9333rem;
 	font-weight:500;
 	padding-bottom:12px;
 }
@@ -386,13 +396,13 @@ article img {
 
 .store {
 	color: rgba(0,0,0,0.5);
-	font-size:13px;
+	font-size:0.8667rem;
 	margin-bottom: 8px;
 }
 
 .price {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:14px;
+	font-size:0.9333rem;
 }
 
 
@@ -403,7 +413,7 @@ article > .tag {
 	left:12px!important;
 	position:absolute!important;
 	background-color: #EFECE5;
-	font-size: 12px;
+	font-size: 0.8rem;
 	height: 18px;
 	line-height: 18px;
 	padding: 0 6px;
@@ -475,7 +485,6 @@ article.sparkling  > div.tag {
 
 input {
 	line-height: 16px;
-	font-size: 15px;
 	color: rgba(0,0,0,0.85);
 	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
@@ -517,7 +526,7 @@ input {
 
 #tagline {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:14px;
+	font-size: 0.9333rem;
 	color: rgba(0,0,0,0.5);
 	line-height: 160%;
 }
@@ -529,7 +538,7 @@ input {
 
 #credits {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:12px;
+	font-size:0.8rem;
 	color: rgba(0,0,0,0.5);
 	margin-bottom:32px;
 	margin-top:32px;
@@ -641,7 +650,6 @@ input {
 ul#typeFilter {
   list-style: none;
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:14px;
 }
 
 ul#typeFilter li{
@@ -661,12 +669,11 @@ ul#typeFilter li label{
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   /* transition: all .2s; */
-}
+	font-size:0.9333rem;
+	padding: 4px 8px;
+	cursor: pointer;
+	background-color:rgba(0,0,0,0.07);
 
-ul#typeFilter li label {
-  padding: 4px 8px;
-  cursor: pointer;
-  background-color:rgba(0,0,0,0.07);
 }
 
 ul#typeFilter li input[type="checkbox"]:checked + label {
@@ -722,7 +729,7 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
   content: "\261D";
   font-weight: normal;
   font-style: normal;
-  font-size: 2em;
+  font-size: 2rem;
   line-height: 50px;
 	color: rgba(0,0,0,0.85);
 }
