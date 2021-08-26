@@ -71,141 +71,139 @@ html { font-family: 'Inter', sans-serif; }
 /* Responsive style rules */
 
 @media only screen and (max-width: 800px) {
-  #sidebar {
-    position:fixed!important;
-		top:0;
-		height:100%!important;
-		background-color: #EFECE5;
-		width: calc(100% - 16px)!important;
-		padding-top:0px!important;
-		padding-bottom:16px!important;
-		padding-left:16px!important;
-		padding-right:16px!important;
-		overflow-y: hidden!important;
-		z-index:2000!important;
-		display:none;
-		margin-top:0px;
-  }
-	/* .logo {
-		margin:0 !important;
-	}
-	.tagline, .filter {
-		display: none !important;
-	} */
 
-	.content {
-		margin-top: 0px!important;
-		margin-left: 16px!important;
-		margin-right: 16px!important;
-		margin-bottom: 32px!important;
+  #sidebar {
+		width: calc(100% - 16px)!important;
+		padding: 0px 16px 16px !important;
+		overflow-y: hidden !important;
+		z-index: 2000 !important;
+		display: none;
+		margin-top: 0px;
+  }
+
+	#mainContent {
+		margin: 0px 16px 32px !important;
 	}
+
 	#grid {
-		margin-top: 72px!important;
-		grid-gap: 16px!important;
-		overflow: hidden;
+		margin-top: 72px !important;
+		grid-gap: 16px !important;
 	}
 
 	#grid > article img {
-	height: 40vw !important;
+		height: 40vw !important;
 	}
 
 	article {
-		padding-bottom:8px!important;
-		margin-bottom:0px!important;
-		position:relative;
+		padding-bottom: 8px !important;
+		margin-bottom: 0px !important;
 	}
 
-
-	.mobile-nav {
-		height: 72px!important;
-		background-color: #EFECE5!important;
+	#navWrapper {
+		height: 72px !important;
+		background-color: #EFECE5 !important;
 		position:fixed !important;
 		z-index:1000 !important;
-		width:100%!important;
-		top:0px!important;
+		width:100% !important;
+		top:0px !important;
 	}
 
 	#topButton {
 	  width: 64px !important;
 	  height: 64px !important;
-		position: fixed;
-		bottom: 50px!important;
-		right: 50%!important;
+		bottom: 50px !important;
+		right: 50% !important;
 		margin-right: -32px!important; /* Negative half of width. */
-		}
+	}
+
 	#topButton::after {
 	  font-size: 2.5em !important;
 	  line-height: 64px !important;
 	}
 
-	.search-icon {
+	.searchIcon {
 	  top: 11px !important;
 	}
 
-	.search-wrapper {
+	#searchWrapper {
 		top:0px;
 		position:fixed !important;
 		margin-top:16px!important;
-		width: calc(100% - 72px) !important;
+		width: calc(100% - 80px) !important;
+		height:40px;
 	}
 
 
-
-
 	/* Style the hamburger menu */
-a.icon {
-  display: block;
-  position: absolute;
-  right: 32px;
-  top: 16px;
-	height:auto;
-	width:auto;
-	padding:4px;
+	a.navButton {
+	  display: block;
+	  position: absolute;
+	  right: 32px;
+	  top: 16px;
+		height:auto;
+		width:auto;
+		padding:4px;
+	}
+
+	/* Add a grey background color on mouse-over */
+	a:hover {
+	  color: black;
+	}
+
+	/* Style the active link (or home/logo) */
+	.active {
+	  color: white;
+	}
+
+	#logo {
+		display:none;
+	}
+
+	#tagline {
+		display:none;
+	}
+
+	#navWrapper svg {
+		display:block!important;
+	}
+
+	#sidebar svg {
+		display:block!important;
+	}
+
+	#sidebar h1 {
+		display:block!important;
+	}
+
+	ul#typeFilter li label {
+		padding: 9px 16px !important;
+	}
+
+	.container {
+		line-height: 24px !important;
+		padding-left: 36px !important;
+	}
+
+	.checkmark {
+		height: 24px !important;
+		width: 24px !important;
+	}
+
+	.container input {
+		line-height: 24px !important;
+	}
+
+	.container .checkmark:after {
+		left: 8px !important;
+		top: 2px !important;
+		width: 6px !important;
+		height: 12px !important;
+		border-width: 0 2px 2px 0 !important;
+	}
+
 }
 
-/* Add a grey background color on mouse-over */
-a:hover {
-  color: black;
-}
 
-/* Style the active link (or home/logo) */
-.active {
-  color: white;
-}
-
-.logo {
-	display:none;
-}
-
-.tagline {
-	display:none;
-}
-
-
-.mobile-nav svg {
-	width:24px;
-	height:24px;
-	display:block!important;
-	color: rgba(0,0,0,0.85)!important;
-}
-
-#sidebar svg {
-	width:24px;
-	height:24px;
-	display:block!important;
-	color: rgba(0,0,0,0.85)!important;
-}
-
-#sidebar h1 {
-	display:block!important;
-	font-size:20px;
-	font-weight:500;
-	margin-top:24px;
-}
-
-
-
-}
 
 /* @media only screen and (max-devide-width: 400px) and (-webkit-device-pixel-ratio: 3){
 	.sidebar {
@@ -255,16 +253,28 @@ a:hover {
 
 /* General styles */
 
-#sidebar h1 {
-	display:none;
+h1 {
+	font-size:20px;
+	font-weight:500;
 }
 
-.mobile-nav svg {
+#sidebar h1 {
 	display:none;
+	margin-top:24px;
+}
+
+#navWrapper svg {
+	display:none;
+	width:32px;
+	height:32px;
+	color: rgba(0,0,0,0.85);
 }
 
 #sidebar svg {
 	display:none;
+	width:32px;
+	height:32px;
+	color: rgba(0,0,0,0.85)!important;
 }
 
 body {
@@ -301,7 +311,7 @@ a:visited {
 
 /* Main page */
 
-.content {
+#mainContent {
 	width: auto;
 	margin-left: 320px;
 	margin-right: 40px;
@@ -405,7 +415,7 @@ article.sparkling  > div.tag {
 
 /* Style the search bar */
 
-.search-wrapper {
+#searchWrapper {
   position: relative;
   display: flex;
   min-width: 100px;
@@ -422,7 +432,7 @@ article.sparkling  > div.tag {
 	color: rgba(0,0,0,0.5);
 }
 
-.search-icon {
+.searchIcon {
   position: absolute;
   top: 8px;
   left: 10px;
@@ -430,7 +440,7 @@ article.sparkling  > div.tag {
 	height:16px;
 }
 
-.clear-icon {
+.clearIcon {
   position: absolute;
   top: 9px;
   right: 8px;
@@ -471,16 +481,17 @@ input {
 	float: left;
 	padding-left:40px;
 	padding-right:40px;
+	background-color: #EFECE5;
 }
 
-.logo {
+#logo {
 	width:90px;
 	height:24px;
 	margin-bottom:24px;
 	margin-top:32px;
 }
 
-.tagline {
+#tagline {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size:14px;
 	color: rgba(0,0,0,0.5);
@@ -501,11 +512,6 @@ input {
 	/* height:100%; */
 	/* bottom: 32px; */
 	/* position:fixed; */
-}
-
-#credits-content {
-	/* height:auto; */
-	/* bottom:0px; */
 }
 
 #credits p {
@@ -608,17 +614,17 @@ input {
 
 /* Styles for wine type filter */
 
-ul#type-filters {
+ul#typeFilter {
   list-style: none;
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	font-size:14px;
 }
 
-ul#type-filters li{
+ul#typeFilter li{
   display: inline;
 }
 
-ul#type-filters li label{
+ul#typeFilter li label{
   display: inline-block;
   color:rgba(0,0,0,0.85);
   border-radius: 25px;
@@ -633,17 +639,17 @@ ul#type-filters li label{
   /* transition: all .2s; */
 }
 
-ul#type-filters li label {
+ul#typeFilter li label {
   padding: 4px 8px;
   cursor: pointer;
   background-color:rgba(0,0,0,0.07);
 }
 
-ul#type-filters li input[type="checkbox"]:checked + label {
+ul#typeFilter li input[type="checkbox"]:checked + label {
   /* transition: all .2s; */
 }
 
-ul#type-filters li input[type="checkbox"] {
+ul#typeFilter li input[type="checkbox"] {
   display: absolute;
   position: absolute;
   opacity: 0;
@@ -653,45 +659,45 @@ ul#type-filters li input[type="checkbox"] {
 /* Color styles for individual wine type filters */
 
 
-ul#type-filters li input[value="orange"]:hover + label {
+ul#typeFilter li input[value="orange"]:hover + label {
   background-color:rgba(243,206,134,0.5);
 }
-ul#type-filters li input[value="orange"]:checked + label {
+ul#typeFilter li input[value="orange"]:checked + label {
   background-color:rgba(243,206,134,1);
 }
 
-ul#type-filters li input[value="rose"]:hover + label {
+ul#typeFilter li input[value="rose"]:hover + label {
   background-color:rgba(255,185,185,0.5);
 }
-ul#type-filters li input[value="rose"]:checked + label {
+ul#typeFilter li input[value="rose"]:checked + label {
   background-color:rgba(255,185,185,1);
 }
 
-ul#type-filters li input[value="red"]:hover + label {
+ul#typeFilter li input[value="red"]:hover + label {
   background-color:rgba(255,159,129,0.5);
 }
-ul#type-filters li input[value="red"]:checked + label {
+ul#typeFilter li input[value="red"]:checked + label {
   background-color:rgba(255,159,129,1);
 }
 
-ul#type-filters li input[value="white"]:hover + label {
+ul#typeFilter li input[value="white"]:hover + label {
   background-color:rgba(255,251,240,0.5);
 }
-ul#type-filters li input[value="white"]:checked + label {
+ul#typeFilter li input[value="white"]:checked + label {
   background-color:rgba(255,251,240,1);
 }
 
-ul#type-filters li input[value="sparkling"]:hover + label {
+ul#typeFilter li input[value="sparkling"]:hover + label {
   background-color:rgba(186,220,245,0.5);
 }
-ul#type-filters li input[value="sparkling"]:checked + label {
+ul#typeFilter li input[value="sparkling"]:checked + label {
   background-color:rgba(186,220,245,1);
 }
 
 
 /* Scroll to top button */
 
-#button {
+#topButton {
   display: inline-block;
 	background-color:#fff;
   width: 50px;
@@ -701,13 +707,13 @@ ul#type-filters li input[value="sparkling"]:checked + label {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  transition: background-color .3s,
-    opacity .5s, visibility .5s;
+  transition: background-color .3s, opacity .5s, visibility .5s;
   opacity: 0;
   visibility: hidden;
   z-index: 1000;
 }
-#button::after {
+
+#topButton::after {
   content: "\261D";
   font-weight: normal;
   font-style: normal;
@@ -715,14 +721,17 @@ ul#type-filters li input[value="sparkling"]:checked + label {
   line-height: 50px;
 	color: rgba(0,0,0,0.85);
 }
-#button:hover {
+
+#topButton:hover {
   cursor: pointer;
 	/* background-color: rgba(222,219,213,1); */
 }
-#button:active {
+
+#topButton:active {
 	/* background-color: rgba(222,219,213,1); */
 }
-#button.show {
+
+#topButton.show {
   opacity: 1;
   visibility: visible;
 }

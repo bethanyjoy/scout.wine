@@ -64,7 +64,7 @@
 
   <script>
 
-    const clearIcon = document.querySelector(".clear-icon");
+    const clearIcon = document.querySelector(".clearIcon");
     const searchBar = document.querySelector("#search");
 
     searchBar.addEventListener("keyup", () => {
@@ -109,7 +109,7 @@
 
     $(document).ready(function () {
 
-      $('.tag-filter :checkbox').click(function () {
+      $('.tagFilter :checkbox').click(function () {
 
         if ($('input:checkbox:checked').length) {
           $('article').hide();
@@ -133,7 +133,7 @@
 
     jQuery(document).ready(function() {
 
-      var btn = $('#button');
+      var btn = $('#topButton');
 
       $(window).scroll(function() {
         if ($(window).scrollTop() > 300) {
@@ -209,7 +209,7 @@
 
 <body>
 
-  <a id="button">
+  <a id="topButton">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg> --></a>
@@ -219,19 +219,19 @@
 
     <h1>Filters</h1>
 
-    <a href="javascript:void(0);" class="icon" onclick="hideSidebar()">
+    <a href="javascript:void(0);" class="navButton" onclick="hideSidebar()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg></a>
 
-    <img class="logo" src="assets/logo.svg">
-    <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
+    <img id="logo" src="assets/logo.svg">
+    <p id="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
 
     <div id="filters">
 
-      <div id="type" class="tag-filter">
+      <div id="type" class="tagFilter">
         <h3>Type</h3>
-          <ul id="type-filters">
+          <ul id="typeFilter">
             <li><input type="checkbox" id="checkboxOne" name="type" value="orange"><label for="checkboxOne">Orange</label></li>
             <li><input type="checkbox" id="checkboxTwo" name="type" value="rose"><label for="checkboxTwo">Ros&#233;</label></li>
             <li><input type="checkbox" id="checkboxThree" name="type" value="red"><label for="checkboxThree">Red</label></li>
@@ -240,7 +240,7 @@
           </ul>
       </div>
 
-      <div id="store" class="tag-filter">
+      <div id="store" class="tagFilter">
         <h3>Store</h3>
           <label class="container">Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
           <label class="container">Silverlake Wine<input type="checkbox" name="store" value="silverlake"><span class="checkmark"></span></label>
@@ -263,11 +263,9 @@
 
     </div>
 
-    <div id="credits">
-      <div id="credits-content">
+    <!-- <div id="credits">
         <p>Made by <a href="https://bethany.design/">bethany.design</a></p>
-      </div>
-    </div>
+    </div> -->
 
     <!-- <div class="filter" style="height:40px;width:1px;display:block;"></div> -->
 
@@ -275,17 +273,17 @@
 
 
 
-  <div class="content">
+  <div id="mainContent">
 
-    <div class="mobile-nav">
-      <a href="javascript:void(0);" class="icon" onclick="showSidebar()">
+    <div id="navWrapper">
+      <a href="javascript:void(0);" class="navButton" onclick="showSidebar()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
         </svg></a>
-      <div class="search-wrapper">
-        <img class="search-icon" src="assets/search.svg" />
+      <div id="searchWrapper">
+        <img class="searchIcon" src="assets/search.svg" />
         <input placeholder="Search" type="text" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="search">
-        <img class="clear-icon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+        <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
       </div>
     </div>
 
