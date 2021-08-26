@@ -216,6 +216,10 @@ html { font-family: 'Inter', sans-serif; }
 		border-width: 0 2px 2px 0 !important;
 	}
 
+	article > .tag {
+		padding: 0 8px !important;
+	}
+
 
 
 }
