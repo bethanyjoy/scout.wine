@@ -137,8 +137,8 @@ html { font-family: 'Inter', sans-serif; }
 	}
 
 	.searchIcon {
-	  top: 11px !important;
-		left: 12px !important;
+	  top: 12px !important;
+		left: 14px !important;
 	}
 
 	#searchWrapper {
@@ -489,7 +489,7 @@ article.sparkling  > div.tag {
   padding: 8px 32px 8px 32px;
   outline: 0;
 	background:rgba(0,0,0,0.07);
-	color: rgba(0,0,0,0.5);
+	color: rgba(0,0,0,0.7);
 }
 
 .searchIcon {
