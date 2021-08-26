@@ -201,6 +201,30 @@ html { font-family: 'Inter', sans-serif; }
 		border-width: 0 2px 2px 0 !important;
 	}
 
+
+
+}
+
+
+
+@media (pointer:fine) {
+
+	ul#typeFilter li input[value="orange"]:hover + label {
+	  background-color:rgba(243,206,134,0.5);
+	}
+	ul#typeFilter li input[value="rose"]:hover + label {
+	  background-color:rgba(255,185,185,0.5);
+	}
+	ul#typeFilter li input[value="red"]:hover + label {
+	  background-color:rgba(255,159,129,0.5);
+	}
+	ul#typeFilter li input[value="white"]:hover + label {
+	  background-color:rgba(255,251,240,0.5);
+	}
+	ul#typeFilter li input[value="sparkling"]:hover + label {
+	  background-color:rgba(186,220,245,0.5);
+	}
+
 }
 
 
@@ -659,36 +683,17 @@ ul#typeFilter li input[type="checkbox"] {
 /* Color styles for individual wine type filters */
 
 
-ul#typeFilter li input[value="orange"]:hover + label {
-  background-color:rgba(243,206,134,0.5);
-}
 ul#typeFilter li input[value="orange"]:checked + label {
   background-color:rgba(243,206,134,1);
-}
-
-ul#typeFilter li input[value="rose"]:hover + label {
-  background-color:rgba(255,185,185,0.5);
 }
 ul#typeFilter li input[value="rose"]:checked + label {
   background-color:rgba(255,185,185,1);
 }
-
-ul#typeFilter li input[value="red"]:hover + label {
-  background-color:rgba(255,159,129,0.5);
-}
 ul#typeFilter li input[value="red"]:checked + label {
   background-color:rgba(255,159,129,1);
 }
-
-ul#typeFilter li input[value="white"]:hover + label {
-  background-color:rgba(255,251,240,0.5);
-}
 ul#typeFilter li input[value="white"]:checked + label {
   background-color:rgba(255,251,240,1);
-}
-
-ul#typeFilter li input[value="sparkling"]:hover + label {
-  background-color:rgba(186,220,245,0.5);
 }
 ul#typeFilter li input[value="sparkling"]:checked + label {
   background-color:rgba(186,220,245,1);
