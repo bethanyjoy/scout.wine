@@ -32,7 +32,7 @@ body {
 }
 
 input {
-	line-height: 16px;
+	line-height: 1;
 	font-size: 15px;
 	color: rgba(0,0,0,0.85);
 	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -110,7 +110,7 @@ html { font-family: 'Inter', sans-serif; }
 	}
 
 	article {
-		padding-bottom: 16px !important;
+		padding-bottom: 1rem !important;
 		margin-bottom: 0px !important;
 	}
 
@@ -218,6 +218,8 @@ html { font-family: 'Inter', sans-serif; }
 
 	article > .tag {
 		padding: 0 8px !important;
+		height: 20px !important;
+		line-height:20px !important;
 	}
 
 
@@ -405,14 +407,14 @@ article img {
 
 .title {
 	font-weight:500;
-	margin-bottom:8px;
-	line-height: 130%;
+	margin-bottom:0.533rem;
+	line-height: 1.2rem;
 }
 
 .store {
 	color: rgba(0,0,0,0.5);
 	font-size:0.8667rem;
-	margin-bottom: 8px;
+	margin-bottom:0.533rem;
 }
 
 .price {
