@@ -60,7 +60,6 @@
   </script>
 
 
-
   <!-- Controls the search bar functionality -->
 
   <script>
@@ -104,7 +103,6 @@
   </script>
 
 
-
   <!-- Controls the tag filtering functionality -->
 
   <script>
@@ -133,74 +131,74 @@
 
   <script>
 
-  jQuery(document).ready(function() {
+    jQuery(document).ready(function() {
 
-    var btn = $('#button');
+      var btn = $('#button');
 
-    $(window).scroll(function() {
-      if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-      } else {
-        btn.removeClass('show');
-      }
+      $(window).scroll(function() {
+        if ($(window).scrollTop() > 300) {
+          btn.addClass('show');
+        } else {
+          btn.removeClass('show');
+        }
+      });
+
+      btn.on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({scrollTop:0}, '300');
+      });
+
     });
-
-    btn.on('click', function(e) {
-      e.preventDefault();
-      $('html, body').animate({scrollTop:0}, '300');
-    });
-
-  });
 
   </script>
 
 
-<script>
+  <!-- Hide/show sidebar on mobile -->
 
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+  <script>
 
-function showSidebar() {
-  var x = document.getElementById("sidebar");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
+    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 
-}
+    function showSidebar() {
+      var x = document.getElementById("sidebar");
+        x.style.display = "block";
+      var body = document.body;
+        body.style.overflow = "hidden"
+    }
 
-function hideSidebar() {
-  var x = document.getElementById("sidebar");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
+    function hideSidebar() {
+      var x = document.getElementById("sidebar");
+        x.style.display = "none";
+        var body = document.body;
+          body.style.overflow = "auto"
+      }
 
+  </script>
 
 
-// Controls the string filtering functionality
-//
-//     $(document).ready(function () {
-//
-//       $('.string-filter :checkbox').click(function () {
-//
-//         if ($('input:checkbox:checked').length) {
-//           $('article').hide();
-//           $('input:checkbox:checked').each(function () {
-//             // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
-//             $('p.title:contains(Scotty)').parent().parent().show();
-//           });
-//         } else {
-//           $('article').show();
-//         }
-//
-//       });
-//
-//     });
+  <!-- Controls the string filtering functionality -->
 
-</script>
+  <!-- <script>
+
+      $(document).ready(function () {
+
+        $('.string-filter :checkbox').click(function () {
+
+          if ($('input:checkbox:checked').length) {
+            $('article').hide();
+            $('input:checkbox:checked').each(function () {
+              // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
+              $('p.title:contains(Scotty)').parent().parent().show();
+            });
+          } else {
+            $('article').show();
+          }
+
+        });
+
+      });
+
+  </script> -->
 
 
 </head>
@@ -213,9 +211,8 @@ function hideSidebar() {
 
   <a id="button">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-</svg> -->
-</a>
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+    </svg> --></a>
 
 
   <div id="sidebar">
@@ -224,9 +221,8 @@ function hideSidebar() {
 
     <a href="javascript:void(0);" class="icon" onclick="hideSidebar()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-</svg>
-    </a>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg></a>
 
     <img class="logo" src="assets/logo.svg">
     <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>
@@ -284,9 +280,8 @@ function hideSidebar() {
     <div class="mobile-nav">
       <a href="javascript:void(0);" class="icon" onclick="showSidebar()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-</svg>
-      </a>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg></a>
       <div class="search-wrapper">
         <img class="search-icon" src="assets/search.svg" />
         <input placeholder="Search" type="text" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="search">
