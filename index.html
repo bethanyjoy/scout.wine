@@ -22,19 +22,15 @@
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
 
 
-
-  <!-- Controls the rendering of the wine data from the JSON file -->
-
   <script>
 
+
+  // Controls the rendering of the wine data from the JSON file
+
     $(function() {
-
       var wine = [];
-
       $.getJSON('data.json', function(data) {
-
         $.each(data.wine, function(i, f) {
-
           var tblRow =
           "<article class=" + f.Type + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
             "<a target='_blank' href=" + f.Link + ">" +
@@ -50,20 +46,12 @@
             "</div>" +
           "</article>"
           $(tblRow).appendTo("#grid");
-
         });
-
       });
-
     });
 
-  </script>
 
-
-
-  <!-- Controls the search bar functionality -->
-
-  <script>
+  // Controls the search bar functionality
 
     const clearIcon = document.querySelector(".clear-icon");
     const searchBar = document.querySelector("#search");
@@ -75,7 +63,6 @@
         clearIcon.style.visibility = "hidden";
       }
     });
-
     clearIcon.addEventListener("click", () => {
       searchBar.value = "";
       clearIcon.style.visibility = "hidden";
@@ -101,18 +88,11 @@
 
     }
 
-  </script>
 
-
-
-  <!-- Controls the tag filtering functionality -->
-
-  <script>
+  // Controls the tag filtering functionality
 
     $(document).ready(function () {
-
       $('.tag-filter :checkbox').click(function () {
-
         if ($('input:checkbox:checked').length) {
           $('article').hide();
           $('input:checkbox:checked').each(function () {
@@ -121,22 +101,14 @@
         } else {
           $('article').show();
         }
-
       });
-
     });
 
-  </script>
 
-
-  <!-- Scroll to the top button -->
-
-  <script>
+  // Scroll to the top button
 
   jQuery(document).ready(function() {
-
-    var btn = $('#button');
-
+    var btn = $('#topButton');
     $(window).scroll(function() {
       if ($(window).scrollTop() > 300) {
         btn.addClass('show');
@@ -144,56 +116,43 @@
         btn.removeClass('show');
       }
     });
-
     btn.on('click', function(e) {
       e.preventDefault();
       $('html, body').animate({scrollTop:0}, '300');
     });
-
   });
 
+
+  // Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
+
+  function showSidebar() {
+    var x = document.getElementById("sidebar");
+      x.style.display = "block";
+  }
+
+  function hideSidebar() {
+    var x = document.getElementById("sidebar");
+      x.style.display = "none";
+  }
+
+
+// Controls the string filtering functionality
+//
+//     $(document).ready(function () {
+//       $('.string-filter :checkbox').click(function () {
+//         if ($('input:checkbox:checked').length) {
+//           $('article').hide();
+//           $('input:checkbox:checked').each(function () {
+//             // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
+//             $('p.title:contains(Scotty)').parent().parent().show();
+//           });
+//         } else {
+//           $('article').show();
+//         }
+//       });
+//     });
+
   </script>
-
-
-<script>
-
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function myFunction() {
-  var x = document.getElementById("sidebar");
-    x.style.display = "block";
-}
-
-function hideFilters() {
-  var x = document.getElementById("sidebar");
-    x.style.display = "none";
-}
-
-</script>
-
-
-  <!-- Controls the string filtering functionality -->
-
-  <!-- <script>
-
-    $(document).ready(function () {
-
-      $('.string-filter :checkbox').click(function () {
-
-        if ($('input:checkbox:checked').length) {
-          $('article').hide();
-          $('input:checkbox:checked').each(function () {
-            // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
-            $('p.title:contains(Scotty)').parent().parent().show();
-          });
-        } else {
-          $('article').show();
-        }
-
-      });
-
-    });
-
-  </script> -->
 
 
 </head>
@@ -204,7 +163,7 @@ function hideFilters() {
 
 <body>
 
-  <a id="button">
+  <a id="topButton">
     <!-- <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
 </svg> -->
@@ -215,7 +174,7 @@ function hideFilters() {
 
     <h1>Filters</h1>
 
-    <a href="javascript:void(0);" class="icon" onclick="hideFilters()">
+    <a href="javascript:void(0);" class="icon" onclick="hideSidebar()">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 </svg>
@@ -275,7 +234,7 @@ function hideFilters() {
   <div class="content">
 
     <div class="mobile-nav">
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <a href="javascript:void(0);" class="icon" onclick="showSidebar()">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 </svg>
