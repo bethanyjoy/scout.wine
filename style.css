@@ -232,6 +232,11 @@ html { font-family: 'Inter', sans-serif; }
 	}
 
 
+	#filters {
+		width: calc(100% - 72px);
+	}
+
+
 }
 
 
