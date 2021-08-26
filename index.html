@@ -167,6 +167,15 @@ function myFunction() {
   }
 }
 
+function hideFilters() {
+  var x = document.getElementById("sidebar");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 </script>
 
 
@@ -211,6 +220,14 @@ function myFunction() {
 
 
   <div id="sidebar">
+
+    <h1>Filters</h1>
+
+    <a href="javascript:void(0);" class="icon" onclick="hideFilters()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+</svg>
+    </a>
 
     <img class="logo" src="assets/logo.svg">
     <p class="tagline">Find natural wine on the eastside of LA <span class="emojis">&#9996; &#129436;</span></p>

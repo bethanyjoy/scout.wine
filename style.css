@@ -75,16 +75,15 @@ html { font-family: 'Inter', sans-serif; }
 		top:0;
 		height:100%!important;
 		background-color: #EFECE5;
-		width:100%!important;
+		width: calc(100% - 16px)!important;
 		padding-top:0px!important;
 		padding-bottom:16px!important;
 		padding-left:16px!important;
+		padding-right:16px!important;
 		overflow-y: hidden!important;
-		z-index:200!important;
+		z-index:2000!important;
 		display:none;
-		margin-top:72px;
-		border-top: solid rgba(0,0,0,0.25);
-		border-width: 2px;
+		margin-top:0px;
   }
 	/* .logo {
 		margin:0 !important;
@@ -160,7 +159,6 @@ a.icon {
   top: 16px;
 	height:auto;
 	width:auto;
-	align:center;
 	padding:4px;
 }
 
@@ -189,6 +187,21 @@ a:hover {
 	display:block!important;
 	color: rgba(0,0,0,0.85)!important;
 }
+
+#sidebar svg {
+	width:24px;
+	height:24px;
+	display:block!important;
+	color: rgba(0,0,0,0.85)!important;
+}
+
+#sidebar h1 {
+	display:block!important;
+	font-size:20px;
+	font-weight:500;
+	margin-top:24px;
+}
+
 
 
 }
@@ -241,7 +254,15 @@ a:hover {
 
 /* General styles */
 
+#sidebar h1 {
+	display:none;
+}
+
 .mobile-nav svg {
+	display:none;
+}
+
+#sidebar svg {
 	display:none;
 }
 
