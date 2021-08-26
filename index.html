@@ -162,14 +162,14 @@
     function showSidebar() {
       var x = document.getElementById("sidebar");
         x.style.display = "block";
-      var body = document.body;
+      var body = document.getElementById("mainContent");
         body.style.overflow = "hidden"
     }
 
     function hideSidebar() {
       var x = document.getElementById("sidebar");
         x.style.display = "none";
-        var body = document.body;
+        var body = document.getElementById("mainContent");
           body.style.overflow = "auto"
       }
 
