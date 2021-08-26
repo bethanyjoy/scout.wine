@@ -138,6 +138,7 @@ html { font-family: 'Inter', sans-serif; }
 
 	.searchIcon {
 	  top: 11px !important;
+		left: 12px !important;
 	}
 
 	#searchWrapper {
@@ -222,6 +223,13 @@ html { font-family: 'Inter', sans-serif; }
 		line-height:20px !important;
 	}
 
+	#search {
+		  padding: 8px 38px 8px 38px !important;
+	}
+
+	#resultsButton {
+		display:block!important;
+	}
 
 
 }
@@ -307,6 +315,7 @@ html { font-family: 'Inter', sans-serif; }
 	color: #fff;
 	text-align:center;
 	border-radius: 100px;
+	display:none;
 }
 
 h1 {
@@ -402,7 +411,7 @@ article img {
 }
 
 .text {
-	margin-top:16px
+	margin-top:1rem;
 }
 
 .title {
