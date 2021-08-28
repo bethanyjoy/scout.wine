@@ -36,14 +36,14 @@
         $.each(data.wine, function(i, f) {
 
           var tblRow =
-          "<article class=" + f.Type + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+          "<article class=" + f.Type + " data-maker=" + f.Title + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
             "<a href=" + f.Link + ">" +
               "<img src=" + f.Image + ">" +
             "</a>" +
             "<div class='tag'>" + f.Type_text + "</div>" +
             "<div class='text'>" +
               "<a href=" + f.Link + ">" +
-                "<p class='title'>" + f.Title + "</p>"+
+                "<p class='title'>" + f.Title_text + "</p>"+
               "</a>" +
               "<p class='store'>" + f.Store_text + "</p>" +
               "<p class='price'>" + f.Price + "</p>" +
@@ -127,6 +127,32 @@
   </script>
 
 
+  <!-- Controls the string filtering functionality -->
+
+  <!-- <script>
+
+  $(document).ready(function () {
+
+    $('.stringFilter :checkbox').click(function () {
+
+      if ($('input:checkbox:checked').length) {
+        $('article').hide();
+        $('input:checkbox:checked').each(function () {
+          if ($(this).val().contains($(this).prop('name')) {
+            $('article[data-' + $(this).prop('name') + ']').show();
+          }
+        }
+      } else {
+        $('article').show();
+      }
+
+    }
+
+  }
+
+  </script> -->
+
+
   <!-- Scroll to the top button -->
 
   <script>
@@ -176,31 +202,6 @@
   </script>
 
 
-  <!-- Controls the string filtering functionality -->
-
-  <!-- <script>
-
-      $(document).ready(function () {
-
-        $('.string-filter :checkbox').click(function () {
-
-          if ($('input:checkbox:checked').length) {
-            $('article').hide();
-            $('input:checkbox:checked').each(function () {
-              // $('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
-              $('p.title:contains(Scotty)').parent().parent().show();
-            });
-          } else {
-            $('article').show();
-          }
-
-        });
-
-      });
-
-  </script> -->
-
-
 </head>
 
 
@@ -248,7 +249,7 @@
           <label class="container">Good Luck Wine Shop<input type="checkbox" name="store" value="goodluck"><span class="checkmark"></span></label>
       </div>
 
-      <div id="maker" class="string-filter">
+      <div id="maker" class="stringFilter">
         <h3>Maker</h3>
           <label class="container">Scotty-Boy!<input type="checkbox" name="maker" value="scotty"><span class="checkmark"></span></label>
           <label class="container">Broc Cellars<input type="checkbox" name="maker" value="broc"><span class="checkmark"></span></label>
@@ -286,7 +287,7 @@
         </svg></a>
       <div id="searchWrapper">
         <img class="searchIcon" src="assets/search.svg" />
-        <input placeholder="Search" type="text" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="search">
+        <input placeholder="Search" type="text" value="" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="search">
         <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
       </div>
     </div>

@@ -193,7 +193,8 @@ for x in hlp_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -206,6 +207,7 @@ for x in hlp_orange_urls:
         type_text = 'Orange'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -218,7 +220,8 @@ for x in hlp_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -231,6 +234,7 @@ for x in hlp_rose_urls:
         type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -243,7 +247,8 @@ for x in hlp_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -256,6 +261,7 @@ for x in hlp_red_urls:
         type_text = 'Red'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -268,7 +274,8 @@ for x in hlp_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -281,6 +288,7 @@ for x in hlp_white_urls:
         type_text = 'White'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -293,7 +301,8 @@ for x in hlp_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -306,6 +315,7 @@ for x in hlp_sparkling_urls:
         type_text = 'Sparkling'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -320,7 +330,8 @@ for x in sl_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -333,6 +344,7 @@ for x in sl_orange_urls:
         type_text = 'Orange'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -345,7 +357,8 @@ for x in sl_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -358,6 +371,7 @@ for x in sl_rose_urls:
         type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -370,7 +384,8 @@ for x in sl_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -383,6 +398,7 @@ for x in sl_red_urls:
         type_text = 'Red'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -395,7 +411,8 @@ for x in sl_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -408,6 +425,7 @@ for x in sl_white_urls:
         type_text = 'White'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -420,7 +438,8 @@ for x in sl_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -433,6 +452,7 @@ for x in sl_sparkling_urls:
         type_text = 'Sparkling'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -447,7 +467,8 @@ for x in er_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -460,6 +481,7 @@ for x in er_orange_urls:
         type_text = 'Orange'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -472,7 +494,8 @@ for x in er_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -485,6 +508,7 @@ for x in er_rose_urls:
         type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -497,7 +521,8 @@ for x in er_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -510,6 +535,7 @@ for x in er_red_urls:
         type_text = 'Red'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -522,7 +548,8 @@ for x in er_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -535,6 +562,7 @@ for x in er_white_urls:
         type_text = 'White'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -547,7 +575,8 @@ for x in er_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="grid-product")
     for product in products:
-        title = product.find("div", class_="grid-product__title-inner").text.strip()
+        title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
+        title_text = product.find("div", class_="grid-product__title-inner").text.strip()
         price = product.find("div", class_="grid-product__price").text.strip()
         link = product.find("a", class_="grid-product__title")['href']
         if product.img:
@@ -560,6 +589,7 @@ for x in er_sparkling_urls:
         type_text = 'Sparkling'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -574,7 +604,8 @@ for x in gl_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("li", class_="product")
     for product in products:
-        title = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="card-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="card-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
@@ -584,6 +615,7 @@ for x in gl_orange_urls:
         type_text = 'Orange'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -596,7 +628,8 @@ for x in gl_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("li", class_="product")
     for product in products:
-        title = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="card-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="card-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
@@ -606,6 +639,7 @@ for x in gl_rose_urls:
         type_text = 'Ros&#233;'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -618,7 +652,8 @@ for x in gl_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("li", class_="product")
     for product in products:
-        title = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="card-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="card-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
@@ -628,6 +663,7 @@ for x in gl_red_urls:
         type_text = 'Red'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -640,7 +676,8 @@ for x in gl_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("li", class_="product")
     for product in products:
-        title = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="card-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="card-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
@@ -650,6 +687,7 @@ for x in gl_white_urls:
         type_text = 'White'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
@@ -662,7 +700,8 @@ for x in gl_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("li", class_="product")
     for product in products:
-        title = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="card-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="card-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
@@ -672,6 +711,7 @@ for x in gl_sparkling_urls:
         type_text = 'Sparkling'
         wines.append({
             'Title': title,
+            'Title_text': title_text,
             'Price': price,
             'Link': link,
             'Image': image,
