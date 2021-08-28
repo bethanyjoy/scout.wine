@@ -236,6 +236,10 @@ html { font-family: 'Inter', sans-serif; }
 		width: calc(100% - 72px);
 	}
 
+	#credits {
+		margin-bottom:100px!important;
+	}
+
 
 }
 
@@ -569,10 +573,9 @@ input {
 
 #credits {
 	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:0.8rem;
 	color: rgba(0,0,0,0.5);
-	margin-bottom:32px;
 	margin-top:32px;
+	margin-bottom:32px;
 	/* height:100%; */
 	/* bottom: 32px; */
 	/* position:fixed; */
@@ -580,21 +583,19 @@ input {
 
 #credits p {
 	padding-bottom:6px;
+	font-size: 0.8667rem;
 }
 
 #credits a {
 	color: rgba(0,0,0,0.5);
 	text-decoration: underline;
+	font-size: 0.8667rem;
 }
 
 
 
 
 /* Styles for filters */
-
-#filters {
-	margin-bottom:120px;
-}
 
 #filters div {
 	margin-top:32px;
