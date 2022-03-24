@@ -1,8 +1,8 @@
 name: scrape
 on:
   schedule:
-    - cron: '*/20 16-23 * * *' # runs every twenty minutes between 9am and 4pm pst
-    - cron: '*/20 0-3 * * *' # runs every twenty minutes between 5pm and 8pm pst
+    - cron: '*/5 14-23 * * *' # runs every twenty minutes between 9am and 4pm pst
+    - cron: '*/5 0-6 * * *' # runs every twenty minutes between 5pm and 8pm pst
 
 jobs:
   build:
