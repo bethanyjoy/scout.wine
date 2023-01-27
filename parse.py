@@ -7,15 +7,15 @@ from bs4 import BeautifulSoup
 wines = []
 
 # list of silverlake wine urls to parse
-# sl_orange_urls = [
+sl_orange_urls = [
 # "https://silverlakewine.com/collections/orange",
 # "https://silverlakewine.com/collections/orange?page=2",
 # "https://silverlakewine.com/collections/orange?page=3",
 # "https://silverlakewine.com/collections/orange?page=4",
 # "https://silverlakewine.com/collections/orange?page=5",
 # "https://silverlakewine.com/collections/orange?page=6"
-# ]
-# sl_red_urls = [
+]
+sl_red_urls = [
 # "https://silverlakewine.com/collections/red",
 # "https://silverlakewine.com/collections/red?page=2",
 # "https://silverlakewine.com/collections/red?page=3",
@@ -42,16 +42,16 @@ wines = []
 # "https://silverlakewine.com/collections/red?page=24",
 # "https://silverlakewine.com/collections/red?page=25",
 # "https://silverlakewine.com/collections/red?page=26"
-# ]
-# sl_rose_urls = [
+]
+sl_rose_urls = [
 # "https://silverlakewine.com/collections/rose",
 # "https://silverlakewine.com/collections/rose?page=2",
 # "https://silverlakewine.com/collections/rose?page=3",
 # "https://silverlakewine.com/collections/rose?page=4",
 # "https://silverlakewine.com/collections/rose?page=5",
 # "https://silverlakewine.com/collections/rose?page=6"
-# ]
-# sl_sparkling_urls = [
+]
+sl_sparkling_urls = [
 # "https://silverlakewine.com/collections/sparkling",
 # "https://silverlakewine.com/collections/sparkling?page=2",
 # "https://silverlakewine.com/collections/sparkling?page=3",
@@ -60,8 +60,8 @@ wines = []
 # "https://silverlakewine.com/collections/sparkling?page=6",
 # "https://silverlakewine.com/collections/sparkling?page=7",
 # "https://silverlakewine.com/collections/sparkling?page=8"
-# ]
-# sl_white_urls = [
+]
+sl_white_urls = [
 # "https://silverlakewine.com/collections/white",
 # "https://silverlakewine.com/collections/white?page=2",
 # "https://silverlakewine.com/collections/white?page=3",
@@ -76,7 +76,7 @@ wines = []
 # "https://silverlakewine.com/collections/white?page=12",
 # "https://silverlakewine.com/collections/white?page=13",
 # "https://silverlakewine.com/collections/white?page=14"
-# ]
+]
 
 # list of highland park wine urls to parse
 hlp_orange_urls = [
@@ -109,25 +109,25 @@ hlp_red_urls = [
 "https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=2",
 "https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=3",
 ]
-# hlp_rose_urls = [
-# ]
-# hlp_sparkling_urls = [
-# ]
-# hlp_white_urls = [
-# ]
+hlp_rose_urls = [
+]
+hlp_sparkling_urls = [
+]
+hlp_white_urls = [
+]
 
 # list of everson royce urls to parse
-# er_orange_urls = [
-# "https://www.eversonroyce.com/collections/orange-wine"
-# ]
-# er_red_urls = [
-# ]
-# er_rose_urls = [
-# ]
-# er_sparkling_urls = [
-# ]
-# er_white_urls = [
-# ]
+er_orange_urls = [
+"https://www.eversonroyce.com/collections/orange-wine"
+]
+er_red_urls = [
+]
+er_rose_urls = [
+]
+er_sparkling_urls = [
+]
+er_white_urls = [
+]
 
 # code for parsing highland park wine urls
 for x in hlp_orange_urls:
