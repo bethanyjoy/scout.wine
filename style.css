@@ -48,10 +48,16 @@
 	/*	Tag colors */
 
 	--red: rgba(255, 159, 129, 1);
-	--white: rgba(255, 251, 240, 1);
+	--white: rgba(196, 205, 169, 0.5);
 	--rose: rgba(255, 185, 185, 1);
 	--orange: rgba(243, 206, 134, 1);
-	--sparkling: rgba(221, 215, 202, 1);
+	--sparkling: rgba(168, 207, 224, 1);
+
+	--red-hover: rgba(255, 159, 129, 0.5);
+	--white-hover: rgba(196, 205, 169, 0.25);
+	--rose-hover: rgba(255, 185, 185, 0.5);
+	--orange-hover: rgba(243, 206, 134, 0.5);
+	--sparkling-hover: rgba(168, 207, 224, 0.5);
 
 	/*	Font stacks */
 	--regular: 'Relative-Book';
@@ -319,19 +325,19 @@ html { font-family: 'Inter', sans-serif; }
 @media (pointer:fine) {
 
 	ul#typeFilter li input[value="orange"]:hover + label {
-	  background-color:rgba(243,206,134,0.5);
+	  background-color: var(--orange-hover);
 	}
 	ul#typeFilter li input[value="rose"]:hover + label {
-	  background-color:rgba(255,185,185,0.5);
+	  background-color: var(--rose-hover);
 	}
 	ul#typeFilter li input[value="red"]:hover + label {
-	  background-color:rgba(255,159,129,0.5);
+	  background-color: var(--red-hover);
 	}
 	ul#typeFilter li input[value="white"]:hover + label {
-	  background-color:rgba(255,251,240,0.5);
+	  background-color: var(--white-hover);
 	}
 	ul#typeFilter li input[value="sparkling"]:hover + label {
-	  background-color:rgba(186,220,245,0.5);
+	  background-color: var(--sparkling-hover);
 	}
 
 }
