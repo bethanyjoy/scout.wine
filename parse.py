@@ -233,7 +233,7 @@ for x in sl_orange_urls:
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
         link = product.find("a")['href']
-        image = product.find("img")['src']
+        image = product.find("img")['srcset']
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'orange'
