@@ -7,9 +7,9 @@ from bs4 import BeautifulSoup
 wines = []
 
 # list of goodluck wine urls to parse
-gl_orange_urls = [
-"https://www.goodluckwineshop.com/shop/orangewine/6?page=1&limit=180&sort_by=category_order&sort_order=asc"
-]
+# gl_orange_urls = [
+# "https://www.goodluckwineshop.com/shop/orangewine/6?page=1&limit=180&sort_by=category_order&sort_order=asc"
+# ]
 # gl_rose_urls = [
 # "https://www.goodluckwineshop.com/shop/ros-/3?page=1&limit=180&sort_by=category_order&sort_order=asc"
 # ]
@@ -24,9 +24,9 @@ gl_orange_urls = [
 # ]
 
 # list of silverlake wine urls to parse
-# sl_orange_urls = [
-# "https://silverlakewine.com/collections/orange"
-# ]
+sl_orange_urls = [
+"https://silverlakewine.com/collections/orange"
+]
 # sl_red_urls = [
 # ]
 # sl_rose_urls = [
@@ -225,33 +225,33 @@ gl_orange_urls = [
 #         })
 
 # code for parsing silverlake wine urls
-# for x in sl_orange_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="grid-product")
-#     for product in products:
-#         title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
-#         title_text = product.find("div", class_="grid-product__title-inner").text.strip()
-#         price = product.find("div", class_="grid-product__price").text.strip()
-#         link = product.find("a", class_="grid-product__title")['href']
-#         if product.img:
-#             image = product.find("img", class_="grid-product__picture")['src']
-#         else:
-#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
-#         store = 'silverlake'
-#         store_text = 'Silver Lake Wine'
-#         type = 'orange'
-#         type_text = 'Orange'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
+for x in sl_orange_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = product.find("a")['href']
+        if product.img:
+            image = product.find("img", class_="rimage__image")['src']
+        else:
+            image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+        store = 'silverlake'
+        store_text = 'Silver Lake Wine'
+        type = 'orange'
+        type_text = 'Orange'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
 # for x in sl_rose_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("div", class_="grid-product")
@@ -499,32 +499,30 @@ gl_orange_urls = [
 #         })
 
 # code for parsing goodluck wine urls
-for x in gl_orange_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("div", class_="w-container")
-    for product in products:
-        title = product.find("h3", class_="w-product-title").text.replace(" ", "")
-        title_text = product.find("h3", class_="w-product-title").text.strip()
-        price = product.find("span", class_="price price--withoutTax").text.strip()
-        link = product.find("a", class_="card-figure__link")['href'].strip("/")
-        image = product.find("img", class_="card-image")['src']
-        store = 'goodluck'
-        store_text = 'Good Luck Wine Shop'
-        type = 'orange'
-        type_text = 'Orange'
-        wines.append({
-            'Title': title,
-            'Title_text': title_text,
-            'Price': price,
-            'Link': link,
-            'Image': image,
-            'Type': type,
-            'Type_text': type_text,
-            'Store': store,
-            'Store_text': store_text,
-            'Test': "test",
-            'Test2': 'test',
-        })
+# for x in gl_orange_urls:
+#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+#     products = soup.find_all("div", class_="w-container")
+#     for product in products:
+#         title = product.find("h3", class_="w-product-title").text.replace(" ", "")
+#         title_text = product.find("h3", class_="w-product-title").text.strip()
+#         price = product.find("span", class_="price price--withoutTax").text.strip()
+#         link = product.find("a", class_="card-figure__link")['href'].strip("/")
+#         image = product.find("img", class_="card-image")['src']
+#         store = 'goodluck'
+#         store_text = 'Good Luck Wine Shop'
+#         type = 'orange'
+#         type_text = 'Orange'
+#         wines.append({
+#             'Title': title,
+#             'Title_text': title_text,
+#             'Price': price,
+#             'Link': link,
+#             'Image': image,
+#             'Type': type,
+#             'Type_text': type_text,
+#             'Store': store,
+#             'Store_text': store_text,
+#         })
 # for x in gl_rose_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("li", class_="product")
@@ -627,5 +625,5 @@ with open("data.json", "w") as writeJSON:
     json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 
 # prints data to terminal (only needed for troubleshooting)
-print(json.dumps(wines, indent=4))
+# print(json.dumps(wines, indent=4))
 print('success!')
