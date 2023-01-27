@@ -233,10 +233,7 @@ for x in sl_orange_urls:
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
         link = product.find("a")['href']
-        if product.img:
-            image = product.find("img", class_="rimage__image")['src']
-        else:
-            image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+        image = product.find("img", class_="rimage__image")['src']
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'orange'
