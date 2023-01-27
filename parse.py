@@ -246,7 +246,7 @@ for x in sl_orange_urls:
 #         title = product.find("div", class_="title").text.replace(" ", "")
 #         title_text = product.find("div", class_="title").text.strip()
 #         price = product.find("div", class_="product-price").text.strip()
-#         link = product.find("a")['href']
+#         link = 'https://silverlakewine.com' + product.find("a")['href']
 #         imagesoup = product.find('noscript')
 #         imageurl = imagesoup.find("img", class_="rimage__image")['src']
 #         image = 'https:' + imageurl
@@ -272,7 +272,7 @@ for x in sl_orange_urls:
 #         title = product.find("div", class_="title").text.replace(" ", "")
 #         title_text = product.find("div", class_="title").text.strip()
 #         price = product.find("div", class_="product-price").text.strip()
-#         link = product.find("a")['href']
+#         link = 'https://silverlakewine.com' + product.find("a")['href']
 #         imagesoup = product.find('noscript')
 #         imageurl = imagesoup.find("img", class_="rimage__image")['src']
 #         image = 'https:' + imageurl
@@ -298,7 +298,7 @@ for x in sl_orange_urls:
 #         title = product.find("div", class_="title").text.replace(" ", "")
 #         title_text = product.find("div", class_="title").text.strip()
 #         price = product.find("div", class_="product-price").text.strip()
-#         link = product.find("a")['href']
+#         link = 'https://silverlakewine.com' + product.find("a")['href']
 #         imagesoup = product.find('noscript')
 #         imageurl = imagesoup.find("img", class_="rimage__image")['src']
 #         image = 'https:' + imageurl
@@ -324,7 +324,7 @@ for x in sl_orange_urls:
 #         title = product.find("div", class_="title").text.replace(" ", "")
 #         title_text = product.find("div", class_="title").text.strip()
 #         price = product.find("div", class_="product-price").text.strip()
-#         link = product.find("a")['href']
+#         link = 'https://silverlakewine.com' + product.find("a")['href']
 #         imagesoup = product.find('noscript')
 #         imageurl = imagesoup.find("img", class_="rimage__image")['src']
 #         image = 'https:' + imageurl
