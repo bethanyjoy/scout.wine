@@ -15,14 +15,68 @@ sl_orange_urls = [
 "https://silverlakewine.com/collections/orange?page=5",
 "https://silverlakewine.com/collections/orange?page=6"
 ]
-# sl_red_urls = [
-# ]
-# sl_rose_urls = [
-# ]
-# sl_sparkling_urls = [
-# ]
-# sl_white_urls = [
-# ]
+sl_red_urls = [
+"https://silverlakewine.com/collections/red",
+"https://silverlakewine.com/collections/red?page=2",
+"https://silverlakewine.com/collections/red?page=3",
+"https://silverlakewine.com/collections/red?page=4",
+"https://silverlakewine.com/collections/red?page=5",
+"https://silverlakewine.com/collections/red?page=6",
+"https://silverlakewine.com/collections/red?page=7",
+"https://silverlakewine.com/collections/red?page=8",
+"https://silverlakewine.com/collections/red?page=9",
+"https://silverlakewine.com/collections/red?page=10",
+"https://silverlakewine.com/collections/red?page=11",
+"https://silverlakewine.com/collections/red?page=12",
+"https://silverlakewine.com/collections/red?page=13",
+"https://silverlakewine.com/collections/red?page=14",
+"https://silverlakewine.com/collections/red?page=15",
+"https://silverlakewine.com/collections/red?page=16",
+"https://silverlakewine.com/collections/red?page=17",
+"https://silverlakewine.com/collections/red?page=18",
+"https://silverlakewine.com/collections/red?page=19",
+"https://silverlakewine.com/collections/red?page=20",
+"https://silverlakewine.com/collections/red?page=21",
+"https://silverlakewine.com/collections/red?page=22",
+"https://silverlakewine.com/collections/red?page=23",
+"https://silverlakewine.com/collections/red?page=24",
+"https://silverlakewine.com/collections/red?page=25",
+"https://silverlakewine.com/collections/red?page=26"
+]
+sl_rose_urls = [
+"https://silverlakewine.com/collections/rose",
+"https://silverlakewine.com/collections/rose?page=2",
+"https://silverlakewine.com/collections/rose?page=3",
+"https://silverlakewine.com/collections/rose?page=4",
+"https://silverlakewine.com/collections/rose?page=5",
+"https://silverlakewine.com/collections/rose?page=6"
+]
+sl_sparkling_urls = [
+"https://silverlakewine.com/collections/sparkling",
+"https://silverlakewine.com/collections/sparkling?page=2",
+"https://silverlakewine.com/collections/sparkling?page=3",
+"https://silverlakewine.com/collections/sparkling?page=4",
+"https://silverlakewine.com/collections/sparkling?page=5",
+"https://silverlakewine.com/collections/sparkling?page=6",
+"https://silverlakewine.com/collections/sparkling?page=7",
+"https://silverlakewine.com/collections/sparkling?page=8"
+]
+sl_white_urls = [
+"https://silverlakewine.com/collections/white",
+"https://silverlakewine.com/collections/white?page=2",
+"https://silverlakewine.com/collections/white?page=3",
+"https://silverlakewine.com/collections/white?page=4",
+"https://silverlakewine.com/collections/white?page=5",
+"https://silverlakewine.com/collections/white?page=6",
+"https://silverlakewine.com/collections/white?page=7",
+"https://silverlakewine.com/collections/white?page=8",
+"https://silverlakewine.com/collections/white?page=9",
+"https://silverlakewine.com/collections/white?page=10",
+"https://silverlakewine.com/collections/white?page=11",
+"https://silverlakewine.com/collections/white?page=12",
+"https://silverlakewine.com/collections/white?page=13",
+"https://silverlakewine.com/collections/white?page=14"
+]
 
 # list of highland park wine urls to parse
 # hlp_orange_urls = [
