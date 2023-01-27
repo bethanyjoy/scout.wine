@@ -8,7 +8,12 @@ wines = []
 
 # list of silverlake wine urls to parse
 sl_orange_urls = [
-"https://silverlakewine.com/collections/orange"
+"https://silverlakewine.com/collections/orange",
+"https://silverlakewine.com/collections/orange?page=2",
+"https://silverlakewine.com/collections/orange?page=3",
+"https://silverlakewine.com/collections/orange?page=4",
+"https://silverlakewine.com/collections/orange?page=5",
+"https://silverlakewine.com/collections/orange?page=6"
 ]
 # sl_red_urls = [
 # ]
@@ -215,7 +220,7 @@ for x in sl_orange_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = product.find("a")['href']
+        link = 'https://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -238,14 +243,13 @@ for x in sl_orange_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("div", class_="grid-product")
 #     for product in products:
-#         title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
-#         title_text = product.find("div", class_="grid-product__title-inner").text.strip()
-#         price = product.find("div", class_="grid-product__price").text.strip()
-#         link = product.find("a", class_="grid-product__title")['href']
-#         if product.img:
-#             image = product.find("img", class_="grid-product__picture")['src']
-#         else:
-#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+#         title = product.find("div", class_="title").text.replace(" ", "")
+#         title_text = product.find("div", class_="title").text.strip()
+#         price = product.find("div", class_="product-price").text.strip()
+#         link = product.find("a")['href']
+#         imagesoup = product.find('noscript')
+#         imageurl = imagesoup.find("img", class_="rimage__image")['src']
+#         image = 'https:' + imageurl
 #         store = 'silverlake'
 #         store_text = 'Silver Lake Wine'
 #         type = 'rose'
@@ -265,14 +269,13 @@ for x in sl_orange_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("div", class_="grid-product")
 #     for product in products:
-#         title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
-#         title_text = product.find("div", class_="grid-product__title-inner").text.strip()
-#         price = product.find("div", class_="grid-product__price").text.strip()
-#         link = product.find("a", class_="grid-product__title")['href']
-#         if product.img:
-#             image = product.find("img", class_="grid-product__picture")['src']
-#         else:
-#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+#         title = product.find("div", class_="title").text.replace(" ", "")
+#         title_text = product.find("div", class_="title").text.strip()
+#         price = product.find("div", class_="product-price").text.strip()
+#         link = product.find("a")['href']
+#         imagesoup = product.find('noscript')
+#         imageurl = imagesoup.find("img", class_="rimage__image")['src']
+#         image = 'https:' + imageurl
 #         store = 'silverlake'
 #         store_text = 'Silver Lake Wine'
 #         type = 'red'
@@ -292,14 +295,13 @@ for x in sl_orange_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("div", class_="grid-product")
 #     for product in products:
-#         title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
-#         title_text = product.find("div", class_="grid-product__title-inner").text.strip()
-#         price = product.find("div", class_="grid-product__price").text.strip()
-#         link = product.find("a", class_="grid-product__title")['href']
-#         if product.img:
-#             image = product.find("img", class_="grid-product__picture")['src']
-#         else:
-#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+#         title = product.find("div", class_="title").text.replace(" ", "")
+#         title_text = product.find("div", class_="title").text.strip()
+#         price = product.find("div", class_="product-price").text.strip()
+#         link = product.find("a")['href']
+#         imagesoup = product.find('noscript')
+#         imageurl = imagesoup.find("img", class_="rimage__image")['src']
+#         image = 'https:' + imageurl
 #         store = 'silverlake'
 #         store_text = 'Silver Lake Wine'
 #         type = 'white'
@@ -319,14 +321,13 @@ for x in sl_orange_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 #     products = soup.find_all("div", class_="grid-product")
 #     for product in products:
-#         title = product.find("div", class_="grid-product__title-inner").text.replace(" ", "")
-#         title_text = product.find("div", class_="grid-product__title-inner").text.strip()
-#         price = product.find("div", class_="grid-product__price").text.strip()
-#         link = product.find("a", class_="grid-product__title")['href']
-#         if product.img:
-#             image = product.find("img", class_="grid-product__picture")['src']
-#         else:
-#             image = 'https://cdn11.bigcommerce.com/s-t1pm6282q8/images/stencil/500x659/products/918/1976/image_coming_soon__47973.1624218886.1280.1280__52076.1628386968.jpg?c=1'
+#         title = product.find("div", class_="title").text.replace(" ", "")
+#         title_text = product.find("div", class_="title").text.strip()
+#         price = product.find("div", class_="product-price").text.strip()
+#         link = product.find("a")['href']
+#         imagesoup = product.find('noscript')
+#         imageurl = imagesoup.find("img", class_="rimage__image")['src']
+#         image = 'https:' + imageurl
 #         store = 'silverlake'
 #         store_text = 'Silver Lake Wine'
 #         type = 'sparkling'
