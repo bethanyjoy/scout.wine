@@ -46,9 +46,9 @@
 	--sparkling: rgba(221, 215, 202, 1);
 
 	/*	Font stacks */
-	--regular: 'Relative-Book',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--bold: 'Relative-Bold',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--mono: 'Relative-Mono',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--bold: 'Relative-Bold', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--mono: "Relative-Mono", -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 	/*	Font size */
 	--body: 16px;
