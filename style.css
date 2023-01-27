@@ -62,7 +62,7 @@
 
 	/*	Font size */
 	--body: 16px;
-	--small: 14px;
+	--small: 0.875rem;
 	--body-mobile: 18px;
 
 }
