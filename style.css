@@ -47,13 +47,13 @@
 
 	/*	Tag colors */
 
-	--red: rgba(255, 159, 129, 1);
+	--red: rgba(255, 166, 138, 1);
 	--white: rgba(196, 205, 169, 0.5);
 	--rose: rgba(255, 185, 185, 1);
 	--orange: rgba(243, 206, 134, 1);
 	--sparkling: rgba(168, 207, 224, 1);
 
-	--red-hover: rgba(255, 159, 129, 0.5);
+	--red-hover: rgba(255, 166, 138, 0.5);
 	--white-hover: rgba(196, 205, 169, 0.25);
 	--rose-hover: rgba(255, 185, 185, 0.5);
 	--orange-hover: rgba(243, 206, 134, 0.5);
