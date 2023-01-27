@@ -522,6 +522,8 @@ for x in gl_orange_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Test': "test",
+            'Test2': 'test',
         })
 # for x in gl_rose_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
