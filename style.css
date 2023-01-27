@@ -540,23 +540,23 @@ article > .tag {
 }
 
 article.red  > div.tag {
-  background:rgba(255,159,129,1)!important;
+  background: var(--red)!important;
 }
 
 article.white  > div.tag{
-  background:rgba(255,251,240,1)!important;
+  background: var(--white)!important;
 }
 
 article.rose > div.tag{
-  background:rgba(255,185,185,1)!important;
+  background: var(--rose)!important;
 }
 
 article.orange > div.tag {
-  background:rgba(243,206,134,1)!important;
+  background: var(--orange)!important;
 }
 
 article.sparkling  > div.tag {
-  background:rgba(186,220,245,1)!important;
+  background: var(--sparkling)!important;
 }
 
 
