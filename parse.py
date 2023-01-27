@@ -627,5 +627,5 @@ with open("data.json", "w") as writeJSON:
     json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 
 # prints data to terminal (only needed for troubleshooting)
-#print(json.dumps(wines, indent=4))
+print(json.dumps(wines, indent=4))
 print('success!')
