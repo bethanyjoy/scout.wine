@@ -3,6 +3,8 @@
   src:  url('fonts/relative-book.woff2') format('woff2'),
         url('fonts/relative-book.woff') format('woff'),
 				url('fonts/relative-book.tff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
@@ -10,6 +12,8 @@
   src:  url('fonts/relative-medium.woff2') format('woff2'),
         url('fonts/relative-medium.woff') format('woff'),
 				url('fonts/relative-medium.tff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
@@ -17,6 +21,8 @@
   src:  url('fonts/relative-bold.woff2') format('woff2'),
         url('fonts/relative-bold.woff') format('woff'),
 				url('fonts/relative-bold.tff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
@@ -24,6 +30,8 @@
   src:  url('fonts/relative-12pitch.woff2') format('woff2'),
         url('fonts/relative-12pitch.woff') format('woff'),
 				url('fonts/relative-12pitch.tff') format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 
 
@@ -48,7 +56,7 @@
 	/*	Font stacks */
 	--regular: 'Relative-Book';
 	--bold: 'Relative-Bold';
-	--mono: "Relative-Mono";
+	--mono: 'Relative-Mono';
 	/* --regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
 
 
