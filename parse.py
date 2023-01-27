@@ -8,43 +8,19 @@ wines = []
 
 # list of goodluck wine urls to parse
 gl_orange_urls = [
-"https://goodluckwineshop.com/wine/orange-wine/",
-"https://goodluckwineshop.com/wine/orange-wine/?page=2",
-"https://goodluckwineshop.com/wine/orange-wine/?page=3",
-"https://goodluckwineshop.com/wine/orange-wine/?page=4"
+"https://www.goodluckwineshop.com/shop/orangewine/6?page=1&limit=180&sort_by=category_order&sort_order=asc"
 ]
 gl_rose_urls = [
-"https://goodluckwineshop.com/rose/",
-"https://goodluckwineshop.com/rose/?page=2",
-"https://goodluckwineshop.com/rose/?page=3",
-"https://goodluckwineshop.com/rose/?page=4"
+"https://www.goodluckwineshop.com/shop/ros-/3?page=1&limit=180&sort_by=category_order&sort_order=asc"
 ]
 gl_red_urls = [
-"https://goodluckwineshop.com/red/",
-"https://goodluckwineshop.com/red/?page=2",
-"https://goodluckwineshop.com/red/?page=3",
-"https://goodluckwineshop.com/red/?page=4",
-"https://goodluckwineshop.com/red/?page=5",
-"https://goodluckwineshop.com/red/?page=6",
-"https://goodluckwineshop.com/red/?page=7",
-"https://goodluckwineshop.com/red/?page=8",
-"https://goodluckwineshop.com/red/?page=9"
+"https://www.goodluckwineshop.com/shop/redwine/4?page=1&limit=180&sort_by=category_order&sort_order=asc"
 ]
 gl_sparkling_urls = [
-"https://goodluckwineshop.com/sparkling/",
-"https://goodluckwineshop.com/sparkling/?page=2",
-"https://goodluckwineshop.com/sparkling/?page=3",
-"https://goodluckwineshop.com/sparkling/?page=4",
-"https://goodluckwineshop.com/sparkling/?page=5",
-"https://goodluckwineshop.com/sparkling/?page=6"
+"https://www.goodluckwineshop.com/shop/sparkling/5?page=1&limit=180&sort_by=category_order&sort_order=asc"
 ]
 gl_white_urls = [
-"https://goodluckwineshop.com/white-wine/",
-"https://goodluckwineshop.com/white-wine/?page=2",
-"https://goodluckwineshop.com/white-wine/?page=3",
-"https://goodluckwineshop.com/white-wine/?page=4",
-"https://goodluckwineshop.com/white-wine/?page=5",
-"https://goodluckwineshop.com/white-wine/?page=6"
+"https://www.goodluckwineshop.com/shop/whitewine/2?page=1&limit=180&sort_by=category_order&sort_order=asc"
 ]
 
 # list of silverlake wine urls to parse
@@ -602,10 +578,10 @@ for x in er_sparkling_urls:
 # code for parsing goodluck wine urls
 for x in gl_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="product")
+    products = soup.find_all("div", class_="w-container")
     for product in products:
-        title = product.find("h3", class_="card-title").text.replace(" ", "")
-        title_text = product.find("h3", class_="card-title").text.strip()
+        title = product.find("h3", class_="w-product-title").text.replace(" ", "")
+        title_text = product.find("h3", class_="w-product-title").text.strip()
         price = product.find("span", class_="price price--withoutTax").text.strip()
         link = product.find("a", class_="card-figure__link")['href'].strip("/")
         image = product.find("img", class_="card-image")['src']
