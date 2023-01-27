@@ -1,3 +1,64 @@
+@font-face {
+  font-family: 'Relative-Book';
+  src:  url('fonts/relative-book.woff2') format('woff2'),
+        url('fonts/relative-book.woff') format('woff'),
+				url('fonts/relative-book.tff') format('ttf');
+}
+
+@font-face {
+  font-family: 'Relative-Medium';
+  src:  url('fonts/relative-medium.woff2') format('woff2'),
+        url('fonts/relative-medium.woff') format('woff'),
+				url('fonts/relative-medium.tff') format('ttf');
+}
+
+@font-face {
+  font-family: 'Relative-Bold';
+  src:  url('fonts/relative-bold.woff2') format('woff2'),
+        url('fonts/relative-bold.woff') format('woff'),
+				url('fonts/relative-bold.tff') format('ttf');
+}
+
+@font-face {
+  font-family: 'Relative-Mono';
+  src:  url('fonts/relative-12pitch.woff2') format('woff2'),
+        url('fonts/relative-12pitch.woff') format('woff'),
+				url('fonts/relative-12pitch.tff') format('ttf');
+}
+
+
+:root {
+
+	/*	Core colors */
+
+	--background: rgba(241, 255, 219, 1);
+	--primary: rgba(31, 121, 204, 1);
+	--primary-2: rgba(31, 121, 204, 0.7);
+	--primary-3: rgba(31, 121, 204, 0.4);
+	--primary-4: rgba(31, 121, 204, 0.12);
+
+	/*	Tag colors */
+
+	--red: rgba(255, 159, 129, 1);
+	--white: rgba(255, 251, 240, 1);
+	--rose: rgba(255, 185, 185, 1);
+	--orange: rgba(243, 206, 134, 1);
+	--sparkling: rgba(221, 215, 202, 1);
+
+	/*	Font stacks */
+	--regular: 'Relative-Book',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--bold: 'Relative-Bold',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--mono: 'Relative-Mono',-apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+	/*	Font size */
+	--body: 16px;
+	--small: 14px;
+	--body-mobile: 18px;
+
+}
+
+
+
 /* CSS Reset */
 
 html, body, div, span, applet, object, iframe,
@@ -16,7 +77,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 15px;
+	font-size: var(--body);
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -26,16 +87,16 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	font-size: 15px;
-	color: rgba(0,0,0,0.85);
-	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: var(--body);
+	color: var(--primary);
+	font-family: var(--regular);
 }
 
 input {
 	line-height: 1;
-	font-size: 15px;
-	color: rgba(0,0,0,0.85);
-	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: var(--body);
+	color: var(--primary);
+	font-family: var(--regular);
 }
 
 ol, ul {
@@ -84,7 +145,7 @@ html { font-family: 'Inter', sans-serif; }
 	figure, figcaption, footer, header, hgroup,
 	menu, nav, output, ruby, section, summary,
 	time, mark, audio, video, body, input {
-		font-size:17px;
+		font-size: var(--body-mobile);
 	}
 
   #sidebar {
@@ -116,7 +177,7 @@ html { font-family: 'Inter', sans-serif; }
 
 	#navWrapper {
 		height: 72px !important;
-		background-color: #EFECE5 !important;
+		background-color: var(--background) !important;
 		position:fixed !important;
 		z-index:1000 !important;
 		width:100% !important;
@@ -318,7 +379,7 @@ html { font-family: 'Inter', sans-serif; }
 #resultsButton {
 	position:fixed;
 	bottom:26px;
-	background-color: rgba(0,0,0,0.85);
+	background-color: var(--primary-2);
 	padding: 16px 20px;
 	width: calc(100% - 72px);
 	color: #fff;
@@ -341,32 +402,35 @@ h1 {
 	display:none;
 	width:32px;
 	height:32px;
-	color: rgba(0,0,0,0.85);
+	color: var(--primary);
 }
 
 #sidebar svg {
 	display:none;
 	width:32px;
 	height:32px;
-	color: rgba(0,0,0,0.85)!important;
+	color: var(--primary) !important;
 }
 
 body {
   padding: 0;
   margin: 0;
-	background-color: #EFECE5;
+	/* background-color: #EFECE5; */
+	background-color: var(--background);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 h3 {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono",	Menlo, Courier, monospace;
-	font-size:0.9333rem;
-	font-weight:500;
+	font-family: var(--bold);
+	/* font-size:0.9333rem; */
+	font-weight:normal;
 	padding-bottom:12px;
 }
 
 a {
 	text-decoration: none;
-	color: rgba(0,0,0,0.85);
+	color: var(--primary);
 }
 
 a img {
@@ -374,7 +438,7 @@ a img {
 }
 
 a:visited {
-		color: rgba(0,0,0,0.85);
+		color: var(--primary);
 }
 
 
@@ -424,20 +488,20 @@ article img {
 }
 
 .title {
-	font-weight:500;
-	margin-bottom:0.4rem;
+	font-family: var(--bold);
+	margin-bottom: 0.4rem;
 	line-height: 1.2rem;
 }
 
 .store {
-	color: rgba(0,0,0,0.5);
-	font-size:0.8667rem;
+	color: var(--primary-2);
+	font-size: var(--small);
 	margin-bottom:0.54rem;
 }
 
 .price {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size:0.9333rem;
+	font-family: var(--mono);
+	/* font-size:0.9333rem; */
 }
 
 
@@ -447,12 +511,12 @@ article > .tag {
 	top:12px!important;
 	left:12px!important;
 	position:absolute!important;
-	background-color: #EFECE5;
-	font-size: 0.8rem;
+	background-color: var(--primary-4);
+	font-size: var(--small);
 	height: 18px;
 	line-height: 18px;
 	padding: 0 6px;
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: var(--mono);
 	border-radius: 100px;
 	display: inline-block;
 	margin: 0 8px 8px 0;
@@ -497,8 +561,13 @@ article.sparkling  > div.tag {
   width: 100%;
   padding: 8px 32px 8px 32px;
   outline: 0;
-	background:rgba(0,0,0,0.07);
-	color: rgba(0,0,0,0.7);
+	background: var(--primary-4);
+	color: var(--primary);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--primary-2);
+  opacity: 1; /* Firefox */
 }
 
 .searchIcon {
@@ -507,6 +576,7 @@ article.sparkling  > div.tag {
   left: 10px;
   width: 15px;
 	height:16px;
+	color: var(--primary-2)!important;
 }
 
 .clearIcon {
@@ -520,8 +590,8 @@ article.sparkling  > div.tag {
 
 input {
 	line-height: 16px;
-	color: rgba(0,0,0,0.85);
-	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	color: var(--primary);
+	font-family: var(--regular);
 }
 
 .search:hover, .search:focus {
@@ -549,31 +619,31 @@ input {
 	float: left;
 	padding-left:40px;
 	padding-right:40px;
-	background-color: #EFECE5;
+	background-color: var(--background);
 }
 
 #logo {
-	width:90px;
-	height:24px;
+	max-width:130px;
+	/* height:31px; */
 	margin-bottom:24px;
 	margin-top:32px;
 }
 
 #tagline {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	font-size: 0.9333rem;
-	color: rgba(0,0,0,0.5);
+	/* font-family: var(--mono); */
+	/* font-size: 0.9333rem; */
+	color: var(--primary-2);
 	line-height: 160%;
 }
 
 .emojis {
-	font-family: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: var(--regular);
 	color: rgba(0,0,0,1);
 }
 
 #credits {
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-	color: rgba(0,0,0,0.5);
+	font-family: var(--mono);
+	color: var(--primary-2);
 	margin-top:32px;
 	margin-bottom:32px;
 	/* height:100%; */
@@ -583,13 +653,13 @@ input {
 
 #credits p {
 	padding-bottom:6px;
-	font-size: 0.8667rem;
+	font-size: var(--small);
 }
 
 #credits a {
-	color: rgba(0,0,0,0.5);
+	color: var(--primary-2);
 	text-decoration: underline;
-	font-size: 0.8667rem;
+	font-size: var(--small);
 }
 
 
@@ -635,7 +705,8 @@ input {
   left: 0;
   height: 16px;
   width: 16px;
-	border: solid rgba(0,0,0,0.25);
+	border: solid;
+	border-color: var(--primary-3);
 	border-width: 2px;
 	box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -649,7 +720,7 @@ input {
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: rgba(0,0,0,0.85);
+  background-color: var(--primary);
 	border:none;
 }
 
@@ -685,7 +756,7 @@ input {
 
 ul#typeFilter {
   list-style: none;
-	font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	font-family: var(--mono);
 }
 
 ul#typeFilter li{
@@ -694,7 +765,6 @@ ul#typeFilter li{
 
 ul#typeFilter li label{
   display: inline-block;
-  color:rgba(0,0,0,0.85);
   border-radius: 25px;
   white-space: nowrap;
   margin: 5px 0px;
@@ -705,10 +775,10 @@ ul#typeFilter li label{
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   /* transition: all .2s; */
-	font-size:0.9333rem;
+	font-size: var(--body);
 	padding: 4px 8px;
 	cursor: pointer;
-	background-color:rgba(0,0,0,0.07);
+	background-color: var(--primary-4);
 
 }
 
@@ -727,19 +797,19 @@ ul#typeFilter li input[type="checkbox"] {
 
 
 ul#typeFilter li input[value="orange"]:checked + label {
-  background-color:rgba(243,206,134,1);
+  background-color: var(--orange);
 }
 ul#typeFilter li input[value="rose"]:checked + label {
-  background-color:rgba(255,185,185,1);
+  background-color: var(--rose);
 }
 ul#typeFilter li input[value="red"]:checked + label {
-  background-color:rgba(255,159,129,1);
+  background-color: var(--red);
 }
 ul#typeFilter li input[value="white"]:checked + label {
-  background-color:rgba(255,251,240,1);
+  background-color: var(--white);
 }
 ul#typeFilter li input[value="sparkling"]:checked + label {
-  background-color:rgba(186,220,245,1);
+  background-color: var(--sparkling);
 }
 
 
@@ -767,7 +837,7 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
   font-style: normal;
   font-size: 2rem;
   line-height: 50px;
-	color: rgba(0,0,0,0.85);
+	color: var(--primary-2);
 }
 
 #topButton:hover {
