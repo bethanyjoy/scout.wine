@@ -2,28 +2,28 @@
   font-family: 'Relative-Book';
   src:  url('fonts/relative-book.woff2') format('woff2'),
         url('fonts/relative-book.woff') format('woff'),
-				url('fonts/relative-book.tff') format('ttf');
+				url('fonts/relative-book.tff') format('truetype');
 }
 
 @font-face {
   font-family: 'Relative-Medium';
   src:  url('fonts/relative-medium.woff2') format('woff2'),
         url('fonts/relative-medium.woff') format('woff'),
-				url('fonts/relative-medium.tff') format('ttf');
+				url('fonts/relative-medium.tff') format('truetype');
 }
 
 @font-face {
   font-family: 'Relative-Bold';
   src:  url('fonts/relative-bold.woff2') format('woff2'),
         url('fonts/relative-bold.woff') format('woff'),
-				url('fonts/relative-bold.tff') format('ttf');
+				url('fonts/relative-bold.tff') format('truetype');
 }
 
 @font-face {
   font-family: 'Relative-Mono';
   src:  url('fonts/relative-12pitch.woff2') format('woff2'),
         url('fonts/relative-12pitch.woff') format('woff'),
-				url('fonts/relative-12pitch.tff') format('ttf');
+				url('fonts/relative-12pitch.tff') format('truetype');
 }
 
 
