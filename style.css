@@ -1,35 +1,35 @@
 @font-face {
   font-family: 'Relative-Book';
-  src:  url('fonts/relative-book.woff2') format('woff2'),
-        url('fonts/relative-book.woff') format('woff'),
-				url('fonts/relative-book.tff') format('truetype');
+  src:  url('fonts/Relative-Book.woff2') format('woff2'),
+        url('fonts/Relative-Book.woff') format('woff'),
+				url('fonts/Relative-Book.tff') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
   font-family: 'Relative-Medium';
-  src:  url('fonts/relative-medium.woff2') format('woff2'),
-        url('fonts/relative-medium.woff') format('woff'),
-				url('fonts/relative-medium.tff') format('truetype');
+  src:  url('fonts/Relative-Medium.woff2') format('woff2'),
+        url('fonts/Relative-Medium.woff') format('woff'),
+				url('fonts/Relative-Medium.tff') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
   font-family: 'Relative-Bold';
-  src:  url('fonts/relative-bold.woff2') format('woff2'),
-        url('fonts/relative-bold.woff') format('woff'),
-				url('fonts/relative-bold.tff') format('truetype');
+  src:  url('fonts/Relative-Bold.woff2') format('woff2'),
+        url('fonts/Relative-Bold.woff') format('woff'),
+				url('fonts/Relative-Bold.tff') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
   font-family: 'Relative-12Pitch';
-  src:  url('fonts/relative-12pitch.woff2') format('woff2'),
-        url('fonts/relative-12pitch.woff') format('woff'),
-				url('fonts/relative-12pitch.tff') format('truetype');
+  src:  url('fonts/Relative-12Pitch.woff2') format('woff2'),
+        url('fonts/Relative-12Pitch.woff') format('woff'),
+				url('fonts/Relative-12Pitch.tff') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
