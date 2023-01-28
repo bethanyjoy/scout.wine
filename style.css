@@ -505,7 +505,7 @@ article img {
 }
 
 .title {
-	font-family: var(--bold);
+	font-family: var(--medium);
 	margin-bottom: 0.4rem;
 	line-height: 1.2rem;
 }

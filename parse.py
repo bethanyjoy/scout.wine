@@ -284,6 +284,11 @@ vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
 
+# list of wine + eggs urls to parse
+eggs_orange_urls = [
+"https://wineandeggs.com/collections/skin-contact-wine",
+]
+
 
 
 # code for parsing vinovore eagle rock urls
