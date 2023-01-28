@@ -258,17 +258,30 @@ for x in vver_orange_urls:
     products = soup.find_all("div", class_="grid-product")
     for product in products:
         title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-        title_text = product.find("div", class_="grid-product__title").text.strip()
-        price = product.find("div", class_="grid-product__price").text.strip()
-        link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-        imagesoup = product.find('noscript')
-        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-        image = 'https:' + imageurl
-        store = 'vinovoreeaglerock'
-        store_text = 'Vinovore Eagle Rock'
-        type = 'orange'
-        type_text = 'Orange'
-        wines.append({
+        if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+          random = "random"
+        else:
+          title_text = product.find("div", class_="grid-product__title").text.strip()
+          # price = product.find("div", class_="grid-product__price").text.strip()
+          link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+          imagesoup = product.find('noscript')
+          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+          image = 'https:' + imageurl
+          store = 'vinovoreeaglerock'
+          store_text = 'Vinovore Eagle Rock'
+          type = 'orange'
+          type_text = 'Orange'
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            # text = pricesoup.text
+            # span = pricesoup.find("span").text
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
+          # text = product.find("div", class_="grid-product__price").text
+          # span = product.find("span", class_="visually-hidden").text
+          # final_text = text[len(span):]
+          wines.append({
             'Title': title,
             'Title_text': title_text,
             'Price': price,
@@ -278,7 +291,7 @@ for x in vver_orange_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
-        })
+          })
 
 # code for parsing highland park wine urls
 # for x in hlp_orange_urls:
