@@ -39,7 +39,7 @@ html { font-family: 'Inter', sans-serif; }
   html { font-family: 'Inter var', sans-serif; }
 }
 
-/* Set up core styles */
+
 :root {
 
 	/*	Core colors */
@@ -78,7 +78,6 @@ html { font-family: 'Inter', sans-serif; }
 	--body-mobile: 18px;
 
 }
-
 
 
 /* CSS Reset */
