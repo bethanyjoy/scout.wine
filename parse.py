@@ -252,6 +252,13 @@ vver_orange_urls = [
 "https://vinovoreeaglerock.com/collections/orange?page=4"
 ]
 
+vver_rose_urls = [
+"https://vinovoreeaglerock.com/collections/rose",
+"https://vinovoreeaglerock.com/collections/rose?page=2",
+"https://vinovoreeaglerock.com/collections/rose?page=3",
+"https://vinovoreeaglerock.com/collections/rose?page=4"
+]
+
 # code for parsing vinovore eagle rock urls
 for x in vver_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -275,6 +282,39 @@ for x in vver_orange_urls:
           store_text = 'Vinovore Eagle Rock'
           type = 'orange'
           type_text = 'Orange'
+          wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+          })
+for x in vver_rose_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="grid-product")
+    for product in products:
+        title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+        if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+          print()
+        else:
+          title_text = product.find("div", class_="grid-product__title").text.strip()
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
+          link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+          imagesoup = product.find('noscript')
+          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+          image = 'https:' + imageurl
+          store = 'vinovoreeaglerock'
+          store_text = 'Vinovore Eagle Rock'
+          type = 'rose'
+          type_text = 'Ros&#233;'
           wines.append({
             'Title': title,
             'Title_text': title_text,
