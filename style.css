@@ -61,6 +61,7 @@
 
 	/*	Font stacks */
 	--regular: 'Relative-Book';
+  --medium: 'Relative-Medium';
 	--bold: 'Relative-Bold';
 	--mono: 'Relative-12Pitch';
 	/* --regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
@@ -395,7 +396,7 @@ html { font-family: 'Inter', sans-serif; }
 #resultsButton {
 	position:fixed;
 	bottom:26px;
-	background-color: var(--primary-2);
+	background-color: var(--primary);
 	padding: 16px 20px;
 	width: calc(100% - 72px);
 	color: #fff;
@@ -405,8 +406,8 @@ html { font-family: 'Inter', sans-serif; }
 }
 
 h1 {
-	font-size:1.333rem;
-	font-weight:500;
+	font-size:1.5rem;
+	font-family: var(--medium);
 }
 
 #sidebar h1 {
@@ -791,7 +792,7 @@ ul#typeFilter li label{
   user-select: none;
   -webkit-tap-highlight-color: transparent;
   /* transition: all .2s; */
-	font-size: var(--body);
+	/* font-size: var(--body); */
 	padding: 4px 8px;
 	cursor: pointer;
 	background-color: var(--primary-4);
