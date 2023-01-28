@@ -1,3 +1,4 @@
+/*	Set up fonts */
 @font-face {
   font-family: 'Relative-Book';
   src:  url('fonts/Relative-Book.woff2') format('woff2'),
@@ -6,7 +7,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
   font-family: 'Relative-Medium';
   src:  url('fonts/Relative-Medium.woff2') format('woff2'),
@@ -15,7 +15,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
   font-family: 'Relative-Bold';
   src:  url('fonts/Relative-Bold.woff2') format('woff2'),
@@ -24,7 +23,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 @font-face {
   font-family: 'Relative-12Pitch';
   src:  url('fonts/Relative-12Pitch.woff2') format('woff2'),
@@ -34,7 +32,14 @@
 	font-style: normal;
 }
 
+/* Inter font setup */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
 
+/* Set up core styles */
 :root {
 
 	/*	Core colors */
@@ -130,16 +135,6 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
-
-
-
-/* Inter font setup */
-
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
 }
 
 
