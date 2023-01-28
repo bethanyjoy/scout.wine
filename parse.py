@@ -259,10 +259,14 @@ for x in vver_orange_urls:
     for product in products:
         title = product.find("div", class_="grid-product__title").text.replace(" ", "")
         if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-          random = "random"
+          print()
         else:
           title_text = product.find("div", class_="grid-product__title").text.strip()
-          # price = product.find("div", class_="grid-product__price").text.strip()
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imageurl = imagesoup.find("img", class_="grid-product__image")['src']
@@ -271,11 +275,6 @@ for x in vver_orange_urls:
           store_text = 'Vinovore Eagle Rock'
           type = 'orange'
           type_text = 'Orange'
-          pricesoup = product.find("div", class_="grid-product__price")
-          if pricesoup.span:
-            price = 'On Sale'
-          else:
-            price = pricesoup.text.strip()
           wines.append({
             'Title': title,
             'Title_text': title_text,
