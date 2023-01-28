@@ -252,7 +252,7 @@ for x in hlp_orange_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://highlandparkwine.com' + product.find("a")['href']
+        link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -278,7 +278,7 @@ for x in hlp_rose_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://highlandparkwine.com' + product.find("a")['href']
+        link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -304,7 +304,7 @@ for x in hlp_red_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://highlandparkwine.com' + product.find("a")['href']
+        link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -330,7 +330,7 @@ for x in hlp_white_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://highlandparkwine.com' + product.find("a")['href']
+        link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -356,7 +356,7 @@ for x in hlp_sparkling_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://highlandparkwine.com' + product.find("a")['href']
+        link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -385,7 +385,7 @@ for x in sl_orange_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://silverlakewine.com' + product.find("a")['href']
+        link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -411,7 +411,7 @@ for x in sl_rose_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://silverlakewine.com' + product.find("a")['href']
+        link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -437,7 +437,7 @@ for x in sl_red_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://silverlakewine.com' + product.find("a")['href']
+        link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -463,7 +463,7 @@ for x in sl_white_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://silverlakewine.com' + product.find("a")['href']
+        link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -489,7 +489,7 @@ for x in sl_sparkling_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://silverlakewine.com' + product.find("a")['href']
+        link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -517,7 +517,7 @@ for x in er_orange_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://eversonroyce.com' + product.find("a")['href']
+        link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -543,7 +543,7 @@ for x in er_rose_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://eversonroyce.com' + product.find("a")['href']
+        link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -569,7 +569,7 @@ for x in er_red_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://eversonroyce.com' + product.find("a")['href']
+        link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -595,7 +595,7 @@ for x in er_white_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://eversonroyce.com' + product.find("a")['href']
+        link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
@@ -621,7 +621,7 @@ for x in er_sparkling_urls:
         title = product.find("div", class_="title").text.replace(" ", "")
         title_text = product.find("div", class_="title").text.strip()
         price = product.find("div", class_="product-price").text.strip()
-        link = 'https://eversonroyce.com' + product.find("a")['href']
+        link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imageurl = imagesoup.find("img", class_="rimage__image")['src']
         image = 'https:' + imageurl
