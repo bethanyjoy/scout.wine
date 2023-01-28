@@ -251,12 +251,37 @@ vver_orange_urls = [
 "https://vinovoreeaglerock.com/collections/orange?page=3",
 "https://vinovoreeaglerock.com/collections/orange?page=4"
 ]
-
 vver_rose_urls = [
 "https://vinovoreeaglerock.com/collections/rose",
 "https://vinovoreeaglerock.com/collections/rose?page=2",
 "https://vinovoreeaglerock.com/collections/rose?page=3",
 "https://vinovoreeaglerock.com/collections/rose?page=4"
+]
+vver_red_urls = [
+"https://vinovoreeaglerock.com/collections/red",
+"https://vinovoreeaglerock.com/collections/red?page=2",
+"https://vinovoreeaglerock.com/collections/red?page=3",
+"https://vinovoreeaglerock.com/collections/red?page=4",
+"https://vinovoreeaglerock.com/collections/red?page=5",
+"https://vinovoreeaglerock.com/collections/red?page=6",
+"https://vinovoreeaglerock.com/collections/red?page=7",
+"https://vinovoreeaglerock.com/collections/red?page=8",
+]
+vver_white_urls = [
+"https://vinovoreeaglerock.com/collections/white",
+"https://vinovoreeaglerock.com/collections/white?page=2",
+"https://vinovoreeaglerock.com/collections/white?page=3",
+"https://vinovoreeaglerock.com/collections/white?page=4",
+"https://vinovoreeaglerock.com/collections/white?page=5",
+"https://vinovoreeaglerock.com/collections/white?page=6",
+]
+vver_sparkling_urls = [
+"https://vinovoreeaglerock.com/collections/sparkling",
+"https://vinovoreeaglerock.com/collections/sparkling?page=2",
+"https://vinovoreeaglerock.com/collections/sparkling?page=3",
+"https://vinovoreeaglerock.com/collections/sparkling?page=4",
+"https://vinovoreeaglerock.com/collections/sparkling?page=5",
+"https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
 
 # code for parsing vinovore eagle rock urls
@@ -315,6 +340,105 @@ for x in vver_rose_urls:
           store_text = 'Vinovore Eagle Rock'
           type = 'rose'
           type_text = 'Ros&#233;'
+          wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+          })
+for x in vver_red_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="grid-product")
+    for product in products:
+        title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+        if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+          print()
+        else:
+          title_text = product.find("div", class_="grid-product__title").text.strip()
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
+          link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+          imagesoup = product.find('noscript')
+          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+          image = 'https:' + imageurl
+          store = 'vinovoreeaglerock'
+          store_text = 'Vinovore Eagle Rock'
+          type = 'red'
+          type_text = 'Red'
+          wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+          })
+for x in vver_white_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="grid-product")
+    for product in products:
+        title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+        if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+          print()
+        else:
+          title_text = product.find("div", class_="grid-product__title").text.strip()
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
+          link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+          imagesoup = product.find('noscript')
+          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+          image = 'https:' + imageurl
+          store = 'vinovoreeaglerock'
+          store_text = 'Vinovore Eagle Rock'
+          type = 'white'
+          type_text = 'White'
+          wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+          })
+for x in vver_sparkling_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="grid-product")
+    for product in products:
+        title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+        if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+          print()
+        else:
+          title_text = product.find("div", class_="grid-product__title").text.strip()
+          pricesoup = product.find("div", class_="grid-product__price")
+          if pricesoup.span:
+            price = 'On Sale'
+          else:
+            price = pricesoup.text.strip()
+          link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+          imagesoup = product.find('noscript')
+          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+          image = 'https:' + imageurl
+          store = 'vinovoreeaglerock'
+          store_text = 'Vinovore Eagle Rock'
+          type = 'sparkling'
+          type_text = 'Sparkling'
           wines.append({
             'Title': title,
             'Title_text': title_text,
