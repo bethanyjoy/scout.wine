@@ -273,14 +273,9 @@ for x in vver_orange_urls:
           type_text = 'Orange'
           pricesoup = product.find("div", class_="grid-product__price")
           if pricesoup.span:
-            # text = pricesoup.text
-            # span = pricesoup.find("span").text
             price = 'On Sale'
           else:
             price = pricesoup.text.strip()
-          # text = product.find("div", class_="grid-product__price").text
-          # span = product.find("span", class_="visually-hidden").text
-          # final_text = text[len(span):]
           wines.append({
             'Title': title,
             'Title_text': title_text,
