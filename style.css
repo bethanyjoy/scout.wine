@@ -548,6 +548,19 @@ article img {
 
 .orange.tag {
   background-color: var(--orange)!important;
+  top:12px!important;
+	left:12px!important;
+	position:absolute!important;
+	background-color: var(--primary-4);
+	font-size: var(--small);
+	height: 18px;
+	line-height: 18px;
+	padding: 0 6px;
+	font-family: var(--mono);
+	border-radius: 100px;
+	display: inline-block;
+	margin: 0 8px 8px 0;
+	cursor: pointer;
 }
 
 .sparkling.tag {
