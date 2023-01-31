@@ -534,23 +534,23 @@ article > .tag {
 	cursor: pointer;
 }
 
-article.red  > div.tag {
+.tag .red {
   background: var(--red)!important;
 }
 
-article.white  > div.tag{
+.tag  .white {
   background: var(--white)!important;
 }
 
-article.rose > div.tag{
+.tag .rose {
   background: var(--rose)!important;
 }
 
-article.orange > div.tag {
+.tag .orange {
   background: var(--orange)!important;
 }
 
-article.sparkling  > div.tag {
+.sparkling .tag {
   background: var(--sparkling)!important;
 }
 
