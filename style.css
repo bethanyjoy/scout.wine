@@ -518,7 +518,7 @@ article img {
 
 /* Wine card type tag styles */
 
-.tag {
+article > .tag {
 	top:12px!important;
 	left:12px!important;
 	position:absolute!important;
@@ -534,7 +534,7 @@ article img {
 	cursor: pointer;
 }
 
-.red .tag {
+article.red  > div.tag {
   background-color: var(--red)!important;
 }
 
@@ -546,7 +546,7 @@ article.rose > div.tag{
   background-color: var(--rose)!important;
 }
 
-.orange .tag {
+article.orange > div.tag {
   background-color: var(--orange)!important;
 }
 
