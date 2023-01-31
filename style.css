@@ -534,15 +534,15 @@ article > .tag {
 	cursor: pointer;
 }
 
-.tag .red {
+.red .tag {
   background: var(--red)!important;
 }
 
-.tag  .white {
+.white .tag {
   background: var(--white)!important;
 }
 
-.tag .rose {
+.rose .tag {
   background: var(--rose)!important;
 }
 
