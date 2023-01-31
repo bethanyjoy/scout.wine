@@ -36,7 +36,7 @@
         $.each(data.wine, function(i, f) {
 
           var tblRow =
-          "<article class=" + f.Type + " data-maker=" + f.Title + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+          "<article class=" + f.Type + " " + f.Title + " " + f.Store + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
             "<a href=" + f.Link + ">" +
               "<img src=" + f.Image + ">" +
             "</a>" +
@@ -58,6 +58,42 @@
     });
 
   </script>
+
+  <!-- Original/safe code below -->
+
+  <!-- <script>
+
+    $(function() {
+
+      var wine = [];
+
+      $.getJSON('data.json', function(data) {
+
+        $.each(data.wine, function(i, f) {
+
+          var tblRow =
+          "<article class=" + f.Type + " data-maker=" + f.Title + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+            "<a href=" + f.Link + ">" +
+              "<img src=" + f.Image + ">" +
+            "</a>" +
+            "<div class='tag'>" + f.Type_text + "</div>" +
+            "<div class='text'>" +
+              "<a href=" + f.Link + ">" +
+                "<p class='title'>" + f.Title_text + "</p>"+
+              "</a>" +
+              "<p class='store'>" + f.Store_text + "</p>" +
+              "<p class='price'>" + f.Price + "</p>" +
+            "</div>" +
+          "</article>"
+          $(tblRow).appendTo("#grid");
+
+        });
+
+      });
+
+    });
+
+  </script> -->
 
 
   <!-- Controls the search bar functionality -->
