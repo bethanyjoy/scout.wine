@@ -522,7 +522,7 @@ article > .tag {
 	top:12px!important;
 	left:12px!important;
 	position:absolute!important;
-	/* background-color: var(--primary-4); */
+	background-color: var(--primary-4);
 	font-size: var(--small);
 	height: 18px;
 	line-height: 18px;
@@ -534,24 +534,24 @@ article > .tag {
 	cursor: pointer;
 }
 
-.red .tag {
-  background: var(--red)!important;
+article.red  > div.tag {
+  background-color: var(--red)!important;
 }
 
-.white .tag {
-  background: var(--white)!important;
+article.white  > div.tag{
+  background-color: var(--white)!important;
 }
 
-.rose .tag {
-  background: var(--rose)!important;
+article.rose > div.tag{
+  background-color: var(--rose)!important;
 }
 
-.orange .tag {
-  background: var(--orange)!important;
+article.orange > div.tag {
+  background-color: var(--orange)!important;
 }
 
-.sparkling .tag {
-  background: var(--sparkling)!important;
+article.sparkling  > div.tag {
+  background-color: var(--sparkling)!important;
 }
 
 
