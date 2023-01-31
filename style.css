@@ -518,7 +518,7 @@ article img {
 
 /* Wine card type tag styles */
 
-article > .tag {
+.tag {
 	top:12px!important;
 	left:12px!important;
 	position:absolute!important;
