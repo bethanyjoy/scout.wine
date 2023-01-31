@@ -35,8 +35,8 @@
 
         $.each(data.wine, function(i, f) {
 
-          var classes = f.Type
-          // var classes = f.Type + f.Title + f.Store
+          // var classes = f.Type
+          var classes = f.Type + " " + f.Title + " " + f.Store
 
           var tblRow =
           "<article class=" + classes + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
