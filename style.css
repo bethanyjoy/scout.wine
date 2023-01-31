@@ -546,7 +546,7 @@ article > .tag {
   background: var(--rose)!important;
 }
 
-.tag .orange {
+.orange .tag {
   background: var(--orange)!important;
 }
 
