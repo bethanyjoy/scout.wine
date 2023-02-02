@@ -6,6 +6,24 @@ from bs4 import BeautifulSoup
 # sets up empty list to store wine data
 wines = []
 
+# list of kamp urls to parse
+kamp_red_urls = [
+"https://shopkamp.com/collections/red",
+"https://shopkamp.com/collections/chillable-reds"
+]
+kamp_white_urls = [
+"https://shopkamp.com/collections/white"
+]
+kamp_rose_urls = [
+"https://shopkamp.com/collections/rose"
+]
+kamp_orange_urls = [
+"https://shopkamp.com/collections/orange"
+]
+kamp_sparkling_urls = [
+"https://shopkamp.com/collections/sparkling"
+]
+
 # list of wine + eggs urls to parse
 eggs_red_urls = [
 "https://wineandeggs.com/collections/red-wine"
@@ -301,6 +319,40 @@ vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
 
+# code for parsing kamp urls
+for x in kamp_red_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="product--root")
+    for product in products:
+        title_name = product.find("p", class_="product--title").text.strip()
+        title_maker = product.find("div", class_="product--vendor").text.strip()
+        title_text = title_maker + " " + title_name
+        title = title_text.replace(" ", "")
+        price = product.find("span", class_="product--price money").text.strip()
+        link = 'http://shopkamp.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img")
+        if imagecheck is not None:
+          imageurl = imagesoup.find("img")['src']
+          image = 'https:' + imageurl
+        else:
+          image = 'none'
+        store = 'kamp'
+        store_text = 'Kamp'
+        type = 'red'
+        type_text = 'Red;'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+
 # code for parsing wine + eggs urls
 for x in eggs_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -311,7 +363,7 @@ for x in eggs_rose_urls:
         title_text = title_maker + " " + title_name
         title = title_text.replace(" ", "")
         price = product.find("div", class_="product-block__price").text.strip()
-        link = 'http://wineandeggs.com/' + product.find("a")['href']
+        link = 'http://wineandeggs.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecode = imagesoup.find("div", class_="product-block__image")['style']
         imageurl = imagecode.strip("background-image:url('").strip("');")
