@@ -40,6 +40,12 @@ eggs_orange_urls = [
 eggs_sparkling_urls = [
 "https://wineandeggs.com/collections/sparkling-wine"
 ]
+eggs_co_fermented_urls = [
+"https://wineandeggs.com/collections/co-fermented"
+]
+eggs_piquette_urls = [
+"https://wineandeggs.com/collections/piquette-wine"
+]
 
 # list of silverlake wine urls to parse
 sl_red_urls = [
@@ -111,6 +117,9 @@ sl_sparkling_urls = [
 "https://silverlakewine.com/collections/sparkling?page=6",
 "https://silverlakewine.com/collections/sparkling?page=7",
 "https://silverlakewine.com/collections/sparkling?page=8"
+]
+sl_co_fermented_urls = [
+"https://silverlakewine.com/collections/fruit-wine"
 ]
 
 # list of highland park wine urls to parse
@@ -663,6 +672,36 @@ for x in hlp_sparkling_urls:
 
 
 # code for parsing silverlake wine urls
+for x in sl_co_fermented_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://silverlakewine.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'silverlake'
+        store_text = 'Silver Lake Wine'
+        type = 'cofermented'
+        type_text = 'Co-Fermented'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
 for x in sl_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="prod-block")
@@ -967,6 +1006,39 @@ for x in er_sparkling_urls:
         })
 
 # code for parsing wine + eggs urls
+for x in eggs_co_fermented_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="product-block")
+    for product in products:
+        title_name = product.find("h3", class_="product-block__title").text.strip()
+        title_maker = product.find("div", class_="italicized-text").text.strip()
+        title_text = title_maker + " " + title_name
+        title = title_text.replace(" ", "")
+        price = product.find("div", class_="product-block__price").text.strip()
+        link = 'http://wineandeggs.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecode = imagesoup.find("div", class_="product-block__image")['style']
+        if imagecode is not None:
+            imageurl = imagecode.strip("background-image:url('").strip("');")
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        image = 'https:' + imageurl
+        store = 'wineandeggs'
+        store_text = 'Wine + Eggs'
+        type = 'cofermented'
+        type_text = 'Co-Fermented'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
 for x in eggs_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
     products = soup.find_all("div", class_="product-block")
@@ -1121,6 +1193,39 @@ for x in eggs_sparkling_urls:
         store_text = 'Wine + Eggs'
         type = 'sparkling'
         type_text = 'Sparkling'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+for x in eggs_piquette_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="product-block")
+    for product in products:
+        title_name = product.find("h3", class_="product-block__title").text.strip()
+        title_maker = product.find("div", class_="italicized-text").text.strip()
+        title_text = title_maker + " " + title_name
+        title = title_text.replace(" ", "")
+        price = product.find("div", class_="product-block__price").text.strip()
+        link = 'http://wineandeggs.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecode = imagesoup.find("div", class_="product-block__image")['style']
+        if imagecode is not None:
+            imageurl = imagecode.strip("background-image:url('").strip("');")
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        image = 'https:' + imageurl
+        store = 'wineandeggs'
+        store_text = 'Wine + Eggs'
+        type = 'piquette'
+        type_text = 'Piquette'
         wines.append({
             'Title': title,
             'Title_text': title_text,

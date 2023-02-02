@@ -57,12 +57,16 @@ html { font-family: 'Inter', sans-serif; }
 	--rose: rgba(255, 185, 185, 1);
 	--orange: rgba(243, 206, 134, 1);
 	--sparkling: rgba(168, 207, 224, 1);
+  --piquette: rgba(212, 188, 232, 1);
+  --co-fermented: rgba(164, 219, 173, 1);
 
 	--red-hover: rgba(255, 166, 138, 0.5);
 	--white-hover: rgba(220, 229, 197, 0.5);
 	--rose-hover: rgba(255, 185, 185, 0.5);
 	--orange-hover: rgba(243, 206, 134, 0.5);
 	--sparkling-hover: rgba(168, 207, 224, 0.5);
+  --piquette-hover: rgba(212, 188, 232, 0.5);
+  --co-fermented-hover: rgba(164, 219, 173, .5);
 
 	/*	Font stacks */
 	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -306,6 +310,15 @@ article.orange > div.tag {
 article.sparkling  > div.tag {
   background-color: var(--sparkling)!important;
 }
+
+article.piquette  > div.tag {
+  background-color: var(--piquette)!important;
+}
+
+article.co-fermented  > div.tag {
+  background-color: var(--co-fermented)!important;
+}
+
 
 
 
@@ -580,7 +593,12 @@ ul#typeFilter li input[value="white"]:checked + label {
 ul#typeFilter li input[value="sparkling"]:checked + label {
   background-color: var(--sparkling);
 }
-
+ul#typeFilter li input[value="piquette"]:checked + label {
+  background-color: var(--piquette);
+}
+ul#typeFilter li input[value="co-fermented"]:checked + label {
+  background-color: var(--co-fermented);
+}
 
 /* Scroll to top button */
 
@@ -828,6 +846,12 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
 	}
 	ul#typeFilter li input[value="sparkling"]:hover + label {
 	  background-color: var(--sparkling-hover);
+	}
+  ul#typeFilter li input[value="piquette"]:hover + label {
+	  background-color: var(--piquette-hover);
+	}
+  ul#typeFilter li input[value="co-fermented"]:hover + label {
+	  background-color: var(--co-fermented-hover);
 	}
 
 }
