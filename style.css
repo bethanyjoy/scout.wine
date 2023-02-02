@@ -312,11 +312,16 @@ article.sparkling  > div.tag {
 
 /* Style the search bar */
 
+.mobile-only {
+  display: none;
+}
+
 #searchWrapper {
   position: relative;
   display: flex;
   min-width: 100px;
-	margin-bottom:32px;
+	margin-bottom: 24px;
+  margin-top: 24px;
 }
 
 #search {
@@ -640,6 +645,14 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
 	time, mark, audio, video, body, input {
 		font-size: var(--body-mobile);
 	}
+
+  .mobile-only {
+    display: block;
+  }
+
+  .mobile-hidden {
+    display: hidden;
+  }
 
   #sidebar {
 		width: calc(100% - 16px)!important;
