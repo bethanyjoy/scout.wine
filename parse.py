@@ -6,15 +6,24 @@ from bs4 import BeautifulSoup
 # sets up empty list to store wine data
 wines = []
 
-# list of silverlake wine urls to parse
-sl_orange_urls = [
-"https://silverlakewine.com/collections/orange",
-"https://silverlakewine.com/collections/orange?page=2",
-"https://silverlakewine.com/collections/orange?page=3",
-"https://silverlakewine.com/collections/orange?page=4",
-"https://silverlakewine.com/collections/orange?page=5",
-"https://silverlakewine.com/collections/orange?page=6"
+# list of wine + eggs urls to parse
+eggs_red_urls = [
+"https://wineandeggs.com/collections/red-wine"
 ]
+eggs_white_urls = [
+"https://wineandeggs.com/collections/white-wine"
+]
+eggs_rose_urls = [
+"https://wineandeggs.com/collections/wine-rose"
+]
+eggs_orange_urls = [
+"https://wineandeggs.com/collections/skin-contact-wine"
+]
+eggs_sparkling_urls = [
+"https://wineandeggs.com/collections/sparkling-wine"
+]
+
+# list of silverlake wine urls to parse
 sl_red_urls = [
 "https://silverlakewine.com/collections/red",
 "https://silverlakewine.com/collections/red?page=2",
@@ -43,24 +52,6 @@ sl_red_urls = [
 "https://silverlakewine.com/collections/red?page=25",
 "https://silverlakewine.com/collections/red?page=26"
 ]
-sl_rose_urls = [
-"https://silverlakewine.com/collections/rose",
-"https://silverlakewine.com/collections/rose?page=2",
-"https://silverlakewine.com/collections/rose?page=3",
-"https://silverlakewine.com/collections/rose?page=4",
-"https://silverlakewine.com/collections/rose?page=5",
-"https://silverlakewine.com/collections/rose?page=6"
-]
-sl_sparkling_urls = [
-"https://silverlakewine.com/collections/sparkling",
-"https://silverlakewine.com/collections/sparkling?page=2",
-"https://silverlakewine.com/collections/sparkling?page=3",
-"https://silverlakewine.com/collections/sparkling?page=4",
-"https://silverlakewine.com/collections/sparkling?page=5",
-"https://silverlakewine.com/collections/sparkling?page=6",
-"https://silverlakewine.com/collections/sparkling?page=7",
-"https://silverlakewine.com/collections/sparkling?page=8"
-]
 sl_white_urls = [
 "https://silverlakewine.com/collections/white",
 "https://silverlakewine.com/collections/white?page=2",
@@ -77,14 +68,34 @@ sl_white_urls = [
 "https://silverlakewine.com/collections/white?page=13",
 "https://silverlakewine.com/collections/white?page=14"
 ]
+sl_rose_urls = [
+"https://silverlakewine.com/collections/rose",
+"https://silverlakewine.com/collections/rose?page=2",
+"https://silverlakewine.com/collections/rose?page=3",
+"https://silverlakewine.com/collections/rose?page=4",
+"https://silverlakewine.com/collections/rose?page=5",
+"https://silverlakewine.com/collections/rose?page=6"
+]
+sl_orange_urls = [
+"https://silverlakewine.com/collections/orange",
+"https://silverlakewine.com/collections/orange?page=2",
+"https://silverlakewine.com/collections/orange?page=3",
+"https://silverlakewine.com/collections/orange?page=4",
+"https://silverlakewine.com/collections/orange?page=5",
+"https://silverlakewine.com/collections/orange?page=6"
+]
+sl_sparkling_urls = [
+"https://silverlakewine.com/collections/sparkling",
+"https://silverlakewine.com/collections/sparkling?page=2",
+"https://silverlakewine.com/collections/sparkling?page=3",
+"https://silverlakewine.com/collections/sparkling?page=4",
+"https://silverlakewine.com/collections/sparkling?page=5",
+"https://silverlakewine.com/collections/sparkling?page=6",
+"https://silverlakewine.com/collections/sparkling?page=7",
+"https://silverlakewine.com/collections/sparkling?page=8"
+]
 
 # list of highland park wine urls to parse
-hlp_orange_urls = [
-"https://www.highlandparkwine.com/collections/orange-wine",
-"https://www.highlandparkwine.com/collections/orange-wine?page=2",
-"https://www.highlandparkwine.com/collections/orange-wine?page=3",
-"https://www.highlandparkwine.com/collections/orange-wine?page=4"
-]
 hlp_red_urls = [
 "https://www.highlandparkwine.com/collections/usa-red-wines",
 "https://www.highlandparkwine.com/collections/usa-red-wines?page=2",
@@ -116,21 +127,6 @@ hlp_red_urls = [
 "https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=3",
 "https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=4"
 ]
-hlp_rose_urls = [
-"https://www.highlandparkwine.com/collections/rose",
-"https://www.highlandparkwine.com/collections/rose?page=2",
-"https://www.highlandparkwine.com/collections/rose?page=3",
-"https://www.highlandparkwine.com/collections/rose?page=4",
-"https://www.highlandparkwine.com/collections/rose?page=5"
-]
-hlp_sparkling_urls = [
-"https://www.highlandparkwine.com/collections/sparkling-wine",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=2",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=3",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=4",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=5",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=6"
-]
 hlp_white_urls = [
 "https://www.highlandparkwine.com/collections/white-wines-from-the-usa",
 "https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=2",
@@ -156,15 +152,29 @@ hlp_white_urls = [
 "https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere",
 "https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere?page=2"
 ]
+hlp_rose_urls = [
+"https://www.highlandparkwine.com/collections/rose",
+"https://www.highlandparkwine.com/collections/rose?page=2",
+"https://www.highlandparkwine.com/collections/rose?page=3",
+"https://www.highlandparkwine.com/collections/rose?page=4",
+"https://www.highlandparkwine.com/collections/rose?page=5"
+]
+hlp_orange_urls = [
+"https://www.highlandparkwine.com/collections/orange-wine",
+"https://www.highlandparkwine.com/collections/orange-wine?page=2",
+"https://www.highlandparkwine.com/collections/orange-wine?page=3",
+"https://www.highlandparkwine.com/collections/orange-wine?page=4"
+]
+hlp_sparkling_urls = [
+"https://www.highlandparkwine.com/collections/sparkling-wine",
+"https://www.highlandparkwine.com/collections/sparkling-wine?page=2",
+"https://www.highlandparkwine.com/collections/sparkling-wine?page=3",
+"https://www.highlandparkwine.com/collections/sparkling-wine?page=4",
+"https://www.highlandparkwine.com/collections/sparkling-wine?page=5",
+"https://www.highlandparkwine.com/collections/sparkling-wine?page=6"
+]
 
 # list of everson royce urls to parse
-er_orange_urls = [
-"https://www.eversonroyce.com/collections/orange-wine",
-"https://www.eversonroyce.com/collections/orange-wine?page=2",
-"https://www.eversonroyce.com/collections/orange-wine?page=3",
-"https://www.eversonroyce.com/collections/orange-wine?page=4",
-"https://www.eversonroyce.com/collections/orange-wine?page=5",
-]
 er_red_urls = [
 "https://www.eversonroyce.com/collections/red-wines-from-the-usa",
 "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
@@ -206,20 +216,6 @@ er_red_urls = [
 "https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
 "https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2"
 ]
-er_rose_urls = [
-"https://www.eversonroyce.com/collections/rose",
-"https://www.eversonroyce.com/collections/rose?page=2",
-"https://www.eversonroyce.com/collections/rose?page=3",
-"https://www.eversonroyce.com/collections/rose?page=4"
-]
-er_sparkling_urls = [
-"https://www.eversonroyce.com/collections/sparklin-wine",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
-]
 er_white_urls = [
 "https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
 "https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
@@ -243,20 +239,29 @@ er_white_urls = [
 "https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
 "https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2"
 ]
+er_rose_urls = [
+"https://www.eversonroyce.com/collections/rose",
+"https://www.eversonroyce.com/collections/rose?page=2",
+"https://www.eversonroyce.com/collections/rose?page=3",
+"https://www.eversonroyce.com/collections/rose?page=4"
+]
+er_orange_urls = [
+"https://www.eversonroyce.com/collections/orange-wine",
+"https://www.eversonroyce.com/collections/orange-wine?page=2",
+"https://www.eversonroyce.com/collections/orange-wine?page=3",
+"https://www.eversonroyce.com/collections/orange-wine?page=4",
+"https://www.eversonroyce.com/collections/orange-wine?page=5",
+]
+er_sparkling_urls = [
+"https://www.eversonroyce.com/collections/sparklin-wine",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
+]
 
 # list of vinovore eagle rock urls to parse
-vver_orange_urls = [
-"https://vinovoreeaglerock.com/collections/orange",
-"https://vinovoreeaglerock.com/collections/orange?page=2",
-"https://vinovoreeaglerock.com/collections/orange?page=3",
-"https://vinovoreeaglerock.com/collections/orange?page=4"
-]
-vver_rose_urls = [
-"https://vinovoreeaglerock.com/collections/rose",
-"https://vinovoreeaglerock.com/collections/rose?page=2",
-"https://vinovoreeaglerock.com/collections/rose?page=3",
-"https://vinovoreeaglerock.com/collections/rose?page=4"
-]
 vver_red_urls = [
 "https://vinovoreeaglerock.com/collections/red",
 "https://vinovoreeaglerock.com/collections/red?page=2",
@@ -275,6 +280,18 @@ vver_white_urls = [
 "https://vinovoreeaglerock.com/collections/white?page=5",
 "https://vinovoreeaglerock.com/collections/white?page=6",
 ]
+vver_rose_urls = [
+"https://vinovoreeaglerock.com/collections/rose",
+"https://vinovoreeaglerock.com/collections/rose?page=2",
+"https://vinovoreeaglerock.com/collections/rose?page=3",
+"https://vinovoreeaglerock.com/collections/rose?page=4"
+]
+vver_orange_urls = [
+"https://vinovoreeaglerock.com/collections/orange",
+"https://vinovoreeaglerock.com/collections/orange?page=2",
+"https://vinovoreeaglerock.com/collections/orange?page=3",
+"https://vinovoreeaglerock.com/collections/orange?page=4"
+]
 vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling",
 "https://vinovoreeaglerock.com/collections/sparkling?page=2",
@@ -284,12 +301,34 @@ vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
 
-# list of wine + eggs urls to parse
-eggs_orange_urls = [
-"https://wineandeggs.com/collections/skin-contact-wine",
-]
-
-
+# code for parsing wine + eggs urls
+for x in eggs_rose_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="product-block")
+    for product in products:
+        title = product.find("h3", class_="product-block__title").text.replace(" ", "")
+        title_text = product.find("h3", class_="product-block__title").text.strip()
+        price = product.find("div", class_="product-block__price").text.strip()
+        link = 'http://wineandeggs.com/' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecode = imagesoup.find("div", class_="product-block__image")['style']
+        imageurl = imagecode.strip("background-image:url('").strip("');")
+        image = 'https:' + imageurl
+        store = 'wineandeggs'
+        store_text = 'Wine + Eggs'
+        type = 'rose'
+        type_text = 'Ros&#233;'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
 
 # code for parsing vinovore eagle rock urls
 for x in vver_orange_urls:
