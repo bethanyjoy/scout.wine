@@ -315,7 +315,7 @@ article.piquette  > div.tag {
   background-color: var(--piquette)!important;
 }
 
-article.co-fermented  > div.tag {
+article.cofermented  > div.tag {
   background-color: var(--co-fermented)!important;
 }
 
@@ -596,7 +596,7 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
 ul#typeFilter li input[value="piquette"]:checked + label {
   background-color: var(--piquette);
 }
-ul#typeFilter li input[value="co-fermented"]:checked + label {
+ul#typeFilter li input[value="cofermented"]:checked + label {
   background-color: var(--co-fermented);
 }
 
@@ -850,7 +850,7 @@ ul#typeFilter li input[value="co-fermented"]:checked + label {
   ul#typeFilter li input[value="piquette"]:hover + label {
 	  background-color: var(--piquette-hover);
 	}
-  ul#typeFilter li input[value="co-fermented"]:hover + label {
+  ul#typeFilter li input[value="cofermented"]:hover + label {
 	  background-color: var(--co-fermented-hover);
 	}
 
