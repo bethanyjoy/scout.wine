@@ -65,12 +65,10 @@ html { font-family: 'Inter', sans-serif; }
 	--sparkling-hover: rgba(168, 207, 224, 0.5);
 
 	/*	Font stacks */
-	--regular: 'Relative-Book';
-  --medium: 'Relative-Medium';
-	--bold: 'Relative-Bold';
-	--mono: 'Relative-12Pitch';
-	/* --regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
-
+	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--bold: 'Relative-Bold', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--mono: 'Relative-12Pitch', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 	/*	Font size */
 	--body: 16px;
@@ -135,253 +133,6 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-
-
-
-/* Responsive style rules */
-
-@media only screen and (max-width: 800px) {
-
-	html, body, div, span, applet, object, iframe,
-	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-	a, abbr, acronym, address, big, cite, code,
-	del, dfn, em, img, ins, kbd, q, s, samp,
-	small, strike, strong, sub, sup, tt, var,
-	b, u, i, center,
-	dl, dt, dd, ol, ul, li,
-	fieldset, form, label, legend,
-	table, caption, tbody, tfoot, thead, tr, th, td,
-	article, aside, canvas, details, embed,
-	figure, figcaption, footer, header, hgroup,
-	menu, nav, output, ruby, section, summary,
-	time, mark, audio, video, body, input {
-		font-size: var(--body-mobile);
-	}
-
-  #sidebar {
-		width: calc(100% - 16px)!important;
-		padding: 0px 16px 16px !important;
-		/* overflow-y: hidden !important; */
-		z-index: 2000 !important;
-		display: none;
-		margin-top: 0px;
-  }
-
-	#mainContent {
-		margin: 0px 16px 32px !important;
-	}
-
-	#grid {
-		margin-top: 72px !important;
-		grid-gap: 16px !important;
-	}
-
-	#grid > article img {
-		height: 40vw !important;
-	}
-
-	article {
-		padding-bottom: 1rem !important;
-		margin-bottom: 0px !important;
-	}
-
-	#navWrapper {
-		height: 72px !important;
-		background-color: var(--background) !important;
-		position:fixed !important;
-		z-index:1000 !important;
-		width:100% !important;
-		top:0px !important;
-	}
-
-	#topButton {
-	  width: 64px !important;
-	  height: 64px !important;
-		bottom: 50px !important;
-		right: 50% !important;
-		margin-right: -32px!important; /* Negative half of width. */
-	}
-
-	#topButton::after {
-	  font-size: 2.5rem !important;
-	  line-height: 64px !important;
-	}
-
-	.searchIcon {
-	  top: 12px !important;
-		left: 14px !important;
-	}
-
-	#searchWrapper {
-		top:0px;
-		position:fixed !important;
-		margin-top:16px!important;
-		width: calc(100% - 80px) !important;
-		height:40px;
-	}
-
-
-	/* Style the hamburger menu */
-	a.navButton {
-	  display: block;
-	  position: fixed;
-	  right: 16px;
-	  top: 16px;
-		height:auto;
-		width:auto;
-		padding:4px;
-	}
-
-	/* Add a grey background color on mouse-over */
-	a:hover {
-	  color: black;
-	}
-
-	/* Style the active link (or home/logo) */
-	.active {
-	  color: white;
-	}
-
-	#logo {
-		display:none;
-	}
-
-	#tagline {
-		display:none;
-	}
-
-	#navWrapper svg {
-		display:block!important;
-	}
-
-	#sidebar svg {
-		display:block!important;
-	}
-
-	#sidebar h1 {
-		display:block!important;
-	}
-
-	ul#typeFilter li label {
-		padding: 9px 16px !important;
-	}
-
-	.container {
-		line-height: 24px !important;
-		padding-left: 36px !important;
-	}
-
-	.checkmark {
-		height: 24px !important;
-		width: 24px !important;
-	}
-
-	.container input {
-		line-height: 24px !important;
-	}
-
-	.container .checkmark:after {
-		left: 8px !important;
-		top: 2px !important;
-		width: 6px !important;
-		height: 12px !important;
-		border-width: 0 2px 2px 0 !important;
-	}
-
-	article > .tag {
-		padding: 0 8px !important;
-		height: 20px !important;
-		line-height:20px !important;
-	}
-
-	#search {
-		  padding: 8px 38px 8px 38px !important;
-	}
-
-	#resultsButton {
-		display:block!important;
-	}
-
-
-	#filters {
-		width: calc(100% - 72px);
-	}
-
-	#credits {
-		margin-bottom:100px!important;
-	}
-
-
-}
-
-
-
-@media (pointer:fine) {
-
-	ul#typeFilter li input[value="orange"]:hover + label {
-	  background-color: var(--orange-hover);
-	}
-	ul#typeFilter li input[value="rose"]:hover + label {
-	  background-color: var(--rose-hover);
-	}
-	ul#typeFilter li input[value="red"]:hover + label {
-	  background-color: var(--red-hover);
-	}
-	ul#typeFilter li input[value="white"]:hover + label {
-	  background-color: var(--white-hover);
-	}
-	ul#typeFilter li input[value="sparkling"]:hover + label {
-	  background-color: var(--sparkling-hover);
-	}
-
-}
-
-
-
-/* @media only screen and (max-devide-width: 400px) and (-webkit-device-pixel-ratio: 3){
-	.sidebar {
-    display:none!important;
-  }
-	.content {
-		margin-left: 16px!important;
-		margin-right: 16px!important;
-		margin-top: 16px!important;
-		grid-gap: 16px!important;
-		margin-bottom: 32px!important;
-	}
-	.content > article img {
-	height: 35vw !important;
-	}
-
-	article {
-		padding-bottom:8px!important;
-		margin-bottom:0px!important;
-	}
-}
-
-@media only screen and (device-width: 375px)
-    and (device-height: 812px)
-    and (-webkit-device-pixel-ratio: 3){
-			.sidebar {
-		    display:none!important;
-		  }
-			.content {
-				margin-left: 16px!important;
-				margin-right: 16px!important;
-				margin-top: 16px!important;
-				grid-gap: 16px!important;
-				margin-bottom: 32px!important;
-			}
-			.content > article img {
-			height: 35vw !important;
-			}
-
-			article {
-				padding-bottom:8px!important;
-				margin-bottom:0px!important;
-			}
-} */
 
 
 
@@ -863,4 +614,205 @@ ul#typeFilter li input[value="sparkling"]:checked + label {
 #topButton.show {
   opacity: 1;
   visibility: visible;
+}
+
+
+
+
+/* Responsive style rules */
+
+@media only screen and (max-width: 800px) {
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed,
+	figure, figcaption, footer, header, hgroup,
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video, body, input {
+		font-size: var(--body-mobile);
+	}
+
+  #sidebar {
+		width: calc(100% - 16px)!important;
+		padding: 0px 16px 16px !important;
+		/* overflow-y: hidden !important; */
+		z-index: 2000 !important;
+		display: none;
+		margin-top: 0px;
+  }
+
+	#mainContent {
+		margin: 0px 16px 32px !important;
+	}
+
+	#grid {
+		margin-top: 72px !important;
+		grid-gap: 16px !important;
+	}
+
+	#grid > article img {
+		height: 40vw !important;
+	}
+
+	article {
+		padding-bottom: 1rem !important;
+		margin-bottom: 0px !important;
+	}
+
+	#navWrapper {
+		height: 72px !important;
+		background-color: var(--background) !important;
+		position:fixed !important;
+		z-index:1000 !important;
+		width:100% !important;
+		top:0px !important;
+	}
+
+	#topButton {
+	  width: 64px !important;
+	  height: 64px !important;
+		bottom: 50px !important;
+		right: 50% !important;
+		margin-right: -32px!important; /* Negative half of width. */
+	}
+
+	#topButton::after {
+	  font-size: 2.5rem !important;
+	  line-height: 64px !important;
+	}
+
+	.searchIcon {
+	  top: 12px !important;
+		left: 14px !important;
+	}
+
+	#searchWrapper {
+		top:0px;
+		position:fixed !important;
+		margin-top:16px!important;
+		width: calc(100% - 80px) !important;
+		height:40px;
+	}
+
+
+	/* Style the hamburger menu */
+	a.navButton {
+	  display: block;
+	  position: fixed;
+	  right: 16px;
+	  top: 16px;
+		height:auto;
+		width:auto;
+		padding:4px;
+	}
+
+	/* Add a grey background color on mouse-over */
+	a:hover {
+	  color: black;
+	}
+
+	/* Style the active link (or home/logo) */
+	.active {
+	  color: white;
+	}
+
+	#logo {
+		display:none;
+	}
+
+	#tagline {
+		display:none;
+	}
+
+	#navWrapper svg {
+		display:block!important;
+	}
+
+	#sidebar svg {
+		display:block!important;
+	}
+
+	#sidebar h1 {
+		display:block!important;
+	}
+
+	ul#typeFilter li label {
+		padding: 9px 16px !important;
+	}
+
+	.container {
+		line-height: 24px !important;
+		padding-left: 36px !important;
+	}
+
+	.checkmark {
+		height: 24px !important;
+		width: 24px !important;
+	}
+
+	.container input {
+		line-height: 24px !important;
+	}
+
+	.container .checkmark:after {
+		left: 8px !important;
+		top: 2px !important;
+		width: 6px !important;
+		height: 12px !important;
+		border-width: 0 2px 2px 0 !important;
+	}
+
+	article > .tag {
+		padding: 0 8px !important;
+		height: 20px !important;
+		line-height:20px !important;
+	}
+
+	#search {
+		  padding: 8px 38px 8px 38px !important;
+	}
+
+	#resultsButton {
+		display:block!important;
+	}
+
+
+	#filters {
+		width: calc(100% - 72px);
+	}
+
+	#credits {
+		margin-bottom:100px!important;
+	}
+
+
+}
+
+
+
+@media (pointer:fine) {
+
+	ul#typeFilter li input[value="orange"]:hover + label {
+	  background-color: var(--orange-hover);
+	}
+	ul#typeFilter li input[value="rose"]:hover + label {
+	  background-color: var(--rose-hover);
+	}
+	ul#typeFilter li input[value="red"]:hover + label {
+	  background-color: var(--red-hover);
+	}
+	ul#typeFilter li input[value="white"]:hover + label {
+	  background-color: var(--white-hover);
+	}
+	ul#typeFilter li input[value="sparkling"]:hover + label {
+	  background-color: var(--sparkling-hover);
+	}
+
 }
