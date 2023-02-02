@@ -214,8 +214,8 @@ a:visited {
 	width: auto;
 	margin-left: 320px;
 	margin-right: 40px;
-	margin-top:32px;
-	margin-bottom:61px;
+	margin-top: 40px;
+	margin-bottom: 61px;
 }
 
 #grid {
@@ -399,8 +399,8 @@ input {
   overflow-x: hidden;
 	overflow-y: auto;
 	float: left;
-	padding-left:40px;
-	padding-right:40px;
+	padding-left: 40px;
+	padding-right: 40px;
 	background-color: var(--background);
 }
 
@@ -408,7 +408,7 @@ input {
 	max-width:240px;
 	/* height:31px; */
 	margin-bottom:24px;
-	margin-top:32px;
+	margin-top: 48px;
 }
 
 #tagline {
