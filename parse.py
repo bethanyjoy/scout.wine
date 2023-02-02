@@ -336,7 +336,7 @@ for x in kamp_orange_urls:
           imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
-          image = 'none'
+          image = 'assets/placeholder.png'
         store = 'kamp'
         store_text = 'Kamp'
         type = 'orange'
@@ -368,7 +368,7 @@ for x in kamp_rose_urls:
           imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
-          image = 'none'
+          image = 'assets/placeholder.png'
         store = 'kamp'
         store_text = 'Kamp'
         type = 'rose'
@@ -400,7 +400,7 @@ for x in kamp_red_urls:
           imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
-          image = 'none'
+          image = 'assets/placeholder.png'
         store = 'kamp'
         store_text = 'Kamp'
         type = 'red'
@@ -432,7 +432,7 @@ for x in kamp_white_urls:
           imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
-          image = 'none'
+          image = 'assets/placeholder.png'
         store = 'kamp'
         store_text = 'Kamp'
         type = 'white'
@@ -464,7 +464,7 @@ for x in kamp_sparkling_urls:
           imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
-          image = 'none'
+          image = 'assets/placeholder.png'
         store = 'kamp'
         store_text = 'Kamp'
         type = 'sparkling'
@@ -498,7 +498,7 @@ for x in eggs_orange_urls:
             imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         image = 'https:' + imageurl
         store = 'wineandeggs'
         store_text = 'Wine + Eggs'
@@ -531,7 +531,7 @@ for x in eggs_rose_urls:
             imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         image = 'https:' + imageurl
         store = 'wineandeggs'
         store_text = 'Wine + Eggs'
@@ -564,7 +564,7 @@ for x in eggs_red_urls:
             imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         image = 'https:' + imageurl
         store = 'wineandeggs'
         store_text = 'Wine + Eggs'
@@ -597,7 +597,7 @@ for x in eggs_white_urls:
             imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         image = 'https:' + imageurl
         store = 'wineandeggs'
         store_text = 'Wine + Eggs'
@@ -630,7 +630,7 @@ for x in eggs_sparkling_urls:
             imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         image = 'https:' + imageurl
         store = 'wineandeggs'
         store_text = 'Wine + Eggs'
@@ -670,7 +670,7 @@ for x in vver_orange_urls:
               imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
-              image = 'none'
+              image = 'assets/placeholder.png'
           store = 'vinovoreeaglerock'
           store_text = 'Vinovore Eagle Rock'
           type = 'orange'
@@ -707,7 +707,7 @@ for x in vver_rose_urls:
               imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
-              image = 'none'
+              image = 'assets/placeholder.png'
           store = 'vinovoreeaglerock'
           store_text = 'Vinovore Eagle Rock'
           type = 'rose'
@@ -744,7 +744,7 @@ for x in vver_red_urls:
               imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
-              image = 'none'
+              image = 'assets/placeholder.png'
           store = 'vinovoreeaglerock'
           store_text = 'Vinovore Eagle Rock'
           type = 'red'
@@ -781,7 +781,7 @@ for x in vver_white_urls:
               imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
-              image = 'none'
+              image = 'assets/placeholder.png'
           store = 'vinovoreeaglerock'
           store_text = 'Vinovore Eagle Rock'
           type = 'white'
@@ -818,7 +818,7 @@ for x in vver_sparkling_urls:
               imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
-              image = 'none'
+              image = 'assets/placeholder.png'
           store = 'vinovoreeaglerock'
           store_text = 'Vinovore Eagle Rock'
           type = 'sparkling'
@@ -851,7 +851,7 @@ for x in hlp_orange_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'orange'
@@ -881,7 +881,7 @@ for x in hlp_rose_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'rose'
@@ -911,7 +911,7 @@ for x in hlp_red_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'red'
@@ -941,7 +941,7 @@ for x in hlp_white_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'white'
@@ -971,7 +971,7 @@ for x in hlp_sparkling_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'highlandpark'
         store_text = 'Highland Park Wine'
         type = 'sparkling'
@@ -1005,7 +1005,7 @@ for x in sl_orange_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'orange'
@@ -1035,7 +1035,7 @@ for x in sl_rose_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'rose'
@@ -1065,7 +1065,7 @@ for x in sl_red_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'red'
@@ -1095,7 +1095,7 @@ for x in sl_white_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'white'
@@ -1125,7 +1125,7 @@ for x in sl_sparkling_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'silverlake'
         store_text = 'Silver Lake Wine'
         type = 'sparkling'
@@ -1157,7 +1157,7 @@ for x in er_orange_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'orange'
@@ -1187,7 +1187,7 @@ for x in er_rose_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'rose'
@@ -1217,7 +1217,7 @@ for x in er_red_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'red'
@@ -1247,7 +1247,7 @@ for x in er_white_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'white'
@@ -1277,7 +1277,7 @@ for x in er_sparkling_urls:
             imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
-            image = 'none'
+            image = 'assets/placeholder.png'
         store = 'eversonroyce'
         store_text = 'Everson Royce'
         type = 'sparkling'
