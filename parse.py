@@ -332,8 +332,8 @@ for x in kamp_red_urls:
         link = 'http://shopkamp.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img")
-        imageurl = imagesoup.find("img")['src']
         if imagecheck is not None:
+          imageurl = imagesoup.find("img")['src']
           image = 'https:' + imageurl
         else:
           image = 'none'
@@ -366,8 +366,8 @@ for x in eggs_rose_urls:
         link = 'http://wineandeggs.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecode = imagesoup.find("div", class_="product-block__image")['style']
-        imageurl = imagecode.strip("background-image:url('").strip("');")
         if imagecode is not None:
+            imageurl = imagecode.strip("background-image:url('").strip("');")
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -406,8 +406,8 @@ for x in vver_orange_urls:
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imagecheck = imagesoup.find("img", class_="grid-product__image")
-          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
           if imagecheck is not None:
+              imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
               image = 'none'
@@ -443,8 +443,8 @@ for x in vver_rose_urls:
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imagecheck = imagesoup.find("img", class_="grid-product__image")
-          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
           if imagecheck is not None:
+              imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
               image = 'none'
@@ -480,8 +480,8 @@ for x in vver_red_urls:
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imagecheck = imagesoup.find("img", class_="grid-product__image")
-          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
           if imagecheck is not None:
+              imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
               image = 'none'
@@ -517,8 +517,8 @@ for x in vver_white_urls:
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imagecheck = imagesoup.find("img", class_="grid-product__image")
-          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
           if imagecheck is not None:
+              imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
               image = 'none'
@@ -554,8 +554,8 @@ for x in vver_sparkling_urls:
           link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
           imagesoup = product.find('noscript')
           imagecheck = imagesoup.find("img", class_="grid-product__image")
-          imageurl = imagesoup.find("img", class_="grid-product__image")['src']
           if imagecheck is not None:
+              imageurl = imagesoup.find("img", class_="grid-product__image")['src']
               image = 'https:' + imageurl
           else:
               image = 'none'
@@ -587,8 +587,8 @@ for x in hlp_orange_urls:
         link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -617,8 +617,8 @@ for x in hlp_rose_urls:
         link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -647,8 +647,8 @@ for x in hlp_red_urls:
         link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -677,8 +677,8 @@ for x in hlp_white_urls:
         link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -707,8 +707,8 @@ for x in hlp_sparkling_urls:
         link = 'http://highlandparkwine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -741,8 +741,8 @@ for x in sl_orange_urls:
         link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -771,8 +771,8 @@ for x in sl_rose_urls:
         link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -801,8 +801,8 @@ for x in sl_red_urls:
         link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -831,8 +831,8 @@ for x in sl_white_urls:
         link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -861,8 +861,8 @@ for x in sl_sparkling_urls:
         link = 'http://silverlakewine.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -893,8 +893,8 @@ for x in er_orange_urls:
         link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -923,8 +923,8 @@ for x in er_rose_urls:
         link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -953,8 +953,8 @@ for x in er_red_urls:
         link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -983,8 +983,8 @@ for x in er_white_urls:
         link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
@@ -1013,8 +1013,8 @@ for x in er_sparkling_urls:
         link = 'http://eversonroyce.com' + product.find("a")['href']
         imagesoup = product.find('noscript')
         imagecheck = imagesoup.find("img", class_="rimage__image")
-        imageurl = imagesoup.find("img", class_="rimage__image")['src']
         if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
             image = 'https:' + imageurl
         else:
             image = 'none'
