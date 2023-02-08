@@ -556,6 +556,9 @@ nav {
 	article img {
 		height: 40vw !important;
 	}
+	article {
+		padding-bottom: var(--space-2);
+	}
 }
 
 @media only screen and (min-width: 800px) {
