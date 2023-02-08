@@ -1,0 +1,571 @@
+:root {
+
+	/*	Core colors */
+
+	--background: rgba(241, 255, 219, 1);
+	--primary: rgba(31, 121, 204, 1);
+	--primary-2: rgba(31, 121, 204, 0.7);
+	--primary-3: rgba(31, 121, 204, 0.4);
+	--primary-4: rgba(31, 121, 204, 0.12);
+
+	/*	Tag colors */
+
+	--red: rgba(255, 166, 138, 1);
+	--white: rgba(220, 229, 197, 1);
+	--rose: rgba(255, 185, 185, 1);
+	--orange: rgba(243, 206, 134, 1);
+	--sparkling: rgba(168, 207, 224, 1);
+  --piquette: rgba(212, 188, 232, 1);
+  --co-fermented: rgba(164, 219, 173, 1);
+
+	--red-hover: rgba(255, 166, 138, 0.5);
+	--white-hover: rgba(220, 229, 197, 0.5);
+	--rose-hover: rgba(255, 185, 185, 0.5);
+	--orange-hover: rgba(243, 206, 134, 0.5);
+	--sparkling-hover: rgba(168, 207, 224, 0.5);
+  --piquette-hover: rgba(212, 188, 232, 0.5);
+  --co-fermented-hover: rgba(164, 219, 173, .5);
+
+	/*	Font stacks */
+	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--bold: 'Relative-Bold', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--mono: 'Relative-12Pitch', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+	/*	Font size */
+	--body: 1rem;
+	--small: 0.875rem;
+
+  /*	Spacing */
+  --space-0: 0px;
+	--space-px: 1px;
+	--space-0-5: 0.125rem; /* 2px */
+	--space-1: 0.25rem;    /* 4px */
+	--space-1-5: 0.375rem; /* 6px */
+	--space-2: 0.5rem;     /* 8px */
+	--space-2-5: 0.625rem; /* 10px */
+	--space-3: 0.75rem;    /* 12px */
+	--space-3-5: 0.875rem; /* 14px */
+	--space-4: 1rem;       /* 16px */
+	--space-5: 1.25rem;    /* 20px */
+	--space-6: 1.5rem;     /* 24px */
+	--space-7: 1.75rem;    /* 28px */
+	--space-8: 2rem;       /* 32px */
+	--space-9: 2.25rem;    /* 36px */
+	--space-10: 2.5rem;    /* 40px */
+	--space-12: 3rem;      /* 48px */
+
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Core styles                                       */
+/*----------------------------------------------------*/
+
+html {
+	font-size: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+  html {
+  	font-size: 18px;
+  }
+}
+
+body {
+  background-color: var(--background);
+	color: var(--primary);
+	display: flex;
+	font-family: var(--regular);
+	font-size: var(--body);
+	-webkit-font-smoothing: antialiased;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+p {
+	margin: 0;
+}
+
+h3 {
+	font-family: var(--bold);
+  font-size: var(--body);
+	font-weight: normal;
+  margin: 0 0 var(--space-3) 0;
+}
+
+
+/*----------------------------------------------------*/
+/*  Main/grid styles                                  */
+/*----------------------------------------------------*/
+
+main {
+	flex: 1;
+	overflow: auto;
+	overscroll-behavior: contain;
+  padding: var(--space-10);
+	padding-left: var(--space-5);
+	position: sticky;
+	text-align: left;
+	top: var(--space-0);
+	width: 100%;
+}
+
+#grid {
+	align-items: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	grid-gap: var(--space-10);
+	overflow:hidden;
+	width: auto;
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Wine card styles                                  */
+/*----------------------------------------------------*/
+
+article {
+	position: relative;
+}
+
+article img {
+	background: rgba(31, 121, 204, 0.08);
+	border-radius: 0.5rem;
+	height: 20vw;
+	max-height: 17.5rem;
+	max-width: 100%;
+	object-fit: cover;
+  width: 100%;
+}
+
+article img:hover {
+	box-shadow: 0px 0.188rem 0.5rem 0 rgba(0,0,0,0.1);
+}
+
+
+/* Text styles */
+
+article .text {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-1-5);
+	margin-top: var(--space-3);
+}
+
+article .title {
+	font-family: var(--medium);
+	line-height: 1.2rem;
+}
+article .store {
+	color: var(--primary-2);
+	font-size: var(--small);
+}
+
+article .price {
+	font-family: var(--mono);
+}
+
+
+/* Wine card type tag styles */
+
+article > .tag {
+	background-color: var(--primary-4);
+	border-radius: 100px;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--mono);
+	font-size: var(--small);
+	height: 1.125rem;
+	left: var(--space-3);
+	line-height: 1.125rem;
+	margin: 0 var(--space-2) var(--space-2) 0;
+	padding: 0 var(--space-1-5);
+	position:absolute;
+	top: var(--space-3);
+}
+
+article.red  > div.tag {
+  background-color: var(--red)!important;
+}
+
+article.white  > div.tag{
+  background-color: var(--white)!important;
+}
+
+article.rose > div.tag{
+  background-color: var(--rose)!important;
+}
+
+article.orange > div.tag {
+  background-color: var(--orange)!important;
+}
+
+article.sparkling  > div.tag {
+  background-color: var(--sparkling)!important;
+}
+
+article.piquette  > div.tag {
+  background-color: var(--piquette)!important;
+}
+
+article.cofermented  > div.tag {
+  background-color: var(--co-fermented)!important;
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Sidebar styles                                    */
+/*----------------------------------------------------*/
+
+nav {
+	align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+	float: left;
+  gap: var(--space-6);
+	height: 100vh;
+	overflow: auto;
+	overscroll-behavior: contain;
+  padding: var(--space-12) var(--space-10);
+	position: sticky;
+	top: 0;
+	width: 19rem;
+}
+
+#filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.logo img {
+	max-width: 9rem;
+}
+
+.tagline {
+	color: var(--primary-2);
+	display: block;
+	line-height: 1.6rem;
+}
+
+.credits {
+	color: var(--primary-2);
+	font-family: var(--mono);
+	font-size: var(--small);
+}
+
+.credits a {
+	text-decoration: underline;
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Search bar styles                                 */
+/*----------------------------------------------------*/
+
+#search {
+	position: relative;
+}
+
+#searchInput {
+	background: var(--primary-4);
+  border: none;
+  border-radius: 100px;
+	color: var(--primary);
+	/* line-height: 1rem; */
+  outline: 0;
+	padding: var(--space-2) var(--space-8);
+	width: 100%;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: var(--primary-2);
+  opacity: 1; /* Firefox */
+}
+
+#search:hover, #search:focus {
+  /* border: 1px solid #009688; */
+  /* background-color: white; */
+}
+
+.searchIcon {
+	color: var(--primary-2)!important;
+	height: 1rem;
+	left: var(--space-2-5);
+  position: absolute;
+  top: var(--space-2);
+  width: 0.938rem;
+}
+
+.clearIcon {
+	cursor: pointer;
+  position: absolute;
+  right: var(--space-2);
+	top: 0.563rem;
+	visibility: hidden;
+  width: 0.75rem;
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Checkbox filter styles                            */
+/*----------------------------------------------------*/
+
+/* Customize the label (the container) */
+.checkboxFilter label {
+	cursor: pointer;
+  display: block;
+	margin-bottom: var(--space-3);
+  padding-left: var(--space-6);
+	position: relative;
+	user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkboxFilter input {
+	cursor: pointer;
+  height: 0;
+  opacity: 0;
+	position: absolute;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+	border: solid;
+	border-color: var(--primary-3);
+	border-radius: 0.25rem;
+	border-width: 0.125rem;
+	box-sizing: border-box;
+	height: 1rem;
+	left: 0;
+  position: absolute;
+  top: 0;
+  width: 1rem;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/* On mouse-over, add a grey background color */
+.checkboxFilter input:hover input ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkboxFilter input:checked ~ .checkmark {
+  background-color: var(--primary);
+	border: none;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+	display: none;
+  position: absolute;
+}
+
+/* Show the checkmark when checked */
+.checkboxFilter input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkboxFilter .checkmark:after {
+	border: solid var(--background);
+  border-width: 0 0.125rem 0.125rem 0;
+	height: 0.625rem;
+  left: 0.3rem;
+  top: 0.063rem;
+	transform: rotate(45deg);
+  width: 0.375rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+}
+
+
+
+
+/*----------------------------------------------------*/
+/*  Button filter styles                              */
+/*----------------------------------------------------*/
+
+.buttonFilter label {
+	background-color: var(--primary-4);
+	border-radius: 5rem;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--mono);
+	margin: var(--space-1) var(--space-0-5);
+	padding: var(--space-1) var(--space-2);
+	/* transition: all .2s; */
+	user-select: none;
+  white-space: nowrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+.buttonFilter input[type="checkbox"]:checked + label {
+  /* transition: all .2s; */
+}
+
+.buttonFilter input[type="checkbox"] {
+  display: absolute;
+	opacity: 0;
+  position: absolute;
+}
+
+/* Color styles for individual wine type filters */
+.buttonFilter input[value="orange"]:checked + label {
+  background-color: var(--orange);
+}
+.buttonFilter input[value="rose"]:checked + label {
+  background-color: var(--rose);
+}
+.buttonFilter input[value="red"]:checked + label {
+  background-color: var(--red);
+}
+.buttonFilter input[value="white"]:checked + label {
+  background-color: var(--white);
+}
+.buttonFilter input[value="sparkling"]:checked + label {
+  background-color: var(--sparkling);
+}
+.buttonFilter input[value="piquette"]:checked + label {
+  background-color: var(--piquette);
+}
+.buttonFilter input[value="cofermented"]:checked + label {
+  background-color: var(--co-fermented);
+}
+
+
+@media (pointer:fine) {
+	.buttonFilter input[value="orange"]:hover + label {
+	  background-color: var(--orange-hover);
+	}
+	.buttonFilter input[value="rose"]:hover + label {
+	  background-color: var(--rose-hover);
+	}
+	.buttonFilter input[value="red"]:hover + label {
+	  background-color: var(--red-hover);
+	}
+	.buttonFilter input[value="white"]:hover + label {
+	  background-color: var(--white-hover);
+	}
+	.buttonFilter input[value="sparkling"]:hover + label {
+	  background-color: var(--sparkling-hover);
+	}
+  .buttonFilter input[value="piquette"]:hover + label {
+	  background-color: var(--piquette-hover);
+	}
+  .buttonFilter input[value="cofermented"]:hover + label {
+	  background-color: var(--co-fermented-hover);
+	}
+}
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*  Mobile styles                                     */
+/*----------------------------------------------------*/
+
+#hideButton {
+	display: none;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+.mobileButtons {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+	.mobileOnly {
+	  display: block;
+	}
+	.mobileHide {
+	  display: none;
+	}
+}
+
+
+@media only screen and (max-width: 800px) {
+	body {
+		display: block;
+	}
+	nav {
+		height: auto;
+		padding: var(--space-4);
+		position: fixed;
+		width: 100%;
+		background-color: var(--background);
+		z-index: 100;
+	}
+	main {
+		margin-top: 3.222rem;
+		padding: var(--space-4);
+	}
+	#grid {
+		gap: var(--space-4);
+	}
+	.sidebarHide {
+	  display: none!important;
+	}
+	#searchWrapper {
+		display: flex;
+		gap: var(--space-2);
+	}
+	#search {
+		flex: 1;
+	}
+	.navButton {
+		display: block;
+		height: 2.222rem;
+		width: 2.222rem;
+		padding: 0.22rem;
+	}
+	#filters {
+		display: none;
+	}
+	.mobileButtons {
+	  display: block;
+	}
+}
+
+@media only screen and (min-width: 800px) {
+	#filters {
+		display: flex!important;
+	}
+	#hideButton {
+		display: none;
+	}
+	#showButton {
+		display: none;
+	}
+	.mobileButtons {
+	  display: none;
+	}
+}
