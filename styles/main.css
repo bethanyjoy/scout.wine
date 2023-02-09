@@ -15,7 +15,7 @@
 	--rose: rgba(255, 185, 185, 1);
 	--orange: rgba(243, 206, 134, 1);
 	--sparkling: rgba(168, 207, 224, 1);
-  --piquette: rgba(212, 188, 232, 1);
+	--piquette: rgba(212, 188, 232, 1);
   --co-fermented: rgba(164, 219, 173, 1);
 
 	--red-hover: rgba(255, 166, 138, 0.5);
@@ -35,7 +35,7 @@
 	/*	Font size */
 	--body: 1rem;
 	--small: 0.875rem;
-
+    
   /*	Spacing */
   --space-0: 0px;
 	--space-px: 1px;
@@ -65,7 +65,7 @@
 /*----------------------------------------------------*/
 
 html {
-	font-size: 16px;
+  font-size: 16px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -75,7 +75,7 @@ html {
 }
 
 body {
-  background-color: var(--background);
+	background-color: var(--background);
 	color: var(--primary);
 	display: flex;
 	font-family: var(--regular);
@@ -267,6 +267,13 @@ nav {
 .credits a {
 	text-decoration: underline;
 }
+
+.navButton {
+	height: 2.222rem;
+	padding: 0.22rem;
+	width: 2.222rem;
+}
+
 
 
 
@@ -490,9 +497,6 @@ nav {
 /*  Mobile styles                                     */
 /*----------------------------------------------------*/
 
-#hideButton {
-	display: none;
-}
 
 .mobileOnly {
   display: none;
@@ -500,6 +504,10 @@ nav {
 
 .mobileButtons {
   display: none;
+}
+
+#hideButton {
+	display: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -531,21 +539,12 @@ nav {
 	#grid {
 		gap: var(--space-4);
 	}
-	.sidebarHide {
-	  display: none!important;
-	}
 	#searchWrapper {
 		display: flex;
 		gap: var(--space-2);
 	}
 	#search {
 		flex: 1;
-	}
-	.navButton {
-		display: block;
-		height: 2.222rem;
-		width: 2.222rem;
-		padding: 0.22rem;
 	}
 	#filters {
 		display: none;
@@ -564,12 +563,6 @@ nav {
 @media only screen and (min-width: 800px) {
 	#filters {
 		display: flex!important;
-	}
-	#hideButton {
-		display: none;
-	}
-	#showButton {
-		display: none;
 	}
 	.mobileButtons {
 	  display: none;
