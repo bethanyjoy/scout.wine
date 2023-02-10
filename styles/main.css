@@ -625,7 +625,7 @@ button.cofermented:active, button.cofermented.is-checked {
 	}
 	#searchWrapper {
 		display: flex;
-		gap: var(--space-4);
+		gap: var(--space-3);
 	}
 	#search {
 		flex: 1;
