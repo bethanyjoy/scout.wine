@@ -276,10 +276,10 @@ nav {
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-12) var(--space-10);
+  padding: var(--space-12) var(--space-5) var(--space-12) var(--space-10);
 	position: sticky;
 	top: 0;
-	width: 19rem;
+	width: 18rem;
 }
 
 #filters {
@@ -289,7 +289,7 @@ nav {
 }
 
 .logo img {
-	max-width: 9.2rem;
+	max-width: 8.4rem;
 }
 
 .tagline {
