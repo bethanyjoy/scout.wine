@@ -57,93 +57,6 @@
 
 	</script>
 
-	<!-- Controls the search bar functionality -->
-	<script>
-
-		const clearIcon = document.querySelector(".clearIcon");
-		const searchBar = document.querySelector("#searchInput");
-
-		searchBar.addEventListener("keyup", () => {
-			if(searchBar.value && clearIcon.style.visibility != "visible"){
-				clearIcon.style.visibility = "visible";
-			} else if(!searchBar.value) {
-				clearIcon.style.visibility = "hidden";
-			}
-		});
-
-		clearIcon.addEventListener("click", () => {
-			searchBar.value = "";
-			clearIcon.style.visibility = "hidden";
-		})
-
-		function myFunction() {
-
-			var input, filter, div, article, p, i, txtValue;
-			input = document.getElementById("searchInput");
-			filter = input.value.toUpperCase();
-			div = document.getElementById("grid");
-			article = div.getElementsByTagName("article");
-
-			for (i = 0; i < article.length; i++) {
-				p = article[i].getElementsByTagName("p")[0];
-				txtValue = p.textContent || p.innerText;
-				if (txtValue.toUpperCase().indexOf(filter) > -1) {
-					article[i].style.display = "";
-				} else {
-					article[i].style.display = "none";
-				}
-			}
-
-		}
-
-	</script>
-
-	<!-- Controls the tag filtering functionality -->
-	<script>
-
-		$(document).ready(function () {
-
-			$('.tagFilter :checkbox').click(function () {
-
-				if ($('input:checkbox:checked').length) {
-					$('article').hide();
-					$('input:checkbox:checked').each(function () {
-						$('article[data-' + $(this).prop('name') + '*="' + $(this).val() + '"]').show();
-					});
-				} else {
-					$('article').show();
-				}
-
-			});
-
-		});
-
-	</script>
-
-	<!-- Controls the string filtering functionality -->
-	<script>
-
-		$(document).ready(function () {
-
-			$('.stringFilter :checkbox').click(function () {
-
-				if ($('input:checkbox:checked').length) {
-					$('article').hide();
-					$('input:checkbox:checked').each(function () {
-						if ($(this).val().contains($(this).prop('name')) {
-							$('article[data-' + $(this).prop('name') + ']').show();
-						});
-					});
-				} else {
-					$('article').show();
-				}
-
-			});
-
-		});
-
-	</script>
-
 	<!-- Scroll to the top button -->
 	<script>
 
@@ -215,11 +128,14 @@
       Find natural wine on the eastside of LA 🍷 ✌️
     </span>
 
+		<!-- <input type="text" id="quicksearch" placeholder="Search" /> -->
+
+
 		<div id="searchWrapper">
 
 	    <div id="search">
 	      <img class="searchIcon" src="assets/search.svg" />
-	      <input placeholder="Search" type="text" value="" autocomplete="off" onkeyup="myFunction()" name"dontfill" id="searchInput">
+				<input type="text" id="quicksearch" placeholder="Search"/>
 	      <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
 	    </div>
 
@@ -242,52 +158,28 @@
 
 		<div id="filters">
 
-			<div class="tagFilter buttonFilter type">
-				<h3>Type</h3>
-						<input type="checkbox" id="checkboxOne" name="type" value="red"><label for="checkboxOne">Red</label>
-						<input type="checkbox" id="checkboxTwo" name="type" value="white"><label for="checkboxTwo">White</label>
-						<input type="checkbox" id="checkboxThree" name="type" value="rose"><label for="checkboxThree">Ros&#233;</label>
-						<input type="checkbox" id="checkboxFour" name="type" value="orange"><label for="checkboxFour">Orange</label>
-						<input type="checkbox" id="checkboxFive" name="type" value="cofermented"><label for="checkboxFive">Co-Fermented</label>
-						<input type="checkbox" id="checkboxSix" name="type" value="sparkling"><label for="checkboxSix">Sparkling</label>
-						<input type="checkbox" id="checkboxSeven" name="type" value="piquette"><label for="checkboxSeven">Piquette</label>
-			</div>
+    <div id="button-filter" class="button-group">
+			<h3>Store</h3>
+      <button class="button is-checked all" data-filter="*">All</button>
+      <button class="button red" data-filter=".red">Red</button>
+      <button class="button white" data-filter=".white">White</button>
+      <button class="button rose" data-filter=".rose">Rose</button>
+      <button class="button orange" data-filter=".orange">Orange</button>
+      <button class="button cofermented" data-filter=".cofermented">Co-Fermented</button>
+      <button class="button sparkling" data-filter=".sparkling">Sparkling</button>
+      <button class="button piquette" data-filter=".piquette">Piquette</button>
+    </div>
 
-			<div class="tagFilter checkboxFilter store">
-				<h3>Store</h3>
-					<label>Everson Royce<input type="checkbox" name="store" value="eversonroyce"><span class="checkmark"></span></label>
-					<label>Highland Park Wine<input type="checkbox" name="store" value="highlandpark"><span class="checkmark"></span></label>
-					<label>Kamp<input type="checkbox" name="store" value="kamp"><span class="checkmark"></span></label>
-					<!-- <label class="container">Psychic Wines<input type="checkbox" name="store" value="kamp"><span class="checkmark"></span></label> -->
-					<label>Silverlake Wine<input type="checkbox" name="store" value="silverlake"><span class="checkmark"></span></label>
-					<label>Vinovore Eagle Rock<input type="checkbox" name="store" value="vinovoreeaglerock"><span class="checkmark"></span></label>
-					<label>Wine + Eggs<input type="checkbox" name="store" value="wineandeggs"><span class="checkmark"></span></label>
-			</div>
+    <div id="checkbox-filter" class="tagFilter checkboxFilter store">
+			<h3>Store</h3>
+      <label>Everson Royce<input type="checkbox" value=".eversonroyce"/><span class="checkmark"></span></label>
+      <label>Highland Park Wine<input type="checkbox" value=".highlandpark"/><span class="checkmark"></span></label>
+      <label>Kamp<input type="checkbox" value=".kamp"/><span class="checkmark"></span></label>
+      <label>Silverlake Wine<input type="checkbox" value=".silverlake"/><span class="checkmark"></span></label>
+      <label>Vinovore Eagle Rock<input type="checkbox" value=".vinovoreeaglerock"/><span class="checkmark"></span></label>
+      <label>Wine + Eggs<input type="checkbox" value=".wineandeggs"/><span class="checkmark"></span></label>
+    </div>
 
-			<!-- <div class="stringFilter checkboxFilter maker">
-				<h3>Maker</h3>
-					<label>Broc Cellars<input type="checkbox" name="maker" value="broc"><span class="checkmark"></span></label>
-					<label>Florez<input type="checkbox" name="maker" value="florez"><span class="checkmark"></span></label>
-					<label>Folk Machine<input type="checkbox" name="maker" value="machine"><span class="checkmark"></span></label>
-					<label>Furlani<input type="checkbox" name="maker" value="furlani"><span class="checkmark"></span></label>
-					<label>Gentle Folk<input type="checkbox" name="maker" value="gentle"><span class="checkmark"></span></label>
-					<label>Gut Oggau<input type="checkbox" name="maker" value="oggau"><span class="checkmark"></span></label>
-					<label>J Brix<input type="checkbox" name="maker" value="brix"><span class="checkmark"></span></label>
-				  <label>Joao Pato<input type="checkbox" name="maker" value="joao"><span class="checkmark"></span></label>
-					<label>Koehnen Wine Co.<input type="checkbox" name="maker" value="koehnen"><span class="checkmark"></span></label>
-					<label>Koppitsch<input type="checkbox" name="maker" value="koppitsch"><span class="checkmark"></span></label>
-					<label>Las Jaras Wines<input type="checkbox" name="maker" value="jaras"><span class="checkmark"></span></label>
-					<label>Marigny<input type="checkbox" name="maker" value="marigny"><span class="checkmark"></span></label>
-					<label>Martha Stoumen<input type="checkbox" name="maker" value="stoumen"><span class="checkmark"></span></label>
-					<label>Meinklang<input type="checkbox" name="maker" value="meinklang"><span class="checkmark"></span></label>
-					<label>Nestarec<input type="checkbox" name="maker" value="nestarec"><span class="checkmark"></span></label>
-					<label>Purity<input type="checkbox" name="maker" value="purity"><span class="checkmark"></span></label>
-					<label>Ruth Lewandowski<input type="checkbox" name="maker" value="lewandowski"><span class="checkmark"></span></label>
-					<label>Scotty Boy!<input type="checkbox" name="maker" value="scotty"><span class="checkmark"></span></label>
-					<label>Swick<input type="checkbox" name="maker" value="swick"><span class="checkmark"></span></label>
-					<label>Wavy Wines<input type="checkbox" name="maker" value="wavy"><span class="checkmark"></span></label>
-					<label>Wonderwerk<input type="checkbox" name="maker" value="wonderwerk"><span class="checkmark"></span></label>
-			</div> -->
 
 			<span class="credits">
 				Made by <a href="https://bethany.design/">bethany.design</a>
@@ -303,11 +195,11 @@
 
   <main id="main">
 
-    <div id="grid">
+    <div class="grid">
 
       <!-- Dummy wine content commented out below -->
 
-      <!-- <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
+			<!-- <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
         <a href="http://vinovoreeaglerock.com/collections/orange/products/oeno-skin-contact">
           <img src="assets/placeholder.png">
         </a>
@@ -319,9 +211,9 @@
           <p class="store">Vinovore Eagle Rock</p>
           <p class="price">$22.00</p>
         </div>
-      </article>
+      </article> -->
 
-      <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
+      <!-- <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
         <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-10-20at2.36.30PM_400x.png?v=1666301841">
         </a>
@@ -431,10 +323,126 @@
            <p class="store">Highland Park Wine</p>
            <p class="price">$36.00</p>
          </div>
-       </article> -->
+       </article>
+
+			 <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
+         <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
+           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-10-20at2.36.30PM_400x.png?v=1666301841">
+         </a>
+         <div class="tag">Rosé</div>
+         <div class="text">
+           <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
+             <p class="title">Vini Sassara Esotico</p>
+           </a>
+           <p class="store">Vinovore Eagle Rock</p>
+           <p class="price">$25.00</p>
+         </div>
+       </article>
+
+       <article class="red WildArcFarmMarsPét-Nat vinovoreeaglerock" data-type="red" data-store="vinovoreeaglerock" style="">
+         <a href="http://vinovoreeaglerock.com/collections/red/products/wild-arc-farm-mars-pet-nat">
+           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/IMG_0917_400x.jpg?v=1672358142">
+         </a>
+         <div class="tag">Red</div>
+         <div class="text">
+           <a href="http://vinovoreeaglerock.com/collections/red/products/wild-arc-farm-mars-pet-nat">
+             <p class="title">Wild Arc Farm Mars Pét-Nat</p>
+           </a>
+           <p class="store">Vinovore Eagle Rock</p>
+           <p class="price">$32.00</p>
+         </div>
+       </article>
+
+       <article class="white GutOggauTimotheusOrange vinovoreeaglerock" data-type="white" data-store="vinovoreeaglerock" style="">
+         <a href="http://vinovoreeaglerock.com/collections/white/products/gut-oggau-timotheus-orange">
+           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-02-22at1.34.32PM_400x.png?v=1645565838">
+         </a>
+         <div class="tag">White</div>
+         <div class="text">
+           <a href="http://vinovoreeaglerock.com/collections/white/products/gut-oggau-timotheus-orange">
+             <p class="title">Gut Oggau Timotheus Orange</p>
+           </a>
+           <p class="store">Vinovore Eagle Rock</p>
+           <p class="price">$64.00</p>
+         </div>
+       </article>
+
+       <article class="sparkling MeinklangFoamVulkan vinovoreeaglerock" data-type="sparkling" data-store="vinovoreeaglerock" style="">
+         <a href="http://vinovoreeaglerock.com/collections/sparkling/products/meinklang-foam-vulkan">
+           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/meinklang-foam-vulkan-hars-elelu-v1_747d9d52-4114-44c3-9b62-94aeceeb86a8_400x.jpg?v=1638395573">
+         </a>
+         <div class="tag">Sparkling</div>
+         <div class="text">
+           <a href="http://vinovoreeaglerock.com/collections/sparkling/products/meinklang-foam-vulkan">
+             <p class="title">Meinklang Foam Vulkan</p>
+           </a>
+           <p class="store">Vinovore Eagle Rock</p>
+           <p class="price">$24.00</p>
+         </div>
+       </article>
+
+       <article class="orange PurityOrangeKrazeVerdelho highlandpark" data-type="orange" data-store="highlandpark" style="">
+         <a href="http://highlandparkwine.com/collections/orange-wine/products/purity-orange-kraze-verdelho">
+           <img src="https://cdn.shopify.com/s/files/1/0657/9571/9419/products/627694e1cb92a8634374eaec2f13252e_1024x1024.jpg?v=1674857402">
+         </a>
+         <div class="tag">Orange</div>
+         <div class="text">
+           <a href="http://highlandparkwine.com/collections/orange-wine/products/purity-orange-kraze-verdelho">
+             <p class="title">Purity Orange Kraze Verdelho</p>
+           </a>
+           <p class="store">Highland Park Wine</p>
+           <p class="price">$29.00</p>
+         </div>
+       </article>
+
+        <article class="red GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="red" data-store="highlandpark" style="">
+          <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+            <img src="https://cdn.shopify.com/s/files/1/0657/9571/9419/products/1aaa89ca0da0e7e7a929799214de65ac_1024x1024.jpg?v=1669076675">
+          </a>
+          <div class="tag">Red</div>
+          <div class="text">
+            <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+              <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
+            </a>
+            <p class="store">Highland Park Wine</p>
+            <p class="price">$36.00</p>
+          </div>
+        </article>
+
+        <article class="red GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="red" data-store="highlandpark" style="">
+          <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+            <img src="https://cdn.shopify.com/s/files/1/0513/0302/2783/products/bcee0efe612adf141b5b1f592dbe94a7_2048x2048.png?v=1652816453">
+          </a>
+          <div class="tag">Red</div>
+          <div class="text">
+            <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+              <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
+            </a>
+            <p class="store">Highland Park Wine</p>
+            <p class="price">$36.00</p>
+          </div>
+        </article>
+
+        <article class="orange GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="orange" data-store="highlandpark" style="">
+          <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+            <img src="https://cdn.shopify.com/s/files/1/0518/7184/2487/products/CopyofKampProductImages-2023-01-26T104741.873_450x.png?v=1674758963">
+          </a>
+          <div class="tag">Orange</div>
+          <div class="text">
+            <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
+              <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
+            </a>
+            <p class="store">Highland Park Wine</p>
+            <p class="price">$36.00</p>
+          </div>
+        </article> -->
 
     </div>
 
   </main>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/script.js"></script>
 
 </body>

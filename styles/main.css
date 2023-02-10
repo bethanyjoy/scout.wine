@@ -108,21 +108,23 @@ main {
 	flex: 1;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-10);
-	padding-left: var(--space-5);
+  /* padding: var(--space-5); */
+	padding-top: var(--space-5);
+	padding-right: var(--space-5);
 	position: sticky;
 	text-align: left;
 	top: var(--space-0);
 	width: 100%;
 }
 
-#grid {
-	align-items: stretch;
-	display: grid;
+.grid {
+	/* align-items: stretch; */
+	/* display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	grid-gap: var(--space-10);
-	overflow:hidden;
-	width: auto;
+	grid-gap: var(--space-10); */
+	/* overflow:hidden;
+	width: auto; */
+	/* margin: -1rem; */
 }
 
 
@@ -133,17 +135,65 @@ main {
 /*----------------------------------------------------*/
 
 article {
-	position: relative;
+	/* position: relative; */
+	width: calc(9.09% - var(--space-10));
+	margin: var(--space-5);
+	height: 24rem;
+}
+
+/* mobile grid styles */
+@media only screen and (max-width: 2523px) {
+	article {
+		width: calc(10% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 2323px) {
+	article {
+		width: calc(11.111% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 2123px) {
+	article {
+		width: calc(12.5% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 1923px) {
+	article {
+		width: calc(14.2857% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 1723px) {
+	article {
+		width: calc(16.6667% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 1523px) {
+	article {
+		width: calc(20% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 1323px) {
+	article {
+		width: calc(25% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 1123px) {
+	article {
+		width: calc(33.3333% - var(--space-10));
+	}
+}
+@media only screen and (max-width: 923px) {
+	article {
+		width: calc(50% - var(--space-10));
+	}
 }
 
 article img {
 	background: rgba(31, 121, 204, 0.08);
 	border-radius: 0.5rem;
-	height: 20vw;
-	max-height: 17.5rem;
+	height: 17.5rem;
 	max-width: 100%;
 	object-fit: cover;
-  width: 100%;
 }
 
 article img:hover {
@@ -279,7 +329,7 @@ nav {
 	position: relative;
 }
 
-#searchInput {
+#quicksearch {
 	background: var(--primary-4);
   border: none;
   border-radius: 100px;
@@ -316,6 +366,121 @@ nav {
 	top: 0.563rem;
 	visibility: hidden;
   width: 0.75rem;
+}
+
+
+
+
+
+
+/*----------------------------------------------------*/
+/*  Button filter styles                              */
+/*----------------------------------------------------*/
+
+
+/* ---- button ---- */
+
+.button {
+	background-color: var(--primary-4);
+	border: none;
+	border-radius: 5rem;
+	color: var(--primary);
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--mono);
+	margin: var(--space-1) var(--space-0-5);
+	padding: var(--space-1) var(--space-2);
+	/* transition: all .2s; */
+	user-select: none;
+	white-space: nowrap;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+}
+
+.button:hover {
+  /* background-color: #8CF; */
+  /* text-shadow: 0 1px hsla(0, 0%, 100%, 0.5); */
+  /* color: #222; */
+}
+
+/* .button:active,
+.button.is-checked {
+  background-color: #28F;
+} */
+
+
+/* Color styles for individual wine type filters */
+button.all:hover {
+  background-color: var(--sparkling-hover);
+}
+button.orange:hover {
+  background-color: var(--orange-hover);
+}
+button.rose:hover {
+  background-color: var(--rose-hover);
+}
+button.red:hover {
+  background-color: var(--red-hover);
+}
+button.white:hover {
+  background-color: var(--white-hover);
+}
+button.sparkling:hover {
+  background-color: var(--sparkling-hover);
+}
+button.piquette:hover {
+  background-color: var(--piquette-hover);
+}
+button.cofermented:hover {
+  background-color: var(--co-fermented-hover);
+}
+
+
+/* Color styles for individual wine type filters */
+button.all:active, button.all.is-checked  {
+  background-color: var(--primary);
+	color: white;
+}
+button.orange:active, button.orange.is-checked  {
+  background-color: var(--orange);
+}
+button.rose:active, button.rose.is-checked {
+  background-color: var(--rose);
+}
+button.red:active, button.red.is-checked {
+  background-color: var(--red);
+}
+button.white:active, button.white.is-checked {
+  background-color: var(--white);
+}
+button.sparkling:active, button.sparkling.is-checked {
+  background-color: var(--sparkling);
+}
+button.piquette:active, button.piquette.is-checked {
+  background-color: var(--piquette);
+}
+button.cofermented:active, button.cofermented.is-checked {
+  background-color: var(--co-fermented);
+}
+
+/* .button.is-checked {
+  color: white;
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
+} */
+
+/* .button:active {
+  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
+} */
+
+/* ---- button-group ---- */
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 
@@ -401,85 +566,6 @@ nav {
 
 
 
-/*----------------------------------------------------*/
-/*  Button filter styles                              */
-/*----------------------------------------------------*/
-
-.buttonFilter label {
-	background-color: var(--primary-4);
-	border-radius: 5rem;
-	cursor: pointer;
-	display: inline-block;
-	font-family: var(--mono);
-	margin: var(--space-1) var(--space-0-5);
-	padding: var(--space-1) var(--space-2);
-	/* transition: all .2s; */
-	user-select: none;
-  white-space: nowrap;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-  -webkit-user-select: none;
-}
-
-.buttonFilter input[type="checkbox"]:checked + label {
-  /* transition: all .2s; */
-}
-
-.buttonFilter input[type="checkbox"] {
-  display: absolute;
-	opacity: 0;
-  position: absolute;
-}
-
-/* Color styles for individual wine type filters */
-.buttonFilter input[value="orange"]:checked + label {
-  background-color: var(--orange);
-}
-.buttonFilter input[value="rose"]:checked + label {
-  background-color: var(--rose);
-}
-.buttonFilter input[value="red"]:checked + label {
-  background-color: var(--red);
-}
-.buttonFilter input[value="white"]:checked + label {
-  background-color: var(--white);
-}
-.buttonFilter input[value="sparkling"]:checked + label {
-  background-color: var(--sparkling);
-}
-.buttonFilter input[value="piquette"]:checked + label {
-  background-color: var(--piquette);
-}
-.buttonFilter input[value="cofermented"]:checked + label {
-  background-color: var(--co-fermented);
-}
-
-
-@media (pointer:fine) {
-	.buttonFilter input[value="orange"]:hover + label {
-	  background-color: var(--orange-hover);
-	}
-	.buttonFilter input[value="rose"]:hover + label {
-	  background-color: var(--rose-hover);
-	}
-	.buttonFilter input[value="red"]:hover + label {
-	  background-color: var(--red-hover);
-	}
-	.buttonFilter input[value="white"]:hover + label {
-	  background-color: var(--white-hover);
-	}
-	.buttonFilter input[value="sparkling"]:hover + label {
-	  background-color: var(--sparkling-hover);
-	}
-  .buttonFilter input[value="piquette"]:hover + label {
-	  background-color: var(--piquette-hover);
-	}
-  .buttonFilter input[value="cofermented"]:hover + label {
-	  background-color: var(--co-fermented-hover);
-	}
-}
 
 
 
@@ -526,10 +612,10 @@ nav {
 	}
 	main {
 		margin-top: 3.222rem;
-		padding: var(--space-4);
+		padding: var(--space-2);
 	}
-	#grid {
-		gap: var(--space-4);
+	.grid {
+		/* gap: var(--space-4); */
 	}
 	.sidebarHide {
 	  display: none!important;
@@ -554,12 +640,28 @@ nav {
 	  display: block;
 	}
 	article img {
-		height: 40vw !important;
+		/* height: 40vw !important; */
 	}
 	article {
-		padding-bottom: var(--space-2);
+		/* padding-bottom: var(--space-2); */
+		width: calc(25% - var(--space-4));
+		margin: var(--space-2);
+		height: 25rem;
 	}
 }
+
+
+@media only screen and (max-width: 730px) {
+	article {
+		width: calc(33.3333% - var(--space-4));
+	}
+}
+@media only screen and (max-width: 550px) {
+	article {
+		width: calc(50% - var(--space-4));
+	}
+}
+
 
 @media only screen and (min-width: 800px) {
 	#filters {
