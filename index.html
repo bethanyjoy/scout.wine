@@ -41,9 +41,7 @@
 
 	    <div id="search">
 	      <img class="searchIcon" src="assets/search.svg" />
-				<input type="search" id="quicksearch" placeholder="Search"/>
-				<!-- <button class="close-icon" type="reset"></button> -->
-	      <!-- <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" /> -->
+				<input type="text" id="quicksearch" placeholder="Search"/>
 	    </div>
 
 			<div class="mobileButtons">
@@ -81,10 +79,10 @@
 			<h3>Store</h3>
       <label>Everson Royce<input type="checkbox" value=".eversonroyce"/><span class="checkmark"></span></label>
       <label>Highland Park Wine<input type="checkbox" value=".highlandpark"/><span class="checkmark"></span></label>
-      <label>Kamp<input type="checkbox" value=".kamp"/><span class="checkmark"></span></label>
-      <label>Silverlake Wine<input type="checkbox" value=".silverlake"/><span class="checkmark"></span></label>
-      <label>Vinovore Eagle Rock<input type="checkbox" value=".vinovoreeaglerock"/><span class="checkmark"></span></label>
-      <label>Wine + Eggs<input type="checkbox" value=".wineandeggs"/><span class="checkmark"></span></label>
+      <!-- <label>Kamp<input type="checkbox" value=".kamp"/><span class="checkmark"></span></label> -->
+      <!-- <label>Silverlake Wine<input type="checkbox" value=".silverlake"/><span class="checkmark"></span></label> -->
+      <!-- <label>Vinovore Eagle Rock<input type="checkbox" value=".vinovoreeaglerock"/><span class="checkmark"></span></label> -->
+      <!-- <label>Wine + Eggs<input type="checkbox" value=".wineandeggs"/><span class="checkmark"></span></label> -->
     </div>
 
 
@@ -103,45 +101,11 @@
   <main id="main">
 
     <div id="grid">
-
     </div>
 
   </main>
 
   <script src="js/isotope.pkgd.min.js"></script>
 	<script src="js/script.js"></script>
-
-	<!-- Hide/show sidebar on mobile -->
-	<script>
-
-		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-
-		function showSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "flex";
-			var x = document.getElementById("showButton");
-				x.style.display = "none";
-			var x = document.getElementById("hideButton");
-				x.style.display = "block";
-			var x = document.getElementById("sidebar");
-				x.style.height = "100vh";
-			var x = document.getElementById("main");
-				x.style.overflow = "hidden"
-		}
-
-		function hideSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "none";
-			var x = document.getElementById("showButton");
-				x.style.display = "block";
-			var x = document.getElementById("hideButton");
-				x.style.display = "none";
-				var x = document.getElementById("sidebar");
-					x.style.height = "auto";
-			var x = document.getElementById("main");
-					x.style.overflow = "auto"
-			}
-
-	</script>
 
 </body>

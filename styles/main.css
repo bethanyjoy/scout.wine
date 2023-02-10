@@ -117,16 +117,6 @@ main {
 	width: 100%;
 }
 
-#grid {
-	/* align-items: stretch; */
-	/* display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	grid-gap: var(--space-10); */
-	/* overflow:hidden;
-	width: auto; */
-	/* margin: -1rem; */
-}
-
 
 
 
@@ -341,7 +331,6 @@ nav {
   border: none;
   border-radius: 100px;
 	color: var(--primary);
-	/* line-height: 1rem; */
   outline: 0;
 	padding: var(--space-2);
 	padding-left: var(--space-8);
@@ -354,8 +343,6 @@ nav {
 }
 
 #search:hover, #search:focus {
-  /* border: 1px solid #009688; */
-  /* background-color: white; */
 }
 
 .searchIcon {
@@ -365,78 +352,6 @@ nav {
   position: absolute;
   top: var(--space-2);
   width: 0.938rem;
-}
-
-.clearIcon {
-	cursor: pointer;
-  position: absolute;
-  right: var(--space-2);
-	top: 0.563rem;
-	visibility: hidden;
-  width: 0.75rem;
-}
-
-
-/* .close-icon {
-	border:1px solid transparent;
-	background-color: transparent;
-	display: inline-block;
-	vertical-align: middle;
-  outline: 0;
-  cursor: pointer;
-	position: relative;
-	padding: 10px;
-}
-.close-icon:after {
-	content: "X";
-	display: block;
-	width: 15px;
-	height: 15px;
-	position: absolute;
-	background-color: #FA9595;
-	z-index:1;
-	right: 35px;
-	top: 0;
-	bottom: 0;
-	margin: auto;
-	padding: 2px;
-	border-radius: 50%;
-	text-align: center;
-	color: white;
-	font-weight: normal;
-	font-size: 12px;
-	box-shadow: 0 0 2px #E50F0F;
-	cursor: pointer;
-}
-#quicksearch:not(:valid) ~ .close-icon {
-	display: none;
-} */
-
-/* #quicksearch::-webkit-search-cancel-button{
-    position: relative;
-    right: var(--space-1);
-    -webkit-appearance: none;
-    height: 20px;
-    width: 20px;
-    border-radius:10px;
-    background: red;
-} */
-
-input[type="search"]::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  height: 1em;
-  width: 1em;
-  border-radius: 50em;
-  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
-  background-size: contain;
-  opacity: 0;
-  pointer-events: none;
-	cursor: pointer;
-}
-
-input[type="search"]:focus::-webkit-search-cancel-button {
-  opacity: .3;
-  pointer-events: all;
 }
 
 
@@ -468,17 +383,6 @@ input[type="search"]:focus::-webkit-search-cancel-button {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
 }
-
-.button:hover {
-  /* background-color: #8CF; */
-  /* text-shadow: 0 1px hsla(0, 0%, 100%, 0.5); */
-  /* color: #222; */
-}
-
-/* .button:active,
-.button.is-checked {
-  background-color: #28F;
-} */
 
 
 /* Color styles for individual wine type filters */
@@ -543,6 +447,7 @@ button.cofermented:active, button.cofermented.is-checked {
 /* .button:active {
   box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
 } */
+
 
 /* ---- button-group ---- */
 

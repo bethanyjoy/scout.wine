@@ -1,6 +1,3 @@
-
-
-
 // quick search regex
 var qsRegex;
 var buttonFilter;
@@ -27,16 +24,8 @@ selections = function() {
 
   }
 
-  // var $grid = $('#grid').imagesLoaded( function() {
-  //   // init Isotope after all images have loaded
-  //   $grid.isotope({
-  //     itemSelector: 'article',
-  //     filter: selections,
-  //   });
-  // });
 
-
-
+  // Render the wine data from the JSON file into grid html
 
   $(function a() {
 
@@ -66,13 +55,7 @@ selections = function() {
 
       $(document).trigger('json_loaded');
 
-      // var $grid = $('#grid').isotope({
-      //   itemSelector: 'article',
-      //   filter: selections,
-      // });
-
     });
-
 
   });
 
@@ -81,18 +64,16 @@ selections = function() {
   function b() {
 
 
+    // Initialize isotope
     var $grid = $('#grid').isotope({
       itemSelector: 'article',
       filter: selections,
     });
 
-    // layout Isotope after each image loads
-    // $grid.imagesLoaded().progress( function() {
-    //   $grid.isotope('layout');
-    // });
 
 
-    // CHECKBOXES
+
+    // Checkbox filter
     $selects.add( $checkboxes ).change( function() {
       var exclusives = [];
       var inclusives = [];
@@ -124,7 +105,9 @@ selections = function() {
     });
 
 
-    // DROPDOWN
+
+
+    // Dropdown filter
     $("#dropdown-filter").on("change", function() {
       // get filter value from option value
       filterValue = $(this).val();
@@ -132,7 +115,7 @@ selections = function() {
       $grid.isotope();
     });
 
-    // BBUTTONS
+    // Button filter
     $('#button-filter').on( 'click', 'button', function() {
       buttonFilter = $( this ).attr('data-filter');
       console.log(buttonFilter);
@@ -186,13 +169,44 @@ selections = function() {
       };
     }
 
-
-
   }
 
 
 
 
 
+// Set isotope function to run after json function has completed runnning
 
 $(document).bind('json_loaded', b);
+
+
+
+
+
+// Hide/show sidebar on mobile
+
+  function showSidebar() {
+    var x = document.getElementById("filters");
+      x.style.display = "flex";
+    var x = document.getElementById("showButton");
+      x.style.display = "none";
+    var x = document.getElementById("hideButton");
+      x.style.display = "block";
+    var x = document.getElementById("sidebar");
+      x.style.height = "100vh";
+    var x = document.getElementById("main");
+      x.style.overflow = "hidden"
+  }
+
+  function hideSidebar() {
+    var x = document.getElementById("filters");
+      x.style.display = "none";
+    var x = document.getElementById("showButton");
+      x.style.display = "block";
+    var x = document.getElementById("hideButton");
+      x.style.display = "none";
+      var x = document.getElementById("sidebar");
+        x.style.height = "auto";
+    var x = document.getElementById("main");
+        x.style.overflow = "auto"
+    }
