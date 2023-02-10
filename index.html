@@ -23,39 +23,7 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 
 	<!-- Controls the rendering of the wine data from the JSON file -->
-	<script>
 
-		$(function() {
-
-			var wine = [];
-
-			$.getJSON('data.json', function(data) {
-
-				$.each(data.wine, function(i, f) {
-
-					var tblRow =
-					"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-						"<a href=" + f.Link + ">" +
-							"<img src=" + f.Image + ">" +
-						"</a>" +
-						"<div class='tag'>" + f.Type_text + "</div>" +
-						"<div class='text'>" +
-							"<a href=" + f.Link + ">" +
-								"<p class='title'>" + f.Title_text + "</p>"+
-							"</a>" +
-							"<p class='store'>" + f.Store_text + "</p>" +
-							"<p class='price'>" + f.Price + "</p>" +
-						"</div>" +
-					"</article>"
-					$(tblRow).appendTo("#grid");
-
-				});
-
-			});
-
-		});
-
-	</script>
 
 	<!-- Scroll to the top button -->
 	<!-- <script>
@@ -199,7 +167,7 @@
 
       <!-- Dummy wine content commented out below -->
 
-<!--
+
        <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
         <a href="http://vinovoreeaglerock.com/collections/orange/products/oeno-skin-contact">
           <img src="assets/placeholder.png">
@@ -212,9 +180,9 @@
           <p class="store">Vinovore Eagle Rock</p>
           <p class="price">$22.00</p>
         </div>
-      </article> -->
+      </article>
 
-      <!-- <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
+      <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
         <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
           <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-10-20at2.36.30PM_400x.png?v=1666301841">
         </a>
@@ -325,14 +293,47 @@
            <p class="price">$36.00</p>
          </div>
        </article>
--->
+
 
     </div>
 
   </main>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="js/isotope.pkgd.min.js"></script>
   <script src="js/script.js"></script>
+
+	<script>
+
+		$(function() {
+
+			var wine = [];
+
+			$.getJSON('data.json', function(data) {
+
+				$.each(data.wine, function(i, f) {
+
+					var tblRow =
+					"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+						"<a href=" + f.Link + ">" +
+							"<img src=" + f.Image + ">" +
+						"</a>" +
+						"<div class='tag'>" + f.Type_text + "</div>" +
+						"<div class='text'>" +
+							"<a href=" + f.Link + ">" +
+								"<p class='title'>" + f.Title_text + "</p>"+
+							"</a>" +
+							"<p class='store'>" + f.Store_text + "</p>" +
+							"<p class='price'>" + f.Price + "</p>" +
+						"</div>" +
+					"</article>"
+					$(tblRow).appendTo("#grid");
+
+				});
+
+			});
+
+		});
+
+	</script>
 
 </body>
