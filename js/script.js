@@ -25,7 +25,7 @@ selections = function() {
   }
 
 
-var $grid = $('.grid').isotope({
+var $grid = $('#grid').isotope({
   itemSelector: 'article',
   filter: selections,
 });

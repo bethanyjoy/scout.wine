@@ -35,7 +35,7 @@
 	/*	Font size */
 	--body: 1rem;
 	--small: 0.875rem;
-    
+
   /*	Spacing */
   --space-0: 0px;
 	--space-px: 1px;
@@ -117,7 +117,7 @@ main {
 	width: 100%;
 }
 
-.grid {
+#grid {
 	/* align-items: stretch; */
 	/* display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -622,7 +622,7 @@ button.cofermented:active, button.cofermented.is-checked {
 		margin-top: 3.222rem;
 		padding: var(--space-2);
 	}
-	.grid {
+	#grid {
 		/* gap: var(--space-4); */
 	}
 	#searchWrapper {
