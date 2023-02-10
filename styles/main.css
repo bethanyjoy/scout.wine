@@ -343,7 +343,8 @@ nav {
 	color: var(--primary);
 	/* line-height: 1rem; */
   outline: 0;
-	padding: var(--space-2) var(--space-8);
+	padding: var(--space-2);
+	padding-left: var(--space-8);
 	width: 100%;
 }
 
@@ -376,6 +377,67 @@ nav {
 }
 
 
+/* .close-icon {
+	border:1px solid transparent;
+	background-color: transparent;
+	display: inline-block;
+	vertical-align: middle;
+  outline: 0;
+  cursor: pointer;
+	position: relative;
+	padding: 10px;
+}
+.close-icon:after {
+	content: "X";
+	display: block;
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	background-color: #FA9595;
+	z-index:1;
+	right: 35px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	padding: 2px;
+	border-radius: 50%;
+	text-align: center;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+	box-shadow: 0 0 2px #E50F0F;
+	cursor: pointer;
+}
+#quicksearch:not(:valid) ~ .close-icon {
+	display: none;
+} */
+
+/* #quicksearch::-webkit-search-cancel-button{
+    position: relative;
+    right: var(--space-1);
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    background: red;
+} */
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1em;
+  width: 1em;
+  border-radius: 50em;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+	cursor: pointer;
+}
+
+input[type="search"]:focus::-webkit-search-cancel-button {
+  opacity: .3;
+  pointer-events: all;
+}
 
 
 

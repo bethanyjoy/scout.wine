@@ -22,66 +22,6 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 
-	<!-- Controls the rendering of the wine data from the JSON file -->
-
-
-	<!-- Scroll to the top button -->
-	<!-- <script>
-
-		jQuery(document).ready(function() {
-
-			var btn = $('#topButton');
-
-			$(window).scroll(function() {
-				if ($(window).scrollTop() > 300) {
-					btn.addClass('show');
-				} else {
-					btn.removeClass('show');
-				}
-			});
-
-			btn.on('click', function(e) {
-				e.preventDefault();
-				$('html, body').animate({scrollTop:0}, '300');
-			});
-
-		});
-
-	</script> -->
-
-	<!-- Hide/show sidebar on mobile -->
-	<script>
-
-		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-
-		function showSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "flex";
-			var x = document.getElementById("showButton");
-				x.style.display = "none";
-			var x = document.getElementById("hideButton");
-				x.style.display = "block";
-			var x = document.getElementById("sidebar");
-				x.style.height = "100vh";
-			var x = document.getElementById("main");
-				x.style.overflow = "hidden"
-		}
-
-		function hideSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "none";
-			var x = document.getElementById("showButton");
-				x.style.display = "block";
-			var x = document.getElementById("hideButton");
-				x.style.display = "none";
-				var x = document.getElementById("sidebar");
-					x.style.height = "auto";
-			var x = document.getElementById("main");
-					x.style.overflow = "auto"
-			}
-
-	</script>
-
 </head>
 
 <body>
@@ -96,15 +36,14 @@
       Find natural wine on the eastside of LA 🍷 ✌️
     </span>
 
-		<!-- <input type="text" id="quicksearch" placeholder="Search" /> -->
-
 
 		<div id="searchWrapper">
 
 	    <div id="search">
 	      <img class="searchIcon" src="assets/search.svg" />
-				<input type="text" id="quicksearch" placeholder="Search"/>
-	      <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" />
+				<input type="search" id="quicksearch" placeholder="Search"/>
+				<!-- <button class="close-icon" type="reset"></button> -->
+	      <!-- <img class="clearIcon" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxLjk3NiA1MS45NzYiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxLjk3NiA1MS45NzY7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iMTZweCIgaGVpZ2h0PSIxNnB4Ij4KPGc+Cgk8cGF0aCBkPSJNNDQuMzczLDcuNjAzYy0xMC4xMzctMTAuMTM3LTI2LjYzMi0xMC4xMzgtMzYuNzcsMGMtMTAuMTM4LDEwLjEzOC0xMC4xMzcsMjYuNjMyLDAsMzYuNzdzMjYuNjMyLDEwLjEzOCwzNi43NywwICAgQzU0LjUxLDM0LjIzNSw1NC41MSwxNy43NCw0NC4zNzMsNy42MDN6IE0zNi4yNDEsMzYuMjQxYy0wLjc4MSwwLjc4MS0yLjA0NywwLjc4MS0yLjgyOCwwbC03LjQyNS03LjQyNWwtNy43NzgsNy43NzggICBjLTAuNzgxLDAuNzgxLTIuMDQ3LDAuNzgxLTIuODI4LDBjLTAuNzgxLTAuNzgxLTAuNzgxLTIuMDQ3LDAtMi44MjhsNy43NzgtNy43NzhsLTcuNDI1LTcuNDI1Yy0wLjc4MS0wLjc4MS0wLjc4MS0yLjA0OCwwLTIuODI4ICAgYzAuNzgxLTAuNzgxLDIuMDQ3LTAuNzgxLDIuODI4LDBsNy40MjUsNy40MjVsNy4wNzEtNy4wNzFjMC43ODEtMC43ODEsMi4wNDctMC43ODEsMi44MjgsMGMwLjc4MSwwLjc4MSwwLjc4MSwyLjA0NywwLDIuODI4ICAgbC03LjA3MSw3LjA3MWw3LjQyNSw3LjQyNUMzNy4wMjIsMzQuMTk0LDM3LjAyMiwzNS40NiwzNi4yNDEsMzYuMjQxeiIgZmlsbD0iIzAwMDAwMCIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=" /> -->
 	    </div>
 
 			<div class="mobileButtons">
@@ -165,176 +104,44 @@
 
     <div id="grid">
 
-      <!-- Dummy wine content commented out below -->
-
-
-       <!-- <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
-        <a href="http://vinovoreeaglerock.com/collections/orange/products/oeno-skin-contact">
-          <img src="assets/placeholder.png">
-        </a>
-        <div class="tag">Orange</div>
-        <div class="text">
-          <a href="http://vinovoreeaglerock.com/collections/orange/products/oeno-skin-contact">
-            <p class="title">Oeno Skin Contact</p>
-          </a>
-          <p class="store">Vinovore Eagle Rock</p>
-          <p class="price">$22.00</p>
-        </div>
-      </article>
-
-      <article class="rose ViniSassaraEsotico vinovoreeaglerock" data-type="rose" data-store="vinovoreeaglerock" style="">
-        <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
-          <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-10-20at2.36.30PM_400x.png?v=1666301841">
-        </a>
-        <div class="tag">Rosé</div>
-        <div class="text">
-          <a href="http://vinovoreeaglerock.com/collections/rose/products/vini-sassara-esotico">
-            <p class="title">Vini Sassara Esotico</p>
-          </a>
-          <p class="store">Vinovore Eagle Rock</p>
-          <p class="price">$25.00</p>
-        </div>
-      </article>
-
-      <article class="red WildArcFarmMarsPét-Nat vinovoreeaglerock" data-type="red" data-store="vinovoreeaglerock" style="">
-        <a href="http://vinovoreeaglerock.com/collections/red/products/wild-arc-farm-mars-pet-nat">
-          <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/IMG_0917_400x.jpg?v=1672358142">
-        </a>
-        <div class="tag">Red</div>
-        <div class="text">
-          <a href="http://vinovoreeaglerock.com/collections/red/products/wild-arc-farm-mars-pet-nat">
-            <p class="title">Wild Arc Farm Mars Pét-Nat</p>
-          </a>
-          <p class="store">Vinovore Eagle Rock</p>
-          <p class="price">$32.00</p>
-        </div>
-      </article>
-
-      <article class="white GutOggauTimotheusOrange vinovoreeaglerock" data-type="white" data-store="vinovoreeaglerock" style="">
-        <a href="http://vinovoreeaglerock.com/collections/white/products/gut-oggau-timotheus-orange">
-          <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/ScreenShot2022-02-22at1.34.32PM_400x.png?v=1645565838">
-        </a>
-        <div class="tag">White</div>
-        <div class="text">
-          <a href="http://vinovoreeaglerock.com/collections/white/products/gut-oggau-timotheus-orange">
-            <p class="title">Gut Oggau Timotheus Orange</p>
-          </a>
-          <p class="store">Vinovore Eagle Rock</p>
-          <p class="price">$64.00</p>
-        </div>
-      </article>
-
-      <article class="sparkling MeinklangFoamVulkan vinovoreeaglerock" data-type="sparkling" data-store="vinovoreeaglerock" style="">
-        <a href="http://vinovoreeaglerock.com/collections/sparkling/products/meinklang-foam-vulkan">
-          <img src="https://cdn.shopify.com/s/files/1/0601/7381/1925/products/meinklang-foam-vulkan-hars-elelu-v1_747d9d52-4114-44c3-9b62-94aeceeb86a8_400x.jpg?v=1638395573">
-        </a>
-        <div class="tag">Sparkling</div>
-        <div class="text">
-          <a href="http://vinovoreeaglerock.com/collections/sparkling/products/meinklang-foam-vulkan">
-            <p class="title">Meinklang Foam Vulkan</p>
-          </a>
-          <p class="store">Vinovore Eagle Rock</p>
-          <p class="price">$24.00</p>
-        </div>
-      </article>
-
-      <article class="orange PurityOrangeKrazeVerdelho highlandpark" data-type="orange" data-store="highlandpark" style="">
-        <a href="http://highlandparkwine.com/collections/orange-wine/products/purity-orange-kraze-verdelho">
-          <img src="https://cdn.shopify.com/s/files/1/0657/9571/9419/products/627694e1cb92a8634374eaec2f13252e_1024x1024.jpg?v=1674857402">
-        </a>
-        <div class="tag">Orange</div>
-        <div class="text">
-          <a href="http://highlandparkwine.com/collections/orange-wine/products/purity-orange-kraze-verdelho">
-            <p class="title">Purity Orange Kraze Verdelho</p>
-          </a>
-          <p class="store">Highland Park Wine</p>
-          <p class="price">$29.00</p>
-        </div>
-      </article>
-
-       <article class="red GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="red" data-store="highlandpark" style="">
-         <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-           <img src="https://cdn.shopify.com/s/files/1/0657/9571/9419/products/1aaa89ca0da0e7e7a929799214de65ac_1024x1024.jpg?v=1669076675">
-         </a>
-         <div class="tag">Red</div>
-         <div class="text">
-           <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-             <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
-           </a>
-           <p class="store">Highland Park Wine</p>
-           <p class="price">$36.00</p>
-         </div>
-       </article>
-
-       <article class="red GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="red" data-store="highlandpark" style="">
-         <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-           <img src="https://cdn.shopify.com/s/files/1/0513/0302/2783/products/bcee0efe612adf141b5b1f592dbe94a7_2048x2048.png?v=1652816453">
-         </a>
-         <div class="tag">Red</div>
-         <div class="text">
-           <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-             <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
-           </a>
-           <p class="store">Highland Park Wine</p>
-           <p class="price">$36.00</p>
-         </div>
-       </article>
-
-       <article class="orange GoodBoyWineLustforLifeCarbonicPinotNoir highlandpark" data-type="orange" data-store="highlandpark" style="">
-         <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-           <img src="https://cdn.shopify.com/s/files/1/0518/7184/2487/products/CopyofKampProductImages-2023-01-26T104741.873_450x.png?v=1674758963">
-         </a>
-         <div class="tag">Orange</div>
-         <div class="text">
-           <a href="http://highlandparkwine.com/collections/usa-red-wines/products/good-boy-wine-lust-for-life-carbonic-pinot-noir">
-             <p class="title">Good Boy Wine Lust for Life Carbonic Pinot Noir</p>
-           </a>
-           <p class="store">Highland Park Wine</p>
-           <p class="price">$36.00</p>
-         </div>
-       </article> -->
-
-
     </div>
 
   </main>
 
   <script src="js/isotope.pkgd.min.js"></script>
+	<script src="js/script.js"></script>
 
+	<!-- Hide/show sidebar on mobile -->
 	<script>
 
-		// $(function() {
-		//
-		// 	var wine = [];
-		//
-		// 	$.getJSON('data.json', function(data) {
-		//
-		// 		$.each(data.wine, function(i, f) {
-		//
-		// 			var tblRow =
-		// 			"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-		// 				"<a href=" + f.Link + ">" +
-		// 					"<img src=" + f.Image + ">" +
-		// 				"</a>" +
-		// 				"<div class='tag'>" + f.Type_text + "</div>" +
-		// 				"<div class='text'>" +
-		// 					"<a href=" + f.Link + ">" +
-		// 						"<p class='title'>" + f.Title_text + "</p>"+
-		// 					"</a>" +
-		// 					"<p class='store'>" + f.Store_text + "</p>" +
-		// 					"<p class='price'>" + f.Price + "</p>" +
-		// 				"</div>" +
-		// 			"</article>"
-		// 			$(tblRow).appendTo("#grid");
-		//
-		// 		});
-		//
-		// 	});
-		//
-		// });
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+
+		function showSidebar() {
+			var x = document.getElementById("filters");
+				x.style.display = "flex";
+			var x = document.getElementById("showButton");
+				x.style.display = "none";
+			var x = document.getElementById("hideButton");
+				x.style.display = "block";
+			var x = document.getElementById("sidebar");
+				x.style.height = "100vh";
+			var x = document.getElementById("main");
+				x.style.overflow = "hidden"
+		}
+
+		function hideSidebar() {
+			var x = document.getElementById("filters");
+				x.style.display = "none";
+			var x = document.getElementById("showButton");
+				x.style.display = "block";
+			var x = document.getElementById("hideButton");
+				x.style.display = "none";
+				var x = document.getElementById("sidebar");
+					x.style.height = "auto";
+			var x = document.getElementById("main");
+					x.style.overflow = "auto"
+			}
 
 	</script>
-
-	<script src="js/script.js"></script>
 
 </body>
