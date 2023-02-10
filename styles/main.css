@@ -563,6 +563,18 @@ button.cofermented:active, button.cofermented.is-checked {
 	display: none;
 }
 
+#resultsButton {
+	position:fixed;
+	bottom: var(--space-4);
+	background-color: var(--primary);
+	padding: 16px 20px;
+	width: calc(100% - var(--space-8));
+	color: #fff;
+	text-align:center;
+	border-radius: 100px;
+	display:block;
+}
+
 @media only screen and (max-width: 800px) {
 	.mobileOnly {
 	  display: block;
@@ -601,6 +613,7 @@ button.cofermented:active, button.cofermented.is-checked {
 	}
 	#filters {
 		display: none;
+		padding-bottom: 5.5rem;
 	}
 	.mobileButtons {
 	  display: block;
