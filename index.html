@@ -22,7 +22,40 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 
+	<!-- Controls the rendering of the wine data from the JSON file -->
+	<script>
 
+		$(function() {
+
+			var wine = [];
+
+			$.getJSON('data.json', function(data) {
+
+				$.each(data.wine, function(i, f) {
+
+					var tblRow =
+					"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+						"<a href=" + f.Link + ">" +
+							"<img src=" + f.Image + ">" +
+						"</a>" +
+						"<div class='tag'>" + f.Type_text + "</div>" +
+						"<div class='text'>" +
+							"<a href=" + f.Link + ">" +
+								"<p class='title'>" + f.Title_text + "</p>"+
+							"</a>" +
+							"<p class='store'>" + f.Store_text + "</p>" +
+							"<p class='price'>" + f.Price + "</p>" +
+						"</div>" +
+					"</article>"
+					$(tblRow).appendTo("#grid");
+
+				});
+
+			});
+
+		});
+
+	</script>
 
 	<!-- Scroll to the top button -->
 	<!-- <script>
@@ -49,7 +82,9 @@
 	</script> -->
 
 	<!-- Hide/show sidebar on mobile -->
-	<!-- <script>
+	<script>
+
+		/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 
 		function showSidebar() {
 			var x = document.getElementById("filters");
@@ -77,7 +112,7 @@
 					x.style.overflow = "auto"
 			}
 
-	</script> -->
+	</script>
 
 </head>
 
@@ -296,74 +331,8 @@
 
   </main>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-	<!-- Controls the rendering of the wine data from the JSON file -->
-	<script>
-
-		$(function() {
-
-			var wine = [];
-
-			$.getJSON('data.json', function(data) {
-
-				$.each(data.wine, function(i, f) {
-
-					var tblRow =
-					"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-						"<a href=" + f.Link + ">" +
-							"<img src=" + f.Image + ">" +
-						"</a>" +
-						"<div class='tag'>" + f.Type_text + "</div>" +
-						"<div class='text'>" +
-							"<a href=" + f.Link + ">" +
-								"<p class='title'>" + f.Title_text + "</p>"+
-							"</a>" +
-							"<p class='store'>" + f.Store_text + "</p>" +
-							"<p class='price'>" + f.Price + "</p>" +
-						"</div>" +
-					"</article>"
-					$(tblRow).appendTo("#grid");
-
-				});
-
-			});
-
-		});
-
-	</script>
-
-	<script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/script.js"></script>
-
-	<script>
-
-		function showSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "flex";
-			var x = document.getElementById("showButton");
-				x.style.display = "none";
-			var x = document.getElementById("hideButton");
-				x.style.display = "block";
-			var x = document.getElementById("sidebar");
-				x.style.height = "100vh";
-			var x = document.getElementById("main");
-				x.style.overflow = "hidden"
-		}
-
-		function hideSidebar() {
-			var x = document.getElementById("filters");
-				x.style.display = "none";
-			var x = document.getElementById("showButton");
-				x.style.display = "block";
-			var x = document.getElementById("hideButton");
-				x.style.display = "none";
-				var x = document.getElementById("sidebar");
-					x.style.height = "auto";
-			var x = document.getElementById("main");
-					x.style.overflow = "auto"
-			}
-
-	</script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/script.js"></script> -->
 
 </body>
