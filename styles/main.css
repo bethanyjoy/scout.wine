@@ -650,4 +650,7 @@ button.cofermented:active, button.cofermented.is-checked {
 	.mobileButtons {
 	  display: none;
 	}
+	#resultsButton {
+		display:none!important;
+	}
 }
