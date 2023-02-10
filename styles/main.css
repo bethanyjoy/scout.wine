@@ -621,7 +621,8 @@ button.cofermented:active, button.cofermented.is-checked {
 	}
 	.searchIcon {
 		top: var(--space-3);
-		left: 0.85rem;
+		left: 0.81rem;
+		width: 1rem;
 	}
 	#searchWrapper {
 		display: flex;
