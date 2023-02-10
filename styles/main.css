@@ -626,7 +626,7 @@ button.cofermented:active, button.cofermented.is-checked {
 		/* padding-bottom: var(--space-2); */
 		width: calc(25% - var(--space-4));
 		margin: var(--space-2);
-		height: 23rem;
+		height: 24rem;
 	}
 }
 
