@@ -619,13 +619,14 @@ button.cofermented:active, button.cofermented.is-checked {
 	  display: block;
 	}
 	article img {
+		height: 16rem;
 		/* height: 40vw !important; */
 	}
 	article {
 		/* padding-bottom: var(--space-2); */
 		width: calc(25% - var(--space-4));
 		margin: var(--space-2);
-		height: 25rem;
+		height: 23rem;
 	}
 }
 
