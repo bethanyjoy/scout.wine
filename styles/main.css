@@ -96,7 +96,8 @@ h3 {
 	font-family: var(--bold);
   font-size: var(--body);
 	font-weight: normal;
-  margin: 0 0 var(--space-3) 0;
+  /* margin: 0 0 var(--space-3) 0; */
+	margin: 0;
 }
 
 
@@ -279,7 +280,7 @@ nav {
   padding: var(--space-12) var(--space-5) var(--space-12) var(--space-10);
 	position: sticky;
 	top: 0;
-	width: 18rem;
+	width: 17.4rem;
 }
 
 #filters {
@@ -289,7 +290,7 @@ nav {
 }
 
 .logo img {
-	max-width: 8.4rem;
+	max-width: 9rem;
 }
 
 .tagline {
@@ -309,9 +310,9 @@ nav {
 }
 
 .navButton {
-	height: 2.222rem;
+	height: 2.667rem;
 	padding: 0.22rem;
-	width: 2.222rem;
+	width: 2.667rem;
 }
 
 
@@ -348,7 +349,7 @@ nav {
 .searchIcon {
 	color: var(--primary-2)!important;
 	height: 1rem;
-	left: var(--space-2-5);
+	left: 0.688rem;
   position: absolute;
   top: var(--space-2);
   width: 0.938rem;
@@ -451,6 +452,10 @@ button.cofermented:active, button.cofermented.is-checked {
 
 /* ---- button-group ---- */
 
+.button-group {
+	margin-top: var(--space-2);
+}
+
 .button-group:after {
   content: '';
   display: block;
@@ -464,11 +469,17 @@ button.cofermented:active, button.cofermented.is-checked {
 /*  Checkbox filter styles                            */
 /*----------------------------------------------------*/
 
+.checkboxFilter {
+	display: grid;
+	flex-direction: column;
+	grid-gap: var(--space-3);
+}
+
 /* Customize the label (the container) */
 .checkboxFilter label {
 	cursor: pointer;
   display: block;
-	margin-bottom: var(--space-3);
+	/* margin-bottom: var(--space-3); */
   padding-left: var(--space-6);
 	position: relative;
 	user-select: none;
@@ -598,15 +609,23 @@ button.cofermented:active, button.cofermented.is-checked {
 		z-index: 100;
 	}
 	main {
-		margin-top: 3.222rem;
+		margin-top: 3.7rem;
 		padding: var(--space-2);
 	}
 	#grid {
 		/* gap: var(--space-4); */
 	}
+	#quicksearch {
+		padding: var(--space-3);
+		padding-left: var(--space-9);
+	}
+	.searchIcon {
+		top: var(--space-3);
+		left: 0.85rem;
+	}
 	#searchWrapper {
 		display: flex;
-		gap: var(--space-2);
+		gap: var(--space-4);
 	}
 	#search {
 		flex: 1;
@@ -627,6 +646,28 @@ button.cofermented:active, button.cofermented.is-checked {
 		width: calc(25% - var(--space-4));
 		margin: var(--space-2);
 		height: 24rem;
+	}
+	.button {
+		padding: var(--space-2) var(--space-3);
+	}
+	.checkmark {
+		height: 1.2rem;
+		width: 1.2rem;
+		border-width: 0.14rem;
+	}
+	.checkboxFilter label {
+		line-height: 1.4rem;
+		padding-left: var(--space-7);
+	}
+	.checkboxFilter .checkmark:after {
+		left: 0.4rem;
+		top: 0.15rem;
+	}
+	.checkboxFilter {
+		grid-gap: var(--space-4);
+	}
+	.button-group {
+		margin-top: var(--space-3);
 	}
 }
 
