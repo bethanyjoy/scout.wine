@@ -168,7 +168,7 @@
       <!-- Dummy wine content commented out below -->
 
 
-       <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
+       <!-- <article class="orange OenoSkinContact vinovoreeaglerock" data-type="orange" data-store="vinovoreeaglerock" style="">
         <a href="http://vinovoreeaglerock.com/collections/orange/products/oeno-skin-contact">
           <img src="assets/placeholder.png">
         </a>
@@ -292,7 +292,7 @@
            <p class="store">Highland Park Wine</p>
            <p class="price">$36.00</p>
          </div>
-       </article>
+       </article> -->
 
 
     </div>
@@ -300,40 +300,41 @@
   </main>
 
   <script src="js/isotope.pkgd.min.js"></script>
-  <script src="js/script.js"></script>
 
 	<script>
 
-		$(function() {
-
-			var wine = [];
-
-			$.getJSON('data.json', function(data) {
-
-				$.each(data.wine, function(i, f) {
-
-					var tblRow =
-					"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-						"<a href=" + f.Link + ">" +
-							"<img src=" + f.Image + ">" +
-						"</a>" +
-						"<div class='tag'>" + f.Type_text + "</div>" +
-						"<div class='text'>" +
-							"<a href=" + f.Link + ">" +
-								"<p class='title'>" + f.Title_text + "</p>"+
-							"</a>" +
-							"<p class='store'>" + f.Store_text + "</p>" +
-							"<p class='price'>" + f.Price + "</p>" +
-						"</div>" +
-					"</article>"
-					$(tblRow).appendTo("#grid");
-
-				});
-
-			});
-
-		});
+		// $(function() {
+		//
+		// 	var wine = [];
+		//
+		// 	$.getJSON('data.json', function(data) {
+		//
+		// 		$.each(data.wine, function(i, f) {
+		//
+		// 			var tblRow =
+		// 			"<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+		// 				"<a href=" + f.Link + ">" +
+		// 					"<img src=" + f.Image + ">" +
+		// 				"</a>" +
+		// 				"<div class='tag'>" + f.Type_text + "</div>" +
+		// 				"<div class='text'>" +
+		// 					"<a href=" + f.Link + ">" +
+		// 						"<p class='title'>" + f.Title_text + "</p>"+
+		// 					"</a>" +
+		// 					"<p class='store'>" + f.Store_text + "</p>" +
+		// 					"<p class='price'>" + f.Price + "</p>" +
+		// 				"</div>" +
+		// 			"</article>"
+		// 			$(tblRow).appendTo("#grid");
+		//
+		// 		});
+		//
+		// 	});
+		//
+		// });
 
 	</script>
+
+	<script src="js/script.js"></script>
 
 </body>
