@@ -578,7 +578,7 @@ button.cofermented:active, button.cofermented.is-checked {
 	position:fixed;
 	bottom: var(--space-4);
 	background-color: var(--primary);
-	padding: 16px 20px;
+	padding: var(--space-4);
 	width: calc(100% - var(--space-8));
 	color: #fff;
 	text-align:center;
