@@ -70,23 +70,6 @@ selections = function() {
       filter: selections,
     });
 
-    // // init Infinite Scroll
-    // $grid.infiniteScroll({
-    //   // Infinite Scroll options
-    //   // do not set append
-    //   // do not set outlayer
-    // });
-    //
-    // // append items on load
-    // $grid.on( 'load.infiniteScroll', function( event, response, path ) {
-    //   var $items = $( response ).find('article');
-    //   // append items after images loaded
-    //   $items.imagesLoaded( function() {
-    //     $grid.append( $items );
-    //     $grid.isotope( 'insert', $items );
-    //   });
-    // });
-
 
 
     // Checkbox filter
