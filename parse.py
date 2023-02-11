@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 # sets up empty list to store wine data
 wines = []
 
+
 # list of kamp urls to parse
 # kamp_red_urls = [
 # "https://shopkamp.com/collections/red",
@@ -23,6 +24,8 @@ wines = []
 # kamp_sparkling_urls = [
 # "https://shopkamp.com/collections/sparkling"
 # ]
+
+
 
 # list of wine + eggs urls to parse
 # eggs_red_urls = [
@@ -46,6 +49,8 @@ wines = []
 # eggs_piquette_urls = [
 # "https://wineandeggs.com/collections/piquette-wine"
 # ]
+
+
 
 # list of silverlake wine urls to parse
 # sl_red_urls = [
@@ -121,6 +126,8 @@ wines = []
 # sl_co_fermented_urls = [
 # "https://silverlakewine.com/collections/fruit-wine"
 # ]
+
+
 
 # list of highland park wine urls to parse
 hlp_red_urls = [
@@ -201,92 +208,96 @@ hlp_sparkling_urls = [
 "https://www.highlandparkwine.com/collections/sparkling-wine?page=6"
 ]
 
+
+
 # list of everson royce urls to parse
-# er_red_urls = [
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=3",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=4",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=5",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=6",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=7",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=8",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=9",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=10",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=11",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=12",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=13",
-# "https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=14",
-# "https://www.eversonroyce.com/collections/french-reds",
-# "https://www.eversonroyce.com/collections/french-reds?page=2",
-# "https://www.eversonroyce.com/collections/french-reds?page=3",
-# "https://www.eversonroyce.com/collections/french-reds?page=4",
-# "https://www.eversonroyce.com/collections/french-reds?page=5",
-# "https://www.eversonroyce.com/collections/french-reds?page=6",
-# "https://www.eversonroyce.com/collections/french-reds?page=7",
-# "https://www.eversonroyce.com/collections/french-reds?page=8",
-# "https://www.eversonroyce.com/collections/french-reds?page=9",
-# "https://www.eversonroyce.com/collections/french-reds?page=10",
-# "https://www.eversonroyce.com/collections/french-reds?page=11",
-# "https://www.eversonroyce.com/collections/french-reds?page=12",
-# "https://www.eversonroyce.com/collections/italian-reds",
-# "https://www.eversonroyce.com/collections/italian-reds?page=2",
-# "https://www.eversonroyce.com/collections/italian-reds?page=3",
-# "https://www.eversonroyce.com/collections/italian-reds?page=4",
-# "https://www.eversonroyce.com/collections/italian-reds?page=5",
-# "https://www.eversonroyce.com/collections/spanish-portuguese-reds",
-# "https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=2",
-# "https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=3",
-# "https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=4",
-# "https://www.eversonroyce.com/collections/eastern-european-reds",
-# "https://www.eversonroyce.com/collections/eastern-european-reds?page=2",
-# "https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
-# "https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2"
-# ]
-# er_white_urls = [
-# "https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
-# "https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
-# "https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=3",
-# "https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=4",
-# "https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=5",
-# "https://www.eversonroyce.com/collections/french-white-wine",
-# "https://www.eversonroyce.com/collections/french-white-wine?page=2",
-# "https://www.eversonroyce.com/collections/french-white-wine?page=3",
-# "https://www.eversonroyce.com/collections/french-white-wine?page=4",
-# "https://www.eversonroyce.com/collections/french-white-wine?page=5",
-# "https://www.eversonroyce.com/collections/italian-white-wine",
-# "https://www.eversonroyce.com/collections/italian-white-wine?page=2",
-# "https://www.eversonroyce.com/collections/italian-white-wine?page=3",
-# "https://www.eversonroyce.com/collections/spanish-portuguese-whites"
-# "https://www.eversonroyce.com/collections/spanish-portuguese-whites?page=2"
-# "https://www.eversonroyce.com/collections/eastern-european-whites",
-# "https://www.eversonroyce.com/collections/eastern-european-whites?page=2",
-# "https://www.eversonroyce.com/collections/eastern-european-whites?page=3",
-# "https://www.eversonroyce.com/collections/eastern-european-whites?page=4",
-# "https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
-# "https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2"
-# ]
-# er_rose_urls = [
-# "https://www.eversonroyce.com/collections/rose",
-# "https://www.eversonroyce.com/collections/rose?page=2",
-# "https://www.eversonroyce.com/collections/rose?page=3",
-# "https://www.eversonroyce.com/collections/rose?page=4"
-# ]
-# er_orange_urls = [
-# "https://www.eversonroyce.com/collections/orange-wine",
-# "https://www.eversonroyce.com/collections/orange-wine?page=2",
-# "https://www.eversonroyce.com/collections/orange-wine?page=3",
-# "https://www.eversonroyce.com/collections/orange-wine?page=4",
-# "https://www.eversonroyce.com/collections/orange-wine?page=5",
-# ]
-# er_sparkling_urls = [
-# "https://www.eversonroyce.com/collections/sparklin-wine",
-# "https://www.eversonroyce.com/collections/sparklin-wine?page=2",
-# "https://www.eversonroyce.com/collections/sparklin-wine?page=3",
-# "https://www.eversonroyce.com/collections/sparklin-wine?page=4",
-# "https://www.eversonroyce.com/collections/sparklin-wine?page=5",
-# "https://www.eversonroyce.com/collections/sparklin-wine?page=6"
-# ]
+er_red_urls = [
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=3",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=4",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=5",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=6",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=7",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=8",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=9",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=10",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=11",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=12",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=13",
+"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=14",
+"https://www.eversonroyce.com/collections/french-reds",
+"https://www.eversonroyce.com/collections/french-reds?page=2",
+"https://www.eversonroyce.com/collections/french-reds?page=3",
+"https://www.eversonroyce.com/collections/french-reds?page=4",
+"https://www.eversonroyce.com/collections/french-reds?page=5",
+"https://www.eversonroyce.com/collections/french-reds?page=6",
+"https://www.eversonroyce.com/collections/french-reds?page=7",
+"https://www.eversonroyce.com/collections/french-reds?page=8",
+"https://www.eversonroyce.com/collections/french-reds?page=9",
+"https://www.eversonroyce.com/collections/french-reds?page=10",
+"https://www.eversonroyce.com/collections/french-reds?page=11",
+"https://www.eversonroyce.com/collections/french-reds?page=12",
+"https://www.eversonroyce.com/collections/italian-reds",
+"https://www.eversonroyce.com/collections/italian-reds?page=2",
+"https://www.eversonroyce.com/collections/italian-reds?page=3",
+"https://www.eversonroyce.com/collections/italian-reds?page=4",
+"https://www.eversonroyce.com/collections/italian-reds?page=5",
+"https://www.eversonroyce.com/collections/spanish-portuguese-reds",
+"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=2",
+"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=3",
+"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=4",
+"https://www.eversonroyce.com/collections/eastern-european-reds",
+"https://www.eversonroyce.com/collections/eastern-european-reds?page=2",
+"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
+"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2"
+]
+er_white_urls = [
+"https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
+"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
+"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=3",
+"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=4",
+"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=5",
+"https://www.eversonroyce.com/collections/french-white-wine",
+"https://www.eversonroyce.com/collections/french-white-wine?page=2",
+"https://www.eversonroyce.com/collections/french-white-wine?page=3",
+"https://www.eversonroyce.com/collections/french-white-wine?page=4",
+"https://www.eversonroyce.com/collections/french-white-wine?page=5",
+"https://www.eversonroyce.com/collections/italian-white-wine",
+"https://www.eversonroyce.com/collections/italian-white-wine?page=2",
+"https://www.eversonroyce.com/collections/italian-white-wine?page=3",
+"https://www.eversonroyce.com/collections/spanish-portuguese-whites"
+"https://www.eversonroyce.com/collections/spanish-portuguese-whites?page=2"
+"https://www.eversonroyce.com/collections/eastern-european-whites",
+"https://www.eversonroyce.com/collections/eastern-european-whites?page=2",
+"https://www.eversonroyce.com/collections/eastern-european-whites?page=3",
+"https://www.eversonroyce.com/collections/eastern-european-whites?page=4",
+"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
+"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2"
+]
+er_rose_urls = [
+"https://www.eversonroyce.com/collections/rose",
+"https://www.eversonroyce.com/collections/rose?page=2",
+"https://www.eversonroyce.com/collections/rose?page=3",
+"https://www.eversonroyce.com/collections/rose?page=4"
+]
+er_orange_urls = [
+"https://www.eversonroyce.com/collections/orange-wine",
+"https://www.eversonroyce.com/collections/orange-wine?page=2",
+"https://www.eversonroyce.com/collections/orange-wine?page=3",
+"https://www.eversonroyce.com/collections/orange-wine?page=4",
+"https://www.eversonroyce.com/collections/orange-wine?page=5",
+]
+er_sparkling_urls = [
+"https://www.eversonroyce.com/collections/sparklin-wine",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
+"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
+]
+
+
 
 # list of vinovore eagle rock urls to parse
 vver_red_urls = [
@@ -327,6 +338,8 @@ vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling?page=5",
 "https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
+
+
 
 
 # code for parsing vinovore eagle rock urls
@@ -517,6 +530,8 @@ for x in vver_sparkling_urls:
           })
 
 
+
+
 # code for parsing highland park wine urls
 for x in hlp_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -668,6 +683,7 @@ for x in hlp_sparkling_urls:
             'Store': store,
             'Store_text': store_text,
         })
+
 
 
 
@@ -853,157 +869,163 @@ for x in hlp_sparkling_urls:
 #             'Store_text': store_text,
 #         })
 
+
+
+
 # code for parsing everson royce wine urls
-# for x in er_orange_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="prod-block")
-#     for product in products:
-#         title = product.find("div", class_="title").text.replace(" ", "")
-#         title_text = product.find("div", class_="title").text.strip()
-#         price = product.find("div", class_="product-price").text.strip()
-#         link = 'http://eversonroyce.com' + product.find("a")['href']
-#         imagesoup = product.find('noscript')
-#         imagecheck = imagesoup.find("img", class_="rimage__image")
-#         if imagecheck is not None:
-#             imageurl = imagesoup.find("img", class_="rimage__image")['src']
-#             image = 'https:' + imageurl
-#         else:
-#             image = 'assets/placeholder.png'
-#         store = 'eversonroyce'
-#         store_text = 'Everson Royce'
-#         type = 'orange'
-#         type_text = 'Orange'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
-# for x in er_rose_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="prod-block")
-#     for product in products:
-#         title = product.find("div", class_="title").text.replace(" ", "")
-#         title_text = product.find("div", class_="title").text.strip()
-#         price = product.find("div", class_="product-price").text.strip()
-#         link = 'http://eversonroyce.com' + product.find("a")['href']
-#         imagesoup = product.find('noscript')
-#         imagecheck = imagesoup.find("img", class_="rimage__image")
-#         if imagecheck is not None:
-#             imageurl = imagesoup.find("img", class_="rimage__image")['src']
-#             image = 'https:' + imageurl
-#         else:
-#             image = 'assets/placeholder.png'
-#         store = 'eversonroyce'
-#         store_text = 'Everson Royce'
-#         type = 'rose'
-#         type_text = 'Ros&#233;'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
-# for x in er_red_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="prod-block")
-#     for product in products:
-#         title = product.find("div", class_="title").text.replace(" ", "")
-#         title_text = product.find("div", class_="title").text.strip()
-#         price = product.find("div", class_="product-price").text.strip()
-#         link = 'http://eversonroyce.com' + product.find("a")['href']
-#         imagesoup = product.find('noscript')
-#         imagecheck = imagesoup.find("img", class_="rimage__image")
-#         if imagecheck is not None:
-#             imageurl = imagesoup.find("img", class_="rimage__image")['src']
-#             image = 'https:' + imageurl
-#         else:
-#             image = 'assets/placeholder.png'
-#         store = 'eversonroyce'
-#         store_text = 'Everson Royce'
-#         type = 'red'
-#         type_text = 'Red'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
-# for x in er_white_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="prod-block")
-#     for product in products:
-#         title = product.find("div", class_="title").text.replace(" ", "")
-#         title_text = product.find("div", class_="title").text.strip()
-#         price = product.find("div", class_="product-price").text.strip()
-#         link = 'http://eversonroyce.com' + product.find("a")['href']
-#         imagesoup = product.find('noscript')
-#         imagecheck = imagesoup.find("img", class_="rimage__image")
-#         if imagecheck is not None:
-#             imageurl = imagesoup.find("img", class_="rimage__image")['src']
-#             image = 'https:' + imageurl
-#         else:
-#             image = 'assets/placeholder.png'
-#         store = 'eversonroyce'
-#         store_text = 'Everson Royce'
-#         type = 'white'
-#         type_text = 'White'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
-# for x in er_sparkling_urls:
-#     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-#     products = soup.find_all("div", class_="prod-block")
-#     for product in products:
-#         title = product.find("div", class_="title").text.replace(" ", "")
-#         title_text = product.find("div", class_="title").text.strip()
-#         price = product.find("div", class_="product-price").text.strip()
-#         link = 'http://eversonroyce.com' + product.find("a")['href']
-#         imagesoup = product.find('noscript')
-#         imagecheck = imagesoup.find("img", class_="rimage__image")
-#         if imagecheck is not None:
-#             imageurl = imagesoup.find("img", class_="rimage__image")['src']
-#             image = 'https:' + imageurl
-#         else:
-#             image = 'assets/placeholder.png'
-#         store = 'eversonroyce'
-#         store_text = 'Everson Royce'
-#         type = 'sparkling'
-#         type_text = 'Sparkling'
-#         wines.append({
-#             'Title': title,
-#             'Title_text': title_text,
-#             'Price': price,
-#             'Link': link,
-#             'Image': image,
-#             'Type': type,
-#             'Type_text': type_text,
-#             'Store': store,
-#             'Store_text': store_text,
-#         })
+for x in er_orange_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://eversonroyce.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'eversonroyce'
+        store_text = 'Everson Royce'
+        type = 'orange'
+        type_text = 'Orange'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+for x in er_rose_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://eversonroyce.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'eversonroyce'
+        store_text = 'Everson Royce'
+        type = 'rose'
+        type_text = 'Ros&#233;'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+for x in er_red_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://eversonroyce.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'eversonroyce'
+        store_text = 'Everson Royce'
+        type = 'red'
+        type_text = 'Red'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+for x in er_white_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://eversonroyce.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'eversonroyce'
+        store_text = 'Everson Royce'
+        type = 'white'
+        type_text = 'White'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+for x in er_sparkling_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("div", class_="prod-block")
+    for product in products:
+        title = product.find("div", class_="title").text.replace(" ", "")
+        title_text = product.find("div", class_="title").text.strip()
+        price = product.find("div", class_="product-price").text.strip()
+        link = 'http://eversonroyce.com' + product.find("a")['href']
+        imagesoup = product.find('noscript')
+        imagecheck = imagesoup.find("img", class_="rimage__image")
+        if imagecheck is not None:
+            imageurl = imagesoup.find("img", class_="rimage__image")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'eversonroyce'
+        store_text = 'Everson Royce'
+        type = 'sparkling'
+        type_text = 'Sparkling'
+        wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+        })
+
+
+
 
 # code for parsing wine + eggs urls
 # for x in eggs_co_fermented_urls:
@@ -1238,6 +1260,9 @@ for x in hlp_sparkling_urls:
 #             'Store_text': store_text,
 #         })
 
+
+
+
 # code for parsing kamp urls
 # for x in kamp_orange_urls:
 #     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1399,6 +1424,8 @@ for x in hlp_sparkling_urls:
 #             'Store': store,
 #             'Store_text': store_text,
 #         })
+
+
 
 # writes the wine data to the json file
 with open("data.json", "w") as writeJSON:
