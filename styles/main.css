@@ -458,7 +458,7 @@ nav {
 /*  Button filter styles                              */
 /*----------------------------------------------------*/
 
-/* .typeContainer label {
+ .buttonFilter label {
 	background-color: var(--primary-4);
 	border-radius: 5rem;
 	cursor: pointer;
@@ -473,64 +473,64 @@ nav {
   -webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
   -webkit-user-select: none;
-} */
+} 
 
-/* .typeContainer input[type="checkbox"]:checked + label {
-} */
+ .buttonFilter input[type="checkbox"]:checked + label {
+} 
 
-/* .typeContainer input[type="checkbox"] {
+ .buttonFilter input[type="checkbox"] {
   display: absolute;
 	opacity: 0;
   position: absolute;
-} */
+} 
 
 /* Color styles for individual wine type filters */
-/* .typeContainer input[value="orange"]:checked + label {
+ .buttonFilter input[value="Orange"]:checked + label {
   background-color: var(--orange);
 }
-.typeContainer input[value="rose"]:checked + label {
+.buttonFilter input[value="Rosé"]:checked + label {
   background-color: var(--rose);
 }
-.typeContainer input[value="red"]:checked + label {
+.buttonFilter input[value="Red"]:checked + label {
   background-color: var(--red);
 }
-.typeContainer input[value="white"]:checked + label {
+.buttonFilter input[value="White"]:checked + label {
   background-color: var(--white);
 }
-.typeContainer input[value="sparkling"]:checked + label {
+.buttonFilter input[value="Sparkling"]:checked + label {
   background-color: var(--sparkling);
 }
-.typeContainer input[value="piquette"]:checked + label {
+.buttonFilter input[value="Piquette"]:checked + label {
   background-color: var(--piquette);
 }
-.typeContainer input[value="cofermented"]:checked + label {
+.buttonFilter input[value="Co-Fermented"]:checked + label {
   background-color: var(--co-fermented);
-} */
+} 
 
 
-/* @media (pointer:fine) {
-	.typeContainer input[value="orange"]:hover + label {
+ @media (pointer:fine) {
+	.buttonFilter input[value="Orange"]:hover + label {
 	  background-color: var(--orange-hover);
 	}
-	.typeContainer input[value="rose"]:hover + label {
+	.buttonFilter input[value="Rosé"]:hover + label {
 	  background-color: var(--rose-hover);
 	}
-	.typeContainer input[value="red"]:hover + label {
+	.buttonFilter input[value="Red"]:hover + label {
 	  background-color: var(--red-hover);
 	}
-	.typeContainer input[value="white"]:hover + label {
+	.buttonFilter input[value="White"]:hover + label {
 	  background-color: var(--white-hover);
 	}
-	.typeContainer input[value="sparkling"]:hover + label {
+	.buttonFilter input[value="Sparkling"]:hover + label {
 	  background-color: var(--sparkling-hover);
 	}
-  .typeContainer input[value="piquette"]:hover + label {
+  .buttonFilter input[value="Piquette"]:hover + label {
 	  background-color: var(--piquette-hover);
 	}
-  .typeContainer input[value="cofermented"]:hover + label {
+  .buttonFilter input[value="Co-Fermented"]:hover + label {
 	  background-color: var(--co-fermented-hover);
 	}
-} */
+} 
 
 
 

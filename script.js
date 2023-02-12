@@ -141,9 +141,9 @@
     });
 
     _(all_type).uniq().each(function (item) {
-      $(".typeContainer").append('<label><input type="checkbox" name="type" value="' + item + '">' + item + '<span class="checkmark"></label>')
+      $(".typeContainer").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>')
     });
-
+    
     _(all_store).uniq().each(function (item) {
       $(".storeContainer").append('<label><input type="checkbox" name="store" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
