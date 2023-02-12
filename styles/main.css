@@ -639,14 +639,11 @@ label.undefined {
 	#filters {
 		display: block!important;
 	}
-	#hideButton {
-		display: none;
-	}
-	#showButton {
-		display: none;
-	}
 	.mobileButtons {
 	  display: none;
+	}
+    #resultsButton {
+		display:none!important;
 	}
 }
 
