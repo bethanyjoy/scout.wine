@@ -283,6 +283,18 @@ nav {
 	text-decoration: underline;
 }
 
+#resultsButton {
+	position:fixed;
+	bottom: var(--space-4);
+	background-color: var(--primary);
+	padding: var(--space-3);
+	width: calc(100% - var(--space-8));
+	color: #fff;
+	text-align:center;
+	border-radius: 100px;
+	display:block;
+}
+
 
 
 
@@ -313,7 +325,7 @@ nav {
 	color: var(--primary);
 	/* line-height: 1rem; */
   outline: 0;
-	padding: var(--space-2) var(--space-3-5);
+	padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
 	width: 100%;
 }
 
@@ -598,8 +610,8 @@ label.undefined {
 		display: flex;
 		gap: var(--space-2);
 	}
-	#search {
-		flex: 1;
+	.search {
+		width: calc(100% - var(--space-10));
 	}
 	.navButton {
 		display: block;
@@ -612,6 +624,8 @@ label.undefined {
 	}
 	.mobileButtons {
 	  display: block;
+      position: fixed;
+      right: var(--space-2);
 	}
 	article img {
 		height: 42vw !important;

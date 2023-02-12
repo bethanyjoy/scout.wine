@@ -189,34 +189,3 @@
 
 $(document).bind('json_loaded', b);
 
-
-
-
-
-// Hide/show sidebar on mobile
-
-  // function showSidebar() {
-  //   var x = document.getElementById("filters");
-  //     x.style.display = "flex";
-  //   var x = document.getElementById("showButton");
-  //     x.style.display = "none";
-  //   var x = document.getElementById("hideButton");
-  //     x.style.display = "block";
-  //   var x = document.getElementById("sidebar");
-  //     x.style.height = "100vh";
-  //   var x = document.getElementById("main");
-  //     x.style.overflow = "hidden"
-  // }
-  //
-  // function hideSidebar() {
-  //   var x = document.getElementById("filters");
-  //     x.style.display = "none";
-  //   var x = document.getElementById("showButton");
-  //     x.style.display = "block";
-  //   var x = document.getElementById("hideButton");
-  //     x.style.display = "none";
-  //     var x = document.getElementById("sidebar");
-  //       x.style.height = "auto";
-  //   var x = document.getElementById("main");
-  //       x.style.overflow = "auto"
-  //   }
