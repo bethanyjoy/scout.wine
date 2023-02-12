@@ -526,7 +526,7 @@ for x in heavens_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'orange'
 		type_text = 'Orange'
 		wines.append({
@@ -556,7 +556,7 @@ for x in heavens_rose_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'rose'
 		type_text = 'Ros&#233;'
 		wines.append({
@@ -586,7 +586,7 @@ for x in heavens_red_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'red'
 		type_text = 'Red'
 		wines.append({
@@ -616,7 +616,7 @@ for x in heavens_white_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'white'
 		type_text = 'White'
 		wines.append({
@@ -646,7 +646,7 @@ for x in heavens_sparkling_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'sparkling'
 		type_text = 'Sparkling'
 		wines.append({
@@ -676,7 +676,7 @@ for x in heavens_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'heavensmarket'
-		store_text = 'Heavens Market'
+		store_text = 'Heaven&#39;s Market'
 		type = 'orange'
 		type_text = 'Orange'
 		wines.append({
