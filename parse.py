@@ -391,155 +391,36 @@ vver_sparkling_urls = [
 
 # code for parsing heavens market urls
 for x in heavens_orange_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-        title_text = product.find("span", class_="visually-hidden").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-        imagesoup = product.find('noscript')
-        imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-        if imagecheck is not None:
-          imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-          image = 'https:' + imageurl
-        else:
-          image = 'assets/placeholder.png'
-				store = 'heavensmarket'
-				store_text = 'Heavens Market'
-				type = 'orange'
-				type_text = 'Orange'
-				wines.append({
-					'Title': title,
-					'Title_text': title_text,
-					'Price': price,
-					'Link': link,
-					'Image': image,
-					'Type': type,
-					'Type_text': type_text,
-					'Store': store,
-					'Store_text': store_text,
-				})
-for x in heavens_rose_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-        title_text = product.find("span", class_="visually-hidden").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-        imagesoup = product.find('noscript')
-        imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-        if imagecheck is not None:
-          imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-          image = 'https:' + imageurl
-        else:
-          image = 'assets/placeholder.png'
-				store = 'heavensmarket'
-				store_text = 'Heavens Market'
-				type = 'rose'
-				type_text = 'Ros&#233;'
-				wines.append({
-					'Title': title,
-					'Title_text': title_text,
-					'Price': price,
-					'Link': link,
-					'Image': image,
-					'Type': type,
-					'Type_text': type_text,
-					'Store': store,
-					'Store_text': store_text,
-				})
-for x in heavens_red_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-        title_text = product.find("span", class_="visually-hidden").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-        imagesoup = product.find('noscript')
-        imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-        if imagecheck is not None:
-          imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-          image = 'https:' + imageurl
-        else:
-          image = 'assets/placeholder.png'
-				store = 'heavensmarket'
-				store_text = 'Heavens Market'
-				type = 'red'
-				type_text = 'Red'
-				wines.append({
-					'Title': title,
-					'Title_text': title_text,
-					'Price': price,
-					'Link': link,
-					'Image': image,
-					'Type': type,
-					'Type_text': type_text,
-					'Store': store,
-					'Store_text': store_text,
-				})
-for x in heavens_white_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-        title_text = product.find("span", class_="visually-hidden").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-        imagesoup = product.find('noscript')
-        imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-        if imagecheck is not None:
-          imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-          image = 'https:' + imageurl
-        else:
-          image = 'assets/placeholder.png'
-				store = 'heavensmarket'
-				store_text = 'Heavens Market'
-				type = 'white'
-				type_text = 'White'
-				wines.append({
-					'Title': title,
-					'Title_text': title_text,
-					'Price': price,
-					'Link': link,
-					'Image': image,
-					'Type': type,
-					'Type_text': type_text,
-					'Store': store,
-					'Store_text': store_text,
-				})
-for x in heavens_sparkling_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-        title_text = product.find("span", class_="visually-hidden").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-        imagesoup = product.find('noscript')
-        imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-        if imagecheck is not None:
-          imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-          image = 'https:' + imageurl
-        else:
-          image = 'assets/placeholder.png'
-				store = 'heavensmarket'
-				store_text = 'Heavens Market'
-				type = 'sparkling'
-				type_text = 'Sparkling'
-				wines.append({
-					'Title': title,
-					'Title_text': title_text,
-					'Price': price,
-					'Link': link,
-					'Image': image,
-					'Type': type,
-					'Type_text': type_text,
-					'Store': store,
-					'Store_text': store_text,
-				})				
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("span", class_="visually-hidden").text.replace(" ", "")
+		title_text = product.find("span", class_="visually-hidden").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
+		imagesoup = product.find('noscript')
+		imagecheck = imagesoup.find("img", class_="grid-view-item__image")
+		if imagecheck is not None:
+			imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'heavensmarket'
+		store_text = 'Heavens Market'
+		type = 'orange'
+		type_text = 'Orange'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
+
 				
 
 # code for parsing field and flask urls
