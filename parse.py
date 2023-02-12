@@ -7,6 +7,38 @@ from bs4 import BeautifulSoup
 wines = []
 
 
+# list of heavens market urls to parse
+heavens_red_urls = [
+"https://www.heavensmarketla.com/collections/red",
+"https://www.heavensmarketla.com/collections/red?page=2",
+"https://www.heavensmarketla.com/collections/red?page=3",
+"https://www.heavensmarketla.com/collections/red?page=4",
+"https://www.heavensmarketla.com/collections/red?page=5",
+]
+heavens_white_urls = [
+"https://www.heavensmarketla.com/collections/white",
+"https://www.heavensmarketla.com/collections/white?page=2",
+"https://www.heavensmarketla.com/collections/white?page=3",
+"https://www.heavensmarketla.com/collections/white?page=4",
+]
+heavens_rose_urls = [
+"https://www.heavensmarketla.com/collections/rose",
+"https://www.heavensmarketla.com/collections/rose?page=2",
+]
+heavens_orange_urls = [
+"https://www.heavensmarketla.com/collections/skin-contact",
+"https://www.heavensmarketla.com/collections/skin-contact?page=2",
+"https://www.heavensmarketla.com/collections/skin-contact?page=3",
+"https://www.heavensmarketla.com/collections/skin-contact?page=4",
+]
+heavens_sparkling_urls = [
+"https://www.heavensmarketla.com/collections/sparkling",
+"https://www.heavensmarketla.com/collections/sparkling?page=2",
+"https://www.heavensmarketla.com/collections/sparkling?page=3",
+"https://www.heavensmarketla.com/collections/sparkling?page=4",
+]
+
+
 # list of field and flask urls to parse
 field_red_urls = [
 "https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
@@ -376,6 +408,122 @@ for x in field_orange_urls:
 		store_text = 'Flask and Field'
 		type = 'orange'
 		type_text = 'Orange'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
+for x in field_rose_urls:
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("h3", class_="card__heading").text.replace(" ", "")
+		title_text = product.find("h3", class_="card__heading").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://flaskandfield.com' + product.find("a")['href']
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			imageurl = product.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'flaskandfield'
+		store_text = 'Flask and Field'
+		type = 'rose'
+		type_text = 'Ros&#233;'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
+for x in field_red_urls:
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("h3", class_="card__heading").text.replace(" ", "")
+		title_text = product.find("h3", class_="card__heading").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://flaskandfield.com' + product.find("a")['href']
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			imageurl = product.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'flaskandfield'
+		store_text = 'Flask and Field'
+		type = 'red'
+		type_text = 'Red'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
+for x in field_white_urls:
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("h3", class_="card__heading").text.replace(" ", "")
+		title_text = product.find("h3", class_="card__heading").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://flaskandfield.com' + product.find("a")['href']
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			imageurl = product.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'flaskandfield'
+		store_text = 'Flask and Field'
+		type = 'white'
+		type_text = 'White'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
+for x in field_sparkling_urls:
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("h3", class_="card__heading").text.replace(" ", "")
+		title_text = product.find("h3", class_="card__heading").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://flaskandfield.com' + product.find("a")['href']
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			imageurl = product.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'flaskandfield'
+		store_text = 'Flask and Field'
+		type = 'sparkling'
+		type_text = 'Sparkling'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
