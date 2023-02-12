@@ -1058,7 +1058,7 @@ for x in sl_co_fermented_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'cofermented'
 		type_text = 'Co-Fermented'
 		wines.append({
@@ -1088,7 +1088,7 @@ for x in sl_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'orange'
 		type_text = 'Orange'
 		wines.append({
@@ -1118,7 +1118,7 @@ for x in sl_rose_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'rose'
 		type_text = 'Ros&#233;'
 		wines.append({
@@ -1148,7 +1148,7 @@ for x in sl_red_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'red'
 		type_text = 'Red'
 		wines.append({
@@ -1178,7 +1178,7 @@ for x in sl_white_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'white'
 		type_text = 'White'
 		wines.append({
@@ -1208,7 +1208,7 @@ for x in sl_sparkling_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'silverlake'
-		store_text = 'Silver Lake Wine'
+		store_text = 'Silverlake Wine'
 		type = 'sparkling'
 		type_text = 'Sparkling'
 		wines.append({
