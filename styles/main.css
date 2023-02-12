@@ -153,17 +153,40 @@ article {
 	position: relative;
 }
 
-article img {
+article a.image {
+	display: block;
 	background: rgba(31, 121, 204, 0.08);
 	border-radius: 0.5rem;
 	height: 20vw;
-	max-height: 17.5rem;
+	width: 100%;
+}
+
+article img {
+/*	background: rgba(31, 121, 204, 0.08);*/
+	border-radius: 0.5rem;
+/*	height: 20vw;*/
+/*	max-height: 17.5rem;*/
 	max-width: 100%;
 	object-fit: cover;
   width: 100%;
+	object-position: 50% 50%;
+	height: 100%;
 }
 
-article img:hover {
+article.heavensmarket img,
+article.wineandeggs img,
+article.kamp img{
+/*	width: 40%;*/
+/*	height: 100%;*/
+	object-fit: scale-down;
+	padding: 1rem 0;
+}
+
+article.kamp img {
+	padding: 0;
+}
+
+article a.image:hover {
 	box-shadow: 0px 0.188rem 0.5rem 0 rgba(0,0,0,0.1);
 }
 
@@ -595,7 +618,7 @@ label.undefined {
       position: fixed;
       right: var(--space-2-5);
 	}
-	article img {
+	article a.image {
 		height: 42vw !important;
 	}
 	article {
