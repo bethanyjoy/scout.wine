@@ -41,7 +41,7 @@
 
     var options = {
       valueNames: ['type', 'category', 'store', 'name', 'maker'],
-      page: 33,
+      page: 60,
       plugins: [
          ListPagination({})
       ]
