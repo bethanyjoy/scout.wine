@@ -625,6 +625,7 @@ label.undefined {
 	#filters {
 		display: none;
 		width: calc(100% - var(--space-10));
+		margin-bottom: 4.5rem;
 	}
 	.mobileButtons {
 	  display: block;
