@@ -104,6 +104,8 @@ ul {
 }
 
 
+
+
 /*----------------------------------------------------*/
 /*  Main/grid styles                                  */
 /*----------------------------------------------------*/
@@ -120,15 +122,6 @@ main {
 	width: 100%;
 }
 
-/* #grid {
-	align-items: stretch;
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	grid-gap: var(--space-10);
-	overflow:hidden;
-	width: auto;
-} */
-
 .list {
 	align-items: stretch;
 	display: grid;
@@ -138,7 +131,18 @@ main {
 	width: auto;
 }
 
+.pagination {
+  margin-top: 56px;
+}
 
+.pagination li {
+  display: inline;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--primary-4);
+  margin-right: var(--space-2);
+  border-radius: 4px;
+}
 
 
 /*----------------------------------------------------*/
@@ -259,10 +263,6 @@ nav {
 	width: 18rem;
 }
 
-#filters {
-  display: block;
-}
-
 .logo img {
 	max-width: 9rem;
 }
@@ -271,6 +271,14 @@ nav {
 	color: var(--primary-2);
 	display: block;
 	line-height: 1.6rem;
+}
+
+#filters {
+  display: block;
+}
+
+.filter {
+	margin-bottom: var(--space-6);;
 }
 
 .credits {
@@ -300,22 +308,6 @@ nav {
 /*  Search bar styles                                 */
 /*----------------------------------------------------*/
 
-#search {
-	position: relative;
-}
-
-/*
-#searchInput {
-	background: var(--primary-4);
-  border: none;
-  border-radius: 8px;
-	color: var(--primary);
-  outline: 0;
-	padding: var(--space-2) var(--space-8);
-	width: 100%;
-}
-*/
-
 
 .search {
 	background: var(--primary-4);
@@ -327,6 +319,7 @@ nav {
 	width: 100%;
 }
 
+/*Style the clear icon*/
 /*
 .search::-webkit-search-cancel-button{
     position:relative;
@@ -339,58 +332,30 @@ nav {
 }
 */
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
   color: var(--primary-2);
   opacity: 1; /* Firefox */
 }
 
-#search:hover, #search:focus {
+.search:hover, .search:focus {
   /* border: 1px solid #009688; */
   /* background-color: white; */
 }
 
-.searchIcon {
-	color: var(--primary-2)!important;
-	height: 1rem;
-	left: var(--space-2-5);
-  position: absolute;
-  top: var(--space-2);
-  width: 0.938rem;
-}
-
-.clearIcon {
-	cursor: pointer;
-  position: absolute;
-  right: var(--space-2);
-	top: 0.563rem;
-	visibility: hidden;
-  width: 0.75rem;
-}
 
 
 
 
-.pagination {
-  margin-top: 56px;
-}
 
-.pagination li {
-  display: inline;
-  text-decoration: none;
-  padding: var(--space-2) var(--space-3);
-  background-color: var(--primary-4);
-  margin-right: var(--space-2);
-  border-radius: 4px;
-}
+
+
+
+
 
 
 /*----------------------------------------------------*/
 /*  Checkbox filter styles                            */
 /*----------------------------------------------------*/
-
-.filter {
-	margin-bottom: var(--space-6);;
-}
 
 /* Customize the label (the container) */
 .checkboxFilter label {
