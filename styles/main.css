@@ -292,7 +292,7 @@ nav {
 	color: #fff;
 	text-align:center;
 	border-radius: 100px;
-	display:block;
+/*	display:block;*/
 }
 
 
@@ -633,6 +633,9 @@ label.undefined {
 	article {
 		padding-bottom: var(--space-2);
 	}
+  #resultsButton {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 800px) {
@@ -642,9 +645,9 @@ label.undefined {
 	.mobileButtons {
 	  display: none;
 	}
-    #resultsButton {
-		display:none!important;
-	}
+  #resultsButton {
+    display: none;
+  }
 }
 
 
