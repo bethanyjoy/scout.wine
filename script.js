@@ -12,7 +12,7 @@
 
         var tblRow =
         "<article class=" + "'" + f.Type + " " + f.Title + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
-          "<a href=" + f.Link + ">" +
+          "<a class='image' href=" + f.Link + ">" +
             "<img src=" + f.Image + ">" +
           "</a>" +
           "<div class='type'>" + f.Type_text + "</div>" +
