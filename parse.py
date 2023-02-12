@@ -359,34 +359,34 @@ vver_sparkling_urls = [
 
 # code for parsing field and flask urls
 for x in field_orange_urls:
-    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-    products = soup.find_all("li", class_="grid__item")
-    for product in products:
-        title = product.find("h3", class_="card__heading").text.replace(" ", "")
-        title_text = product.find("h3", class_="card__heading").text.strip()
-        price = product.find("span", class_="price-item").text.strip()
-        link = 'http://flaskandfield.com' + product.find("a")['href']
-        imagecheck = product.find("img")
-        if imagecheck is not None:
-            imageurl = product.find("img")['src']
-            image = 'https:' + imageurl
-        else:
-            image = 'assets/placeholder.png'
-        store = 'flaskandfield'
-        store_text = 'Flask and Field'
-        type = 'orange'
-        type_text = 'Orange'
-				wines.append({
-            'Title': title,
-            'Title_text': title_text,
-            'Price': price,
-            'Link': link,
-            'Image': image,
-            'Type': type,
-            'Type_text': type_text,
-            'Store': store,
-            'Store_text': store_text,
-          })
+	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+	products = soup.find_all("li", class_="grid__item")
+	for product in products:
+		title = product.find("h3", class_="card__heading").text.replace(" ", "")
+		title_text = product.find("h3", class_="card__heading").text.strip()
+		price = product.find("span", class_="price-item").text.strip()
+		link = 'http://flaskandfield.com' + product.find("a")['href']
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			imageurl = product.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+		store = 'flaskandfield'
+		store_text = 'Flask and Field'
+		type = 'orange'
+		type_text = 'Orange'
+		wines.append({
+			'Title': title,
+			'Title_text': title_text,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_text': type_text,
+			'Store': store,
+			'Store_text': store_text,
+		})
 
 
 
