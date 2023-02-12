@@ -611,21 +611,25 @@ label.undefined {
 		gap: var(--space-2);
 	}
 	.search {
-		width: calc(100% - var(--space-10));
+		width: calc(100% - var(--space-12));
 	}
 	.navButton {
 		display: block;
 		height: 2.222rem;
-		width: 2.222rem;
-		padding: 0.22rem;
+		padding: 0.15rem 0.5rem;
+	}
+	.navButton svg{
+		height: 2rem;
+		width: 2rem;
 	}
 	#filters {
 		display: none;
+		width: calc(100% - var(--space-10));
 	}
 	.mobileButtons {
 	  display: block;
       position: fixed;
-      right: var(--space-2);
+      right: var(--space-2-5);
 	}
 	article img {
 		height: 42vw !important;
