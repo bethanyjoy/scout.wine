@@ -6,6 +6,34 @@ from bs4 import BeautifulSoup
 # sets up empty list to store wine data
 wines = []
 
+
+# list of field and flask urls to parse
+field_red_urls = [
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=2",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=3",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=4",
+]
+field_white_urls = [
+"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=2",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=3",
+]
+field_rose_urls = [
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine&page=2",
+]
+field_orange_urls = [
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&page=2",
+]
+field_sparkling_urls = [
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine",
+"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
+]
+
+
+
 # list of kamp urls to parse
 kamp_red_urls = [
 "https://shopkamp.com/collections/red",
@@ -327,6 +355,40 @@ vver_sparkling_urls = [
 "https://vinovoreeaglerock.com/collections/sparkling?page=5",
 "https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
+
+
+# code for parsing field and flask urls
+for x in field_orange_urls:
+    soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+    products = soup.find_all("li", class_="grid__item")
+    for product in products:
+        title = product.find("h3", class_="card__heading").text.replace(" ", "")
+        title_text = product.find("h3", class_="card__heading").text.strip()
+        price = product.find("span", class_="price-item").text.strip()
+        link = 'http://flaskandfield.com' + product.find("a")['href']
+        imagecheck = product.find("img")
+        if imagecheck is not None:
+            imageurl = product.find("img")['src']
+            image = 'https:' + imageurl
+        else:
+            image = 'assets/placeholder.png'
+        store = 'flaskandfield'
+        store_text = 'Flask and Field'
+        type = 'orange'
+        type_text = 'Orange'
+				wines.append({
+            'Title': title,
+            'Title_text': title_text,
+            'Price': price,
+            'Link': link,
+            'Image': image,
+            'Type': type,
+            'Type_text': type_text,
+            'Store': store,
+            'Store_text': store_text,
+          })
+
+
 
 
 # code for parsing vinovore eagle rock urls
