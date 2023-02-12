@@ -309,7 +309,7 @@ nav {
 #searchInput {
 	background: var(--primary-4);
   border: none;
-  border-radius: 100px;
+  border-radius: 8px;
 	color: var(--primary);
 	/* line-height: 1rem; */
   outline: 0;
