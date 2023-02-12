@@ -28,7 +28,7 @@
 
 	/*	Font stacks */
 	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--bold: 'Relative-Bold', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--mono: 'Relative-12Pitch', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -275,7 +275,6 @@ nav {
 
 .credits {
 	color: var(--primary-2);
-/*	font-family: var(--mono);*/
 	font-size: var(--small);
 }
 
@@ -284,15 +283,14 @@ nav {
 }
 
 #resultsButton {
-	position:fixed;
+	position: fixed;
 	bottom: var(--space-4);
 	background-color: var(--primary);
 	padding: var(--space-3);
 	width: calc(100% - var(--space-8));
 	color: #fff;
-	text-align:center;
+	text-align: center;
 	border-radius: 100px;
-/*	display:block;*/
 }
 
 
@@ -311,7 +309,6 @@ nav {
   border: none;
   border-radius: 8px;
 	color: var(--primary);
-	/* line-height: 1rem; */
   outline: 0;
 	padding: var(--space-2) var(--space-8);
 	width: 100%;
@@ -321,9 +318,8 @@ nav {
 .search {
 	background: var(--primary-4);
   border: none;
-  border-radius: 8px;
+  border-radius: 8px!important;
 	color: var(--primary);
-	/* line-height: 1rem; */
   outline: 0;
 	padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
 	width: 100%;
