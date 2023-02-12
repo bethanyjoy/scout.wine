@@ -186,6 +186,10 @@ article .price {
 	font-family: var(--mono);
 }
 
+article .maker {
+  display: none;
+}
+
 
 /* Wine card type tag styles */
 
@@ -449,6 +453,11 @@ nav {
   width: 0.375rem;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+}
+
+
+label.undefined {
+  display:none;
 }
 
 

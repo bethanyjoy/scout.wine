@@ -1038,6 +1038,7 @@ for x in eggs_co_fermented_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_orange_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1071,6 +1072,7 @@ for x in eggs_orange_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1104,6 +1106,7 @@ for x in eggs_rose_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1137,6 +1140,7 @@ for x in eggs_red_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1170,6 +1174,7 @@ for x in eggs_white_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1203,6 +1208,7 @@ for x in eggs_sparkling_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in eggs_piquette_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1236,6 +1242,7 @@ for x in eggs_piquette_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 
 # code for parsing kamp urls
@@ -1270,6 +1277,7 @@ for x in kamp_orange_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in kamp_rose_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1302,6 +1310,7 @@ for x in kamp_rose_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in kamp_red_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1334,6 +1343,7 @@ for x in kamp_red_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in kamp_white_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1366,6 +1376,7 @@ for x in kamp_white_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 for x in kamp_sparkling_urls:
     soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1398,6 +1409,7 @@ for x in kamp_sparkling_urls:
             'Type_text': type_text,
             'Store': store,
             'Store_text': store_text,
+            'Maker': title_maker,
         })
 
 # writes the wine data to the json file

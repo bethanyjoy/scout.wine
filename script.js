@@ -22,6 +22,7 @@
             "</a>" +
             "<p class='store'>" + f.Store_text + "</p>" +
             "<p class='price'>" + f.Price + "</p>" +
+            "<p class='maker'>" + f.Maker + "</p>" +
           "</div>" +
         "</article>"
         $(tblRow).appendTo("#grid");
@@ -39,7 +40,7 @@
   function b() {
 
     var options = {
-      valueNames: ['type', 'category', 'store', 'name'],
+      valueNames: ['type', 'category', 'store', 'name', 'maker'],
       page: 33,
       plugins: [
          ListPagination({})
@@ -52,6 +53,7 @@
       var category = new Array();
       var store = new Array();
       var name = new Array();
+      var maker = new Array();
 
       $("input:checkbox[name=type]:checked").each(function () {
         type.push($(this).val());
@@ -76,17 +78,23 @@
       $("input:checkbox[name=name]:checked").each(function () {
         name.push($(this).val());
       });
+      
+      $("input:checkbox[name=maker]:checked").each(function () {
+        maker.push($(this).val());
+      });
 
       var values_category = category.length > 0 ? category : null;
       var values_type = type.length > 0 ? type : null;
       var values_store = store.length > 0 ? store : null;
       var values_name = name.length > 0 ? name : null;
+      var values_maker = maker.length > 0 ? maker : null;
 
       userList.filter(function (item) {
         var categoryTest;
         var typeTest;
         var storeTest;
         var nameTest;
+        var makerTest;
 
         if(item.values().category.indexOf('|') > 0){
           var categoryArr = item.values().category.split('|');
@@ -101,6 +109,7 @@
             && (_(values_type).contains(item.values().type) || !values_type)
             && (_(values_store).contains(item.values().store) || !values_store)
             && (_(values_name).contains(item.values().name) || !values_name)
+            && (_(values_maker).contains(item.values().maker) || !values_maker)
       });
     }
 
@@ -120,6 +129,7 @@
     var all_type = [];
     var all_store = [];
     var all_name = [];
+    var all_maker = [];
 
     updateList();
 
@@ -134,6 +144,7 @@
       all_type.push(item.values().type)
       all_store.push(item.values().store)
       all_name.push(item.values().name)
+      all_maker.push(item.values().maker)
     });
 
     _(all_category).uniq().each(function (item) {
@@ -151,6 +162,10 @@
     _(all_name).uniq().each(function (item) {
       $(".nameContainer").append('<label><input type="checkbox" name="name" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
+    
+    _(all_maker).uniq().each(function (item) {
+      $(".makerContainer").append('<label class="' + item + '"><input type="checkbox" name="maker" value="' + item + '">' + item + '<span class="checkmark"></label>')
+    });
 
     $(document).off("change", "input:checkbox[name=category]");
     $(document).on("change", "input:checkbox[name=category]", updateList);
@@ -160,6 +175,8 @@
     $(document).on("change", "input:checkbox[name=store]", updateList);
     $(document).off("change", "input:checkbox[name=name]");
     $(document).on("change", "input:checkbox[name=name]", updateList);
+    $(document).off("change", "input:checkbox[name=maker]");
+    $(document).on("change", "input:checkbox[name=maker]", updateList);
 
 
   }
