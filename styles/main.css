@@ -304,6 +304,7 @@ nav {
 	position: relative;
 }
 
+/*
 #searchInput {
 	background: var(--primary-4);
   border: none;
@@ -313,6 +314,7 @@ nav {
 	padding: var(--space-2) var(--space-8);
 	width: 100%;
 }
+*/
 
 
 .search {
