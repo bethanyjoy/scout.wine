@@ -1712,7 +1712,7 @@ for x in field_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'flaskandfield'
-		store_text = 'Flask and Field'
+		store_text = 'Flask &#38; Field'
 		type = 'orange'
 		type_text = 'Orange'
 		wines.append({
@@ -1741,7 +1741,7 @@ for x in field_rose_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'flaskandfield'
-		store_text = 'Flask and Field'
+		store_text = 'Flask &#38; Field'
 		type = 'rose'
 		type_text = 'Ros&#233;'
 		wines.append({
@@ -1770,7 +1770,7 @@ for x in field_red_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'flaskandfield'
-		store_text = 'Flask and Field'
+		store_text = 'Flask &#38; Field'
 		type = 'red'
 		type_text = 'Red'
 		wines.append({
@@ -1799,7 +1799,7 @@ for x in field_white_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'flaskandfield'
-		store_text = 'Flask and Field'
+		store_text = 'Flask &#38; Field'
 		type = 'white'
 		type_text = 'White'
 		wines.append({
@@ -1828,7 +1828,7 @@ for x in field_sparkling_urls:
 		else:
 			image = 'assets/placeholder.png'
 		store = 'flaskandfield'
-		store_text = 'Flask and Field'
+		store_text = 'Flask &#38; Field'
 		type = 'sparkling'
 		type_text = 'Sparkling'
 		wines.append({
