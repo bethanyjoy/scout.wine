@@ -15,7 +15,7 @@
 	--rose: rgba(255, 185, 185, 1);
 	--orange: rgba(243, 206, 134, 1);
 	--sparkling: rgba(168, 207, 224, 1);
-	--piquette: rgba(212, 188, 232, 1);
+  --piquette: rgba(212, 188, 232, 1);
   --co-fermented: rgba(164, 219, 173, 1);
 
 	--red-hover: rgba(255, 166, 138, 0.5);
@@ -28,7 +28,7 @@
 
 	/*	Font stacks */
 	--regular: 'Relative-Book', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --medium: 'Relative-Medium', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--bold: 'Relative-Bold', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--mono: 'Relative-12Pitch', -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
@@ -65,7 +65,7 @@
 /*----------------------------------------------------*/
 
 html {
-  font-size: 16px;
+	font-size: 16px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -75,7 +75,7 @@ html {
 }
 
 body {
-	background-color: var(--background);
+  background-color: var(--background);
 	color: var(--primary);
 	display: flex;
 	font-family: var(--regular);
@@ -96,8 +96,11 @@ h3 {
 	font-family: var(--bold);
   font-size: var(--body);
 	font-weight: normal;
-  /* margin: 0 0 var(--space-3) 0; */
-	margin: 0;
+  margin: 0 0 var(--space-3) 0;
+}
+
+ul {
+  padding-inline-start: 0;
 }
 
 
@@ -109,13 +112,30 @@ main {
 	flex: 1;
 	overflow: auto;
 	overscroll-behavior: contain;
-  /* padding: var(--space-5); */
-	padding-top: var(--space-5);
-	padding-right: var(--space-5);
+  padding: var(--space-10);
+	padding-left: var(--space-5);
 	position: sticky;
 	text-align: left;
 	top: var(--space-0);
 	width: 100%;
+}
+
+/* #grid {
+	align-items: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	grid-gap: var(--space-10);
+	overflow:hidden;
+	width: auto;
+} */
+
+.list {
+	align-items: stretch;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	grid-gap: 40px;
+	overflow:hidden;
+	width: auto;
 }
 
 
@@ -126,65 +146,17 @@ main {
 /*----------------------------------------------------*/
 
 article {
-	/* position: relative; */
-	width: calc(9.09% - var(--space-10));
-	margin: var(--space-5);
-	height: 24rem;
-}
-
-/* mobile grid styles */
-@media only screen and (max-width: 2523px) {
-	article {
-		width: calc(10% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 2323px) {
-	article {
-		width: calc(11.111% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 2123px) {
-	article {
-		width: calc(12.5% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 1923px) {
-	article {
-		width: calc(14.2857% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 1723px) {
-	article {
-		width: calc(16.6667% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 1523px) {
-	article {
-		width: calc(20% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 1323px) {
-	article {
-		width: calc(25% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 1123px) {
-	article {
-		width: calc(33.3333% - var(--space-10));
-	}
-}
-@media only screen and (max-width: 923px) {
-	article {
-		width: calc(50% - var(--space-10));
-	}
+	position: relative;
 }
 
 article img {
 	background: rgba(31, 121, 204, 0.08);
 	border-radius: 0.5rem;
-	height: 17.5rem;
+	height: 20vw;
+	max-height: 17.5rem;
 	max-width: 100%;
 	object-fit: cover;
+  width: 100%;
 }
 
 article img:hover {
@@ -201,7 +173,7 @@ article .text {
 	margin-top: var(--space-3);
 }
 
-article .title {
+article .name {
 	font-family: var(--medium);
 	line-height: 1.2rem;
 }
@@ -217,7 +189,7 @@ article .price {
 
 /* Wine card type tag styles */
 
-article > .tag {
+article > .type {
 	background-color: var(--primary-4);
 	border-radius: 100px;
 	cursor: pointer;
@@ -233,31 +205,31 @@ article > .tag {
 	top: var(--space-3);
 }
 
-article.red  > div.tag {
+article.red  > div.type {
   background-color: var(--red)!important;
 }
 
-article.white  > div.tag{
+article.white  > div.type{
   background-color: var(--white)!important;
 }
 
-article.rose > div.tag{
+article.rose > div.type{
   background-color: var(--rose)!important;
 }
 
-article.orange > div.tag {
+article.orange > div.type {
   background-color: var(--orange)!important;
 }
 
-article.sparkling  > div.tag {
+article.sparkling  > div.type {
   background-color: var(--sparkling)!important;
 }
 
-article.piquette  > div.tag {
+article.piquette  > div.type {
   background-color: var(--piquette)!important;
 }
 
-article.cofermented  > div.tag {
+article.cofermented  > div.type {
   background-color: var(--co-fermented)!important;
 }
 
@@ -277,16 +249,14 @@ nav {
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-12) var(--space-5) var(--space-12) var(--space-10);
+  padding: var(--space-12) var(--space-10);
 	position: sticky;
 	top: 0;
-	width: 17.4rem;
+	width: 18rem;
 }
 
 #filters {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-6);
+  display: block;
 }
 
 .logo img {
@@ -301,20 +271,13 @@ nav {
 
 .credits {
 	color: var(--primary-2);
-	font-family: var(--mono);
+/*	font-family: var(--mono);*/
 	font-size: var(--small);
 }
 
 .credits a {
 	text-decoration: underline;
 }
-
-.navButton {
-	height: 2.667rem;
-	padding: 0.22rem;
-	width: 2.667rem;
-}
-
 
 
 
@@ -327,16 +290,40 @@ nav {
 	position: relative;
 }
 
-#quicksearch {
+#searchInput {
 	background: var(--primary-4);
   border: none;
   border-radius: 100px;
 	color: var(--primary);
+	/* line-height: 1rem; */
   outline: 0;
-	padding: var(--space-2);
-	padding-left: var(--space-8);
+	padding: var(--space-2) var(--space-8);
 	width: 100%;
 }
+
+
+.search {
+	background: var(--primary-4);
+  border: none;
+  border-radius: 8px;
+	color: var(--primary);
+	/* line-height: 1rem; */
+  outline: 0;
+	padding: var(--space-2) var(--space-3-5);
+	width: 100%;
+}
+
+/*
+.search::-webkit-search-cancel-button{
+    position:relative;
+    right:20px;  
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    background: red;
+}
+*/
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--primary-2);
@@ -344,142 +331,58 @@ nav {
 }
 
 #search:hover, #search:focus {
+  /* border: 1px solid #009688; */
+  /* background-color: white; */
 }
 
 .searchIcon {
 	color: var(--primary-2)!important;
 	height: 1rem;
-	left: 0.688rem;
+	left: var(--space-2-5);
   position: absolute;
   top: var(--space-2);
   width: 0.938rem;
 }
 
-
-
-
-/*----------------------------------------------------*/
-/*  Button filter styles                              */
-/*----------------------------------------------------*/
-
-
-/* ---- button ---- */
-
-.button {
-	background-color: var(--primary-4);
-	border: none;
-	border-radius: 5rem;
-	color: var(--primary);
+.clearIcon {
 	cursor: pointer;
-	display: inline-block;
-	font-family: var(--mono);
-	margin: var(--space-1) var(--space-0-5);
-	padding: var(--space-1) var(--space-2);
-	/* transition: all .2s; */
-	user-select: none;
-	white-space: nowrap;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
+  position: absolute;
+  right: var(--space-2);
+	top: 0.563rem;
+	visibility: hidden;
+  width: 0.75rem;
 }
 
 
-/* Color styles for individual wine type filters */
-button.all:hover {
-  background-color: var(--sparkling-hover);
-}
-button.orange:hover {
-  background-color: var(--orange-hover);
-}
-button.rose:hover {
-  background-color: var(--rose-hover);
-}
-button.red:hover {
-  background-color: var(--red-hover);
-}
-button.white:hover {
-  background-color: var(--white-hover);
-}
-button.sparkling:hover {
-  background-color: var(--sparkling-hover);
-}
-button.piquette:hover {
-  background-color: var(--piquette-hover);
-}
-button.cofermented:hover {
-  background-color: var(--co-fermented-hover);
-}
 
 
-/* Color styles for individual wine type filters */
-button.all:active, button.all.is-checked  {
-  background-color: var(--primary);
-	color: white;
-}
-button.orange:active, button.orange.is-checked  {
-  background-color: var(--orange);
-}
-button.rose:active, button.rose.is-checked {
-  background-color: var(--rose);
-}
-button.red:active, button.red.is-checked {
-  background-color: var(--red);
-}
-button.white:active, button.white.is-checked {
-  background-color: var(--white);
-}
-button.sparkling:active, button.sparkling.is-checked {
-  background-color: var(--sparkling);
-}
-button.piquette:active, button.piquette.is-checked {
-  background-color: var(--piquette);
-}
-button.cofermented:active, button.cofermented.is-checked {
-  background-color: var(--co-fermented);
+.pagination {
+  margin-top: 56px;
 }
 
-/* .button.is-checked {
-  color: white;
-  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8);
-} */
-
-/* .button:active {
-  box-shadow: inset 0 1px 10px hsla(0, 0%, 0%, 0.8);
-} */
-
-
-/* ---- button-group ---- */
-
-.button-group {
-	margin-top: var(--space-2);
+.pagination li {
+  display: inline;
+  text-decoration: none;
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--primary-4);
+  margin-right: var(--space-2);
+  border-radius: 4px;
 }
-
-.button-group:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-
 
 
 /*----------------------------------------------------*/
 /*  Checkbox filter styles                            */
 /*----------------------------------------------------*/
 
-.checkboxFilter {
-	display: grid;
-	flex-direction: column;
-	grid-gap: var(--space-3);
+.filter {
+	margin-bottom: var(--space-6);;
 }
 
 /* Customize the label (the container) */
 .checkboxFilter label {
 	cursor: pointer;
   display: block;
-	/* margin-bottom: var(--space-3); */
+	margin-bottom: var(--space-3);
   padding-left: var(--space-6);
 	position: relative;
 	user-select: none;
@@ -551,6 +454,83 @@ button.cofermented:active, button.cofermented.is-checked {
 
 
 
+/*----------------------------------------------------*/
+/*  Button filter styles                              */
+/*----------------------------------------------------*/
+
+/* .typeContainer label {
+	background-color: var(--primary-4);
+	border-radius: 5rem;
+	cursor: pointer;
+	display: inline-block;
+	font-family: var(--mono);
+	margin: var(--space-1) var(--space-0-5);
+	padding: var(--space-1) var(--space-2);
+	user-select: none;
+  white-space: nowrap;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+  -webkit-user-select: none;
+} */
+
+/* .typeContainer input[type="checkbox"]:checked + label {
+} */
+
+/* .typeContainer input[type="checkbox"] {
+  display: absolute;
+	opacity: 0;
+  position: absolute;
+} */
+
+/* Color styles for individual wine type filters */
+/* .typeContainer input[value="orange"]:checked + label {
+  background-color: var(--orange);
+}
+.typeContainer input[value="rose"]:checked + label {
+  background-color: var(--rose);
+}
+.typeContainer input[value="red"]:checked + label {
+  background-color: var(--red);
+}
+.typeContainer input[value="white"]:checked + label {
+  background-color: var(--white);
+}
+.typeContainer input[value="sparkling"]:checked + label {
+  background-color: var(--sparkling);
+}
+.typeContainer input[value="piquette"]:checked + label {
+  background-color: var(--piquette);
+}
+.typeContainer input[value="cofermented"]:checked + label {
+  background-color: var(--co-fermented);
+} */
+
+
+/* @media (pointer:fine) {
+	.typeContainer input[value="orange"]:hover + label {
+	  background-color: var(--orange-hover);
+	}
+	.typeContainer input[value="rose"]:hover + label {
+	  background-color: var(--rose-hover);
+	}
+	.typeContainer input[value="red"]:hover + label {
+	  background-color: var(--red-hover);
+	}
+	.typeContainer input[value="white"]:hover + label {
+	  background-color: var(--white-hover);
+	}
+	.typeContainer input[value="sparkling"]:hover + label {
+	  background-color: var(--sparkling-hover);
+	}
+  .typeContainer input[value="piquette"]:hover + label {
+	  background-color: var(--piquette-hover);
+	}
+  .typeContainer input[value="cofermented"]:hover + label {
+	  background-color: var(--co-fermented-hover);
+	}
+} */
 
 
 
@@ -561,6 +541,9 @@ button.cofermented:active, button.cofermented.is-checked {
 /*  Mobile styles                                     */
 /*----------------------------------------------------*/
 
+#hideButton {
+	display: none;
+}
 
 .mobileOnly {
   display: none;
@@ -568,22 +551,6 @@ button.cofermented:active, button.cofermented.is-checked {
 
 .mobileButtons {
   display: none;
-}
-
-#hideButton {
-	display: none;
-}
-
-#resultsButton {
-	position:fixed;
-	bottom: var(--space-4);
-	background-color: var(--primary);
-	padding: var(--space-4);
-	width: calc(100% - var(--space-8));
-	color: #fff;
-	text-align:center;
-	border-radius: 100px;
-	display:block;
 }
 
 @media only screen and (max-width: 800px) {
@@ -609,93 +576,55 @@ button.cofermented:active, button.cofermented.is-checked {
 		z-index: 100;
 	}
 	main {
-		margin-top: 3.7rem;
-		padding: var(--space-2);
+		margin-top: 3.222rem;
+		padding: var(--space-4);
 	}
 	#grid {
-		/* gap: var(--space-4); */
+		gap: var(--space-4);
 	}
-	#quicksearch {
-		padding: var(--space-3);
-		padding-left: var(--space-9);
-	}
-	.searchIcon {
-		top: var(--space-3);
-		left: 0.81rem;
-		width: 1rem;
+	.sidebarHide {
+	  display: none!important;
 	}
 	#searchWrapper {
 		display: flex;
-		gap: var(--space-3);
+		gap: var(--space-2);
 	}
 	#search {
-		/* flex: 1; */
-		width: calc(100% - var(--space-10));
+		flex: 1;
+	}
+	.navButton {
+		display: block;
+		height: 2.222rem;
+		width: 2.222rem;
+		padding: 0.22rem;
 	}
 	#filters {
 		display: none;
-		padding-bottom: 5.5rem;
 	}
 	.mobileButtons {
 	  display: block;
-		position: fixed;
-		right: var(--space-2);
 	}
 	article img {
-		height: 16rem;
-		/* height: 40vw !important; */
+		height: 40vw !important;
 	}
 	article {
-		/* padding-bottom: var(--space-2); */
-		width: calc(25% - var(--space-4));
-		margin: var(--space-2);
-		height: 24rem;
-	}
-	.button {
-		padding: var(--space-2) var(--space-3);
-	}
-	.checkmark {
-		height: 1.2rem;
-		width: 1.2rem;
-		border-width: 0.14rem;
-	}
-	.checkboxFilter label {
-		line-height: 1.4rem;
-		padding-left: var(--space-7);
-	}
-	.checkboxFilter .checkmark:after {
-		left: 0.4rem;
-		top: 0.15rem;
-	}
-	.checkboxFilter {
-		grid-gap: var(--space-4);
-	}
-	.button-group {
-		margin-top: var(--space-3);
+		padding-bottom: var(--space-2);
 	}
 }
-
-
-@media only screen and (max-width: 730px) {
-	article {
-		width: calc(33.3333% - var(--space-4));
-	}
-}
-@media only screen and (max-width: 550px) {
-	article {
-		width: calc(50% - var(--space-4));
-	}
-}
-
 
 @media only screen and (min-width: 800px) {
 	#filters {
-		display: flex!important;
+		display: block!important;
+	}
+	#hideButton {
+		display: none;
+	}
+	#showButton {
+		display: none;
 	}
 	.mobileButtons {
 	  display: none;
 	}
-	#resultsButton {
-		display:none!important;
-	}
 }
+
+

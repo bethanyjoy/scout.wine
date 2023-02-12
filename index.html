@@ -4,136 +4,94 @@
 
 <head>
 
-	<meta charset="utf-8">
+  <meta charset="utf-8">
 
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
-	<title>Wiine</title>
+  <title>Wiine</title>
 
   <meta name="description" content="Find natural wine on the eastside of LA 🍷 ✌️">
   <meta name="author" content="Bethany Nuechterlein">
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link href="styles/normalize.css" rel="stylesheet">
+  <link href="styles/normalize.css" rel="stylesheet">
   <link href="styles/fonts.css" rel="stylesheet">
-	<link href="styles/main.css" rel="stylesheet">
+  <link href="styles/main.css" rel="stylesheet">
 
-	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
 
 </head>
 
-<body>
+<body id="search-results">
 
   <nav id="sidebar">
 
-    <a class="logo mobileHide" href="index.html">
+    <a class="logo sidebarHide" href="index.html">
       <img src="assets/logo.svg">
     </a>
 
-    <span class="tagline mobileHide">
+    <span class="tagline sidebarHide">
       Find natural wine on the eastside of LA 🍷 ✌️
     </span>
+    
+    <input type="search" class="search" placeholder="Search" />
 
-
-		<div id="searchWrapper">
-
-	    <div id="search">
-	      <img class="searchIcon" src="assets/search.svg" />
-				<input type="text" id="quicksearch" placeholder="Search"/>
-	    </div>
-
-			<div class="mobileButtons">
-
-				<a href="javascript:void(0);" id="showButton" class="navButton mobileOnly" onclick="showSidebar()">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-					</svg>
-				</a>
-				<a href="javascript:void(0);" id="hideButton" class="navButton mobileOnly" onclick="hideSidebar()">
-					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-	          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-	        </svg>
-				</a>
-
-			</div>
-
-		</div>
-
-		<div id="filters">
-
-    <div id="button-filter">
-			<h3>Type</h3>
-			<div class="button-group">
-      <button class="button is-checked all" data-filter="*">All</button>
-      <button class="button red" data-filter=".red">Red</button>
-      <button class="button white" data-filter=".white">White</button>
-      <button class="button rose" data-filter=".rose">Rose</button>
-      <button class="button orange" data-filter=".orange">Orange</button>
-      <!-- <button class="button cofermented" data-filter=".cofermented">Co-Fermented</button> -->
-      <button class="button sparkling" data-filter=".sparkling">Sparkling</button>
-      <!-- <button class="button piquette" data-filter=".piquette">Piquette</button> -->
-		</div>
+    <div id="filters">
+      <div>
+        <div class="typeContainer checkboxFilter filter">
+          <h3>Type</h3>
+        </div>
+        <div class="storeContainer checkboxFilter filter">
+          <h3>Store</h3>
+        </div>
+        <div id="checkbox-filter" class="tagFilter checkboxFilter maker filter">
+          <h3>Maker</h3>
+          <label>Broc Cellars<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Florez<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Folk Machine<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Furlani<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Gentle Folk<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Good Boy Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Gut Oggau<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>J Brix<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Joao Pato<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Koehnen Wine Co.<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Koppitsch<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Las Jaras Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Marigny<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Martha Stoumen<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Meinklang<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Nestarec<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Purity<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Ruth Lewandowski<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Scotty Boy!<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Swick<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Wavy Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
+          <label>Wonderwerk<input type="checkbox" value=""/><span class="checkmark"></span></label>
+        </div>
+      </div>
+      <span class="credits">Made by <a href="https://bethany.design/">bethany.design</a></span>
+          
     </div>
 
-    <div id="checkbox-filter" class="tagFilter checkboxFilter store">
-			<h3>Store</h3>
-      <label>Everson Royce<input type="checkbox" value=".eversonroyce"/><span class="checkmark"></span></label>
-      <label>Highland Park Wine<input type="checkbox" value=".highlandpark"/><span class="checkmark"></span></label>
-      <!-- <label>Kamp<input type="checkbox" value=".kamp"/><span class="checkmark"></span></label> -->
-      <!-- <label>Silverlake Wine<input type="checkbox" value=".silverlake"/><span class="checkmark"></span></label> -->
-      <label>Vinovore Eagle Rock<input type="checkbox" value=".vinovoreeaglerock"/><span class="checkmark"></span></label>
-      <!-- <label>Wine + Eggs<input type="checkbox" value=".wineandeggs"/><span class="checkmark"></span></label> -->
-    </div>
-
-		<div id="checkbox-filter" class="tagFilter checkboxFilter maker">
-			<h3>Maker</h3>
-      <label>Broc Cellars<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Florez<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Folk Machine<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Furlani<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Gentle Folk<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Good Boy Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Gut Oggau<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>J Brix<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Joao Pato<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Koehnen Wine Co.<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Koppitsch<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Las Jaras Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Marigny<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Martha Stoumen<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Meinklang<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Nestarec<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Purity<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Ruth Lewandowski<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Scotty Boy!<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Swick<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Wavy Wines<input type="checkbox" value=""/><span class="checkmark"></span></label>
-			<label>Wonderwerk<input type="checkbox" value=""/><span class="checkmark"></span></label>
-    </div>
-
-
-			<span class="credits">
-				Made by <a href="https://bethany.design/">bethany.design</a>
-			</span>
-
-			<a href="javascript:void(0);" id="resultsButton" onclick="hideSidebar()" class="mobileOnly">
-				Show results
-			</a>
-
-		</div>
 
   </nav>
 
   <main id="main">
 
-    <div id="grid">
+    <div class="list" id="grid">
     </div>
+    <ul class="pagination"></ul>
 
   </main>
 
-  <script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
+
+	<script src="script.js"></script>
 
 </body>
