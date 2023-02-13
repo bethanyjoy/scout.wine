@@ -56,7 +56,7 @@ for x in vver_orange_urls:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
     if 'giftbox' in title.lower():
       print()
-		elif 'bouquet' in title.lower():
+    elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -152,7 +152,7 @@ for x in vver_rose_urls:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
     if 'giftbox' in title.lower():
       print()
-		elif 'bouquet' in title.lower():
+    elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -237,7 +237,7 @@ for x in vver_rose_urls:
         'Link': link,
         'Image': image,
         'Type': 'rose',
-        'Type_text': 'Ros&#233;',
+        'Type_text': 'Rose',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -248,7 +248,7 @@ for x in vver_red_urls:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
     if 'giftbox' in title.lower():
       print()
-		elif 'bouquet' in title.lower():
+    elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -344,7 +344,7 @@ for x in vver_white_urls:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
     if 'giftbox' in title.lower():
       print()
-		elif 'bouquet' in title.lower():
+    elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -440,7 +440,7 @@ for x in vver_sparkling_urls:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
     if 'giftbox' in title.lower():
       print()
-		elif 'bouquet' in title.lower():
+    elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -533,6 +533,8 @@ for x in vver_sparkling_urls:
 
 
 # list of highland park wine urls to parse
+
+
 
 
 
