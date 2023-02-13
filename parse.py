@@ -2584,7 +2584,7 @@ for x in sl_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': 'Rose',
+      'Type_text': 'Ros&#233;',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2955,44 +2955,451 @@ er_sparkling_urls = [
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
 ]
 
-
 # code for parsing everson royce wine urls
 for x in er_orange_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="prod-block")
-	for product in products:
-		title = product.find("div", class_="title").text.replace(" ", "")
-		title_text = product.find("div", class_="title").text.strip()
-		price = product.find("div", class_="product-price").text.strip()
-		link = 'http://eversonroyce.com' + product.find("a")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="rimage__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="rimage__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		store = 'eversonroyce'
-		store_text = 'Everson Royce'
-		type = 'orange'
-		type_text = 'Orange'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
-		})
-
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="prod-block")
+  for product in products:
+    title = product.find("div", class_="title").text.replace(" ", "")
+    title_text = product.find("div", class_="title").text.strip()
+    price = product.find("div", class_="product-price").text.strip()
+    link = 'http://eversonroyce.com' + product.find("a")['href']
+    imagesoup = product.find('noscript')
+    imagecheck = imagesoup.find("img", class_="rimage__image")
+    if imagecheck is not None:
+      imageurl = imagesoup.find("img", class_="rimage__image")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'orange',
+      'Type_text': 'Orange',
+      'Store': 'eversonroyce',
+      'Store_text': 'Everson Royce',
+    })
+for x in er_rose_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="prod-block")
+  for product in products:
+    title = product.find("div", class_="title").text.replace(" ", "")
+    title_text = product.find("div", class_="title").text.strip()
+    price = product.find("div", class_="product-price").text.strip()
+    link = 'http://eversonroyce.com' + product.find("a")['href']
+    imagesoup = product.find('noscript')
+    imagecheck = imagesoup.find("img", class_="rimage__image")
+    if imagecheck is not None:
+      imageurl = imagesoup.find("img", class_="rimage__image")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'rose',
+      'Type_text': 'Ros&#233;',
+      'Store': 'eversonroyce',
+      'Store_text': 'Everson Royce',
+    })
+for x in er_red_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="prod-block")
+  for product in products:
+    title = product.find("div", class_="title").text.replace(" ", "")
+    title_text = product.find("div", class_="title").text.strip()
+    price = product.find("div", class_="product-price").text.strip()
+    link = 'http://eversonroyce.com' + product.find("a")['href']
+    imagesoup = product.find('noscript')
+    imagecheck = imagesoup.find("img", class_="rimage__image")
+    if imagecheck is not None:
+      imageurl = imagesoup.find("img", class_="rimage__image")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'red',
+      'Type_text': 'Red',
+      'Store': 'eversonroyce',
+      'Store_text': 'Everson Royce',
+    })
+for x in er_white_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="prod-block")
+  for product in products:
+    title = product.find("div", class_="title").text.replace(" ", "")
+    title_text = product.find("div", class_="title").text.strip()
+    price = product.find("div", class_="product-price").text.strip()
+    link = 'http://eversonroyce.com' + product.find("a")['href']
+    imagesoup = product.find('noscript')
+    imagecheck = imagesoup.find("img", class_="rimage__image")
+    if imagecheck is not None:
+      imageurl = imagesoup.find("img", class_="rimage__image")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'white',
+      'Type_text': 'White',
+      'Store': 'eversonroyce',
+      'Store_text': 'Everson Royce',
+    })
+for x in er_sparkling_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="prod-block")
+  for product in products:
+    title = product.find("div", class_="title").text.replace(" ", "")
+    title_text = product.find("div", class_="title").text.strip()
+    price = product.find("div", class_="product-price").text.strip()
+    link = 'http://eversonroyce.com' + product.find("a")['href']
+    imagesoup = product.find('noscript')
+    imagecheck = imagesoup.find("img", class_="rimage__image")
+    if imagecheck is not None:
+      imageurl = imagesoup.find("img", class_="rimage__image")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'sparkling',
+      'Type_text': 'Sparkling',
+      'Store': 'eversonroyce',
+      'Store_text': 'Everson Royce',
+    })
 
 
 
 
 # list of kamp urls to parse
+
+
+
+
 
 
 kamp_red_urls = [
