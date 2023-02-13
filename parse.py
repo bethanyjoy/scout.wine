@@ -72,10 +72,12 @@ for x in vver_orange_urls:
         image = 'https:' + imageurl
       else:
         image = 'assets/placeholder.png'
-      type = 'orange'
-      type_text = 'Orange'
       if 'lewandowski' in title.lower():
         maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
       elif 'cirelli' in title.lower():
@@ -86,6 +88,8 @@ for x in vver_orange_urls:
         maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
       elif 'goodboywine' in title.lower():
         maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
@@ -114,6 +118,10 @@ for x in vver_orange_urls:
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
         maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
       elif 'swick' in title.lower():
         maker = 'Swick'
       elif 'wavywines' in title.lower():
@@ -158,10 +166,12 @@ for x in vver_rose_urls:
         image = 'https:' + imageurl
       else:
         image = 'assets/placeholder.png'
-      type = 'orange'
-      type_text = 'Orange'
       if 'lewandowski' in title.lower():
         maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
       elif 'cirelli' in title.lower():
@@ -172,6 +182,8 @@ for x in vver_rose_urls:
         maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
       elif 'goodboywine' in title.lower():
         maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
@@ -200,6 +212,10 @@ for x in vver_rose_urls:
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
         maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
       elif 'swick' in title.lower():
         maker = 'Swick'
       elif 'wavywines' in title.lower():
@@ -244,10 +260,12 @@ for x in vver_red_urls:
         image = 'https:' + imageurl
       else:
         image = 'assets/placeholder.png'
-      type = 'orange'
-      type_text = 'Orange'
       if 'lewandowski' in title.lower():
         maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
       elif 'cirelli' in title.lower():
@@ -258,6 +276,8 @@ for x in vver_red_urls:
         maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
       elif 'goodboywine' in title.lower():
         maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
@@ -286,6 +306,10 @@ for x in vver_red_urls:
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
         maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
       elif 'swick' in title.lower():
         maker = 'Swick'
       elif 'wavywines' in title.lower():
@@ -330,10 +354,12 @@ for x in vver_white_urls:
         image = 'https:' + imageurl
       else:
         image = 'assets/placeholder.png'
-      type = 'orange'
-      type_text = 'Orange'
       if 'lewandowski' in title.lower():
         maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
       elif 'cirelli' in title.lower():
@@ -344,6 +370,8 @@ for x in vver_white_urls:
         maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
       elif 'goodboywine' in title.lower():
         maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
@@ -372,6 +400,10 @@ for x in vver_white_urls:
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
         maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
       elif 'swick' in title.lower():
         maker = 'Swick'
       elif 'wavywines' in title.lower():
@@ -416,10 +448,12 @@ for x in vver_sparkling_urls:
         image = 'https:' + imageurl
       else:
         image = 'assets/placeholder.png'
-      type = 'orange'
-      type_text = 'Orange'
       if 'lewandowski' in title.lower():
         maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
       elif 'cirelli' in title.lower():
@@ -430,6 +464,8 @@ for x in vver_sparkling_urls:
         maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
       elif 'goodboywine' in title.lower():
         maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
@@ -458,6 +494,10 @@ for x in vver_sparkling_urls:
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
         maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
       elif 'swick' in title.lower():
         maker = 'Swick'
       elif 'wavywines' in title.lower():
@@ -580,20 +620,77 @@ for x in hlp_orange_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-		store = 'highlandpark'
-		store_text = 'Highland Park Wine'
-		type = 'orange'
-		type_text = 'Orange'
+		if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+		elif 'amevive' in title.lower():
+			maker = 'Amevive'
+		elif 'amplify' in title.lower():
+			maker = 'Amplify'
+		elif 'broc' in title.lower():
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title.lower():
+			maker = 'Cirelli'
+		elif 'dueterre' in title.lower():
+			maker = 'Due Terre'
+		elif 'folkmachine' in title.lower():
+			maker = 'Folk Machine'
+		elif 'furlani' in title.lower():
+			maker = 'Furlani'
+		elif 'gentle folk' in title.lower():
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title.lower():
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title.lower():
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title.lower():
+			maker = 'Kopptisch'
+		elif 'koehnen' in title.lower():
+			maker = 'Koehnen'
+		elif 'lasjaras' in title.lower():
+			maker = 'Las Jaras'
+		elif 'marigny' in title.lower():
+			maker = 'Marigny'
+		elif 'marthastoumen' in title.lower():
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title.lower():
+			maker = 'Meinklang'
+		elif 'nestarec' in title.lower():
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title.lower():
+			maker = 'Old Westminster'
+		elif 'purity' in title.lower():
+			maker = 'Purity'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title.lower():
+			maker = 'Subject to Change'
+		elif 'swick' in title.lower():
+			maker = 'Swick'
+		elif 'wavywines' in title.lower():
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title.lower():
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title.lower():
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
+			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
+			'Type': '',
+			'Type_text': '',
+			'Store': 'highlandpark',
+			'Store_text': 'Highland Park Wine',
 		})
 for x in hlp_rose_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -610,20 +707,77 @@ for x in hlp_rose_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-		store = 'highlandpark'
-		store_text = 'Highland Park Wine'
-		type = 'rose'
-		type_text = 'Ros&#233;'
+		if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+		elif 'amevive' in title.lower():
+			maker = 'Amevive'
+		elif 'amplify' in title.lower():
+			maker = 'Amplify'
+		elif 'broc' in title.lower():
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title.lower():
+			maker = 'Cirelli'
+		elif 'dueterre' in title.lower():
+			maker = 'Due Terre'
+		elif 'folkmachine' in title.lower():
+			maker = 'Folk Machine'
+		elif 'furlani' in title.lower():
+			maker = 'Furlani'
+		elif 'gentle folk' in title.lower():
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title.lower():
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title.lower():
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title.lower():
+			maker = 'Kopptisch'
+		elif 'koehnen' in title.lower():
+			maker = 'Koehnen'
+		elif 'lasjaras' in title.lower():
+			maker = 'Las Jaras'
+		elif 'marigny' in title.lower():
+			maker = 'Marigny'
+		elif 'marthastoumen' in title.lower():
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title.lower():
+			maker = 'Meinklang'
+		elif 'nestarec' in title.lower():
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title.lower():
+			maker = 'Old Westminster'
+		elif 'purity' in title.lower():
+			maker = 'Purity'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title.lower():
+			maker = 'Subject to Change'
+		elif 'swick' in title.lower():
+			maker = 'Swick'
+		elif 'wavywines' in title.lower():
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title.lower():
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title.lower():
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
+			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
+			'Type': '',
+			'Type_text': '',
+			'Store': 'highlandpark',
+			'Store_text': 'Highland Park Wine',
 		})
 for x in hlp_red_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -640,20 +794,77 @@ for x in hlp_red_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-		store = 'highlandpark'
-		store_text = 'Highland Park Wine'
-		type = 'red'
-		type_text = 'Red'
+		if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+		elif 'amevive' in title.lower():
+			maker = 'Amevive'
+		elif 'amplify' in title.lower():
+			maker = 'Amplify'
+		elif 'broc' in title.lower():
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title.lower():
+			maker = 'Cirelli'
+		elif 'dueterre' in title.lower():
+			maker = 'Due Terre'
+		elif 'folkmachine' in title.lower():
+			maker = 'Folk Machine'
+		elif 'furlani' in title.lower():
+			maker = 'Furlani'
+		elif 'gentle folk' in title.lower():
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title.lower():
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title.lower():
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title.lower():
+			maker = 'Kopptisch'
+		elif 'koehnen' in title.lower():
+			maker = 'Koehnen'
+		elif 'lasjaras' in title.lower():
+			maker = 'Las Jaras'
+		elif 'marigny' in title.lower():
+			maker = 'Marigny'
+		elif 'marthastoumen' in title.lower():
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title.lower():
+			maker = 'Meinklang'
+		elif 'nestarec' in title.lower():
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title.lower():
+			maker = 'Old Westminster'
+		elif 'purity' in title.lower():
+			maker = 'Purity'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title.lower():
+			maker = 'Subject to Change'
+		elif 'swick' in title.lower():
+			maker = 'Swick'
+		elif 'wavywines' in title.lower():
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title.lower():
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title.lower():
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
+			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
+			'Type': '',
+			'Type_text': '',
+			'Store': 'highlandpark',
+			'Store_text': 'Highland Park Wine',
 		})
 for x in hlp_white_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -670,21 +881,78 @@ for x in hlp_white_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-		store = 'highlandpark'
-		store_text = 'Highland Park Wine'
-		type = 'white'
-		type_text = 'White'
+		if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+		elif 'amevive' in title.lower():
+			maker = 'Amevive'
+		elif 'amplify' in title.lower():
+			maker = 'Amplify'
+		elif 'broc' in title.lower():
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title.lower():
+			maker = 'Cirelli'
+		elif 'dueterre' in title.lower():
+			maker = 'Due Terre'
+		elif 'folkmachine' in title.lower():
+			maker = 'Folk Machine'
+		elif 'furlani' in title.lower():
+			maker = 'Furlani'
+		elif 'gentle folk' in title.lower():
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title.lower():
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title.lower():
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title.lower():
+			maker = 'Kopptisch'
+		elif 'koehnen' in title.lower():
+			maker = 'Koehnen'
+		elif 'lasjaras' in title.lower():
+			maker = 'Las Jaras'
+		elif 'marigny' in title.lower():
+			maker = 'Marigny'
+		elif 'marthastoumen' in title.lower():
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title.lower():
+			maker = 'Meinklang'
+		elif 'nestarec' in title.lower():
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title.lower():
+			maker = 'Old Westminster'
+		elif 'purity' in title.lower():
+			maker = 'Purity'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title.lower():
+			maker = 'Subject to Change'
+		elif 'swick' in title.lower():
+			maker = 'Swick'
+		elif 'wavywines' in title.lower():
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title.lower():
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title.lower():
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
+			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
-			})
+			'Type': '',
+			'Type_text': '',
+			'Store': 'highlandpark',
+			'Store_text': 'Highland Park Wine',
+		})
 for x in hlp_sparkling_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 	products = soup.find_all("div", class_="prod-block")
@@ -700,20 +968,77 @@ for x in hlp_sparkling_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-		store = 'highlandpark'
-		store_text = 'Highland Park Wine'
-		type = 'sparkling'
-		type_text = 'Sparkling'
+		if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+		elif 'amevive' in title.lower():
+			maker = 'Amevive'
+		elif 'amplify' in title.lower():
+			maker = 'Amplify'
+		elif 'broc' in title.lower():
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title.lower():
+			maker = 'Cirelli'
+		elif 'dueterre' in title.lower():
+			maker = 'Due Terre'
+		elif 'folkmachine' in title.lower():
+			maker = 'Folk Machine'
+		elif 'furlani' in title.lower():
+			maker = 'Furlani'
+		elif 'gentle folk' in title.lower():
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title.lower():
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title.lower():
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title.lower():
+			maker = 'Kopptisch'
+		elif 'koehnen' in title.lower():
+			maker = 'Koehnen'
+		elif 'lasjaras' in title.lower():
+			maker = 'Las Jaras'
+		elif 'marigny' in title.lower():
+			maker = 'Marigny'
+		elif 'marthastoumen' in title.lower():
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title.lower():
+			maker = 'Meinklang'
+		elif 'nestarec' in title.lower():
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title.lower():
+			maker = 'Old Westminster'
+		elif 'purity' in title.lower():
+			maker = 'Purity'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title.lower():
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title.lower():
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title.lower():
+			maker = 'Subject to Change'
+		elif 'swick' in title.lower():
+			maker = 'Swick'
+		elif 'wavywines' in title.lower():
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title.lower():
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title.lower():
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
 		wines.append({
 			'Title': title,
 			'Title_text': title_text,
+			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
+			'Type': '',
+			'Type_text': '',
+			'Store': 'highlandpark',
+			'Store_text': 'Highland Park Wine',
 		})
 
 
