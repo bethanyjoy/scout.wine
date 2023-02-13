@@ -3901,38 +3901,95 @@ field_sparkling_urls = [
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
 ]
 	
-	
-
 # code for parsing field and flask urls
 for x in field_orange_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("li", class_="grid__item")
-	for product in products:
-		title = product.find("h3", class_="card__heading").text.replace(" ", "")
-		title_text = product.find("h3", class_="card__heading").text.strip()
-		price = product.find("span", class_="price-item").text.strip()
-		link = 'http://flaskandfield.com' + product.find("a")['href']
-		imagecheck = product.find("img")
-		if imagecheck is not None:
-			imageurl = product.find("img")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		store = 'flaskandfield'
-		store_text = 'Flask &#38; Field'
-		type = 'orange'
-		type_text = 'Orange'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
-		})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("h3", class_="card__heading").text.replace(" ", "")
+    title_text = product.find("h3", class_="card__heading").text.strip()
+    price = product.find("span", class_="price-item").text.strip()
+    link = 'http://flaskandfield.com' + product.find("a")['href']
+    imagecheck = product.find("img")
+    if imagecheck is not None:
+      imageurl = product.find("img")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'   
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'orange',
+      'Type_text': 'Orange',
+      'Store': 'flaskandfield',
+      'Store_text': 'Flask &#38; Field',
+    })
+    
+    print(maker) 
 
 
 
@@ -3950,6 +4007,371 @@ for x in field_orange_urls:
 
 
 
+for x in field_rose_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("h3", class_="card__heading").text.replace(" ", "")
+    title_text = product.find("h3", class_="card__heading").text.strip()
+    price = product.find("span", class_="price-item").text.strip()
+    link = 'http://flaskandfield.com' + product.find("a")['href']
+    imagecheck = product.find("img")
+    if imagecheck is not None:
+      imageurl = product.find("img")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'   
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'rose',
+      'Type_text': 'Rose',
+      'Store': 'flaskandfield',
+      'Store_text': 'Flask &#38; Field',
+    })
+    
+    print(maker) 
+
+
+
+
+for x in field_red_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("h3", class_="card__heading").text.replace(" ", "")
+    title_text = product.find("h3", class_="card__heading").text.strip()
+    price = product.find("span", class_="price-item").text.strip()
+    link = 'http://flaskandfield.com' + product.find("a")['href']
+    imagecheck = product.find("img")
+    if imagecheck is not None:
+      imageurl = product.find("img")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'   
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'red',
+      'Type_text': 'Red',
+      'Store': 'flaskandfield',
+      'Store_text': 'Flask &#38; Field',
+    })
+    
+    print(maker) 
+		
+		
+		
+		
+for x in field_white_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("h3", class_="card__heading").text.replace(" ", "")
+    title_text = product.find("h3", class_="card__heading").text.strip()
+    price = product.find("span", class_="price-item").text.strip()
+    link = 'http://flaskandfield.com' + product.find("a")['href']
+    imagecheck = product.find("img")
+    if imagecheck is not None:
+      imageurl = product.find("img")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'   
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'white',
+      'Type_text': 'White',
+      'Store': 'flaskandfield',
+      'Store_text': 'Flask &#38; Field',
+    })
+    
+    print(maker) 
+		
+for x in field_sparkling_urls:
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("h3", class_="card__heading").text.replace(" ", "")
+    title_text = product.find("h3", class_="card__heading").text.strip()
+    price = product.find("span", class_="price-item").text.strip()
+    link = 'http://flaskandfield.com' + product.find("a")['href']
+    imagecheck = product.find("img")
+    if imagecheck is not None:
+      imageurl = product.find("img")['src']
+      image = 'https:' + imageurl
+    else:
+      image = 'assets/placeholder.png'
+    if 'lewandowski' in title.lower():
+      maker = 'Ruth Lewandowski'
+    elif 'amevive' in title.lower():
+      maker = 'Amevive'
+    elif 'amplify' in title.lower():
+      maker = 'Amplify'
+    elif 'broc' in title.lower():
+      maker = 'Broc Cellars'
+    elif 'cirelli' in title.lower():
+      maker = 'Cirelli'
+    elif 'dueterre' in title.lower():
+      maker = 'Due Terre'
+    elif 'folkmachine' in title.lower():
+      maker = 'Folk Machine'
+    elif 'furlani' in title.lower():
+      maker = 'Furlani'
+    elif 'gentle folk' in title.lower():
+      maker = 'Gentle Folk'
+    elif 'goodboywine' in title.lower():
+      maker = 'Good Boy Wine'
+    elif 'gutoggau' in title.lower():
+      maker = 'Gut Oggau'   
+    elif 'kopptisch' in title.lower():
+      maker = 'Kopptisch'
+    elif 'koehnen' in title.lower():
+      maker = 'Koehnen'
+    elif 'lasjaras' in title.lower():
+      maker = 'Las Jaras'
+    elif 'marigny' in title.lower():
+      maker = 'Marigny'
+    elif 'marthastoumen' in title.lower():
+      maker = 'Martha Stoumen'
+    elif 'meinklang' in title.lower():
+      maker = 'Meinklang'
+    elif 'nestarec' in title.lower():
+      maker = 'Nestarec'
+    elif 'oldwestminster' in title.lower():
+      maker = 'Old Westminster'
+    elif 'purity' in title.lower():
+      maker = 'Purity'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'scottyboy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'scotty-boy' in title.lower():
+      maker = 'Scotty Boy'
+    elif 'stagiaire' in title.lower():
+      maker = 'Stagiaire'
+    elif 'subjecttochange' in title.lower():
+      maker = 'Subject to Change'
+    elif 'swick' in title.lower():
+      maker = 'Swick'
+    elif 'wavywines' in title.lower():
+      maker = 'Wavy Wines'
+    elif 'wildarcfarm' in title.lower():
+      maker = 'Wild Arc Farm'
+    elif 'wonderwerk' in title.lower():
+      maker = 'Wonderwerk'
+    else:
+      maker ='undefined'
+    wines.append({
+      'Title': title,
+      'Title_text': title_text,
+      'Maker': maker,
+      'Price': price,
+      'Link': link,
+      'Image': image,
+      'Type': 'sparkling',
+      'Type_text': 'Sparkling',
+      'Store': 'flaskandfield',
+      'Store_text': 'Flask &#38; Field',
+    })
+    
+    print(maker) 
+		
+		
+		
+		
 with open("data.json", "w") as writeJSON:
     json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 
