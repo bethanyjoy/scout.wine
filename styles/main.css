@@ -151,8 +151,18 @@ main {
 
 .pagination li:hover {
   background-color: var(--primary-3);
+	cursor: pointer;
 }
 
+.pagination li.active:hover {
+  background-color: var(--primary-2);
+	color: var(--background);
+	cursor: default;
+}
+
+.pagination li.active a {
+	cursor: default;
+}
 
 /*----------------------------------------------------*/
 /*  Wine card styles                                  */

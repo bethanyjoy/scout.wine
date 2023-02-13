@@ -42,6 +42,8 @@
     var options = {
       valueNames: ['type', 'category', 'store', 'name', 'maker'],
       page: 60,
+			innerWindow: 3,
+			right: 2,
       plugins: [
          ListPagination({})
       ]
