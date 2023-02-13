@@ -78,14 +78,24 @@ for x in vver_orange_urls:
         maker = 'Ruth Lewandowski'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
         maker = 'Gut Oggau'
       elif 'kopptisch' in title.lower():
         maker = 'Kopptisch'
       elif 'koehnen' in title.lower():
         maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
       elif 'marigny' in title.lower():
         maker = 'Marigny'
       elif 'marthastoumen' in title.lower():
@@ -94,8 +104,12 @@ for x in vver_orange_urls:
         maker = 'Meinklang'
       elif 'nestarec' in title.lower():
         maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
       elif 'purity' in title.lower():
         maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
       elif 'scottyboy' in title.lower():
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
@@ -104,6 +118,8 @@ for x in vver_orange_urls:
         maker = 'Swick'
       elif 'wavywines' in title.lower():
         maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
       elif 'wonderwerk' in title.lower():
         maker = 'Wonderwerk'
       else:
@@ -148,14 +164,24 @@ for x in vver_rose_urls:
         maker = 'Ruth Lewandowski'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
         maker = 'Gut Oggau'
       elif 'kopptisch' in title.lower():
         maker = 'Kopptisch'
       elif 'koehnen' in title.lower():
         maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
       elif 'marigny' in title.lower():
         maker = 'Marigny'
       elif 'marthastoumen' in title.lower():
@@ -164,8 +190,12 @@ for x in vver_rose_urls:
         maker = 'Meinklang'
       elif 'nestarec' in title.lower():
         maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
       elif 'purity' in title.lower():
         maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
       elif 'scottyboy' in title.lower():
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
@@ -174,6 +204,8 @@ for x in vver_rose_urls:
         maker = 'Swick'
       elif 'wavywines' in title.lower():
         maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
       elif 'wonderwerk' in title.lower():
         maker = 'Wonderwerk'
       else:
@@ -218,14 +250,24 @@ for x in vver_red_urls:
         maker = 'Ruth Lewandowski'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
         maker = 'Gut Oggau'
       elif 'kopptisch' in title.lower():
         maker = 'Kopptisch'
       elif 'koehnen' in title.lower():
         maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
       elif 'marigny' in title.lower():
         maker = 'Marigny'
       elif 'marthastoumen' in title.lower():
@@ -234,8 +276,12 @@ for x in vver_red_urls:
         maker = 'Meinklang'
       elif 'nestarec' in title.lower():
         maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
       elif 'purity' in title.lower():
         maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
       elif 'scottyboy' in title.lower():
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
@@ -244,6 +290,8 @@ for x in vver_red_urls:
         maker = 'Swick'
       elif 'wavywines' in title.lower():
         maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
       elif 'wonderwerk' in title.lower():
         maker = 'Wonderwerk'
       else:
@@ -288,14 +336,24 @@ for x in vver_white_urls:
         maker = 'Ruth Lewandowski'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
         maker = 'Gut Oggau'
       elif 'kopptisch' in title.lower():
         maker = 'Kopptisch'
       elif 'koehnen' in title.lower():
         maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
       elif 'marigny' in title.lower():
         maker = 'Marigny'
       elif 'marthastoumen' in title.lower():
@@ -304,8 +362,12 @@ for x in vver_white_urls:
         maker = 'Meinklang'
       elif 'nestarec' in title.lower():
         maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
       elif 'purity' in title.lower():
         maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
       elif 'scottyboy' in title.lower():
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
@@ -314,11 +376,13 @@ for x in vver_white_urls:
         maker = 'Swick'
       elif 'wavywines' in title.lower():
         maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
       elif 'wonderwerk' in title.lower():
         maker = 'Wonderwerk'
       else:
         maker ='undefined'
-      wines.append({
+			wines.append({
         'Title': title,
         'Title_text': title_text,
         'Maker': maker,
@@ -358,14 +422,24 @@ for x in vver_sparkling_urls:
         maker = 'Ruth Lewandowski'
       elif 'broc' in title.lower():
         maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
       elif 'furlani' in title.lower():
         maker = 'Furlani'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
       elif 'gutoggau' in title.lower():
         maker = 'Gut Oggau'
       elif 'kopptisch' in title.lower():
         maker = 'Kopptisch'
       elif 'koehnen' in title.lower():
         maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
       elif 'marigny' in title.lower():
         maker = 'Marigny'
       elif 'marthastoumen' in title.lower():
@@ -374,8 +448,12 @@ for x in vver_sparkling_urls:
         maker = 'Meinklang'
       elif 'nestarec' in title.lower():
         maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
       elif 'purity' in title.lower():
         maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
       elif 'scottyboy' in title.lower():
         maker = 'Scotty Boy'
       elif 'scotty-boy' in title.lower():
@@ -384,6 +462,8 @@ for x in vver_sparkling_urls:
         maker = 'Swick'
       elif 'wavywines' in title.lower():
         maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
       elif 'wonderwerk' in title.lower():
         maker = 'Wonderwerk'
       else:
