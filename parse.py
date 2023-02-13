@@ -141,7 +141,7 @@ for x in vver_orange_urls:
         'Link': link,
         'Image': image,
         'Type': 'orange',
-        'Type_text': '3Orange',
+        'Type_text': 'Orange',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -237,7 +237,7 @@ for x in vver_rose_urls:
         'Link': link,
         'Image': image,
         'Type': 'rose',
-        'Type_text': '4Ros&#233;',
+        'Type_text': 'Ros&#233;',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -333,7 +333,7 @@ for x in vver_red_urls:
         'Link': link,
         'Image': image,
         'Type': 'red',
-        'Type_text': '1Red',
+        'Type_text': 'Red',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -431,7 +431,7 @@ for x in vver_white_urls:
         'Link': link,
         'Image': image,
         'Type': 'white',
-        'Type_text': '2White',
+        'Type_text': 'White',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -532,7 +532,7 @@ for x in vver_sparkling_urls:
         'Link': link,
         'Image': image,
         'Type': 'sparkling',
-        'Type_text': '6Sparkling',
+        'Type_text': 'Sparkling',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -703,7 +703,7 @@ for x in hlp_orange_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'orange',
-			'Type_text': '3Orange',
+			'Type_text': 'Orange',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -790,7 +790,7 @@ for x in hlp_rose_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'rose',
-			'Type_text': '4Ros&#233;',
+			'Type_text': 'Ros&#233;',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -877,7 +877,7 @@ for x in hlp_red_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'red',
-			'Type_text': '1Red',
+			'Type_text': 'Red',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -964,7 +964,7 @@ for x in hlp_white_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'white',
-			'Type_text': '2White',
+			'Type_text': 'White',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -1051,7 +1051,7 @@ for x in hlp_sparkling_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'sparkling',
-			'Type_text': '6Sparkling',
+			'Type_text': 'Sparkling',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -1182,7 +1182,7 @@ for x in heavens_orange_urls:
         'Link': link,
         'Image': image,
         'Type': 'orange',
-        'Type_text': '3Orange',
+        'Type_text': 'Orange',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1274,7 +1274,7 @@ for x in heavens_rose_urls:
         'Link': link,
         'Image': image,
         'Type': 'rose',
-        'Type_text': '4Ros&#233;',
+        'Type_text': 'Ros&#233;',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1364,7 +1364,7 @@ for x in heavens_red_urls:
         'Link': link,
         'Image': image,
         'Type': 'red',
-        'Type_text': '1Red',
+        'Type_text': 'Red',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1454,7 +1454,7 @@ for x in heavens_white_urls:
         'Link': link,
         'Image': image,
         'Type': 'white',
-        'Type_text': '2White',
+        'Type_text': 'White',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1544,7 +1544,7 @@ for x in heavens_sparkling_urls:
         'Link': link,
         'Image': image,
         'Type': 'sparkling',
-        'Type_text': '6Sparkling',
+        'Type_text': 'Sparkling',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1662,7 +1662,7 @@ for x in eggs_co_fermented_urls:
       'Link': link,
       'Image': image,
       'Type': 'cofermented',
-      'Type_text': '5Co-Fermented',
+      'Type_text': 'Co-Fermented',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -1760,7 +1760,7 @@ for x in eggs_orange_urls:
       'Link': link,
       'Image': image,
       'Type': 'orange',
-      'Type_text': '3Orange',
+      'Type_text': 'Orange',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -1854,7 +1854,7 @@ for x in eggs_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': '4Ros&#233;',
+      'Type_text': 'Ros&#233;',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -1947,7 +1947,7 @@ for x in eggs_red_urls:
       'Link': link,
       'Image': image,
       'Type': 'red',
-      'Type_text': '1Red',
+      'Type_text': 'Red',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2040,7 +2040,7 @@ for x in eggs_white_urls:
       'Link': link,
       'Image': image,
       'Type': 'white',
-      'Type_text': '2White',
+      'Type_text': 'White',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2132,7 +2132,7 @@ for x in eggs_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': '6Sparkling',
+      'Type_text': 'Sparkling',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2224,7 +2224,7 @@ for x in eggs_piquette_urls:
       'Link': link,
       'Image': image,
       'Type': 'piquette',
-      'Type_text': '7Piquette',
+      'Type_text': 'Piquette',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2391,7 +2391,7 @@ for x in sl_co_fermented_urls:
       'Link': link,
       'Image': image,
       'Type': 'cofermented',
-      'Type_text': '5Co-Fermented',
+      'Type_text': 'Co-Fermented',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2490,7 +2490,7 @@ for x in sl_orange_urls:
       'Link': link,
       'Image': image,
       'Type': 'orange',
-      'Type_text': '3Orange',
+      'Type_text': 'Orange',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2584,7 +2584,7 @@ for x in sl_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': '4Ros&#233;',
+      'Type_text': 'Ros&#233;',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2676,7 +2676,7 @@ for x in sl_red_urls:
       'Link': link,
       'Image': image,
       'Type': 'red',
-      'Type_text': '1Red',
+      'Type_text': 'Red',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2767,7 +2767,7 @@ for x in sl_white_urls:
       'Link': link,
       'Image': image,
       'Type': 'white',
-      'Type_text': '2White',
+      'Type_text': 'White',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2857,7 +2857,7 @@ for x in sl_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': '6Sparkling',
+      'Type_text': 'Sparkling',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -3039,7 +3039,7 @@ for x in er_orange_urls:
       'Link': link,
       'Image': image,
       'Type': 'orange',
-      'Type_text': '3Orange',
+      'Type_text': 'Orange',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3126,7 +3126,7 @@ for x in er_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': '4Ros&#233;',
+      'Type_text': 'Ros&#233;',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3213,7 +3213,7 @@ for x in er_red_urls:
       'Link': link,
       'Image': image,
       'Type': 'red',
-      'Type_text': '1Red',
+      'Type_text': 'Red',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3300,7 +3300,7 @@ for x in er_white_urls:
       'Link': link,
       'Image': image,
       'Type': 'white',
-      'Type_text': '2White',
+      'Type_text': 'White',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3387,7 +3387,7 @@ for x in er_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': '6Sparkling',
+      'Type_text': 'Sparkling',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3506,7 +3506,7 @@ for x in kamp_orange_urls:
       'Link': link,
       'Image': image,
       'Type': 'orange',
-      'Type_text': '3Orange',
+      'Type_text': 'Orange',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3595,7 +3595,7 @@ for x in kamp_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': '4Ros&#233;',
+      'Type_text': 'Ros&#233;',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3684,7 +3684,7 @@ for x in kamp_red_urls:
       'Link': link,
       'Image': image,
       'Type': 'red',
-      'Type_text': '1Red',
+      'Type_text': 'Red',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3773,7 +3773,7 @@ for x in kamp_white_urls:
       'Link': link,
       'Image': image,
       'Type': 'white',
-      'Type_text': '2White',
+      'Type_text': 'White',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3862,7 +3862,7 @@ for x in kamp_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': '6Sparkling',
+      'Type_text': 'Sparkling',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3984,7 +3984,7 @@ for x in field_orange_urls:
       'Link': link,
       'Image': image,
       'Type': 'orange',
-      'Type_text': '3Orange',
+      'Type_text': 'Orange',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
@@ -4070,7 +4070,7 @@ for x in field_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': '4Ros&#233;',
+      'Type_text': 'Ros&#233;',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
@@ -4156,7 +4156,7 @@ for x in field_red_urls:
       'Link': link,
       'Image': image,
       'Type': 'red',
-      'Type_text': '1Red',
+      'Type_text': 'Red',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })		
@@ -4242,7 +4242,7 @@ for x in field_white_urls:
       'Link': link,
       'Image': image,
       'Type': 'white',
-      'Type_text': '2White',
+      'Type_text': 'White',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
@@ -4328,7 +4328,7 @@ for x in field_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': '6Sparkling',
+      'Type_text': 'Sparkling',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
