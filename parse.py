@@ -774,8 +774,8 @@ for x in hlp_rose_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': '',
-			'Type_text': '',
+			'Type': 'rose',
+			'Type_text': 'Ros&#233;',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -861,8 +861,8 @@ for x in hlp_red_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': '',
-			'Type_text': '',
+			'Type': 'red',
+			'Type_text': 'Red',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -948,8 +948,8 @@ for x in hlp_white_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': '',
-			'Type_text': '',
+			'Type': 'white',
+			'Type_text': 'White',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -1035,8 +1035,8 @@ for x in hlp_sparkling_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': '',
-			'Type_text': '',
+			'Type': 'sparkling',
+			'Type_text': 'Sparkling',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
