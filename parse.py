@@ -52,15 +52,11 @@ for x in vver_orange_urls:
 	
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
 	products = soup.find_all("div", class_="grid-product")
-	
 	for product in products:
 		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		
 		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
 			print()
-			
 		else:
-			
 			title_text = product.find("div", class_="grid-product__title").text.strip()
 			pricesoup = product.find("div", class_="grid-product__price")
 			if pricesoup.span:
@@ -75,11 +71,6 @@ for x in vver_orange_urls:
 				image = 'https:' + imageurl
 			else:
 				image = 'assets/placeholder.png'
-#			store = 'vinovoreeaglerock'
-#			store_text = 'Vinovore Eagle Rock'
-#			type = 'orange'
-#			type_text = 'Orange'
-
 			if 'lewandowski' in title.lower():
       	maker = 'Ruth Lewandowski'
 			elif 'broc' in title.lower():
@@ -114,7 +105,6 @@ for x in vver_orange_urls:
 				maker = 'Wonderwerk'
 			else:
 				maker ='undefined'
-				
 			wines.append({
 				'Title': title,
 				'Title_text': title_text,
@@ -125,7 +115,7 @@ for x in vver_orange_urls:
 				'Type_text': 'Orange',
 				'Store': 'vinovoreeaglerock',
 				'Store_text': 'Vinovore Eagle Rock',
-#				'Maker': maker,
+				'Maker': maker,
 			})
 #for x in vver_rose_urls:
 #	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
