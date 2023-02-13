@@ -3986,7 +3986,7 @@ for x in field_orange_urls:
       'Type': 'orange',
       'Type_text': 'Orange',
       'Store': 'flaskandfield',
-      'Store_text': 'Flask & Field',
+      'Store_text': 'Flask + Field',
     })
 for x in field_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4072,7 +4072,7 @@ for x in field_rose_urls:
       'Type': 'rose',
       'Type_text': 'Ros&#233;',
       'Store': 'flaskandfield',
-      'Store_text': 'Flask & Field',
+      'Store_text': 'Flask + Field',
     })
 for x in field_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4158,7 +4158,7 @@ for x in field_red_urls:
       'Type': 'red',
       'Type_text': 'Red',
       'Store': 'flaskandfield',
-      'Store_text': 'Flask & Field',
+      'Store_text': 'Flask + Field',
     })		
 for x in field_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4244,7 +4244,7 @@ for x in field_white_urls:
       'Type': 'white',
       'Type_text': 'White',
       'Store': 'flaskandfield',
-      'Store_text': 'Flask & Field',
+      'Store_text': 'Flask + Field',
     })
 for x in field_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4330,7 +4330,7 @@ for x in field_sparkling_urls:
       'Type': 'sparkling',
       'Type_text': 'Sparkling',
       'Store': 'flaskandfield',
-      'Store_text': 'Flask & Field',
+      'Store_text': 'Flask + Field',
     })
 		
 		
