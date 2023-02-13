@@ -144,6 +144,15 @@ main {
   border-radius: 4px;
 }
 
+.pagination li.active {
+  background-color: var(--primary-2);
+	color: var(--background);
+}
+
+.pagination li:hover {
+  background-color: var(--primary-3);
+}
+
 
 /*----------------------------------------------------*/
 /*  Wine card styles                                  */
