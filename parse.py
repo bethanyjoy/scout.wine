@@ -774,7 +774,7 @@ for x in hlp_rose_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'rose',
-			'Type_text': 'Rose',
+			'Type_text': 'Ros&#233;',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -1258,7 +1258,7 @@ for x in heavens_rose_urls:
         'Link': link,
         'Image': image,
         'Type': 'rose',
-        'Type_text': 'Rose',
+        'Type_text': 'Ros&#233;',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1604,80 +1604,81 @@ for x in eggs_co_fermented_urls:
 
 
 # list of silverlake wine urls to parse
+
+
 sl_red_urls = [
-"https://silverlakewine.com/collections/red",
-"https://silverlakewine.com/collections/red?page=2",
-"https://silverlakewine.com/collections/red?page=3",
-"https://silverlakewine.com/collections/red?page=4",
-"https://silverlakewine.com/collections/red?page=5",
-"https://silverlakewine.com/collections/red?page=6",
-"https://silverlakewine.com/collections/red?page=7",
-"https://silverlakewine.com/collections/red?page=8",
-"https://silverlakewine.com/collections/red?page=9",
-"https://silverlakewine.com/collections/red?page=10",
-"https://silverlakewine.com/collections/red?page=11",
-"https://silverlakewine.com/collections/red?page=12",
-"https://silverlakewine.com/collections/red?page=13",
-"https://silverlakewine.com/collections/red?page=14",
-"https://silverlakewine.com/collections/red?page=15",
-"https://silverlakewine.com/collections/red?page=16",
-"https://silverlakewine.com/collections/red?page=17",
-"https://silverlakewine.com/collections/red?page=18",
-"https://silverlakewine.com/collections/red?page=19",
-"https://silverlakewine.com/collections/red?page=20",
-"https://silverlakewine.com/collections/red?page=21",
-"https://silverlakewine.com/collections/red?page=22",
-"https://silverlakewine.com/collections/red?page=23",
-"https://silverlakewine.com/collections/red?page=24",
-"https://silverlakewine.com/collections/red?page=25",
-"https://silverlakewine.com/collections/red?page=26"
+	"https://silverlakewine.com/collections/red",
+	"https://silverlakewine.com/collections/red?page=2",
+	"https://silverlakewine.com/collections/red?page=3",
+	"https://silverlakewine.com/collections/red?page=4",
+	"https://silverlakewine.com/collections/red?page=5",
+	"https://silverlakewine.com/collections/red?page=6",
+	"https://silverlakewine.com/collections/red?page=7",
+	"https://silverlakewine.com/collections/red?page=8",
+	"https://silverlakewine.com/collections/red?page=9",
+	"https://silverlakewine.com/collections/red?page=10",
+	"https://silverlakewine.com/collections/red?page=11",
+	"https://silverlakewine.com/collections/red?page=12",
+	"https://silverlakewine.com/collections/red?page=13",
+	"https://silverlakewine.com/collections/red?page=14",
+	"https://silverlakewine.com/collections/red?page=15",
+	"https://silverlakewine.com/collections/red?page=16",
+	"https://silverlakewine.com/collections/red?page=17",
+	"https://silverlakewine.com/collections/red?page=18",
+	"https://silverlakewine.com/collections/red?page=19",
+	"https://silverlakewine.com/collections/red?page=20",
+	"https://silverlakewine.com/collections/red?page=21",
+	"https://silverlakewine.com/collections/red?page=22",
+	"https://silverlakewine.com/collections/red?page=23",
+	"https://silverlakewine.com/collections/red?page=24",
+	"https://silverlakewine.com/collections/red?page=25",
+	"https://silverlakewine.com/collections/red?page=26"
 ]
 sl_white_urls = [
-"https://silverlakewine.com/collections/white",
-"https://silverlakewine.com/collections/white?page=2",
-"https://silverlakewine.com/collections/white?page=3",
-"https://silverlakewine.com/collections/white?page=4",
-"https://silverlakewine.com/collections/white?page=5",
-"https://silverlakewine.com/collections/white?page=6",
-"https://silverlakewine.com/collections/white?page=7",
-"https://silverlakewine.com/collections/white?page=8",
-"https://silverlakewine.com/collections/white?page=9",
-"https://silverlakewine.com/collections/white?page=10",
-"https://silverlakewine.com/collections/white?page=11",
-"https://silverlakewine.com/collections/white?page=12",
-"https://silverlakewine.com/collections/white?page=13",
-"https://silverlakewine.com/collections/white?page=14"
+	"https://silverlakewine.com/collections/white",
+	"https://silverlakewine.com/collections/white?page=2",
+	"https://silverlakewine.com/collections/white?page=3",
+	"https://silverlakewine.com/collections/white?page=4",
+	"https://silverlakewine.com/collections/white?page=5",
+	"https://silverlakewine.com/collections/white?page=6",
+	"https://silverlakewine.com/collections/white?page=7",
+	"https://silverlakewine.com/collections/white?page=8",
+	"https://silverlakewine.com/collections/white?page=9",
+	"https://silverlakewine.com/collections/white?page=10",
+	"https://silverlakewine.com/collections/white?page=11",
+	"https://silverlakewine.com/collections/white?page=12",
+	"https://silverlakewine.com/collections/white?page=13",
+	"https://silverlakewine.com/collections/white?page=14"
 ]
 sl_rose_urls = [
-"https://silverlakewine.com/collections/rose",
-"https://silverlakewine.com/collections/rose?page=2",
-"https://silverlakewine.com/collections/rose?page=3",
-"https://silverlakewine.com/collections/rose?page=4",
-"https://silverlakewine.com/collections/rose?page=5",
-"https://silverlakewine.com/collections/rose?page=6"
+	"https://silverlakewine.com/collections/rose",
+	"https://silverlakewine.com/collections/rose?page=2",
+	"https://silverlakewine.com/collections/rose?page=3",
+	"https://silverlakewine.com/collections/rose?page=4",
+	"https://silverlakewine.com/collections/rose?page=5",
+	"https://silverlakewine.com/collections/rose?page=6"
 ]
 sl_orange_urls = [
-"https://silverlakewine.com/collections/orange",
-"https://silverlakewine.com/collections/orange?page=2",
-"https://silverlakewine.com/collections/orange?page=3",
-"https://silverlakewine.com/collections/orange?page=4",
-"https://silverlakewine.com/collections/orange?page=5",
-"https://silverlakewine.com/collections/orange?page=6"
+	"https://silverlakewine.com/collections/orange",
+	"https://silverlakewine.com/collections/orange?page=2",
+	"https://silverlakewine.com/collections/orange?page=3",
+	"https://silverlakewine.com/collections/orange?page=4",
+	"https://silverlakewine.com/collections/orange?page=5",
+	"https://silverlakewine.com/collections/orange?page=6"
 ]
 sl_sparkling_urls = [
-"https://silverlakewine.com/collections/sparkling",
-"https://silverlakewine.com/collections/sparkling?page=2",
-"https://silverlakewine.com/collections/sparkling?page=3",
-"https://silverlakewine.com/collections/sparkling?page=4",
-"https://silverlakewine.com/collections/sparkling?page=5",
-"https://silverlakewine.com/collections/sparkling?page=6",
-"https://silverlakewine.com/collections/sparkling?page=7",
-"https://silverlakewine.com/collections/sparkling?page=8"
+	"https://silverlakewine.com/collections/sparkling",
+	"https://silverlakewine.com/collections/sparkling?page=2",
+	"https://silverlakewine.com/collections/sparkling?page=3",
+	"https://silverlakewine.com/collections/sparkling?page=4",
+	"https://silverlakewine.com/collections/sparkling?page=5",
+	"https://silverlakewine.com/collections/sparkling?page=6",
+	"https://silverlakewine.com/collections/sparkling?page=7",
+	"https://silverlakewine.com/collections/sparkling?page=8"
 ]
 sl_co_fermented_urls = [
-"https://silverlakewine.com/collections/fruit-wine"
+	"https://silverlakewine.com/collections/fruit-wine"
 ]
-
 
 # code for parsing silverlake wine urls
 for x in sl_co_fermented_urls:
@@ -1719,90 +1720,92 @@ for x in sl_co_fermented_urls:
 
 
 # list of everson royce urls to parse
+
+
 er_red_urls = [
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=3",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=4",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=5",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=6",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=7",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=8",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=9",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=10",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=11",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=12",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=13",
-"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=14",
-"https://www.eversonroyce.com/collections/french-reds",
-"https://www.eversonroyce.com/collections/french-reds?page=2",
-"https://www.eversonroyce.com/collections/french-reds?page=3",
-"https://www.eversonroyce.com/collections/french-reds?page=4",
-"https://www.eversonroyce.com/collections/french-reds?page=5",
-"https://www.eversonroyce.com/collections/french-reds?page=6",
-"https://www.eversonroyce.com/collections/french-reds?page=7",
-"https://www.eversonroyce.com/collections/french-reds?page=8",
-"https://www.eversonroyce.com/collections/french-reds?page=9",
-"https://www.eversonroyce.com/collections/french-reds?page=10",
-"https://www.eversonroyce.com/collections/french-reds?page=11",
-"https://www.eversonroyce.com/collections/french-reds?page=12",
-"https://www.eversonroyce.com/collections/italian-reds",
-"https://www.eversonroyce.com/collections/italian-reds?page=2",
-"https://www.eversonroyce.com/collections/italian-reds?page=3",
-"https://www.eversonroyce.com/collections/italian-reds?page=4",
-"https://www.eversonroyce.com/collections/italian-reds?page=5",
-"https://www.eversonroyce.com/collections/spanish-portuguese-reds",
-"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=2",
-"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=3",
-"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=4",
-"https://www.eversonroyce.com/collections/eastern-european-reds",
-"https://www.eversonroyce.com/collections/eastern-european-reds?page=2",
-"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
-"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2"
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=3",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=4",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=5",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=6",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=7",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=8",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=9",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=10",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=11",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=12",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=13",
+	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=14",
+	"https://www.eversonroyce.com/collections/french-reds",
+	"https://www.eversonroyce.com/collections/french-reds?page=2",
+	"https://www.eversonroyce.com/collections/french-reds?page=3",
+	"https://www.eversonroyce.com/collections/french-reds?page=4",
+	"https://www.eversonroyce.com/collections/french-reds?page=5",
+	"https://www.eversonroyce.com/collections/french-reds?page=6",
+	"https://www.eversonroyce.com/collections/french-reds?page=7",
+	"https://www.eversonroyce.com/collections/french-reds?page=8",
+	"https://www.eversonroyce.com/collections/french-reds?page=9",
+	"https://www.eversonroyce.com/collections/french-reds?page=10",
+	"https://www.eversonroyce.com/collections/french-reds?page=11",
+	"https://www.eversonroyce.com/collections/french-reds?page=12",
+	"https://www.eversonroyce.com/collections/italian-reds",
+	"https://www.eversonroyce.com/collections/italian-reds?page=2",
+	"https://www.eversonroyce.com/collections/italian-reds?page=3",
+	"https://www.eversonroyce.com/collections/italian-reds?page=4",
+	"https://www.eversonroyce.com/collections/italian-reds?page=5",
+	"https://www.eversonroyce.com/collections/spanish-portuguese-reds",
+	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=2",
+	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=3",
+	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=4",
+	"https://www.eversonroyce.com/collections/eastern-european-reds",
+	"https://www.eversonroyce.com/collections/eastern-european-reds?page=2",
+	"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
+	"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2"
 ]
 er_white_urls = [
-"https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
-"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
-"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=3",
-"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=4",
-"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=5",
-"https://www.eversonroyce.com/collections/french-white-wine",
-"https://www.eversonroyce.com/collections/french-white-wine?page=2",
-"https://www.eversonroyce.com/collections/french-white-wine?page=3",
-"https://www.eversonroyce.com/collections/french-white-wine?page=4",
-"https://www.eversonroyce.com/collections/french-white-wine?page=5",
-"https://www.eversonroyce.com/collections/italian-white-wine",
-"https://www.eversonroyce.com/collections/italian-white-wine?page=2",
-"https://www.eversonroyce.com/collections/italian-white-wine?page=3",
-"https://www.eversonroyce.com/collections/spanish-portuguese-whites"
-"https://www.eversonroyce.com/collections/spanish-portuguese-whites?page=2"
-"https://www.eversonroyce.com/collections/eastern-european-whites",
-"https://www.eversonroyce.com/collections/eastern-european-whites?page=2",
-"https://www.eversonroyce.com/collections/eastern-european-whites?page=3",
-"https://www.eversonroyce.com/collections/eastern-european-whites?page=4",
-"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
-"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2"
+	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
+	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
+	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=3",
+	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=4",
+	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=5",
+	"https://www.eversonroyce.com/collections/french-white-wine",
+	"https://www.eversonroyce.com/collections/french-white-wine?page=2",
+	"https://www.eversonroyce.com/collections/french-white-wine?page=3",
+	"https://www.eversonroyce.com/collections/french-white-wine?page=4",
+	"https://www.eversonroyce.com/collections/french-white-wine?page=5",
+	"https://www.eversonroyce.com/collections/italian-white-wine",
+	"https://www.eversonroyce.com/collections/italian-white-wine?page=2",
+	"https://www.eversonroyce.com/collections/italian-white-wine?page=3",
+	"https://www.eversonroyce.com/collections/spanish-portuguese-whites"
+	"https://www.eversonroyce.com/collections/spanish-portuguese-whites?page=2"
+	"https://www.eversonroyce.com/collections/eastern-european-whites",
+	"https://www.eversonroyce.com/collections/eastern-european-whites?page=2",
+	"https://www.eversonroyce.com/collections/eastern-european-whites?page=3",
+	"https://www.eversonroyce.com/collections/eastern-european-whites?page=4",
+	"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
+	"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2"
 ]
 er_rose_urls = [
-"https://www.eversonroyce.com/collections/rose",
-"https://www.eversonroyce.com/collections/rose?page=2",
-"https://www.eversonroyce.com/collections/rose?page=3",
-"https://www.eversonroyce.com/collections/rose?page=4"
+	"https://www.eversonroyce.com/collections/rose",
+	"https://www.eversonroyce.com/collections/rose?page=2",
+	"https://www.eversonroyce.com/collections/rose?page=3",
+	"https://www.eversonroyce.com/collections/rose?page=4"
 ]
 er_orange_urls = [
-"https://www.eversonroyce.com/collections/orange-wine",
-"https://www.eversonroyce.com/collections/orange-wine?page=2",
-"https://www.eversonroyce.com/collections/orange-wine?page=3",
-"https://www.eversonroyce.com/collections/orange-wine?page=4",
-"https://www.eversonroyce.com/collections/orange-wine?page=5",
+	"https://www.eversonroyce.com/collections/orange-wine",
+	"https://www.eversonroyce.com/collections/orange-wine?page=2",
+	"https://www.eversonroyce.com/collections/orange-wine?page=3",
+	"https://www.eversonroyce.com/collections/orange-wine?page=4",
+	"https://www.eversonroyce.com/collections/orange-wine?page=5",
 ]
 er_sparkling_urls = [
-"https://www.eversonroyce.com/collections/sparklin-wine",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
-"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
+	"https://www.eversonroyce.com/collections/sparklin-wine",
+	"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
+	"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
+	"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
+	"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
+	"https://www.eversonroyce.com/collections/sparklin-wine?page=6"
 ]
 
 
@@ -1844,20 +1847,20 @@ for x in er_orange_urls:
 
 # list of kamp urls to parse
 kamp_red_urls = [
-"https://shopkamp.com/collections/red",
-"https://shopkamp.com/collections/chillable-reds"
+	"https://shopkamp.com/collections/red",
+	"https://shopkamp.com/collections/chillable-reds"
 ]
 kamp_white_urls = [
-"https://shopkamp.com/collections/white"
+	"https://shopkamp.com/collections/white"
 ]
 kamp_rose_urls = [
-"https://shopkamp.com/collections/rose"
+	"https://shopkamp.com/collections/rose"
 ]
 kamp_orange_urls = [
-"https://shopkamp.com/collections/orange"
+	"https://shopkamp.com/collections/orange"
 ]
 kamp_sparkling_urls = [
-"https://shopkamp.com/collections/sparkling"
+	"https://shopkamp.com/collections/sparkling"
 ]
 	
 	
@@ -1902,28 +1905,30 @@ for x in kamp_orange_urls:
 	
 	
 # list of field and flask urls to parse
+
+
 field_red_urls = [
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=2",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=3",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=4",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=2",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=3",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=4",
 ]
 field_white_urls = [
-"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=2",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=3",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=2",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=3",
 ]
 field_rose_urls = [
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine&page=2",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine&page=2",
 ]
 field_orange_urls = [
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&page=2",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&page=2",
 ]
 field_sparkling_urls = [
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine",
-"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
 ]
 	
 	
@@ -1972,6 +1977,9 @@ for x in field_orange_urls:
 
 
 # writes the wine data to the json file
+
+
+
 with open("data.json", "w") as writeJSON:
     json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 
