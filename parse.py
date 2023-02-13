@@ -2867,6 +2867,8 @@ for x in sl_sparkling_urls:
 		
 		
 		
+		
+		
 er_red_urls = [
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
