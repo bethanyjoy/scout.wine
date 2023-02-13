@@ -1759,7 +1759,7 @@ for x in kamp_red_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in kamp_white_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
