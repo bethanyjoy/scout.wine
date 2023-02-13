@@ -54,7 +54,9 @@ for x in vver_orange_urls:
   products = soup.find_all("div", class_="grid-product")
   for product in products:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+    if 'giftbox' in title.lower():
+      print()
+		elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -148,7 +150,9 @@ for x in vver_rose_urls:
   products = soup.find_all("div", class_="grid-product")
   for product in products:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+    if 'giftbox' in title.lower():
+      print()
+		elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -242,7 +246,9 @@ for x in vver_red_urls:
   products = soup.find_all("div", class_="grid-product")
   for product in products:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+    if 'giftbox' in title.lower():
+      print()
+		elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -336,7 +342,9 @@ for x in vver_white_urls:
   products = soup.find_all("div", class_="grid-product")
   for product in products:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+    if 'giftbox' in title.lower():
+      print()
+		elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
@@ -430,7 +438,9 @@ for x in vver_sparkling_urls:
   products = soup.find_all("div", class_="grid-product")
   for product in products:
     title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+    if 'giftbox' in title.lower():
+      print()
+		elif 'bouquet' in title.lower():
       print()
     else:
       title_text = product.find("div", class_="grid-product__title").text.strip()
