@@ -10,42 +10,42 @@ wines = []
 
 # list of vinovore eagle rock urls to parse
 vver_red_urls = [
-"https://vinovoreeaglerock.com/collections/red",
-"https://vinovoreeaglerock.com/collections/red?page=2",
-"https://vinovoreeaglerock.com/collections/red?page=3",
-"https://vinovoreeaglerock.com/collections/red?page=4",
-"https://vinovoreeaglerock.com/collections/red?page=5",
-"https://vinovoreeaglerock.com/collections/red?page=6",
-"https://vinovoreeaglerock.com/collections/red?page=7",
-"https://vinovoreeaglerock.com/collections/red?page=8",
+	"https://vinovoreeaglerock.com/collections/red",
+	"https://vinovoreeaglerock.com/collections/red?page=2",
+	"https://vinovoreeaglerock.com/collections/red?page=3",
+	"https://vinovoreeaglerock.com/collections/red?page=4",
+	"https://vinovoreeaglerock.com/collections/red?page=5",
+	"https://vinovoreeaglerock.com/collections/red?page=6",
+	"https://vinovoreeaglerock.com/collections/red?page=7",
+	"https://vinovoreeaglerock.com/collections/red?page=8",
 ]
 vver_white_urls = [
-"https://vinovoreeaglerock.com/collections/white",
-"https://vinovoreeaglerock.com/collections/white?page=2",
-"https://vinovoreeaglerock.com/collections/white?page=3",
-"https://vinovoreeaglerock.com/collections/white?page=4",
-"https://vinovoreeaglerock.com/collections/white?page=5",
-"https://vinovoreeaglerock.com/collections/white?page=6",
+	"https://vinovoreeaglerock.com/collections/white",
+	"https://vinovoreeaglerock.com/collections/white?page=2",
+	"https://vinovoreeaglerock.com/collections/white?page=3",
+	"https://vinovoreeaglerock.com/collections/white?page=4",
+	"https://vinovoreeaglerock.com/collections/white?page=5",
+	"https://vinovoreeaglerock.com/collections/white?page=6",
 ]
 vver_rose_urls = [
-"https://vinovoreeaglerock.com/collections/rose",
-"https://vinovoreeaglerock.com/collections/rose?page=2",
-"https://vinovoreeaglerock.com/collections/rose?page=3",
-"https://vinovoreeaglerock.com/collections/rose?page=4"
+	"https://vinovoreeaglerock.com/collections/rose",
+	"https://vinovoreeaglerock.com/collections/rose?page=2",
+	"https://vinovoreeaglerock.com/collections/rose?page=3",
+	"https://vinovoreeaglerock.com/collections/rose?page=4"
 ]
 vver_orange_urls = [
-"https://vinovoreeaglerock.com/collections/orange",
-"https://vinovoreeaglerock.com/collections/orange?page=2",
-"https://vinovoreeaglerock.com/collections/orange?page=3",
-"https://vinovoreeaglerock.com/collections/orange?page=4"
+	"https://vinovoreeaglerock.com/collections/orange",
+	"https://vinovoreeaglerock.com/collections/orange?page=2",
+	"https://vinovoreeaglerock.com/collections/orange?page=3",
+	"https://vinovoreeaglerock.com/collections/orange?page=4"
 ]
 vver_sparkling_urls = [
-"https://vinovoreeaglerock.com/collections/sparkling",
-"https://vinovoreeaglerock.com/collections/sparkling?page=2",
-"https://vinovoreeaglerock.com/collections/sparkling?page=3",
-"https://vinovoreeaglerock.com/collections/sparkling?page=4",
-"https://vinovoreeaglerock.com/collections/sparkling?page=5",
-"https://vinovoreeaglerock.com/collections/sparkling?page=6",
+	"https://vinovoreeaglerock.com/collections/sparkling",
+	"https://vinovoreeaglerock.com/collections/sparkling?page=2",
+	"https://vinovoreeaglerock.com/collections/sparkling?page=3",
+	"https://vinovoreeaglerock.com/collections/sparkling?page=4",
+	"https://vinovoreeaglerock.com/collections/sparkling?page=5",
+	"https://vinovoreeaglerock.com/collections/sparkling?page=6",
 ]
 
 
@@ -524,82 +524,84 @@ for x in vver_sparkling_urls:
 
 
 # list of highland park wine urls to parse
+
+
 hlp_red_urls = [
-"https://www.highlandparkwine.com/collections/usa-red-wines",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=2",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=3",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=4",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=5",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=6",
-"https://www.highlandparkwine.com/collections/usa-red-wines?page=7",
-"https://www.highlandparkwine.com/collections/french-reds",
-"https://www.highlandparkwine.com/collections/french-reds?page=2",
-"https://www.highlandparkwine.com/collections/french-reds?page=3",
-"https://www.highlandparkwine.com/collections/french-reds?page=4",
-"https://www.highlandparkwine.com/collections/french-reds?page=5",
-"https://www.highlandparkwine.com/collections/french-reds?page=6",
-"https://www.highlandparkwine.com/collections/french-reds?page=7",
-"https://www.highlandparkwine.com/collections/french-reds?page=8",
-"https://www.highlandparkwine.com/collections/italian-reds",
-"https://www.highlandparkwine.com/collections/italian-reds?page=2",
-"https://www.highlandparkwine.com/collections/italian-reds?page=3",
-"https://www.highlandparkwine.com/collections/italian-reds?page=4",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-reds",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=2",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=3",
-"https://www.highlandparkwine.com/collections/eastern-european-reds",
-"https://www.highlandparkwine.com/collections/eastern-european-reds?page=2",
-"https://www.highlandparkwine.com/collections/eastern-european-reds?page=3",
-"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere",
-"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=2",
-"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=3",
-"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=4"
+	"https://www.highlandparkwine.com/collections/usa-red-wines",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=2",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=3",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=4",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=5",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=6",
+	"https://www.highlandparkwine.com/collections/usa-red-wines?page=7",
+	"https://www.highlandparkwine.com/collections/french-reds",
+	"https://www.highlandparkwine.com/collections/french-reds?page=2",
+	"https://www.highlandparkwine.com/collections/french-reds?page=3",
+	"https://www.highlandparkwine.com/collections/french-reds?page=4",
+	"https://www.highlandparkwine.com/collections/french-reds?page=5",
+	"https://www.highlandparkwine.com/collections/french-reds?page=6",
+	"https://www.highlandparkwine.com/collections/french-reds?page=7",
+	"https://www.highlandparkwine.com/collections/french-reds?page=8",
+	"https://www.highlandparkwine.com/collections/italian-reds",
+	"https://www.highlandparkwine.com/collections/italian-reds?page=2",
+	"https://www.highlandparkwine.com/collections/italian-reds?page=3",
+	"https://www.highlandparkwine.com/collections/italian-reds?page=4",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=2",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=3",
+	"https://www.highlandparkwine.com/collections/eastern-european-reds",
+	"https://www.highlandparkwine.com/collections/eastern-european-reds?page=2",
+	"https://www.highlandparkwine.com/collections/eastern-european-reds?page=3",
+	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere",
+	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=2",
+	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=3",
+	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=4"
 ]
 hlp_white_urls = [
-"https://www.highlandparkwine.com/collections/white-wines-from-the-usa",
-"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=2",
-"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=3",
-"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=4",
-"https://www.highlandparkwine.com/collections/french-white-wine",
-"https://www.highlandparkwine.com/collections/french-white-wine?page=2",
-"https://www.highlandparkwine.com/collections/french-white-wine?page=3",
-"https://www.highlandparkwine.com/collections/french-white-wine?page=4",
-"https://www.highlandparkwine.com/collections/french-white-wine?page=5",
-"https://www.highlandparkwine.com/collections/italian-white-wine",
-"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
-"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
-"https://www.highlandparkwine.com/collections/italian-white-wine?page=3",
-"https://www.highlandparkwine.com/collections/italian-white-wine?page=4",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-whites",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=2",
-"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=3",
-"https://www.highlandparkwine.com/collections/eastern-european-whites",
-"https://www.highlandparkwine.com/collections/eastern-european-whites?page=2",
-"https://www.highlandparkwine.com/collections/eastern-european-whites?page=3",
-"https://www.highlandparkwine.com/collections/eastern-european-whites?page=4",
-"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere",
-"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere?page=2"
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa",
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=2",
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=3",
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=4",
+	"https://www.highlandparkwine.com/collections/french-white-wine",
+	"https://www.highlandparkwine.com/collections/french-white-wine?page=2",
+	"https://www.highlandparkwine.com/collections/french-white-wine?page=3",
+	"https://www.highlandparkwine.com/collections/french-white-wine?page=4",
+	"https://www.highlandparkwine.com/collections/french-white-wine?page=5",
+	"https://www.highlandparkwine.com/collections/italian-white-wine",
+	"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
+	"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
+	"https://www.highlandparkwine.com/collections/italian-white-wine?page=3",
+	"https://www.highlandparkwine.com/collections/italian-white-wine?page=4",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=2",
+	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=3",
+	"https://www.highlandparkwine.com/collections/eastern-european-whites",
+	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=2",
+	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=3",
+	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=4",
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere",
+	"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere?page=2"
 ]
 hlp_rose_urls = [
-"https://www.highlandparkwine.com/collections/rose",
-"https://www.highlandparkwine.com/collections/rose?page=2",
-"https://www.highlandparkwine.com/collections/rose?page=3",
-"https://www.highlandparkwine.com/collections/rose?page=4",
-"https://www.highlandparkwine.com/collections/rose?page=5"
+	"https://www.highlandparkwine.com/collections/rose",
+	"https://www.highlandparkwine.com/collections/rose?page=2",
+	"https://www.highlandparkwine.com/collections/rose?page=3",
+	"https://www.highlandparkwine.com/collections/rose?page=4",
+	"https://www.highlandparkwine.com/collections/rose?page=5"
 ]
 hlp_orange_urls = [
-"https://www.highlandparkwine.com/collections/orange-wine",
-"https://www.highlandparkwine.com/collections/orange-wine?page=2",
-"https://www.highlandparkwine.com/collections/orange-wine?page=3",
-"https://www.highlandparkwine.com/collections/orange-wine?page=4"
+	"https://www.highlandparkwine.com/collections/orange-wine",
+	"https://www.highlandparkwine.com/collections/orange-wine?page=2",
+	"https://www.highlandparkwine.com/collections/orange-wine?page=3",
+	"https://www.highlandparkwine.com/collections/orange-wine?page=4"
 ]
 hlp_sparkling_urls = [
-"https://www.highlandparkwine.com/collections/sparkling-wine",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=2",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=3",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=4",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=5",
-"https://www.highlandparkwine.com/collections/sparkling-wine?page=6"
+	"https://www.highlandparkwine.com/collections/sparkling-wine",
+	"https://www.highlandparkwine.com/collections/sparkling-wine?page=2",
+	"https://www.highlandparkwine.com/collections/sparkling-wine?page=3",
+	"https://www.highlandparkwine.com/collections/sparkling-wine?page=4",
+	"https://www.highlandparkwine.com/collections/sparkling-wine?page=5",
+	"https://www.highlandparkwine.com/collections/sparkling-wine?page=6"
 ]
 
 
@@ -621,7 +623,7 @@ for x in hlp_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-    	maker = 'Ruth Lewandowski'
+			maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
@@ -692,357 +694,6 @@ for x in hlp_orange_urls:
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
-for x in hlp_rose_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="prod-block")
-	for product in products:
-		title = product.find("div", class_="title").text.replace(" ", "")
-		title_text = product.find("div", class_="title").text.strip()
-		price = product.find("div", class_="product-price").text.strip()
-		link = 'http://highlandparkwine.com' + product.find("a")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="rimage__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="rimage__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		if 'lewandowski' in title.lower():
-    	maker = 'Ruth Lewandowski'
-		elif 'amevive' in title.lower():
-			maker = 'Amevive'
-		elif 'amplify' in title.lower():
-			maker = 'Amplify'
-		elif 'broc' in title.lower():
-			maker = 'Broc Cellars'
-		elif 'cirelli' in title.lower():
-			maker = 'Cirelli'
-		elif 'dueterre' in title.lower():
-			maker = 'Due Terre'
-		elif 'folkmachine' in title.lower():
-			maker = 'Folk Machine'
-		elif 'furlani' in title.lower():
-			maker = 'Furlani'
-		elif 'gentle folk' in title.lower():
-			maker = 'Gentle Folk'
-		elif 'goodboywine' in title.lower():
-			maker = 'Good Boy Wine'
-		elif 'gutoggau' in title.lower():
-			maker = 'Gut Oggau'
-		elif 'kopptisch' in title.lower():
-			maker = 'Kopptisch'
-		elif 'koehnen' in title.lower():
-			maker = 'Koehnen'
-		elif 'lasjaras' in title.lower():
-			maker = 'Las Jaras'
-		elif 'marigny' in title.lower():
-			maker = 'Marigny'
-		elif 'marthastoumen' in title.lower():
-			maker = 'Martha Stoumen'
-		elif 'meinklang' in title.lower():
-			maker = 'Meinklang'
-		elif 'nestarec' in title.lower():
-			maker = 'Nestarec'
-		elif 'oldwestminster' in title.lower():
-			maker = 'Old Westminster'
-		elif 'purity' in title.lower():
-			maker = 'Purity'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'scottyboy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'scotty-boy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title.lower():
-			maker = 'Subject to Change'
-		elif 'swick' in title.lower():
-			maker = 'Swick'
-		elif 'wavywines' in title.lower():
-			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title.lower():
-			maker = 'Wild Arc Farm'
-		elif 'wonderwerk' in title.lower():
-			maker = 'Wonderwerk'
-		else:
-			maker ='undefined'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Maker': maker,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': 'rose',
-			'Type_text': 'Ros&#233;',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
-		})
-for x in hlp_red_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="prod-block")
-	for product in products:
-		title = product.find("div", class_="title").text.replace(" ", "")
-		title_text = product.find("div", class_="title").text.strip()
-		price = product.find("div", class_="product-price").text.strip()
-		link = 'http://highlandparkwine.com' + product.find("a")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="rimage__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="rimage__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		if 'lewandowski' in title.lower():
-    	maker = 'Ruth Lewandowski'
-		elif 'amevive' in title.lower():
-			maker = 'Amevive'
-		elif 'amplify' in title.lower():
-			maker = 'Amplify'
-		elif 'broc' in title.lower():
-			maker = 'Broc Cellars'
-		elif 'cirelli' in title.lower():
-			maker = 'Cirelli'
-		elif 'dueterre' in title.lower():
-			maker = 'Due Terre'
-		elif 'folkmachine' in title.lower():
-			maker = 'Folk Machine'
-		elif 'furlani' in title.lower():
-			maker = 'Furlani'
-		elif 'gentle folk' in title.lower():
-			maker = 'Gentle Folk'
-		elif 'goodboywine' in title.lower():
-			maker = 'Good Boy Wine'
-		elif 'gutoggau' in title.lower():
-			maker = 'Gut Oggau'
-		elif 'kopptisch' in title.lower():
-			maker = 'Kopptisch'
-		elif 'koehnen' in title.lower():
-			maker = 'Koehnen'
-		elif 'lasjaras' in title.lower():
-			maker = 'Las Jaras'
-		elif 'marigny' in title.lower():
-			maker = 'Marigny'
-		elif 'marthastoumen' in title.lower():
-			maker = 'Martha Stoumen'
-		elif 'meinklang' in title.lower():
-			maker = 'Meinklang'
-		elif 'nestarec' in title.lower():
-			maker = 'Nestarec'
-		elif 'oldwestminster' in title.lower():
-			maker = 'Old Westminster'
-		elif 'purity' in title.lower():
-			maker = 'Purity'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'scottyboy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'scotty-boy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title.lower():
-			maker = 'Subject to Change'
-		elif 'swick' in title.lower():
-			maker = 'Swick'
-		elif 'wavywines' in title.lower():
-			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title.lower():
-			maker = 'Wild Arc Farm'
-		elif 'wonderwerk' in title.lower():
-			maker = 'Wonderwerk'
-		else:
-			maker ='undefined'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Maker': maker,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': 'red',
-			'Type_text': 'Red',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
-		})
-for x in hlp_white_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="prod-block")
-	for product in products:
-		title = product.find("div", class_="title").text.replace(" ", "")
-		title_text = product.find("div", class_="title").text.strip()
-		price = product.find("div", class_="product-price").text.strip()
-		link = 'http://highlandparkwine.com' + product.find("a")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="rimage__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="rimage__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		if 'lewandowski' in title.lower():
-    	maker = 'Ruth Lewandowski'
-		elif 'amevive' in title.lower():
-			maker = 'Amevive'
-		elif 'amplify' in title.lower():
-			maker = 'Amplify'
-		elif 'broc' in title.lower():
-			maker = 'Broc Cellars'
-		elif 'cirelli' in title.lower():
-			maker = 'Cirelli'
-		elif 'dueterre' in title.lower():
-			maker = 'Due Terre'
-		elif 'folkmachine' in title.lower():
-			maker = 'Folk Machine'
-		elif 'furlani' in title.lower():
-			maker = 'Furlani'
-		elif 'gentle folk' in title.lower():
-			maker = 'Gentle Folk'
-		elif 'goodboywine' in title.lower():
-			maker = 'Good Boy Wine'
-		elif 'gutoggau' in title.lower():
-			maker = 'Gut Oggau'
-		elif 'kopptisch' in title.lower():
-			maker = 'Kopptisch'
-		elif 'koehnen' in title.lower():
-			maker = 'Koehnen'
-		elif 'lasjaras' in title.lower():
-			maker = 'Las Jaras'
-		elif 'marigny' in title.lower():
-			maker = 'Marigny'
-		elif 'marthastoumen' in title.lower():
-			maker = 'Martha Stoumen'
-		elif 'meinklang' in title.lower():
-			maker = 'Meinklang'
-		elif 'nestarec' in title.lower():
-			maker = 'Nestarec'
-		elif 'oldwestminster' in title.lower():
-			maker = 'Old Westminster'
-		elif 'purity' in title.lower():
-			maker = 'Purity'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'scottyboy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'scotty-boy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title.lower():
-			maker = 'Subject to Change'
-		elif 'swick' in title.lower():
-			maker = 'Swick'
-		elif 'wavywines' in title.lower():
-			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title.lower():
-			maker = 'Wild Arc Farm'
-		elif 'wonderwerk' in title.lower():
-			maker = 'Wonderwerk'
-		else:
-			maker ='undefined'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Maker': maker,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': 'white',
-			'Type_text': 'White',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
-		})
-for x in hlp_sparkling_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="prod-block")
-	for product in products:
-		title = product.find("div", class_="title").text.replace(" ", "")
-		title_text = product.find("div", class_="title").text.strip()
-		price = product.find("div", class_="product-price").text.strip()
-		link = 'http://highlandparkwine.com' + product.find("a")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="rimage__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="rimage__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		if 'lewandowski' in title.lower():
-    	maker = 'Ruth Lewandowski'
-		elif 'amevive' in title.lower():
-			maker = 'Amevive'
-		elif 'amplify' in title.lower():
-			maker = 'Amplify'
-		elif 'broc' in title.lower():
-			maker = 'Broc Cellars'
-		elif 'cirelli' in title.lower():
-			maker = 'Cirelli'
-		elif 'dueterre' in title.lower():
-			maker = 'Due Terre'
-		elif 'folkmachine' in title.lower():
-			maker = 'Folk Machine'
-		elif 'furlani' in title.lower():
-			maker = 'Furlani'
-		elif 'gentle folk' in title.lower():
-			maker = 'Gentle Folk'
-		elif 'goodboywine' in title.lower():
-			maker = 'Good Boy Wine'
-		elif 'gutoggau' in title.lower():
-			maker = 'Gut Oggau'
-		elif 'kopptisch' in title.lower():
-			maker = 'Kopptisch'
-		elif 'koehnen' in title.lower():
-			maker = 'Koehnen'
-		elif 'lasjaras' in title.lower():
-			maker = 'Las Jaras'
-		elif 'marigny' in title.lower():
-			maker = 'Marigny'
-		elif 'marthastoumen' in title.lower():
-			maker = 'Martha Stoumen'
-		elif 'meinklang' in title.lower():
-			maker = 'Meinklang'
-		elif 'nestarec' in title.lower():
-			maker = 'Nestarec'
-		elif 'oldwestminster' in title.lower():
-			maker = 'Old Westminster'
-		elif 'purity' in title.lower():
-			maker = 'Purity'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'scottyboy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'scotty-boy' in title.lower():
-			maker = 'Scotty Boy'
-		elif 'stagiaire' in title.lower():
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title.lower():
-			maker = 'Subject to Change'
-		elif 'swick' in title.lower():
-			maker = 'Swick'
-		elif 'wavywines' in title.lower():
-			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title.lower():
-			maker = 'Wild Arc Farm'
-		elif 'wonderwerk' in title.lower():
-			maker = 'Wonderwerk'
-		else:
-			maker ='undefined'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Maker': maker,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': 'sparkling',
-			'Type_text': 'Sparkling',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
-		})
-
-
-
 
 
 
