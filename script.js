@@ -154,7 +154,7 @@
     });
 
 		let sort_type = all_type.sort();
-		let trim_type = sort_type.map(x => x.slice(1));
+//		let trim_type = sort_type.map(x => x.slice(1));
 
     _(trim_type).uniq().each(function (item) {
       $(".typeContainer").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>')

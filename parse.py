@@ -532,7 +532,7 @@ for x in vver_sparkling_urls:
         'Link': link,
         'Image': image,
         'Type': 'sparkling',
-        'Type_text': 'Sparkling',
+        'Type_text': '6Sparkling',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -1051,7 +1051,7 @@ for x in hlp_sparkling_urls:
 			'Link': link,
 			'Image': image,
 			'Type': 'sparkling',
-			'Type_text': 'Sparkling',
+			'Type_text': '6Sparkling',
 			'Store': 'highlandpark',
 			'Store_text': 'Highland Park Wine',
 		})
@@ -1544,7 +1544,7 @@ for x in heavens_sparkling_urls:
         'Link': link,
         'Image': image,
         'Type': 'sparkling',
-        'Type_text': 'Sparkling',
+        'Type_text': '6Sparkling',
         'Store': 'heavensmarket',
         'Store_text': 'Heaven&#39;s Market',
       })
@@ -1662,7 +1662,7 @@ for x in eggs_co_fermented_urls:
       'Link': link,
       'Image': image,
       'Type': 'cofermented',
-      'Type_text': 'Co-Fermented',
+      'Type_text': '5Co-Fermented',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2132,7 +2132,7 @@ for x in eggs_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': 'Sparkling',
+      'Type_text': '6Sparkling',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2224,7 +2224,7 @@ for x in eggs_piquette_urls:
       'Link': link,
       'Image': image,
       'Type': 'piquette',
-      'Type_text': 'Piquette',
+      'Type_text': '7Piquette',
       'Store': 'wineandeggs',
       'Store_text': 'Wine + Eggs',
     })
@@ -2391,7 +2391,7 @@ for x in sl_co_fermented_urls:
       'Link': link,
       'Image': image,
       'Type': 'cofermented',
-      'Type_text': 'Co-Fermented',
+      'Type_text': '5Co-Fermented',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -2857,7 +2857,7 @@ for x in sl_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': 'Sparkling',
+      'Type_text': '6Sparkling',
       'Store': 'silverlake',
       'Store_text': 'Silverlake Wine',
     })
@@ -3387,7 +3387,7 @@ for x in er_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': 'Sparkling',
+      'Type_text': '6Sparkling',
       'Store': 'eversonroyce',
       'Store_text': 'Everson Royce',
     })
@@ -3862,7 +3862,7 @@ for x in kamp_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': 'Sparkling',
+      'Type_text': '6Sparkling',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -4328,7 +4328,7 @@ for x in field_sparkling_urls:
       'Link': link,
       'Image': image,
       'Type': 'sparkling',
-      'Type_text': 'Sparkling',
+      'Type_text': '6Sparkling',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
