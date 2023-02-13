@@ -51,191 +51,355 @@ vver_sparkling_urls = [
 
 # code for parsing vinovore eagle rock urls
 for x in vver_orange_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="grid-product")
-	for product in products:
-		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-			print()
-		else:
-			title_text = product.find("div", class_="grid-product__title").text.strip()
-			pricesoup = product.find("div", class_="grid-product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
-			link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-			imagesoup = product.find('noscript')
-			imagecheck = imagesoup.find("img", class_="grid-product__image")
-			if imagecheck is not None:
-				imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-				image = 'https:' + imageurl
-			else:
-				image = 'assets/placeholder.png'
-			store = 'vinovoreeaglerock'
-			store_text = 'Vinovore Eagle Rock'
-			type = 'orange'
-			type_text = 'Orange'
-			wines.append({
-				'Title': title,
-				'Title_text': title_text,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Type': type,
-				'Type_text': type_text,
-				'Store': store,
-				'Store_text': store_text,
-			})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="grid-product")
+  for product in products:
+    title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+      print()
+    else:
+      title_text = product.find("div", class_="grid-product__title").text.strip()
+      pricesoup = product.find("div", class_="grid-product__price")
+      if pricesoup.span:
+        price = 'On Sale'
+      else:
+        price = pricesoup.text.strip()
+      link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-product__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      type = 'orange'
+      type_text = 'Orange'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'vinovoreeaglerock',
+        'Store_text': 'Vinovore Eagle Rock',
+      })
 for x in vver_rose_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="grid-product")
-	for product in products:
-		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-			print()
-		else:
-			title_text = product.find("div", class_="grid-product__title").text.strip()
-			pricesoup = product.find("div", class_="grid-product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
-			link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-			imagesoup = product.find('noscript')
-			imagecheck = imagesoup.find("img", class_="grid-product__image")
-			if imagecheck is not None:
-				imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-				image = 'https:' + imageurl
-			else:
-				image = 'assets/placeholder.png'
-			store = 'vinovoreeaglerock'
-			store_text = 'Vinovore Eagle Rock'
-			type = 'rose'
-			type_text = 'Ros&#233;'
-			wines.append({
-				'Title': title,
-				'Title_text': title_text,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Type': type,
-				'Type_text': type_text,
-				'Store': store,
-				'Store_text': store_text,
-			})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="grid-product")
+  for product in products:
+    title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+      print()
+    else:
+      title_text = product.find("div", class_="grid-product__title").text.strip()
+      pricesoup = product.find("div", class_="grid-product__price")
+      if pricesoup.span:
+        price = 'On Sale'
+      else:
+        price = pricesoup.text.strip()
+      link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-product__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      type = 'orange'
+      type_text = 'Orange'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'vinovoreeaglerock',
+        'Store_text': 'Vinovore Eagle Rock',
+      })
 for x in vver_red_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="grid-product")
-	for product in products:
-		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-			print()
-		else:
-			title_text = product.find("div", class_="grid-product__title").text.strip()
-			pricesoup = product.find("div", class_="grid-product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
-			link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-			imagesoup = product.find('noscript')
-			imagecheck = imagesoup.find("img", class_="grid-product__image")
-			if imagecheck is not None:
-				imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-				image = 'https:' + imageurl
-			else:
-				image = 'assets/placeholder.png'
-			store = 'vinovoreeaglerock'
-			store_text = 'Vinovore Eagle Rock'
-			type = 'red'
-			type_text = 'Red'
-			wines.append({
-				'Title': title,
-				'Title_text': title_text,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Type': type,
-				'Type_text': type_text,
-				'Store': store,
-				'Store_text': store_text,
-			})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="grid-product")
+  for product in products:
+    title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+      print()
+    else:
+      title_text = product.find("div", class_="grid-product__title").text.strip()
+      pricesoup = product.find("div", class_="grid-product__price")
+      if pricesoup.span:
+        price = 'On Sale'
+      else:
+        price = pricesoup.text.strip()
+      link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-product__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      type = 'orange'
+      type_text = 'Orange'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'vinovoreeaglerock',
+        'Store_text': 'Vinovore Eagle Rock',
+      })
 for x in vver_white_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="grid-product")
-	for product in products:
-		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-			print()
-		else:
-			title_text = product.find("div", class_="grid-product__title").text.strip()
-			pricesoup = product.find("div", class_="grid-product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
-			link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-			imagesoup = product.find('noscript')
-			imagecheck = imagesoup.find("img", class_="grid-product__image")
-			if imagecheck is not None:
-				imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-				image = 'https:' + imageurl
-			else:
-				image = 'assets/placeholder.png'
-			store = 'vinovoreeaglerock'
-			store_text = 'Vinovore Eagle Rock'
-			type = 'white'
-			type_text = 'White'
-			wines.append({
-				'Title': title,
-				'Title_text': title_text,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Type': type,
-				'Type_text': type_text,
-				'Store': store,
-				'Store_text': store_text,
-			})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="grid-product")
+  for product in products:
+    title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+      print()
+    else:
+      title_text = product.find("div", class_="grid-product__title").text.strip()
+      pricesoup = product.find("div", class_="grid-product__price")
+      if pricesoup.span:
+        price = 'On Sale'
+      else:
+        price = pricesoup.text.strip()
+      link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-product__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      type = 'orange'
+      type_text = 'Orange'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'vinovoreeaglerock',
+        'Store_text': 'Vinovore Eagle Rock',
+      })
 for x in vver_sparkling_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("div", class_="grid-product")
-	for product in products:
-		title = product.find("div", class_="grid-product__title").text.replace(" ", "")
-		if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
-			print()
-		else:
-			title_text = product.find("div", class_="grid-product__title").text.strip()
-			pricesoup = product.find("div", class_="grid-product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
-			link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
-			imagesoup = product.find('noscript')
-			imagecheck = imagesoup.find("img", class_="grid-product__image")
-			if imagecheck is not None:
-				imageurl = imagesoup.find("img", class_="grid-product__image")['src']
-				image = 'https:' + imageurl
-			else:
-				image = 'assets/placeholder.png'
-			store = 'vinovoreeaglerock'
-			store_text = 'Vinovore Eagle Rock'
-			type = 'sparkling'
-			type_text = 'Sparkling'
-			wines.append({
-				'Title': title,
-				'Title_text': title_text,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Type': type,
-				'Type_text': type_text,
-				'Store': store,
-				'Store_text': store_text,
-			})
-
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("div", class_="grid-product")
+  for product in products:
+    title = product.find("div", class_="grid-product__title").text.replace(" ", "")
+    if title == 'BuildAGiftBox' or title == 'AddAGiftBoxorBag':
+      print()
+    else:
+      title_text = product.find("div", class_="grid-product__title").text.strip()
+      pricesoup = product.find("div", class_="grid-product__price")
+      if pricesoup.span:
+        price = 'On Sale'
+      else:
+        price = pricesoup.text.strip()
+      link = 'http://vinovoreeaglerock.com' + product.find("a")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-product__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      type = 'orange'
+      type_text = 'Orange'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'vinovoreeaglerock',
+        'Store_text': 'Vinovore Eagle Rock',
+      })
 
 
 
@@ -752,7 +916,7 @@ for x in eggs_co_fermented_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_orange_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -786,7 +950,7 @@ for x in eggs_orange_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_rose_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -820,7 +984,7 @@ for x in eggs_rose_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_red_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -854,7 +1018,7 @@ for x in eggs_red_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_white_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -888,7 +1052,7 @@ for x in eggs_white_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_sparkling_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -922,7 +1086,7 @@ for x in eggs_sparkling_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in eggs_piquette_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -956,7 +1120,7 @@ for x in eggs_piquette_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 		
 		
@@ -1529,7 +1693,7 @@ for x in kamp_orange_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in kamp_rose_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1562,7 +1726,7 @@ for x in kamp_rose_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in kamp_red_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1628,7 +1792,7 @@ for x in kamp_white_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 for x in kamp_sparkling_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1661,7 +1825,7 @@ for x in kamp_sparkling_urls:
 			'Type_text': type_text,
 			'Store': store,
 			'Store_text': store_text,
-			'Maker': title_maker,
+#			'Maker': title_maker,
 		})
 	
 	
