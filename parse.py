@@ -621,7 +621,7 @@ for x in hlp_orange_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-        maker = 'Ruth Lewandowski'
+    	maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
@@ -708,7 +708,7 @@ for x in hlp_rose_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-        maker = 'Ruth Lewandowski'
+    	maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
@@ -795,7 +795,7 @@ for x in hlp_red_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-        maker = 'Ruth Lewandowski'
+    	maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
@@ -882,7 +882,7 @@ for x in hlp_white_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-        maker = 'Ruth Lewandowski'
+    	maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
@@ -969,7 +969,7 @@ for x in hlp_sparkling_urls:
 		else:
 			image = 'assets/placeholder.png'
 		if 'lewandowski' in title.lower():
-        maker = 'Ruth Lewandowski'
+    	maker = 'Ruth Lewandowski'
 		elif 'amevive' in title.lower():
 			maker = 'Amevive'
 		elif 'amplify' in title.lower():
