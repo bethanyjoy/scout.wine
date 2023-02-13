@@ -3595,7 +3595,7 @@ for x in kamp_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': 'Rose',
+      'Type_text': 'Ros&#233;',
       'Store': 'kamp',
       'Store_text': 'Kamp',
     })
@@ -3988,25 +3988,6 @@ for x in field_orange_urls:
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
-    
-    print(maker) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-# writes the wine data to the json file
-
-
-
 for x in field_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
   products = soup.find_all("li", class_="grid__item")
@@ -4089,16 +4070,10 @@ for x in field_rose_urls:
       'Link': link,
       'Image': image,
       'Type': 'rose',
-      'Type_text': 'Rose',
+      'Type_text': 'Ros&#233;',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
-    
-    print(maker) 
-
-
-
-
 for x in field_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
   products = soup.find_all("li", class_="grid__item")
@@ -4184,13 +4159,7 @@ for x in field_red_urls:
       'Type_text': 'Red',
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
-    })
-    
-    print(maker) 
-		
-		
-		
-		
+    })		
 for x in field_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
   products = soup.find_all("li", class_="grid__item")
@@ -4277,9 +4246,6 @@ for x in field_white_urls:
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
-    
-    print(maker) 
-		
 for x in field_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
   products = soup.find_all("li", class_="grid__item")
@@ -4366,10 +4332,6 @@ for x in field_sparkling_urls:
       'Store': 'flaskandfield',
       'Store_text': 'Flask &#38; Field',
     })
-    
-    print(maker) 
-		
-		
 		
 		
 with open("data.json", "w") as writeJSON:
