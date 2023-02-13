@@ -153,19 +153,26 @@
       $(".categoryContainer").append('<label><input type="checkbox" name="category" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
 
-    _(all_type).uniq().each(function (item) {
+		let sort_type = all_type.sort();
+		let trim_type = sort_type.map(x => x.slice(1));
+
+    _(trim_type).uniq().each(function (item) {
       $(".typeContainer").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>')
     });
+		
+		let sort_store = all_store.sort();
     
-    _(all_store).uniq().each(function (item) {
+    _(sort_store).uniq().each(function (item) {
       $(".storeContainer").append('<label><input type="checkbox" name="store" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
 
     _(all_name).uniq().each(function (item) {
       $(".nameContainer").append('<label><input type="checkbox" name="name" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
+		
+		let sort_maker = all_maker.sort();
     
-    _(all_maker).uniq().each(function (item) {
+    _(sort_maker).uniq().each(function (item) {
       $(".makerContainer").append('<label class="' + item + '"><input type="checkbox" name="maker" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
 
