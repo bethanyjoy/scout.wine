@@ -1050,68 +1050,130 @@ for x in hlp_sparkling_urls:
 # list of heavens market urls to parse
 
 
+
+
 heavens_red_urls = [
-"https://www.heavensmarketla.com/collections/red",
-"https://www.heavensmarketla.com/collections/red?page=2",
-"https://www.heavensmarketla.com/collections/red?page=3",
-"https://www.heavensmarketla.com/collections/red?page=4",
-"https://www.heavensmarketla.com/collections/red?page=5",
+	"https://www.heavensmarketla.com/collections/red",
+	"https://www.heavensmarketla.com/collections/red?page=2",
+	"https://www.heavensmarketla.com/collections/red?page=3",
+	"https://www.heavensmarketla.com/collections/red?page=4",
+	"https://www.heavensmarketla.com/collections/red?page=5",
 ]
 heavens_white_urls = [
-"https://www.heavensmarketla.com/collections/white",
-"https://www.heavensmarketla.com/collections/white?page=2",
-"https://www.heavensmarketla.com/collections/white?page=3",
-"https://www.heavensmarketla.com/collections/white?page=4",
+	"https://www.heavensmarketla.com/collections/white",
+	"https://www.heavensmarketla.com/collections/white?page=2",
+	"https://www.heavensmarketla.com/collections/white?page=3",
+	"https://www.heavensmarketla.com/collections/white?page=4",
 ]
 heavens_rose_urls = [
-"https://www.heavensmarketla.com/collections/rose",
-"https://www.heavensmarketla.com/collections/rose?page=2",
+	"https://www.heavensmarketla.com/collections/rose",
+	"https://www.heavensmarketla.com/collections/rose?page=2",
 ]
 heavens_orange_urls = [
-"https://www.heavensmarketla.com/collections/skin-contact",
-"https://www.heavensmarketla.com/collections/skin-contact?page=2",
-"https://www.heavensmarketla.com/collections/skin-contact?page=3",
-"https://www.heavensmarketla.com/collections/skin-contact?page=4",
+	"https://www.heavensmarketla.com/collections/skin-contact",
+	"https://www.heavensmarketla.com/collections/skin-contact?page=2",
+	"https://www.heavensmarketla.com/collections/skin-contact?page=3",
+	"https://www.heavensmarketla.com/collections/skin-contact?page=4",
 ]
 heavens_sparkling_urls = [
-"https://www.heavensmarketla.com/collections/sparkling",
-"https://www.heavensmarketla.com/collections/sparkling?page=2",
-"https://www.heavensmarketla.com/collections/sparkling?page=3",
-"https://www.heavensmarketla.com/collections/sparkling?page=4",
+	"https://www.heavensmarketla.com/collections/sparkling",
+	"https://www.heavensmarketla.com/collections/sparkling?page=2",
+	"https://www.heavensmarketla.com/collections/sparkling?page=3",
+	"https://www.heavensmarketla.com/collections/sparkling?page=4",
 ]
 
 
 # code for parsing heavens market urls
 for x in heavens_orange_urls:
-	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
-	products = soup.find_all("li", class_="grid__item")
-	for product in products:
-		title = product.find("span", class_="visually-hidden").text.replace(" ", "")
-		title_text = product.find("span", class_="visually-hidden").text.strip()
-		price = product.find("span", class_="price-item").text.strip()
-		link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
-		imagesoup = product.find('noscript')
-		imagecheck = imagesoup.find("img", class_="grid-view-item__image")
-		if imagecheck is not None:
-			imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
-			image = 'https:' + imageurl
-		else:
-			image = 'assets/placeholder.png'
-		store = 'heavensmarket'
-		store_text = 'Heaven&#39;s Market'
-		type = 'orange'
-		type_text = 'Orange'
-		wines.append({
-			'Title': title,
-			'Title_text': title_text,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Type': type,
-			'Type_text': type_text,
-			'Store': store,
-			'Store_text': store_text,
-		})
+  soup = BeautifulSoup(requests.get(x).content, 'html.parser')
+  products = soup.find_all("li", class_="grid__item")
+  for product in products:
+    title = product.find("span", class_="visually-hidden").text.replace(" ", "")
+    title_text = product.find("span", class_="visually-hidden").text.strip()
+    if 'wineclass' in title.lower():
+      print()
+    else:
+      price = product.find("span", class_="price-item").text.strip()
+      link = 'http://heavensmarketla.com' + product.find("a", class_="grid-view-item__link")['href']
+      imagesoup = product.find('noscript')
+      imagecheck = imagesoup.find("img", class_="grid-view-item__image")
+      if imagecheck is not None:
+        imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
+        image = 'https:' + imageurl
+      else:
+        image = 'assets/placeholder.png'
+      if 'lewandowski' in title.lower():
+        maker = 'Ruth Lewandowski'
+      elif 'amevive' in title.lower():
+        maker = 'Amevive'
+      elif 'amplify' in title.lower():
+        maker = 'Amplify'
+      elif 'broc' in title.lower():
+        maker = 'Broc Cellars'
+      elif 'cirelli' in title.lower():
+        maker = 'Cirelli'
+      elif 'dueterre' in title.lower():
+        maker = 'Due Terre'
+      elif 'folkmachine' in title.lower():
+        maker = 'Folk Machine'
+      elif 'furlani' in title.lower():
+        maker = 'Furlani'
+      elif 'gentle folk' in title.lower():
+        maker = 'Gentle Folk'
+      elif 'goodboywine' in title.lower():
+        maker = 'Good Boy Wine'
+      elif 'gutoggau' in title.lower():
+        maker = 'Gut Oggau'
+      elif 'kopptisch' in title.lower():
+        maker = 'Kopptisch'
+      elif 'koehnen' in title.lower():
+        maker = 'Koehnen'
+      elif 'lasjaras' in title.lower():
+        maker = 'Las Jaras'
+      elif 'marigny' in title.lower():
+        maker = 'Marigny'
+      elif 'marthastoumen' in title.lower():
+        maker = 'Martha Stoumen'
+      elif 'meinklang' in title.lower():
+        maker = 'Meinklang'
+      elif 'nestarec' in title.lower():
+        maker = 'Nestarec'
+      elif 'oldwestminster' in title.lower():
+        maker = 'Old Westminster'
+      elif 'purity' in title.lower():
+        maker = 'Purity'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'scottyboy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'scotty-boy' in title.lower():
+        maker = 'Scotty Boy'
+      elif 'stagiaire' in title.lower():
+        maker = 'Stagiaire'
+      elif 'subjecttochange' in title.lower():
+        maker = 'Subject to Change'
+      elif 'swick' in title.lower():
+        maker = 'Swick'
+      elif 'wavywines' in title.lower():
+        maker = 'Wavy Wines'
+      elif 'wildarcfarm' in title.lower():
+        maker = 'Wild Arc Farm'
+      elif 'wonderwerk' in title.lower():
+        maker = 'Wonderwerk'
+      else:
+        maker ='undefined'
+      wines.append({
+        'Title': title,
+        'Title_text': title_text,
+        'Maker': maker,
+        'Price': price,
+        'Link': link,
+        'Image': image,
+        'Type': 'orange',
+        'Type_text': 'Orange',
+        'Store': 'heavensmarket',
+        'Store_text': 'Heaven&#39;s Market',
+      })
 
 
 		
