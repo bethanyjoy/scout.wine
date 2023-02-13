@@ -217,8 +217,8 @@ for x in vver_rose_urls:
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
+        'Type': 'rose',
+        'Type_text': 'Ros&#233;',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -303,8 +303,8 @@ for x in vver_red_urls:
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
+        'Type': 'red',
+        'Type_text': 'Red',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -389,8 +389,8 @@ for x in vver_white_urls:
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
+        'Type': 'white',
+        'Type_text': 'White',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
@@ -475,8 +475,8 @@ for x in vver_sparkling_urls:
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
+        'Type': 'sparkling',
+        'Type_text': 'Sparkling',
         'Store': 'vinovoreeaglerock',
         'Store_text': 'Vinovore Eagle Rock',
       })
