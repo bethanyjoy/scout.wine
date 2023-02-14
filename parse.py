@@ -1061,7 +1061,9 @@ for url in kamp_urls:
 			type = 'Ros&#233;'
 		if 'sparkling' in url:
 			type = 'Sparkling'
-		type_class = type.replace("&#233;", "e").lower()
+		# if 'chillable' in url:
+		# 	type = 'Chillable Red'
+		type_class = type.replace("&#233;", "e").replace(" ", "").lower()
 
 		# title
 		title_name = product.find("p", class_="product--title").text.strip()
