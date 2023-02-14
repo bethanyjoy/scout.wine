@@ -1,6 +1,7 @@
 import re
 import json
 import requests
+import random
 from bs4 import BeautifulSoup
 
 # sets up empty list to store wine data
@@ -4345,7 +4346,7 @@ for x in field_sparkling_urls:
       'Store': 'Flask + Field',
     })
 		
-		
+random.shuffle(wines)	
 		
 # Write JSON file
 with open("data.json", "w") as writeJSON:
