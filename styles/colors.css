@@ -85,18 +85,18 @@ nav {
   background-color: var(--primary-4);
 }
 
-.pagination li.active {
-  background-color: var(--primary-2);
-	color: var(--background);
-}
-
 .pagination li:hover {
   background-color: var(--primary-3);
 	cursor: pointer;
 }
 
+.pagination li.active {
+  background-color: var(--primary);
+	color: var(--background);
+}
+
 .pagination li.active:hover {
-  background-color: var(--primary-2);
+  background-color: var(--primary);
 	color: var(--background);
 }
 
