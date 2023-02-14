@@ -5,9 +5,19 @@
 
 :root {
 
-	/*	Core color values */
-	--background-value: 249, 245, 234;
+	/*	Core colors */
 	--primary-value: 91, 66, 43;
+	--background: rgb(249, 245, 234);
+	
+	/*	Valentine's Day Theme */
+/*	--primary-value: 226, 68, 20;*/
+	
+	/*	Primary shades */
+	--primary: rgb(var(--primary-value));
+	--primary-2: rgba(var(--primary-value), 0.7);
+	--primary-3: rgba(var(--primary-value), 0.4);
+	--primary-4: rgba(var(--primary-value), 0.12);
+	--primary-5: rgba(var(--primary-value), 0.08);
 	
 	/*	Type color values */
 	--red-value: 255, 166, 138;
@@ -17,14 +27,6 @@
 	--sparkling-value: 168, 207, 224;
   --piquette-value: 212, 188, 232;
   --co-fermented-value: 164, 219, 173;
-	
-	/*	Core colors */
-	--background: rgb(var(--background-value));
-	--primary: rgb(var(--primary-value));
-	--primary-2: rgba(var(--primary-value), 0.7);
-	--primary-3: rgba(var(--primary-value), 0.4);
-	--primary-4: rgba(var(--primary-value), 0.12);
-	--primary-5: rgba(var(--primary-value), 0.08);
 	
 	/*	Tag background colors */
 	--red: rgb(var(--red-value));
