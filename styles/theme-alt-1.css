@@ -11,6 +11,7 @@
 	--primary-2: rgba(var(--primary_value), 0.7);
 	--primary-3: rgba(var(--primary_value), 0.4);
 	--primary-4: rgba(var(--primary_value), 0.12);
+	--primary-5: rgba(var(--primary_value), 0.08);
 	--background: rgba(241, 255, 219, 1);
 
 	/*	Tag background colors */
@@ -97,7 +98,7 @@ nav {
 
 
 article a.image {
-	background: rgba(31, 121, 204, 0.08);
+	background: var(--primary-5);
 }
 
 article .name {
@@ -200,7 +201,7 @@ article.cofermented  > div.type {
 }
 
 .checkboxFilter .checkmark:after {
-	border: solid var(--background);
+	border-color: var(--background);
 }
 
 

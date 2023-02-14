@@ -85,7 +85,7 @@ main {
 	overflow: auto;
 	overscroll-behavior: contain;
   padding: var(--space-10);
-	padding-left: var(--space-5);
+/*	padding: var(--space-10) var(--space-10) var(--space-10) var(--space-5);*/
 	position: sticky;
 	text-align: left;
 	top: var(--space-0);
@@ -152,7 +152,7 @@ article img {
 }
 
 article a.image:hover {
-	box-shadow: 0 0.188rem 0.5rem 0 rgba(0,0,0,0.1);
+	box-shadow: 0 0.188rem 0.5rem 0 var(--primary-4);
 }
 
 
@@ -359,6 +359,10 @@ nav {
   width: 1rem;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+}
+
+.checkboxFilter .checkmark:after {
+	border: solid;
 }
 
 /* On mouse-over, add a background color */

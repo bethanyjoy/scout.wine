@@ -6,22 +6,20 @@
 :root {
 
 	/*	Core colors */
-  --primary-value: 91, 66, 43;
-/*	--primary-value: 31, 121, 204;*/
+  --primary-value: 48, 41, 47;
 	--primary: rgb(var(--primary-value));
 	--primary-2: rgba(var(--primary-value), 0.7);
 	--primary-3: rgba(var(--primary-value), 0.4);
 	--primary-4: rgba(var(--primary-value), 0.12);
 	--primary-5: rgba(var(--primary-value), 0.08);
 	--background-value: 249, 245, 234;
-/*	--background-value: 241, 255, 219;*/
 	--background: rgb(var(--background-value));
 	--background-1: rgba(var(--background-value), 0.8);
 	--background-2: rgba(var(--background-value), 0.7);
 	--background-3: rgba(var(--background-value), 0.4);
 	--background-4: rgba(var(--background-value), 0.12);
 	--background-5: rgba(var(--background-value), 0.08);
-	--background-main: rgba(var(--primary-value), 0.08);;
+	--background-main: rgb(14,83,86);
 
 	/*	Tag background colors */
 	--red: rgba(255, 166, 138, 1);
@@ -41,6 +39,13 @@
   --piquette-hover: rgba(212, 188, 232, 0.5);
   --co-fermented-hover: rgba(164, 219, 173, .5);
 
+	/*	Font stacks */
+	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--regular: 'Relative-Book', var(--fallback);
+  --medium: 'Relative-Medium', var(--fallback);
+	--bold: 'Relative-Bold', var(--fallback);
+	--mono: 'Relative-12Pitch', var(--fallback);
+
 }
 
 
@@ -53,16 +58,17 @@
 body {
   background-color: var(--background);
 	color: var(--primary);
+	font-family: var(--regular);
 }
 
 main {
 	background-color: var(--background-main);
+	color: var(--background);
+	padding: var(--space-10);
 }
 
-@media only screen and (max-width: 800px) {
-	main {
-		background-color: var(--background);
-	}
+h3 {
+	font-family: var(--bold);
 }
 
 nav {
@@ -79,22 +85,22 @@ nav {
 /*	Pagination */
 
 .pagination li {
-  background-color: var(--primary-4);
+  background-color: var(--background-4);
 }
 
 .pagination li.active {
-  background-color: var(--primary-2);
-	color: var(--background);
+  background-color: var(--background-2);
+	color: var(--primary);
 }
 
 .pagination li:hover {
-  background-color: var(--primary-3);
+  background-color: var(--background-3);
 	cursor: pointer;
 }
 
 .pagination li.active:hover {
-  background-color: var(--primary-2);
-	color: var(--background);
+  background-color: var(--background-2);
+/*	color: var(--background);*/
 }
 
 
@@ -105,15 +111,25 @@ nav {
 
 
 article a.image {
-	background: var(--primary-5);
+	background: var(--background-5);
+}
+
+article .name {
+	font-family: var(--medium);
 }
 
 article .store {
-	color: var(--primary-2);
+	color: var(--background-2);
+}
+
+article .price {
+	font-family: var(--mono);
 }
 
 article > .type {
-	background-color: var(--primary-4);
+	background-color: var(--background-4);
+	font-family: var(--mono);
+	color: var(--primary);
 }
 
 
@@ -207,6 +223,7 @@ article.cofermented  > div.type {
 
  .buttonFilter label {
 	background-color: var(--primary-4);
+	font-family: var(--mono);
 } 
 
 /* Styles for individual wine type filters */
