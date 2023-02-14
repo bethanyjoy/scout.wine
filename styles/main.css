@@ -539,5 +539,3 @@ label:has(> input[value="undefined"]) {
 		display: none;
 	}
 }
-
-

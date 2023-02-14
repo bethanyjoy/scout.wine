@@ -40,7 +40,6 @@
 
 
 
-
 /*----------------------------------------------------*/
 /*  Variables                                         */
 /*----------------------------------------------------*/
@@ -108,14 +107,19 @@ article .store {
 }
 
 
-/*  Button Filters  */
+/*  Sidebar styles  */
+
+.tagline {
+	line-height: 1.6rem;
+}
+
+.search {
+	font-weight: 300;
+}
 
  .buttonFilter label {
 	font-family: var(--mono);
 } 
-
-
-/*  Credits  */
 
 .credits {
 	font-size: var(--small);
@@ -123,11 +127,4 @@ article .store {
 
 .credits a {
 	text-decoration: underline;
-}
-
-
-/*  Credits  */
-
-.tagline {
-	line-height: 1.6rem;
 }
