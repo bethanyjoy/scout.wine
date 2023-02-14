@@ -153,9 +153,9 @@
       $(".categoryContainer").append('<label><input type="checkbox" name="category" value="' + item + '">' + item + '<span class="checkmark"></label>')
     });
 
-		let sort_type = all_type.sort();
+//		let sort_type = all_type.sort();
 
-    _(sort_type).uniq().each(function (item) {
+    _(all_type).uniq().each(function (item) {
       $(".typeContainer").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>')
     });
 		
