@@ -6,31 +6,31 @@
 /*	Relative */
 
 @font-face {
-  font-family: 'Relative';
+  font-family: 'Relative-Book';
   src:  url('../fonts/Relative-Book.woff2') format('woff2'),
         url('../fonts/Relative-Book.woff') format('woff'),
 				url('../fonts/Relative-Book.tff') format('truetype');
-	font-weight: 300;
+	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Relative';
+  font-family: 'Relative-Medium';
   src:  url('../fonts/Relative-Medium.woff2') format('woff2'),
         url('../fonts/Relative-Medium.woff') format('woff'),
 				url('../fonts/Relative-Medium.tff') format('truetype');
-	font-weight: 500;
+	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Relative';
+  font-family: 'Relative-Bold';
   src:  url('../fonts/Relative-Bold.woff2') format('woff2'),
         url('../fonts/Relative-Bold.woff') format('woff'),
 				url('../fonts/Relative-Bold.tff') format('truetype');
-	font-weight: 700;
+	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Relative 12Pitch';
+  font-family: 'Relative-12Pitch';
   src:  url('../fonts/Relative-12Pitch.woff2') format('woff2'),
         url('../fonts/Relative-12Pitch.woff') format('woff'),
 				url('../fonts/Relative-12Pitch.tff') format('truetype');
@@ -40,22 +40,19 @@
 
 
 
-
 /*----------------------------------------------------*/
 /*  Variables                                         */
 /*----------------------------------------------------*/
 
 
 :root {
-	
-	/*	Font size */
-	--body: 1rem;
-	--small: 0.875rem;
 
-	/*	Font stacks */
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--sans: 'Relative', var(--fallback);
-	--mono: 'Relative 12Pitch', var(--fallback);
+	
+	--regular: 'Relative-Book', var(--fallback);
+  --medium: 'Relative-Medium', var(--fallback);
+	--bold: 'Relative-Bold', var(--fallback);
+	--mono: 'Relative-12Pitch', var(--fallback);
 
 }
 
@@ -69,24 +66,18 @@
 /* Core styles */
 
 body {
-	font-family: var(--sans);
-	font-size: var(--body);
-	font-weight: 300;
-	-webkit-font-smoothing: antialiased;
+	font-family: var(--regular);
 }
 
 h3 {
-	font-family: var(--sans);
-	font-size: var(--body);
-	font-weight: 700;
+	font-family: var(--bold);
 }
 
 
 /* Wine card styles */
 
 article .name {
-	font-family: var(--sans);
-	font-weight: 500;
+	font-family: var(--medium);
 }
 
 article .price {
@@ -95,16 +86,6 @@ article .price {
 
 article > .type {
 	font-family: var(--mono);
-	font-size: var(--small);
-	line-height: 1.125rem;
-}
-
-article .name {
-	line-height: 1.2rem;
-}
-
-article .store {
-	font-size: var(--small);
 }
 
 
@@ -114,20 +95,3 @@ article .store {
 	font-family: var(--mono);
 } 
 
-
-/*  Credits  */
-
-.credits {
-	font-size: var(--small);
-}
-
-.credits a {
-	text-decoration: underline;
-}
-
-
-/*  Credits  */
-
-.tagline {
-	line-height: 1.6rem;
-}

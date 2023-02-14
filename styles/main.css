@@ -5,10 +5,6 @@
 
 :root {
 
-	/*	Font size */
-	--body: 1rem;
-	--small: 0.875rem;
-
   /*	Spacing */
   --space-0: 0px;
 	--space-px: 1px;
@@ -50,8 +46,6 @@ html {
 
 body {
 	display: flex;
-	font-size: var(--body);
-	-webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -64,8 +58,6 @@ p {
 }
 
 h3 {
-  font-size: var(--body);
-	font-weight: normal;
   margin: 0 0 var(--space-3) 0;
 }
 
@@ -151,18 +143,33 @@ article img {
   width: 100%;
 }
 
-article a.image:hover {
-	box-shadow: 0 0.188rem 0.5rem 0 var(--primary-4);
-}
-
 
 /* Style images with transparent backgrounds */
 
 article.heavensmarket img,
-article.wineandeggs img,
-article.kamp img{
+article.kamp img,
+article.wineandeggs img {
 	object-fit: scale-down;
-	padding: 1rem 0;
+}
+
+article.heavensmarket img {
+	padding: 2vw 0;
+}
+
+@media only screen and (max-width: 800px) {
+	article.heavensmarket img {
+		padding: 2.5vw 0;
+	}
+}
+
+article.wineandeggs img {
+	padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+	article.wineandeggs img {
+		padding: 2.5vw 0;
+	}
 }
 
 article.kamp img {
@@ -179,13 +186,6 @@ article .text {
 	margin-top: var(--space-3);
 }
 
-article .name {
-	line-height: 1.2rem;
-}
-article .store {
-	font-size: var(--small);
-}
-
 article .maker {
   display: none;
 }
@@ -197,13 +197,11 @@ article > .type {
 	border-radius: 10rem;
 	cursor: pointer;
 	display: inline-block;
-	font-size: var(--small);
 	height: 1.125rem;
 	left: var(--space-3);
-	line-height: 1.125rem;
 	margin: 0 var(--space-2) var(--space-2) 0;
 	padding: 0 var(--space-1-5);
-	position:absolute;
+	position: absolute;
 	top: var(--space-3);
 }
 
@@ -230,12 +228,11 @@ nav {
 }
 
 .logo svg {
-	max-width: 9rem;
+	max-width: 8.2rem;
 }
 
 .tagline {
 	display: block;
-	line-height: 1.6rem;
 }
 
 #filters {
@@ -244,14 +241,6 @@ nav {
 
 .filter {
 	margin-bottom: var(--space-6);;
-}
-
-.credits {
-	font-size: var(--small);
-}
-
-.credits a {
-	text-decoration: underline;
 }
 
 .resultsButton {

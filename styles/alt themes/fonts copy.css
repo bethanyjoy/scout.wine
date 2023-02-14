@@ -6,35 +6,39 @@
 /*	Relative */
 
 @font-face {
-  font-family: 'Relative';
-  src:  url('../fonts/Relative-Book.woff2') format('woff2'),
-        url('../fonts/Relative-Book.woff') format('woff'),
-				url('../fonts/Relative-Book.tff') format('truetype');
+  font-family: 'Gopher';
+  src:  url('../fonts/Gopher-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Gopher';
+  src:  url('../fonts/Gopher-LightItalic.woff2') format('woff2');
+	font-weight: 300;
+	font-style: italic;
+}
+@font-face {
+  font-family: 'Gopher';
+  src:  url('../fonts/Gopher-Light.woff2') format('woff2');
 	font-weight: 300;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Relative';
-  src:  url('../fonts/Relative-Medium.woff2') format('woff2'),
-        url('../fonts/Relative-Medium.woff') format('woff'),
-				url('../fonts/Relative-Medium.tff') format('truetype');
-	font-weight: 500;
+  font-family: 'Courier Prime Sans';
+  src:  url('../fonts/courier_prime_sans-webfont.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Relative';
-  src:  url('../fonts/Relative-Bold.woff2') format('woff2'),
-        url('../fonts/Relative-Bold.woff') format('woff'),
-				url('../fonts/Relative-Bold.tff') format('truetype');
-	font-weight: 700;
-	font-style: normal;
+  font-family: 'Baton Web';
+  src:  url('../fonts/BatonWeb-RegularItalic.woff2') format('woff2');
+	font-weight: 400;
+	font-style: italic;
 }
 @font-face {
-  font-family: 'Relative 12Pitch';
-  src:  url('../fonts/Relative-12Pitch.woff2') format('woff2'),
-        url('../fonts/Relative-12Pitch.woff') format('woff'),
-				url('../fonts/Relative-12Pitch.tff') format('truetype');
-	font-weight: normal;
+  font-family: 'Baton Web';
+  src:  url('../fonts/BatonWeb-Regular.woff2') format('woff2');
+	font-weight: 400;
 	font-style: normal;
 }
 
@@ -54,8 +58,9 @@
 
 	/*	Font stacks */
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--sans: 'Relative', var(--fallback);
-	--mono: 'Relative 12Pitch', var(--fallback);
+	--regular: 'Gopher', var(--fallback);
+	--mono: 'Courier Prime Sans', var(--fallback);
+	--display: 'Baton Web', var(--fallback);
 
 }
 
@@ -69,24 +74,25 @@
 /* Core styles */
 
 body {
-	font-family: var(--sans);
+	font-family: var(--mono);
 	font-size: var(--body);
-	font-weight: 300;
 	-webkit-font-smoothing: antialiased;
 }
 
 h3 {
-	font-family: var(--sans);
+	font-family: var(--regular);
 	font-size: var(--body);
-	font-weight: 700;
+	font-weight: normal;
+/*	text-transform: uppercase;*/
 }
 
 
 /* Wine card styles */
 
 article .name {
-	font-family: var(--sans);
-	font-weight: 500;
+	font-family: var(--display);
+	text-transform: uppercase;
+	font-size: 1.4em;
 }
 
 article .price {
