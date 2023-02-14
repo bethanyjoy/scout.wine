@@ -1,0 +1,262 @@
+/*----------------------------------------------------*/
+/*  Variables                                         */
+/*----------------------------------------------------*/
+
+
+:root {
+
+	/*	Core colors */
+  --primary_value: 31, 121, 204;
+	--primary: rgba(var(--primary_value), 1);
+	--primary-2: rgba(var(--primary_value), 0.7);
+	--primary-3: rgba(var(--primary_value), 0.4);
+	--primary-4: rgba(var(--primary_value), 0.12);
+	--background: rgba(241, 255, 219, 1);
+
+	/*	Tag background colors */
+	--red: rgba(255, 166, 138, 1);
+	--white: rgba(220, 229, 197, 1);
+	--rose: rgba(255, 185, 185, 1);
+	--orange: rgba(243, 206, 134, 1);
+	--sparkling: rgba(168, 207, 224, 1);
+  --piquette: rgba(212, 188, 232, 1);
+  --co-fermented: rgba(164, 219, 173, 1);
+
+	/*	Tag hover colors */
+	--red-hover: rgba(255, 166, 138, 0.5);
+	--white-hover: rgba(220, 229, 197, 0.5);
+	--rose-hover: rgba(255, 185, 185, 0.5);
+	--orange-hover: rgba(243, 206, 134, 0.5);
+	--sparkling-hover: rgba(168, 207, 224, 0.5);
+  --piquette-hover: rgba(212, 188, 232, 0.5);
+  --co-fermented-hover: rgba(164, 219, 173, .5);
+
+	/*	Font stacks */
+	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	--regular: 'Relative-Book', var(--fallback);
+  --medium: 'Relative-Medium', var(--fallback);
+	--bold: 'Relative-Bold', var(--fallback);
+	--mono: 'Relative-12Pitch', var(--fallback);
+
+}
+
+
+
+/*----------------------------------------------------*/
+/*  Core styles                                       */
+/*----------------------------------------------------*/
+
+
+body {
+  background-color: var(--background);
+	color: var(--primary);
+	font-family: var(--regular);
+}
+
+h3 {
+	font-family: var(--bold);
+}
+
+nav {
+	background-color: var(--background);
+}
+
+
+
+/*----------------------------------------------------*/
+/*  Main/grid styles                                  */
+/*----------------------------------------------------*/
+
+
+/*	Pagination */
+
+.pagination li {
+  background-color: var(--primary-4);
+}
+
+.pagination li.active {
+  background-color: var(--primary-2);
+	color: var(--background);
+}
+
+.pagination li:hover {
+  background-color: var(--primary-3);
+	cursor: pointer;
+}
+
+.pagination li.active:hover {
+  background-color: var(--primary-2);
+	color: var(--background);
+}
+
+
+
+/*----------------------------------------------------*/
+/*  Wine card styles                                  */
+/*----------------------------------------------------*/
+
+
+article a.image {
+	background: rgba(31, 121, 204, 0.08);
+}
+
+article .name {
+	font-family: var(--medium);
+}
+
+article .store {
+	color: var(--primary-2);
+}
+
+article .price {
+	font-family: var(--mono);
+}
+
+article > .type {
+	background-color: var(--primary-4);
+	font-family: var(--mono);
+}
+
+
+/*	Style type tags */
+
+article.red  > div.type {
+  background-color: var(--red)!important;
+}
+
+article.white  > div.type{
+  background-color: var(--white)!important;
+}
+
+article.rose > div.type{
+  background-color: var(--rose)!important;
+}
+
+article.orange > div.type {
+  background-color: var(--orange)!important;
+}
+
+article.sparkling  > div.type {
+  background-color: var(--sparkling)!important;
+}
+
+article.piquette  > div.type {
+  background-color: var(--piquette)!important;
+}
+
+article.cofermented  > div.type {
+  background-color: var(--co-fermented)!important;
+}
+
+
+
+/*----------------------------------------------------*/
+/*  Sidebar styles                                    */
+/*----------------------------------------------------*/
+
+
+.logo svg {
+	fill: var(--primary);
+}
+
+.tagline {
+	color: var(--primary-2);
+}
+
+.credits {
+	color: var(--primary-2);
+}
+
+.mobileButtons svg {
+	stroke: var(--primary);
+}
+
+.resultsButton {
+	background-color: var(--primary);
+	color: var(--background);
+}
+
+
+/*	Search */
+
+.search {
+	background-color: var(--primary-4);
+	color: var(--primary);
+}
+
+::placeholder {
+  color: var(--primary-2);
+}
+
+
+/*	Chekbox Filters */
+
+.checkmark {
+	border-color: var(--primary-3);
+}
+
+.checkboxFilter input:checked ~ .checkmark {
+  background-color: var(--primary);
+}
+
+.checkboxFilter .checkmark:after {
+	border: solid var(--background);
+}
+
+
+/*  Button Filters  */
+
+ .buttonFilter label {
+	background-color: var(--primary-4);
+	font-family: var(--mono);
+} 
+
+/* Styles for individual wine type filters */
+
+ .buttonFilter input[value="Orange"]:checked + label {
+  background-color: var(--orange);
+}
+.buttonFilter input[value="Rosé"]:checked + label {
+  background-color: var(--rose);
+}
+.buttonFilter input[value="Red"]:checked + label {
+  background-color: var(--red);
+}
+.buttonFilter input[value="White"]:checked + label {
+  background-color: var(--white);
+}
+.buttonFilter input[value="Sparkling"]:checked + label {
+  background-color: var(--sparkling);
+}
+.buttonFilter input[value="Piquette"]:checked + label {
+  background-color: var(--piquette);
+}
+.buttonFilter input[value="Co-Fermented"]:checked + label {
+  background-color: var(--co-fermented);
+} 
+
+/* Hover styles for individual wine type filters */
+
+ @media (pointer:fine) {
+	.buttonFilter input[value="Orange"]:hover + label {
+	  background-color: var(--orange-hover);
+	}
+	.buttonFilter input[value="Rosé"]:hover + label {
+	  background-color: var(--rose-hover);
+	}
+	.buttonFilter input[value="Red"]:hover + label {
+	  background-color: var(--red-hover);
+	}
+	.buttonFilter input[value="White"]:hover + label {
+	  background-color: var(--white-hover);
+	}
+	.buttonFilter input[value="Sparkling"]:hover + label {
+	  background-color: var(--sparkling-hover);
+	}
+  .buttonFilter input[value="Piquette"]:hover + label {
+	  background-color: var(--piquette-hover);
+	}
+  .buttonFilter input[value="Co-Fermented"]:hover + label {
+	  background-color: var(--co-fermented-hover);
+	}
+} 

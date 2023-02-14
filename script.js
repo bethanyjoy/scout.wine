@@ -11,16 +11,16 @@
       $.each(data.wine, function(i, f) {
 
         var tblRow =
-        "<article class=" + "'" + f.Type + " " + f.Store + "'" + " data-type=" + f.Type + " data-store=" + f.Store + ">" +
+        "<article class=" + "'" + f.Type_class + " " + f.Store_class + "'>" +
           "<a class='image' href=" + f.Link + ">" +
             "<img src=" + f.Image + ">" +
           "</a>" +
-          "<div class='type'>" + f.Type_text + "</div>" +
+          "<div class='type'>" + f.Type + "</div>" +
           "<div class='text'>" +
             "<a href=" + f.Link + ">" +
-              "<p class='name'>" + f.Title_text + "</p>"+
+              "<p class='name'>" + f.Title + "</p>"+
             "</a>" +
-            "<p class='store'>" + f.Store_text + "</p>" +
+            "<p class='store'>" + f.Store + "</p>" +
             "<p class='price'>" + f.Price + "</p>" +
             "<p class='maker'>" + f.Maker + "</p>" +
           "</div>" +
@@ -48,7 +48,7 @@
          ListPagination({})
       ]
     };
-    var userList = new List('search-results', options);
+    var userList = new List('body', options);
 
     var updateList = function () {
       var type = new Array();

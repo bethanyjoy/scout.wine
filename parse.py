@@ -6,8 +6,6 @@ from bs4 import BeautifulSoup
 # sets up empty list to store wine data
 wines = []
 
-
-
 # list of vinovore eagle rock urls to parse
 vver_red_urls = [
 	"https://vinovoreeaglerock.com/collections/red",
@@ -134,16 +132,16 @@ for x in vver_orange_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
-        'Store': 'vinovoreeaglerock',
-        'Store_text': 'Vinovore Eagle Rock',
+        'Type_class': 'orange',
+        'Type': 'Orange',
+        'Store_class': 'vinovoreeaglerock',
+        'Store': 'Vinovore Eagle Rock',
       })
 for x in vver_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -230,16 +228,16 @@ for x in vver_rose_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'rose',
-        'Type_text': 'Ros&#233;',
-        'Store': 'vinovoreeaglerock',
-        'Store_text': 'Vinovore Eagle Rock',
+        'Type_class': 'rose',
+        'Type': 'Ros&#233;',
+        'Store_class': 'vinovoreeaglerock',
+        'Store': 'Vinovore Eagle Rock',
       })
 for x in vver_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -326,16 +324,16 @@ for x in vver_red_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'red',
-        'Type_text': 'Red',
-        'Store': 'vinovoreeaglerock',
-        'Store_text': 'Vinovore Eagle Rock',
+        'Type_class': 'red',
+        'Type': 'Red',
+        'Store_class': 'vinovoreeaglerock',
+        'Store': 'Vinovore Eagle Rock',
       })
 
 
@@ -424,16 +422,16 @@ for x in vver_white_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'white',
-        'Type_text': 'White',
-        'Store': 'vinovoreeaglerock',
-        'Store_text': 'Vinovore Eagle Rock',
+        'Type_class': 'white',
+        'Type': 'White',
+        'Store_class': 'vinovoreeaglerock',
+        'Store': 'Vinovore Eagle Rock',
       })
 			
 			
@@ -525,22 +523,24 @@ for x in vver_sparkling_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'sparkling',
-        'Type_text': 'Sparkling',
-        'Store': 'vinovoreeaglerock',
-        'Store_text': 'Vinovore Eagle Rock',
+        'Type_class': 'sparkling',
+        'Type': 'Sparkling',
+        'Store_class': 'vinovoreeaglerock',
+        'Store': 'Vinovore Eagle Rock',
       })
 
 			
 			
 			
 
+			
+# list of highland park wine urls to parse
 hlp_red_urls = [
 	"https://www.highlandparkwine.com/collections/usa-red-wines",
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=2",
@@ -696,16 +696,16 @@ for x in hlp_orange_urls:
 		else:
 			maker ='undefined'
 		wines.append({
-			'Title': title,
-			'Title_text': title_text,
+			#'Title': title,
+			'Title': title_text,
 			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': 'orange',
-			'Type_text': 'Orange',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
+			'Type_class': 'orange',
+			'Type': 'Orange',
+			'Store_class': 'highlandpark',
+			'Store': 'Highland Park Wine',
 		})
 for x in hlp_rose_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -783,16 +783,16 @@ for x in hlp_rose_urls:
 		else:
 			maker ='undefined'
 		wines.append({
-			'Title': title,
-			'Title_text': title_text,
+			#'Title': title,
+			'Title': title_text,
 			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': 'rose',
-			'Type_text': 'Ros&#233;',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
+			'Type_class': 'rose',
+			'Type': 'Ros&#233;',
+			'Store_class': 'highlandpark',
+			'Store': 'Highland Park Wine',
 		})
 for x in hlp_red_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -870,16 +870,16 @@ for x in hlp_red_urls:
 		else:
 			maker ='undefined'
 		wines.append({
-			'Title': title,
-			'Title_text': title_text,
+			#'Title': title,
+			'Title': title_text,
 			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': 'red',
-			'Type_text': 'Red',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
+			'Type_class': 'red',
+			'Type': 'Red',
+			'Store_class': 'highlandpark',
+			'Store': 'Highland Park Wine',
 		})
 for x in hlp_white_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -957,16 +957,16 @@ for x in hlp_white_urls:
 		else:
 			maker ='undefined'
 		wines.append({
-			'Title': title,
-			'Title_text': title_text,
+			#'Title': title,
+			'Title': title_text,
 			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': 'white',
-			'Type_text': 'White',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
+			'Type_class': 'white',
+			'Type': 'White',
+			'Store_class': 'highlandpark',
+			'Store': 'Highland Park Wine',
 		})
 for x in hlp_sparkling_urls:
 	soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1044,16 +1044,16 @@ for x in hlp_sparkling_urls:
 		else:
 			maker ='undefined'
 		wines.append({
-			'Title': title,
-			'Title_text': title_text,
+			#'Title': title,
+			'Title': title_text,
 			'Maker': maker,
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Type': 'sparkling',
-			'Type_text': 'Sparkling',
-			'Store': 'highlandpark',
-			'Store_text': 'Highland Park Wine',
+			'Type_class': 'sparkling',
+			'Type': 'Sparkling',
+			'Store_class': 'highlandpark',
+			'Store': 'Highland Park Wine',
 		})
 
 
@@ -1065,6 +1065,8 @@ for x in hlp_sparkling_urls:
 
 
 
+
+# list of heavens market wine urls to parse
 heavens_red_urls = [
 	"https://www.heavensmarketla.com/collections/red",
 	"https://www.heavensmarketla.com/collections/red?page=2",
@@ -1175,16 +1177,16 @@ for x in heavens_orange_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'orange',
-        'Type_text': 'Orange',
-        'Store': 'heavensmarket',
-        'Store_text': 'Heaven&#39;s Market',
+        'Type_class': 'orange',
+        'Type': 'Orange',
+        'Store_class': 'heavensmarket',
+        'Store': 'Heaven&#39;s Market',
       })
 
 
@@ -1267,16 +1269,16 @@ for x in heavens_rose_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'rose',
-        'Type_text': 'Ros&#233;',
-        'Store': 'heavensmarket',
-        'Store_text': 'Heaven&#39;s Market',
+        'Type_class': 'rose',
+        'Type': 'Ros&#233;',
+        'Store_class': 'heavensmarket',
+        'Store': 'Heaven&#39;s Market',
       })
 for x in heavens_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1357,16 +1359,16 @@ for x in heavens_red_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'red',
-        'Type_text': 'Red',
-        'Store': 'heavensmarket',
-        'Store_text': 'Heaven&#39;s Market',
+        'Type_class': 'red',
+        'Type': 'Red',
+        'Store_class': 'heavensmarket',
+        'Store': 'Heaven&#39;s Market',
       })
 for x in heavens_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1447,16 +1449,16 @@ for x in heavens_white_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'white',
-        'Type_text': 'White',
-        'Store': 'heavensmarket',
-        'Store_text': 'Heaven&#39;s Market',
+        'Type_class': 'white',
+        'Type': 'White',
+        'Store_class': 'heavensmarket',
+        'Store': 'Heaven&#39;s Market',
       })
 for x in heavens_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -1537,16 +1539,16 @@ for x in heavens_sparkling_urls:
       else:
         maker ='undefined'
       wines.append({
-        'Title': title,
-        'Title_text': title_text,
+        #'Title': title,
+        'Title': title_text,
         'Maker': maker,
         'Price': price,
         'Link': link,
         'Image': image,
-        'Type': 'sparkling',
-        'Type_text': 'Sparkling',
-        'Store': 'heavensmarket',
-        'Store_text': 'Heaven&#39;s Market',
+        'Type_class': 'sparkling',
+        'Type': 'Sparkling',
+        'Store_class': 'heavensmarket',
+        'Store': 'Heaven&#39;s Market',
       })
 
 		
@@ -1554,6 +1556,8 @@ for x in heavens_sparkling_urls:
 # list of wine + eggs urls to parse
 
 
+
+# list of wine + eggs wine urls to parse
 eggs_red_urls = [
 	"https://wineandeggs.com/collections/red-wine"
 ]
@@ -1655,16 +1659,16 @@ for x in eggs_co_fermented_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'cofermented',
-      'Type_text': 'Co-Fermented',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'cofermented',
+      'Type': 'Co-Fermented',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
@@ -1753,16 +1757,16 @@ for x in eggs_orange_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'orange',
-      'Type_text': 'Orange',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'orange',
+      'Type': 'Orange',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 
@@ -1847,16 +1851,16 @@ for x in eggs_rose_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'rose',
-      'Type_text': 'Ros&#233;',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'rose',
+      'Type': 'Ros&#233;',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
@@ -1940,16 +1944,16 @@ for x in eggs_red_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'red',
-      'Type_text': 'Red',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'red',
+      'Type': 'Red',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
@@ -2033,16 +2037,16 @@ for x in eggs_white_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'white',
-      'Type_text': 'White',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'white',
+      'Type': 'White',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
@@ -2125,16 +2129,16 @@ for x in eggs_sparkling_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'sparkling',
-      'Type_text': 'Sparkling',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'sparkling',
+      'Type': 'Sparkling',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
@@ -2217,22 +2221,24 @@ for x in eggs_piquette_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'piquette',
-      'Type_text': 'Piquette',
-      'Store': 'wineandeggs',
-      'Store_text': 'Wine + Eggs',
+      'Type_class': 'piquette',
+      'Type': 'Piquette',
+      'Store_class': 'wineandeggs',
+      'Store': 'Wine + Eggs',
     })
 
 		
 		
 	
 	
+	
+# list of silverlake wine wine urls to parse
 sl_red_urls = [
 	"https://silverlakewine.com/collections/red",
 	"https://silverlakewine.com/collections/red?page=2",
@@ -2384,16 +2390,16 @@ for x in sl_co_fermented_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'cofermented',
-      'Type_text': 'Co-Fermented',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'cofermented',
+      'Type': 'Co-Fermented',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 
 
@@ -2483,16 +2489,16 @@ for x in sl_orange_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'orange',
-      'Type_text': 'Orange',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'orange',
+      'Type': 'Orange',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 
 
@@ -2577,16 +2583,16 @@ for x in sl_rose_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'rose',
-      'Type_text': 'Ros&#233;',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'rose',
+      'Type': 'Ros&#233;',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 		
 		
@@ -2669,16 +2675,16 @@ for x in sl_red_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'red',
-      'Type_text': 'Red',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'red',
+      'Type': 'Red',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 		
 		
@@ -2760,16 +2766,16 @@ for x in sl_white_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'white',
-      'Type_text': 'White',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'white',
+      'Type': 'White',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 		
 		
@@ -2850,16 +2856,16 @@ for x in sl_sparkling_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'sparkling',
-      'Type_text': 'Sparkling',
-      'Store': 'silverlake',
-      'Store_text': 'Silverlake Wine',
+      'Type_class': 'sparkling',
+      'Type': 'Sparkling',
+      'Store_class': 'silverlake',
+      'Store': 'Silverlake Wine',
     })
 		
 		
@@ -2869,6 +2875,8 @@ for x in sl_sparkling_urls:
 		
 		
 		
+		
+# list of everson royce wine urls to parse
 er_red_urls = [
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
@@ -3032,16 +3040,16 @@ for x in er_orange_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'orange',
-      'Type_text': 'Orange',
-      'Store': 'eversonroyce',
-      'Store_text': 'Everson Royce',
+      'Type_class': 'orange',
+      'Type': 'Orange',
+      'Store_class': 'eversonroyce',
+      'Store': 'Everson Royce',
     })
 for x in er_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3119,16 +3127,16 @@ for x in er_rose_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'rose',
-      'Type_text': 'Ros&#233;',
-      'Store': 'eversonroyce',
-      'Store_text': 'Everson Royce',
+      'Type_class': 'rose',
+      'Type': 'Ros&#233;',
+      'Store_class': 'eversonroyce',
+      'Store': 'Everson Royce',
     })
 for x in er_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3206,16 +3214,16 @@ for x in er_red_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'red',
-      'Type_text': 'Red',
-      'Store': 'eversonroyce',
-      'Store_text': 'Everson Royce',
+      'Type_class': 'red',
+      'Type': 'Red',
+      'Store_class': 'eversonroyce',
+      'Store': 'Everson Royce',
     })
 for x in er_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3293,16 +3301,16 @@ for x in er_white_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'white',
-      'Type_text': 'White',
-      'Store': 'eversonroyce',
-      'Store_text': 'Everson Royce',
+      'Type_class': 'white',
+      'Type': 'White',
+      'Store_class': 'eversonroyce',
+      'Store': 'Everson Royce',
     })
 for x in er_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3380,16 +3388,16 @@ for x in er_sparkling_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'sparkling',
-      'Type_text': 'Sparkling',
-      'Store': 'eversonroyce',
-      'Store_text': 'Everson Royce',
+      'Type_class': 'sparkling',
+      'Type': 'Sparkling',
+      'Store_class': 'eversonroyce',
+      'Store': 'Everson Royce',
     })
 
 
@@ -3402,6 +3410,8 @@ for x in er_sparkling_urls:
 
 
 
+
+# list of kamp wine urls to parse
 kamp_red_urls = [
 	"https://shopkamp.com/collections/red",
 	"https://shopkamp.com/collections/chillable-reds"
@@ -3499,16 +3509,16 @@ for x in kamp_orange_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'orange',
-      'Type_text': 'Orange',
-      'Store': 'kamp',
-      'Store_text': 'Kamp',
+      'Type_class': 'orange',
+      'Type': 'Orange',
+      'Store_class': 'kamp',
+      'Store': 'Kamp',
     })
 for x in kamp_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3588,16 +3598,16 @@ for x in kamp_rose_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'rose',
-      'Type_text': 'Ros&#233;',
-      'Store': 'kamp',
-      'Store_text': 'Kamp',
+      'Type_class': 'rose',
+      'Type': 'Ros&#233;',
+      'Store_class': 'kamp',
+      'Store': 'Kamp',
     })
 for x in kamp_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3677,16 +3687,16 @@ for x in kamp_red_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'red',
-      'Type_text': 'Red',
-      'Store': 'kamp',
-      'Store_text': 'Kamp',
+      'Type_class': 'red',
+      'Type': 'Red',
+      'Store_class': 'kamp',
+      'Store': 'Kamp',
     })
 for x in kamp_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3766,16 +3776,16 @@ for x in kamp_white_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'white',
-      'Type_text': 'White',
-      'Store': 'kamp',
-      'Store_text': 'Kamp',
+      'Type_class': 'white',
+      'Type': 'White',
+      'Store_class': 'kamp',
+      'Store': 'Kamp',
     })
 for x in kamp_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -3855,16 +3865,16 @@ for x in kamp_sparkling_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'sparkling',
-      'Type_text': 'Sparkling',
-      'Store': 'kamp',
-      'Store_text': 'Kamp',
+      'Type_class': 'sparkling',
+      'Type': 'Sparkling',
+      'Store_class': 'kamp',
+      'Store': 'Kamp',
     })
 
 	
@@ -3877,6 +3887,8 @@ for x in kamp_sparkling_urls:
 
 
 
+
+# list of field + flask wine urls to parse
 field_red_urls = [
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=2",
@@ -3901,7 +3913,7 @@ field_sparkling_urls = [
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
 ]
 	
-# code for parsing field and flask urls
+# code for parsing field + flask urls
 for x in field_orange_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
   products = soup.find_all("li", class_="grid__item")
@@ -3977,16 +3989,16 @@ for x in field_orange_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'orange',
-      'Type_text': 'Orange',
-      'Store': 'flaskandfield',
-      'Store_text': 'Flask + Field',
+      'Type_class': 'orange',
+      'Type': 'Orange',
+      'Store_class': 'flaskandfield',
+      'Store': 'Flask + Field',
     })
 for x in field_rose_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4063,16 +4075,16 @@ for x in field_rose_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'rose',
-      'Type_text': 'Ros&#233;',
-      'Store': 'flaskandfield',
-      'Store_text': 'Flask + Field',
+      'Type_class': 'rose',
+      'Type': 'Ros&#233;',
+      'Store_class': 'flaskandfield',
+      'Store': 'Flask + Field',
     })
 for x in field_red_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4149,16 +4161,16 @@ for x in field_red_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'red',
-      'Type_text': 'Red',
-      'Store': 'flaskandfield',
-      'Store_text': 'Flask + Field',
+      'Type_class': 'red',
+      'Type': 'Red',
+      'Store_class': 'flaskandfield',
+      'Store': 'Flask + Field',
     })		
 for x in field_white_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4235,16 +4247,16 @@ for x in field_white_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'white',
-      'Type_text': 'White',
-      'Store': 'flaskandfield',
-      'Store_text': 'Flask + Field',
+      'Type_class': 'white',
+      'Type': 'White',
+      'Store_class': 'flaskandfield',
+      'Store': 'Flask + Field',
     })
 for x in field_sparkling_urls:
   soup = BeautifulSoup(requests.get(x).content, 'html.parser')
@@ -4321,19 +4333,21 @@ for x in field_sparkling_urls:
     else:
       maker ='undefined'
     wines.append({
-      'Title': title,
-      'Title_text': title_text,
+      #'Title': title,
+      'Title': title_text,
       'Maker': maker,
       'Price': price,
       'Link': link,
       'Image': image,
-      'Type': 'sparkling',
-      'Type_text': 'Sparkling',
-      'Store': 'flaskandfield',
-      'Store_text': 'Flask + Field',
+      'Type_class': 'sparkling',
+      'Type': 'Sparkling',
+      'Store_class': 'flaskandfield',
+      'Store': 'Flask + Field',
     })
 		
 		
+		
+# Write JSON file
 with open("data.json", "w") as writeJSON:
     json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 

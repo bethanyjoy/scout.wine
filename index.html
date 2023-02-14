@@ -17,6 +17,7 @@
 
   <link href="styles/normalize.css" rel="stylesheet">
   <link href="styles/fonts.css" rel="stylesheet">
+	<link href="styles/theme.css" rel="stylesheet">
   <link href="styles/main.css" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
@@ -24,70 +25,61 @@
 
 </head>
 
-<body id="search-results">
+<body id="body">
 
   <nav id="sidebar">
 
-    <a class="logo sidebarHide" href="index.html">
-      <img src="assets/logo.svg">
+    <a class="logo" href="index.html">
+      <svg width="158" height="56" viewBox="0 0 158 56" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0H8L15.6 36.72L23.2 0H31.2L38.8 36.72L46.4 0H54.4L42.8 56H34.8L27.2 19.28L19.6 56H11.6L0 0Z"/>
+				<path d="M59.0837 0H66.7638V56H59.0837V0Z"/>
+				<path d="M75.7244 0H83.4044V56H75.7244V0Z"/>
+				<path d="M92.365 56V0H100.045L114.285 36.4V0H121.965V56H114.285L100.045 19.6V56H92.365Z"/>
+				<path d="M130.959 56H157.359V48.32H138.639V30.32H148.559V22.64H138.639V7.68H153.359V0H130.959V56Z"/>
+			</svg>
     </a>
 
-    <span class="tagline sidebarHide">
-      Find natural wine on the eastside of LA 🍷 ✌️
-    </span>
+    <span class="tagline">
+			Find natural wine on the eastside of LA 🍷 ✌️
+		</span>
     
-    <div id="searchWrapper">
-    
+    <div class="searchWrapper">
       <input type="search" class="search" placeholder="Search" />
-
       <div class="mobileButtons">
-
-                  <a href="javascript:void(0);" id="showButton" class="navButton mobileOnly" onclick="showSidebar()">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                      </svg>
-                  </a>
-                  <a href="javascript:void(0);" id="hideButton" class="navButton mobileOnly" onclick="hideSidebar()">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-                  </a>
-
+				<a href="javascript:void(0);" class="navButton" id="showButton" onclick="showSidebar()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</a>
+				<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</a>
       </div>
       
     </div>
 
     <div id="filters">
       <div>
-        <div class="typeContainer buttonFilter filter">
-          <h3>Type</h3>
-        </div>
-        <div class="storeContainer checkboxFilter filter">
-          <h3>Store</h3>
-        </div>
-        <div class="makerContainer checkboxFilter filter">
-          <h3>Maker</h3>
-        </div>
+        <div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
+        <div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
+        <div class="makerContainer checkboxFilter filter"><h3>Maker</h3></div>
         <span class="credits">Made by <a href="https://bethany.design/">bethany.design</a></span>
-        <a href="javascript:void(0);" id="resultsButton" onclick="hideSidebar()" class="mobileOnly">
-		  Show results
-		</a>
-      </div>
-          
+				<a href="javascript:void(0);" class="resultsButton" onclick="hideSidebar()">Show results</a>
+      </div>     
     </div>
-
 
   </nav>
 
   <main id="main">
 
-    <div class="list" id="grid">
-    </div>
+    <div class="list" id="grid"></div>
     <ul class="pagination"></ul>
 
   </main>
 
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<!--	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
 <!--	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>-->
@@ -109,7 +101,7 @@
      var x = document.getElementById("sidebar");
        x.style.height = "100vh";
      var x = document.getElementById("main");
-       x.style.overflow = "hidden"
+       x.style.display = "hidden"
    }
   
    function hideSidebar() {
@@ -122,7 +114,7 @@
        var x = document.getElementById("sidebar");
          x.style.height = "auto";
      var x = document.getElementById("main");
-         x.style.overflow = "auto"
+         x.style.display = "block"
      }
   
   </script>
