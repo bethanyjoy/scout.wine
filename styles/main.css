@@ -397,6 +397,7 @@ label:has(> input[value="undefined"]) {
 @media only screen and (max-width: 800px) {
 	.checkboxFilter label {
 		line-height: 1.4rem;
+    margin-bottom: var(--space-3-5);
     padding-left: var(--space-7);
 	}
   .checkmark {
@@ -438,7 +439,7 @@ label:has(> input[value="undefined"]) {
 @media only screen and (max-width: 800px) {
   .buttonFilter label {
   	border-radius: 5rem;
-  	margin: var(--space-1) var(--space-0-5);
+  	margin: var(--space-1-5) var(--space-1);
   	padding: var(--space-1-5) var(--space-2-5);
   }
 }
@@ -565,4 +566,10 @@ label:has(> input[value="undefined"]) {
 	#filters {
 		display: none;
 	}
+}
+
+@media only screen and (max-width: 800px) {
+  h3 {
+    margin: 0 0 var(--space-3-5) 0;
+  }
 }
