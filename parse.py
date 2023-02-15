@@ -8,7 +8,8 @@ from bs4 import BeautifulSoup
 wines = []
 
 
-# list of vinovore eagle rock urls to parse
+# Vinovore Eagle Rock
+
 vinovoreeaglerock_urls = [
 
 	"https://vinovoreeaglerock.com/collections/red",
@@ -46,7 +47,6 @@ vinovoreeaglerock_urls = [
 
 ]
 
-# code for parsing vinovore eagle rock urls
 for url in vinovoreeaglerock_urls:
 
 	# set up soup
@@ -188,7 +188,8 @@ for url in vinovoreeaglerock_urls:
 			})
 
 
-# list of highland park wine urls to parse
+# Highland Park Wine
+
 highlandpark_urls = [
 
 	"https://www.highlandparkwine.com/collections/usa-red-wines",
@@ -275,7 +276,6 @@ highlandpark_urls = [
 
 ]
 
-# code for parsing highland park wine urls
 for url in highlandpark_urls:
 
 	# set up soup
@@ -421,7 +421,174 @@ for url in highlandpark_urls:
 		})
 
 
-# list of heavens market wine urls to parse
+# Sip Snack
+
+sipsnack_urls = [
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/champagne",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/champagne?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/chillable-red",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/chillable-red?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/orange-wine",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/orange-wine?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/pet-nat",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/pet-nat?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/red-wine",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/red-wine?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/rose",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/rose?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/rose-wine",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/rose-wine?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/sparkling-wine",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/sparkling-wine?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/white",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/white?page=2",
+
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/white-wine",
+	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/white-wine?page=2",
+
+]
+
+for url in sipsnack_urls:
+
+	# set up soup
+	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+	products = soup.find_all("div", class_="product--root")
+
+	for product in products:
+
+		# type
+		if 'champagne' in url:
+			type = 'Sparkling'
+		if 'pet-nat' in url:
+			type = 'Sparkling'
+		if 'red' in url:
+			type = 'Red'
+		if 'white' in url:
+			type = 'White'
+		if 'orange' in url:
+			type = 'Orange'
+		if 'rose' in url:
+			type = 'Ros&#233;'
+		if 'sparkling' in url:
+			type = 'Sparkling'
+		type_class = type.replace("&#233;", "e").lower()
+
+		# get title string (used for parsing)
+		title_string = product.find("h3", class_="product--title").text.replace(" ", "").lower()
+
+		# title
+		title = product.find("h3", class_="product--title").text.strip()
+
+		# price
+		price = product.find("span", class_="product--price").text.strip()
+
+		# link
+		link = 'http://www.sipsnackshop.com.com' + product.find("a")['href']
+
+		# image
+		imagesoup = product.find('noscript')
+		imagecheck = imagesoup.find("img")
+		if imagecheck is not None:
+			imageurl = imagesoup.find("img")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+
+		# maker
+		if 'lewandowski' in title_string:
+			maker = 'Ruth Lewandowski'
+		elif 'amevive' in title_string:
+			maker = 'Amevive'
+		elif 'amplify' in title_string:
+			maker = 'Amplify'
+		elif 'broc' in title_string:
+			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
+		elif 'cirelli' in title_string:
+			maker = 'Cirelli'
+		elif 'dueterre' in title_string:
+			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
+		elif 'folkmachine' in title_string:
+			maker = 'Folk Machine'
+		elif 'furlani' in title_string:
+			maker = 'Furlani'
+		elif 'gentle folk' in title_string:
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title_string:
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title_string:
+			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
+		elif 'kopptisch' in title_string:
+			maker = 'Kopptisch'
+		elif 'koehnen' in title_string:
+			maker = 'Koehnen'
+		elif 'lasjaras' in title_string:
+			maker = 'Las Jaras'
+		elif 'marigny' in title_string:
+			maker = 'Marigny'
+		elif 'marthastoumen' in title_string:
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title_string:
+			maker = 'Meinklang'
+		elif 'nestarec' in title_string:
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title_string:
+			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
+		elif 'purity' in title_string:
+			maker = 'Purity'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title_string:
+			maker = 'Subject to Change'
+		elif 'swick' in title_string:
+			maker = 'Swick'
+		elif 'wavywines' in title_string:
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title_string:
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title_string:
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
+
+		# add wine to list
+		wines.append({
+			'Title': title,
+			'Maker': maker,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_class': type_class,
+			'Store': 'Sip Snack',
+			'Store_class': 'sipsnack',
+		})
+
+
+# Heaven's Market
+
 heavensmarket_urls = [
 
 	"https://www.heavensmarketla.com/collections/red",
@@ -450,7 +617,6 @@ heavensmarket_urls = [
 
 ]
 
-# code for parsing heavens market urls
 for url in heavensmarket_urls:
 
 	# set up soup
@@ -584,7 +750,8 @@ for url in heavensmarket_urls:
 			})
 
 
-# list of wine + eggs wine urls to parse
+# Wine + Eggs
+
 wineandeggs_urls = [
 
 	"https://wineandeggs.com/collections/red-wine",
@@ -597,7 +764,6 @@ wineandeggs_urls = [
 
 ]
 
-# code for parsing wine + eggs urls
 for url in wineandeggs_urls:
 
 	# set up soup
@@ -629,7 +795,7 @@ for url in wineandeggs_urls:
 		title = title_maker + " " + title_name
 
 		# get title string (used for parsing)
-		title_string = title.replace(" ", "")
+		title_string = title.replace(" ", "").lower()
 
 		# price
 		price = product.find("div", class_="product-block__price").text.strip()
@@ -730,7 +896,8 @@ for url in wineandeggs_urls:
 		})
 
 
-# list of silverlake wine wine urls to parse
+# Silverlake Wine
+
 silverlake_urls = [
 
 	"https://silverlakewine.com/collections/red",
@@ -802,7 +969,6 @@ silverlake_urls = [
 
 ]
 
-# code for parsing silverlake wine urls
 for url in silverlake_urls:
 
 	# set up soup
@@ -931,7 +1097,8 @@ for url in silverlake_urls:
 		})
 
 
-# list of everson royce wine urls to parse
+# Everson Royce
+
 eversonroyce_urls = [
 
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
@@ -1026,7 +1193,6 @@ eversonroyce_urls = [
 
 ]
 
-# code for parsing everson royce wine urls
 for url in eversonroyce_urls:
 
 	# set up soup
@@ -1172,7 +1338,185 @@ for url in eversonroyce_urls:
 		})
 
 
-# list of kamp wine urls to parse
+# Vinovore Eagle Rock
+
+vinovoresilverlake_urls = [
+
+	"https://vinovoresilverlake.com/collections/red",
+	"https://vinovoresilverlake.com/collections/red?page=2",
+	"https://vinovoresilverlake.com/collections/red?page=3",
+	"https://vinovoresilverlake.com/collections/red?page=4",
+	"https://vinovoresilverlake.com/collections/red?page=5",
+
+	"https://vinovoresilverlake.com/collections/white",
+	"https://vinovoresilverlake.com/collections/white?page=2",
+	"https://vinovoresilverlake.com/collections/white?page=3",
+	"https://vinovoresilverlake.com/collections/white?page=4",
+	"https://vinovoresilverlake.com/collections/white?page=5",
+
+	"https://vinovoresilverlake.com/collections/rose",
+	"https://vinovoresilverlake.com/collections/rose?page=2",
+	"https://vinovoresilverlake.com/collections/rose?page=3",
+	"https://vinovoresilverlake.com/collections/rose?page=4",
+	"https://vinovoresilverlake.com/collections/rose?page=5",
+
+	"https://vinovoresilverlake.com/collections/orange",
+	"https://vinovoresilverlake.com/collections/orange?page=2",
+	"https://vinovoresilverlake.com/collections/orange?page=3",
+	"https://vinovoresilverlake.com/collections/orange?page=4",
+	"https://vinovoresilverlake.com/collections/orange?page=5",
+
+	"https://vinovoresilverlake.com/collections/sparkling",
+	"https://vinovoresilverlake.com/collections/sparkling?page=2",
+	"https://vinovoresilverlake.com/collections/sparkling?page=3",
+	"https://vinovoresilverlake.com/collections/sparkling?page=4",
+	"https://vinovoresilverlake.com/collections/sparkling?page=5",
+
+]
+
+for url in vinovoresilverlake_urls:
+
+	# set up soup
+	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+	products = soup.find_all("div", class_="product")
+
+	for product in products:
+
+		# type
+		if 'red' in url:
+			type = 'Red'
+		if 'white' in url:
+			type = 'White'
+		if 'orange' in url:
+			type = 'Orange'
+		if 'rose' in url:
+			type = 'Ros&#233;'
+		if 'sparkling' in url:
+			type = 'Sparkling'
+		type_class = type.replace("&#233;", "e").lower()
+
+		# get title string (used for parsing)
+		title_string = product.find("h3", class_="product__title").text.replace(" ", "").lower()
+
+		# ignore non-wine items
+		if 'giftbox' in title_string:
+			print()
+		elif 'bouquet' in title_string:
+			print()
+		elif 'stopper' in title_string:
+			print()
+
+		# parse wine items
+		else:
+
+			# title
+			title = product.find("h3", class_="product__title").text.strip()
+
+			# price
+			pricesoup = product.find("p", class_="product__price")
+			if pricesoup.span:
+				price = 'On Sale'
+			else:
+				price = pricesoup.text.strip()
+
+			# link
+			link = 'http://vinovoresilverlake.com' + product.find("a")['href']
+
+			# image
+			imagesoup = product.find('noscript')
+			imagecheck = imagesoup.find("img", class_="product__img")
+			if imagecheck is not None:
+				imageurl = imagesoup.find("img", class_="product__img")['src']
+				image = 'https:' + imageurl
+			else:
+				image = 'assets/placeholder.png'
+
+			# maker
+			if 'lewandowski' in title_string:
+				maker = 'Ruth Lewandowski'
+			elif 'amevive' in title_string:
+				maker = 'Amevive'
+			elif 'amplify' in title_string:
+				maker = 'Amplify'
+			elif 'broc' in title_string:
+				maker = 'Broc Cellars'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
+			elif 'cirelli' in title_string:
+				maker = 'Cirelli'
+			elif 'dueterre' in title_string:
+				maker = 'Due Terre'
+			elif 'florez' in title_string:
+				maker = 'Florez'
+			elif 'folkmachine' in title_string:
+				maker = 'Folk Machine'
+			elif 'furlani' in title_string:
+				maker = 'Furlani'
+			elif 'gentle folk' in title_string:
+				maker = 'Gentle Folk'
+			elif 'goodboywine' in title_string:
+				maker = 'Good Boy Wine'
+			elif 'gutoggau' in title_string:
+				maker = 'Gut Oggau'
+			elif 'jumbotime' in title_string:
+				maker = 'Jumbo Time Wines'
+			elif 'kopptisch' in title_string:
+				maker = 'Kopptisch'
+			elif 'koehnen' in title_string:
+				maker = 'Koehnen'
+			elif 'lasjaras' in title_string:
+				maker = 'Las Jaras'
+			elif 'marigny' in title_string:
+				maker = 'Marigny'
+			elif 'marthastoumen' in title_string:
+				maker = 'Martha Stoumen'
+			elif 'meinklang' in title_string:
+				maker = 'Meinklang'
+			elif 'nestarec' in title_string:
+				maker = 'Nestarec'
+			elif 'oldwestminster' in title_string:
+				maker = 'Old Westminster'
+			elif 'patricksullivan' in title_string:
+				maker = 'Patrick Sullivan'
+			elif 'purity' in title_string:
+				maker = 'Purity'
+			elif 'stagiaire' in title_string:
+				maker = 'Stagiaire'
+			elif 'scottyboy' in title_string:
+				maker = 'Scotty Boy'
+			elif 'scotty-boy' in title_string:
+				maker = 'Scotty Boy'
+			elif 'stagiaire' in title_string:
+				maker = 'Stagiaire'
+			elif 'subjecttochange' in title_string:
+				maker = 'Subject to Change'
+			elif 'swick' in title_string:
+				maker = 'Swick'
+			elif 'wavywines' in title_string:
+				maker = 'Wavy Wines'
+			elif 'wildarcfarm' in title_string:
+				maker = 'Wild Arc Farm'
+			elif 'wonderwerk' in title_string:
+				maker = 'Wonderwerk'
+			else:
+				maker ='undefined'
+
+			# add wine to list
+			wines.append({
+				'Title': title,
+				'Maker': maker,
+				'Price': price,
+				'Link': link,
+				'Image': image,
+				'Type': type,
+				'Type_class': type_class,
+				'Store': 'Vinovore Silverlake',
+				'Store_class': 'vinovoresilverlake',
+			})
+
+
+# Kamp
+
 kamp_urls = [
 	"https://shopkamp.com/collections/red/austria",
 	"https://shopkamp.com/collections/red/california",
@@ -1224,7 +1568,6 @@ kamp_urls = [
 	"https://shopkamp.com/collections/sparkling/spain",
 ]
 
-# code for parsing kamp urls
 for url in kamp_urls:
 
 	# set up soup
@@ -1268,14 +1611,13 @@ for url in kamp_urls:
 		else:
 			region = 'undefined'
 
-
 		# title
 		title_name = product.find("p", class_="product--title").text.strip()
 		title_maker = product.find("div", class_="product--vendor").text.strip()
 		title = title_maker + " " + title_name
 
 		# get title string (used for parsing)
-		title_string = title.replace(" ", "")
+		title_string = title.replace(" ", "").lower()
 
 		# price
 		price = product.find("span", class_="product--price money").text.strip()
@@ -1377,7 +1719,8 @@ for url in kamp_urls:
 		})
 
 
-# list of flask + field wine urls to parse
+# Flask & Field
+
 flaskandfield_urls = [
 
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Italy",
@@ -1447,7 +1790,6 @@ flaskandfield_urls = [
 
 ]
 
-# code for parsing field + flask urls
 for url in flaskandfield_urls:
 
 	# set up soup
@@ -1602,7 +1944,142 @@ for url in flaskandfield_urls:
 		})
 
 
-# list of helens wine urls to parse
+# Fancy Free
+
+fancyfree_urls = [
+	"https://www.fancyfreeliquor.com/sparkling",
+	"https://www.fancyfreeliquor.com/white",
+	"https://www.fancyfreeliquor.com/orange",
+	"https://www.fancyfreeliquor.com/rose",
+	"https://www.fancyfreeliquor.com/red",
+]
+
+for url in fancyfree_urls:
+
+	# set up soup
+	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+	products = soup.find_all("div", class_="grid-item")
+
+	for product in products:
+
+		# type
+		if 'red' in url:
+			type = 'Red'
+		if 'white' in url:
+			type = 'White'
+		if 'orange' in url:
+			type = 'Orange'
+		if 'rose' in url:
+			type = 'Ros&#233;'
+		if 'sparkling' in url:
+			type = 'Sparkling'
+		type_class = type.replace("&#233;", "e").lower()
+
+		# get title string (used for parsing)
+		title_string = product.find("div", class_="grid-title").text.replace(" ", "").lower()
+
+		# title
+		title = product.find("div", class_="grid-title").text.strip()
+
+		# price
+		price = product.find("div", class_="product-price").text.strip()
+
+		# link
+		link = 'http://www.fancyfreeliquor.com' + product.find("a")['href']
+
+		# image
+		imagecheck = product.find("img")
+		if imagecheck is not None:
+			image = product.find("img")['data-src']
+		else:
+			image = 'assets/placeholder.png'
+
+		# maker
+		if 'lewandowski' in title_string:
+			maker = 'Ruth Lewandowski'
+		elif 'amevive' in title_string:
+			maker = 'Amevive'
+		elif 'amplify' in title_string:
+			maker = 'Amplify'
+		elif 'broc' in title_string:
+			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
+		elif 'cirelli' in title_string:
+			maker = 'Cirelli'
+		elif 'dueterre' in title_string:
+			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
+		elif 'folkmachine' in title_string:
+			maker = 'Folk Machine'
+		elif 'furlani' in title_string:
+			maker = 'Furlani'
+		elif 'gentle folk' in title_string:
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title_string:
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title_string:
+			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
+		elif 'kopptisch' in title_string:
+			maker = 'Kopptisch'
+		elif 'koehnen' in title_string:
+			maker = 'Koehnen'
+		elif 'lasjaras' in title_string:
+			maker = 'Las Jaras'
+		elif 'marigny' in title_string:
+			maker = 'Marigny'
+		elif 'marthastoumen' in title_string:
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title_string:
+			maker = 'Meinklang'
+		elif 'nestarec' in title_string:
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title_string:
+			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
+		elif 'purity' in title_string:
+			maker = 'Purity'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title_string:
+			maker = 'Subject to Change'
+		elif 'swick' in title_string:
+			maker = 'Swick'
+		elif 'wavywines' in title_string:
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title_string:
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title_string:
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
+
+		# add wine to list
+		wines.append({
+			'Title': title,
+			'Maker': maker,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_class': type_class,
+			'Store': 'Fancy Free',
+			'Store_class': 'fancyfree',
+		})
+
+
+# Helen's Wine
+
 helens_urls = [
 	"https://helenswines.com/collections/sparkling/australia",
 	"https://helenswines.com/collections/sparkling/austria",
@@ -1669,7 +2146,6 @@ helens_urls = [
 	"https://helenswines.com/collections/orange/spain",
 ]
 
-# code for parsing helens wine urls
 for url in helens_urls:
 
 	# set up soup
@@ -1820,6 +2296,343 @@ for url in helens_urls:
 			'Region': region,
 		})
 
+
+# Domaine LA
+
+domaine_urls = [
+
+	"https://domainela.com/shop/sparkling-wines",
+	"https://domainela.com/shop/sparkling-wines?p=2",
+
+	"https://domainela.com/shop/white-wines",
+	"https://domainela.com/shop/white-wines?p=2",
+	"https://domainela.com/shop/white-wines?p=3",
+
+	"https://domainela.com/shop/orange",
+
+	"https://domainela.com/shop/rose",
+
+	"https://domainela.com/shop/red-wines",
+	"https://domainela.com/shop/red-wines?p=2",
+	"https://domainela.com/shop/red-wines?p=3",
+	"https://domainela.com/shop/red-wines?p=4",
+
+]
+
+# for url in domaine_urls:
+#
+# 	# set up soup
+# 	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+# 	products = soup.find_all("li", class_="product-item")
+#
+# 	for product in products:
+#
+# 		# type
+# 		if 'red' in url:
+# 			type = 'Red'
+# 		if 'white' in url:
+# 			type = 'White'
+# 		if 'orange' in url:
+# 			type = 'Orange'
+# 		if 'rose' in url:
+# 			type = 'Ros&#233;'
+# 		if 'sparkling' in url:
+# 			type = 'Sparkling'
+# 		type_class = type.replace("&#233;", "e").lower()
+#
+# 		# get title string (used for parsing)
+# 		title_string = product.find("a", class_="product-item-link").text.replace(" ", "").lower()
+#
+# 		# title
+# 		title = product.find("a", class_="product-item-link").text.strip()
+#
+# 		# price
+# 		price = product.find("span", class_="price").text.strip()
+#
+# 		# link
+# 		link = product.find("a", class_="product-item-link")['href']
+#
+# 		# image
+# 		imagecheck = product.find("img", class_="product-image-photo")
+# 		if imagecheck is not None:
+# 			image = product.find("img", class_="product-image-photo")['src']
+# 		else:
+# 			image = 'assets/placeholder.png'
+#
+# 		# maker
+# 		if 'lewandowski' in title_string:
+# 			maker = 'Ruth Lewandowski'
+# 		elif 'amevive' in title_string:
+# 			maker = 'Amevive'
+# 		elif 'amplify' in title_string:
+# 			maker = 'Amplify'
+# 		elif 'broc' in title_string:
+# 			maker = 'Broc Cellars'
+# 		elif 'cantinagiardino' in title_string:
+# 			maker = 'Cantina Giardino'
+# 		elif 'cirelli' in title_string:
+# 			maker = 'Cirelli'
+# 		elif 'dueterre' in title_string:
+# 			maker = 'Due Terre'
+# 		elif 'florez' in title_string:
+# 			maker = 'Florez'
+# 		elif 'folkmachine' in title_string:
+# 			maker = 'Folk Machine'
+# 		elif 'furlani' in title_string:
+# 			maker = 'Furlani'
+# 		elif 'gentle folk' in title_string:
+# 			maker = 'Gentle Folk'
+# 		elif 'goodboywine' in title_string:
+# 			maker = 'Good Boy Wine'
+# 		elif 'gutoggau' in title_string:
+# 			maker = 'Gut Oggau'
+# 		elif 'jumbotime' in title_string:
+# 			maker = 'Jumbo Time Wines'
+# 		elif 'kopptisch' in title_string:
+# 			maker = 'Kopptisch'
+# 		elif 'koehnen' in title_string:
+# 			maker = 'Koehnen'
+# 		elif 'lasjaras' in title_string:
+# 			maker = 'Las Jaras'
+# 		elif 'marigny' in title_string:
+# 			maker = 'Marigny'
+# 		elif 'marthastoumen' in title_string:
+# 			maker = 'Martha Stoumen'
+# 		elif 'meinklang' in title_string:
+# 			maker = 'Meinklang'
+# 		elif 'nestarec' in title_string:
+# 			maker = 'Nestarec'
+# 		elif 'oldwestminster' in title_string:
+# 			maker = 'Old Westminster'
+# 		elif 'patricksullivan' in title_string:
+# 			maker = 'Patrick Sullivan'
+# 		elif 'purity' in title_string:
+# 			maker = 'Purity'
+# 		elif 'stagiaire' in title_string:
+# 			maker = 'Stagiaire'
+# 		elif 'scottyboy' in title_string:
+# 			maker = 'Scotty Boy'
+# 		elif 'scotty-boy' in title_string:
+# 			maker = 'Scotty Boy'
+# 		elif 'stagiaire' in title_string:
+# 			maker = 'Stagiaire'
+# 		elif 'subjecttochange' in title_string:
+# 			maker = 'Subject to Change'
+# 		elif 'swick' in title_string:
+# 			maker = 'Swick'
+# 		elif 'wavywines' in title_string:
+# 			maker = 'Wavy Wines'
+# 		elif 'wildarcfarm' in title_string:
+# 			maker = 'Wild Arc Farm'
+# 		elif 'wonderwerk' in title_string:
+# 			maker = 'Wonderwerk'
+# 		else:
+# 			maker ='undefined'
+#
+# 		# add wine to list
+# 		wines.append({
+# 			'Title': title,
+# 			'Maker': maker,
+# 			'Price': price,
+# 			'Link': link,
+# 			'Image': image,
+# 			'Type': type,
+# 			'Type_class': type_class,
+# 			'Store': 'Domaine LA',
+# 			'Store_class': 'domaine',
+# 		})
+
+
+# Buvon's Wines
+
+buvons_urls = [
+
+	"https://www.buvonswine.com/collections/sparkling",
+	"https://www.buvonswine.com/collections/sparkling?page=2",
+	"https://www.buvonswine.com/collections/sparkling?page=3",
+	"https://www.buvonswine.com/collections/sparkling?page=4",
+	"https://www.buvonswine.com/collections/sparkling?page=5",
+	"https://www.buvonswine.com/collections/sparkling?page=6",
+	"https://www.buvonswine.com/collections/sparkling?page=7",
+	"https://www.buvonswine.com/collections/sparkling?page=8",
+
+	"https://www.buvonswine.com/collections/champagne",
+	"https://www.buvonswine.com/collections/champagne?page=2",
+	"https://www.buvonswine.com/collections/champagne?page=3",
+	"https://www.buvonswine.com/collections/champagne?page=4",
+	"https://www.buvonswine.com/collections/champagne?page=5",
+
+	"https://www.buvonswine.com/collections/rose",
+	"https://www.buvonswine.com/collections/rose?page=2",
+	"https://www.buvonswine.com/collections/rose?page=3",
+	"https://www.buvonswine.com/collections/rose?page=4",
+	"https://www.buvonswine.com/collections/rose?page=5",
+	"https://www.buvonswine.com/collections/rose?page=6",
+	"https://www.buvonswine.com/collections/rose?page=7",
+
+	"https://www.buvonswine.com/collections/macerated-orange",
+	"https://www.buvonswine.com/collections/macerated-orange?page=2",
+	"https://www.buvonswine.com/collections/macerated-orange?page=3",
+	"https://www.buvonswine.com/collections/macerated-orange?page=4",
+	"https://www.buvonswine.com/collections/macerated-orange?page=5",
+	"https://www.buvonswine.com/collections/macerated-orange?page=6",
+	"https://www.buvonswine.com/collections/macerated-orange?page=7",
+
+	"https://www.buvonswine.com/collections/white",
+	"https://www.buvonswine.com/collections/white?page=2",
+	"https://www.buvonswine.com/collections/white?page=3",
+	"https://www.buvonswine.com/collections/white?page=4",
+	"https://www.buvonswine.com/collections/white?page=5",
+	"https://www.buvonswine.com/collections/white?page=6",
+	"https://www.buvonswine.com/collections/white?page=7",
+	"https://www.buvonswine.com/collections/white?page=8",
+	"https://www.buvonswine.com/collections/white?page=9",
+	"https://www.buvonswine.com/collections/white?page=10",
+	"https://www.buvonswine.com/collections/white?page=11",
+	"https://www.buvonswine.com/collections/white?page=12",
+
+	"https://www.buvonswine.com/collections/red",
+	"https://www.buvonswine.com/collections/red?page=2",
+	"https://www.buvonswine.com/collections/red?page=3",
+	"https://www.buvonswine.com/collections/red?page=4",
+	"https://www.buvonswine.com/collections/red?page=5",
+	"https://www.buvonswine.com/collections/red?page=6",
+	"https://www.buvonswine.com/collections/red?page=7",
+	"https://www.buvonswine.com/collections/red?page=8",
+	"https://www.buvonswine.com/collections/red?page=9",
+	"https://www.buvonswine.com/collections/red?page=10",
+	"https://www.buvonswine.com/collections/red?page=11",
+	"https://www.buvonswine.com/collections/red?page=12",
+	"https://www.buvonswine.com/collections/red?page=13",
+	"https://www.buvonswine.com/collections/red?page=14",
+	"https://www.buvonswine.com/collections/red?page=15",
+
+]
+
+# for url in buvons_urls:
+#
+# 	# set up soup
+# 	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+# 	products = soup.find_all("div", class_="u-1/2@phab")
+#
+# 	for product in products:
+#
+# 		# type
+# 		if 'red' in url:
+# 			type = 'Red'
+# 		if 'white' in url:
+# 			type = 'White'
+# 		if 'orange' in url:
+# 			type = 'Orange'
+# 		if 'rose' in url:
+# 			type = 'Ros&#233;'
+# 		if 'sparkling' in url:
+# 			type = 'Sparkling'
+# 		if 'champagne' in url:
+# 			type = 'Sparkling'
+# 		type_class = type.replace("&#233;", "e").lower()
+#
+# 		# get title string (used for parsing)
+# 		title_string = product.find("h2", class_="product__title").text.replace(" ", "").lower()
+#
+# 		# title
+# 		title = product.find("h2", class_="product__title").text.strip()
+#
+# 		# price
+# 		price = product.find("span", class_="product__price-price").text.strip()
+#
+# 		# link
+# 		link = 'www.buvonswine.com' + product.find("a")['href']
+#
+# 		# image
+# 		imagecheck = product.find("img")
+# 		if imagecheck is not None:
+# 			image = product.find("img")['src']
+# 		else:
+# 			image = 'assets/placeholder.png'
+#
+# 		# maker
+# 		if 'lewandowski' in title_string:
+# 			maker = 'Ruth Lewandowski'
+# 		elif 'amevive' in title_string:
+# 			maker = 'Amevive'
+# 		elif 'amplify' in title_string:
+# 			maker = 'Amplify'
+# 		elif 'broc' in title_string:
+# 			maker = 'Broc Cellars'
+# 		elif 'cantinagiardino' in title_string:
+# 			maker = 'Cantina Giardino'
+# 		elif 'cirelli' in title_string:
+# 			maker = 'Cirelli'
+# 		elif 'dueterre' in title_string:
+# 			maker = 'Due Terre'
+# 		elif 'florez' in title_string:
+# 			maker = 'Florez'
+# 		elif 'folkmachine' in title_string:
+# 			maker = 'Folk Machine'
+# 		elif 'furlani' in title_string:
+# 			maker = 'Furlani'
+# 		elif 'gentle folk' in title_string:
+# 			maker = 'Gentle Folk'
+# 		elif 'goodboywine' in title_string:
+# 			maker = 'Good Boy Wine'
+# 		elif 'gutoggau' in title_string:
+# 			maker = 'Gut Oggau'
+# 		elif 'jumbotime' in title_string:
+# 			maker = 'Jumbo Time Wines'
+# 		elif 'kopptisch' in title_string:
+# 			maker = 'Kopptisch'
+# 		elif 'koehnen' in title_string:
+# 			maker = 'Koehnen'
+# 		elif 'lasjaras' in title_string:
+# 			maker = 'Las Jaras'
+# 		elif 'marigny' in title_string:
+# 			maker = 'Marigny'
+# 		elif 'marthastoumen' in title_string:
+# 			maker = 'Martha Stoumen'
+# 		elif 'meinklang' in title_string:
+# 			maker = 'Meinklang'
+# 		elif 'nestarec' in title_string:
+# 			maker = 'Nestarec'
+# 		elif 'oldwestminster' in title_string:
+# 			maker = 'Old Westminster'
+# 		elif 'patricksullivan' in title_string:
+# 			maker = 'Patrick Sullivan'
+# 		elif 'purity' in title_string:
+# 			maker = 'Purity'
+# 		elif 'stagiaire' in title_string:
+# 			maker = 'Stagiaire'
+# 		elif 'scottyboy' in title_string:
+# 			maker = 'Scotty Boy'
+# 		elif 'scotty-boy' in title_string:
+# 			maker = 'Scotty Boy'
+# 		elif 'stagiaire' in title_string:
+# 			maker = 'Stagiaire'
+# 		elif 'subjecttochange' in title_string:
+# 			maker = 'Subject to Change'
+# 		elif 'swick' in title_string:
+# 			maker = 'Swick'
+# 		elif 'wavywines' in title_string:
+# 			maker = 'Wavy Wines'
+# 		elif 'wildarcfarm' in title_string:
+# 			maker = 'Wild Arc Farm'
+# 		elif 'wonderwerk' in title_string:
+# 			maker = 'Wonderwerk'
+# 		else:
+# 			maker ='undefined'
+#
+# 		# add wine to list
+# 		wines.append({
+# 			'Title': title,
+# 			'Maker': maker,
+# 			'Price': price,
+# 			'Link': link,
+# 			'Image': image,
+# 			'Type': type,
+# 			'Type_class': type_class,
+# 			'Store': 'Buvon&#39;s',
+# 			'Store_class': 'buvons',
+# 		})
 
 
 
