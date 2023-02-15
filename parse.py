@@ -965,7 +965,9 @@ silverlake_urls = [
 	"https://silverlakewine.com/collections/sparkling?page=7",
 	"https://silverlakewine.com/collections/sparkling?page=8",
 
-	"https://silverlakewine.com/collections/fruit-wine"
+	"https://silverlakewine.com/collections/fruit-wine",
+
+	"https://silverlakewine.com/collections/piquette",
 
 ]
 
@@ -990,6 +992,8 @@ for url in silverlake_urls:
 			type = 'Sparkling'
 		if 'fruit' in url:
 			type = 'Co-Fermented'
+		if 'piquette' in url:
+			type = 'Piquette'
 		type_class = type.replace("&#233;", "e").lower()
 
 		# get title string (used for parsing)
