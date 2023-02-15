@@ -305,6 +305,7 @@ nav {
     height: 1.25rem;
     width: 1.25rem;
     background-image: url('/assets/x-mark-outline.svg');
+/*		cursor: pointer;*/
 }
 
 
