@@ -10,6 +10,7 @@ wines = []
 
 # list of vinovore eagle rock urls to parse
 vinovoreeaglerock_urls = [
+
 	"https://vinovoreeaglerock.com/collections/red",
 	"https://vinovoreeaglerock.com/collections/red?page=2",
 	"https://vinovoreeaglerock.com/collections/red?page=3",
@@ -18,26 +19,31 @@ vinovoreeaglerock_urls = [
 	"https://vinovoreeaglerock.com/collections/red?page=6",
 	"https://vinovoreeaglerock.com/collections/red?page=7",
 	"https://vinovoreeaglerock.com/collections/red?page=8",
+
 	"https://vinovoreeaglerock.com/collections/white",
 	"https://vinovoreeaglerock.com/collections/white?page=2",
 	"https://vinovoreeaglerock.com/collections/white?page=3",
 	"https://vinovoreeaglerock.com/collections/white?page=4",
 	"https://vinovoreeaglerock.com/collections/white?page=5",
 	"https://vinovoreeaglerock.com/collections/white?page=6",
+
 	"https://vinovoreeaglerock.com/collections/orange",
 	"https://vinovoreeaglerock.com/collections/orange?page=2",
 	"https://vinovoreeaglerock.com/collections/orange?page=3",
 	"https://vinovoreeaglerock.com/collections/orange?page=4",
+
 	"https://vinovoreeaglerock.com/collections/rose",
 	"https://vinovoreeaglerock.com/collections/rose?page=2",
 	"https://vinovoreeaglerock.com/collections/rose?page=3",
 	"https://vinovoreeaglerock.com/collections/rose?page=4",
+
 	"https://vinovoreeaglerock.com/collections/sparkling",
 	"https://vinovoreeaglerock.com/collections/sparkling?page=2",
 	"https://vinovoreeaglerock.com/collections/sparkling?page=3",
 	"https://vinovoreeaglerock.com/collections/sparkling?page=4",
 	"https://vinovoreeaglerock.com/collections/sparkling?page=5",
 	"https://vinovoreeaglerock.com/collections/sparkling?page=6",
+
 ]
 
 # code for parsing vinovore eagle rock urls
@@ -174,6 +180,7 @@ for url in vinovoreeaglerock_urls:
 
 # list of highland park wine urls to parse
 highlandpark_urls = [
+
 	"https://www.highlandparkwine.com/collections/usa-red-wines",
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=2",
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=3",
@@ -181,6 +188,7 @@ highlandpark_urls = [
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=5",
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=6",
 	"https://www.highlandparkwine.com/collections/usa-red-wines?page=7",
+
 	"https://www.highlandparkwine.com/collections/french-reds",
 	"https://www.highlandparkwine.com/collections/french-reds?page=2",
 	"https://www.highlandparkwine.com/collections/french-reds?page=3",
@@ -189,58 +197,72 @@ highlandpark_urls = [
 	"https://www.highlandparkwine.com/collections/french-reds?page=6",
 	"https://www.highlandparkwine.com/collections/french-reds?page=7",
 	"https://www.highlandparkwine.com/collections/french-reds?page=8",
+
 	"https://www.highlandparkwine.com/collections/italian-reds",
 	"https://www.highlandparkwine.com/collections/italian-reds?page=2",
 	"https://www.highlandparkwine.com/collections/italian-reds?page=3",
 	"https://www.highlandparkwine.com/collections/italian-reds?page=4",
+
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds",
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=2",
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-reds?page=3",
+
 	"https://www.highlandparkwine.com/collections/eastern-european-reds",
 	"https://www.highlandparkwine.com/collections/eastern-european-reds?page=2",
 	"https://www.highlandparkwine.com/collections/eastern-european-reds?page=3",
+
 	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere",
 	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=2",
 	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=3",
 	"https://www.highlandparkwine.com/collections/reds-from-the-southern-hemisphere?page=4",
+
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa",
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=2",
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=3",
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-usa?page=4",
+
 	"https://www.highlandparkwine.com/collections/french-white-wine",
 	"https://www.highlandparkwine.com/collections/french-white-wine?page=2",
 	"https://www.highlandparkwine.com/collections/french-white-wine?page=3",
 	"https://www.highlandparkwine.com/collections/french-white-wine?page=4",
 	"https://www.highlandparkwine.com/collections/french-white-wine?page=5",
+
 	"https://www.highlandparkwine.com/collections/italian-white-wine",
 	"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
 	"https://www.highlandparkwine.com/collections/italian-white-wine?page=2",
 	"https://www.highlandparkwine.com/collections/italian-white-wine?page=3",
 	"https://www.highlandparkwine.com/collections/italian-white-wine?page=4",
+
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites",
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=2",
 	"https://www.highlandparkwine.com/collections/spanish-portuguese-whites?page=3",
+
 	"https://www.highlandparkwine.com/collections/eastern-european-whites",
 	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=2",
 	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=3",
 	"https://www.highlandparkwine.com/collections/eastern-european-whites?page=4",
+
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere",
 	"https://www.highlandparkwine.com/collections/white-wines-from-the-southern-hemisphere?page=2",
+
 	"https://www.highlandparkwine.com/collections/rose",
 	"https://www.highlandparkwine.com/collections/rose?page=2",
 	"https://www.highlandparkwine.com/collections/rose?page=3",
 	"https://www.highlandparkwine.com/collections/rose?page=4",
 	"https://www.highlandparkwine.com/collections/rose?page=5",
+
 	"https://www.highlandparkwine.com/collections/orange-wine",
 	"https://www.highlandparkwine.com/collections/orange-wine?page=2",
 	"https://www.highlandparkwine.com/collections/orange-wine?page=3",
 	"https://www.highlandparkwine.com/collections/orange-wine?page=4",
+
 	"https://www.highlandparkwine.com/collections/sparkling-wine",
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=2",
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=3",
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=4",
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=5",
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=6",
+
 ]
 
 # code for parsing highland park wine urls
@@ -264,6 +286,22 @@ for url in highlandpark_urls:
 		if 'sparkling' in url:
 			type = 'Sparkling'
 		type_class = type.replace("&#233;", "e").lower()
+
+		# region
+		if 'usa' in url:
+			region = 'United States'
+		if 'french' in url:
+			region = 'France'
+		if 'italian' in url:
+			region = 'Italy'
+		if 'spanish' in url:
+			region = 'Spain + Portugal'
+		if 'portuguese' in url:
+			region = 'Spain + Portugal'
+		if 'eastern' in url:
+			region = 'Eastern Europe'
+		if 'hemisphere' in url:
+			region = 'Southern Hemisphere'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
@@ -359,30 +397,37 @@ for url in highlandpark_urls:
 			'Type_class': type_class,
 			'Store': 'Highland Park Wine',
 			'Store_class': 'highlandpark',
+			'Region': region,
 		})
 
 
 # list of heavens market wine urls to parse
 heavensmarket_urls = [
+
 	"https://www.heavensmarketla.com/collections/red",
 	"https://www.heavensmarketla.com/collections/red?page=2",
 	"https://www.heavensmarketla.com/collections/red?page=3",
 	"https://www.heavensmarketla.com/collections/red?page=4",
 	"https://www.heavensmarketla.com/collections/red?page=5",
+
 	"https://www.heavensmarketla.com/collections/white",
 	"https://www.heavensmarketla.com/collections/white?page=2",
 	"https://www.heavensmarketla.com/collections/white?page=3",
 	"https://www.heavensmarketla.com/collections/white?page=4",
+
 	"https://www.heavensmarketla.com/collections/rose",
 	"https://www.heavensmarketla.com/collections/rose?page=2",
+
 	"https://www.heavensmarketla.com/collections/skin-contact",
 	"https://www.heavensmarketla.com/collections/skin-contact?page=2",
 	"https://www.heavensmarketla.com/collections/skin-contact?page=3",
 	"https://www.heavensmarketla.com/collections/skin-contact?page=4",
+
 	"https://www.heavensmarketla.com/collections/sparkling",
 	"https://www.heavensmarketla.com/collections/sparkling?page=2",
 	"https://www.heavensmarketla.com/collections/sparkling?page=3",
 	"https://www.heavensmarketla.com/collections/sparkling?page=4",
+
 ]
 
 # code for parsing heavens market urls
@@ -513,6 +558,7 @@ for url in heavensmarket_urls:
 
 # list of wine + eggs wine urls to parse
 wineandeggs_urls = [
+
 	"https://wineandeggs.com/collections/red-wine",
 	"https://wineandeggs.com/collections/white-wine",
 	"https://wineandeggs.com/collections/wine-rose",
@@ -520,6 +566,7 @@ wineandeggs_urls = [
 	"https://wineandeggs.com/collections/sparkling-wine",
 	"https://wineandeggs.com/collections/co-fermented",
 	"https://wineandeggs.com/collections/piquette-wine",
+
 ]
 
 # code for parsing wine + eggs urls
@@ -649,6 +696,7 @@ for url in wineandeggs_urls:
 
 # list of silverlake wine wine urls to parse
 silverlake_urls = [
+
 	"https://silverlakewine.com/collections/red",
 	"https://silverlakewine.com/collections/red?page=2",
 	"https://silverlakewine.com/collections/red?page=3",
@@ -675,6 +723,7 @@ silverlake_urls = [
 	"https://silverlakewine.com/collections/red?page=24",
 	"https://silverlakewine.com/collections/red?page=25",
 	"https://silverlakewine.com/collections/red?page=26",
+
 	"https://silverlakewine.com/collections/white",
 	"https://silverlakewine.com/collections/white?page=2",
 	"https://silverlakewine.com/collections/white?page=3",
@@ -689,18 +738,21 @@ silverlake_urls = [
 	"https://silverlakewine.com/collections/white?page=12",
 	"https://silverlakewine.com/collections/white?page=13",
 	"https://silverlakewine.com/collections/white?page=14",
+
 	"https://silverlakewine.com/collections/rose",
 	"https://silverlakewine.com/collections/rose?page=2",
 	"https://silverlakewine.com/collections/rose?page=3",
 	"https://silverlakewine.com/collections/rose?page=4",
 	"https://silverlakewine.com/collections/rose?page=5",
 	"https://silverlakewine.com/collections/rose?page=6",
+
 	"https://silverlakewine.com/collections/orange",
 	"https://silverlakewine.com/collections/orange?page=2",
 	"https://silverlakewine.com/collections/orange?page=3",
 	"https://silverlakewine.com/collections/orange?page=4",
 	"https://silverlakewine.com/collections/orange?page=5",
 	"https://silverlakewine.com/collections/orange?page=6",
+
 	"https://silverlakewine.com/collections/sparkling",
 	"https://silverlakewine.com/collections/sparkling?page=2",
 	"https://silverlakewine.com/collections/sparkling?page=3",
@@ -709,7 +761,9 @@ silverlake_urls = [
 	"https://silverlakewine.com/collections/sparkling?page=6",
 	"https://silverlakewine.com/collections/sparkling?page=7",
 	"https://silverlakewine.com/collections/sparkling?page=8",
+
 	"https://silverlakewine.com/collections/fruit-wine"
+
 ]
 
 # code for parsing silverlake wine urls
@@ -835,6 +889,7 @@ for url in silverlake_urls:
 
 # list of everson royce wine urls to parse
 eversonroyce_urls = [
+
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=2",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=3",
@@ -849,6 +904,7 @@ eversonroyce_urls = [
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=12",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=13",
 	"https://www.eversonroyce.com/collections/red-wines-from-the-usa?page=14",
+
 	"https://www.eversonroyce.com/collections/french-reds",
 	"https://www.eversonroyce.com/collections/french-reds?page=2",
 	"https://www.eversonroyce.com/collections/french-reds?page=3",
@@ -861,55 +917,69 @@ eversonroyce_urls = [
 	"https://www.eversonroyce.com/collections/french-reds?page=10",
 	"https://www.eversonroyce.com/collections/french-reds?page=11",
 	"https://www.eversonroyce.com/collections/french-reds?page=12",
+
 	"https://www.eversonroyce.com/collections/italian-reds",
 	"https://www.eversonroyce.com/collections/italian-reds?page=2",
 	"https://www.eversonroyce.com/collections/italian-reds?page=3",
 	"https://www.eversonroyce.com/collections/italian-reds?page=4",
 	"https://www.eversonroyce.com/collections/italian-reds?page=5",
+
 	"https://www.eversonroyce.com/collections/spanish-portuguese-reds",
 	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=2",
 	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=3",
 	"https://www.eversonroyce.com/collections/spanish-portuguese-reds?page=4",
+
 	"https://www.eversonroyce.com/collections/eastern-european-reds",
 	"https://www.eversonroyce.com/collections/eastern-european-reds?page=2",
+
 	"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere",
 	"https://www.eversonroyce.com/collections/reds-from-the-southern-hemisphere?page=2",
+
 	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa",
 	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=2",
 	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=3",
 	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=4",
 	"https://www.eversonroyce.com/collections/whites-wines-from-the-usa?page=5",
+
 	"https://www.eversonroyce.com/collections/french-white-wine",
 	"https://www.eversonroyce.com/collections/french-white-wine?page=2",
 	"https://www.eversonroyce.com/collections/french-white-wine?page=3",
 	"https://www.eversonroyce.com/collections/french-white-wine?page=4",
 	"https://www.eversonroyce.com/collections/french-white-wine?page=5",
+
 	"https://www.eversonroyce.com/collections/italian-white-wine",
 	"https://www.eversonroyce.com/collections/italian-white-wine?page=2",
 	"https://www.eversonroyce.com/collections/italian-white-wine?page=3",
+
 	"https://www.eversonroyce.com/collections/spanish-portuguese-whites"
 	"https://www.eversonroyce.com/collections/spanish-portuguese-whites?page=2"
+
 	"https://www.eversonroyce.com/collections/eastern-european-whites",
 	"https://www.eversonroyce.com/collections/eastern-european-whites?page=2",
 	"https://www.eversonroyce.com/collections/eastern-european-whites?page=3",
 	"https://www.eversonroyce.com/collections/eastern-european-whites?page=4",
+
 	"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere",
 	"https://www.eversonroyce.com/collections/white-wines-from-the-southern-hemisphere?page=2",
+
 	"https://www.eversonroyce.com/collections/rose",
 	"https://www.eversonroyce.com/collections/rose?page=2",
 	"https://www.eversonroyce.com/collections/rose?page=3",
 	"https://www.eversonroyce.com/collections/rose?page=4",
+
 	"https://www.eversonroyce.com/collections/orange-wine",
 	"https://www.eversonroyce.com/collections/orange-wine?page=2",
 	"https://www.eversonroyce.com/collections/orange-wine?page=3",
 	"https://www.eversonroyce.com/collections/orange-wine?page=4",
 	"https://www.eversonroyce.com/collections/orange-wine?page=5",
+
 	"https://www.eversonroyce.com/collections/sparklin-wine",
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=2",
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=3",
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=4",
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=5",
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=6",
+
 ]
 
 # code for parsing everson royce wine urls
@@ -933,6 +1003,22 @@ for url in eversonroyce_urls:
 		if 'sparklin' in url:
 			type = 'Sparkling'
 		type_class = type.replace("&#233;", "e").lower()
+
+		# region
+		if 'usa' in url:
+			region = 'United States'
+		if 'french' in url:
+			region = 'France'
+		if 'italian' in url:
+			region = 'Italy'
+		if 'spanish' in url:
+			region = 'Spain Portugal'
+		if 'portuguese' in url:
+			region = 'Spain Portugal'
+		if 'eastern' in url:
+			region = 'Eastern Europe'
+		if 'hemisphere' in url:
+			region = 'Southern Hemisphere'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
@@ -1028,17 +1114,60 @@ for url in eversonroyce_urls:
 			'Type_class': type_class,
 			'Store': 'Everson Royce',
 			'Store_class': 'eversonroyce',
+			'Region': region,
 		})
 
 
 # list of kamp wine urls to parse
 kamp_urls = [
-	"https://shopkamp.com/collections/red",
-	"https://shopkamp.com/collections/chillable-reds",
-	"https://shopkamp.com/collections/white",
-	"https://shopkamp.com/collections/rose",
-	"https://shopkamp.com/collections/orange",
-	"https://shopkamp.com/collections/sparkling",
+	"https://shopkamp.com/collections/red/austria",
+	"https://shopkamp.com/collections/red/california",
+	"https://shopkamp.com/collections/red/france",
+	"https://shopkamp.com/collections/red/germany",
+	"https://shopkamp.com/collections/red/greece",
+	"https://shopkamp.com/collections/red/italy",
+	"https://shopkamp.com/collections/red/oregon",
+	"https://shopkamp.com/collections/red/spain",
+	"https://shopkamp.com/collections/chillable-reds/austria",
+	"https://shopkamp.com/collections/chillable-reds/california",
+	"https://shopkamp.com/collections/chillable-reds/france",
+	"https://shopkamp.com/collections/chillable-reds/germany",
+	"https://shopkamp.com/collections/chillable-reds/greece",
+	"https://shopkamp.com/collections/chillable-reds/italy",
+	"https://shopkamp.com/collections/chillable-reds/oregon",
+	"https://shopkamp.com/collections/chillable-reds/spain",
+	"https://shopkamp.com/collections/white/austria",
+	"https://shopkamp.com/collections/white/california",
+	"https://shopkamp.com/collections/white/france",
+	"https://shopkamp.com/collections/white/germany",
+	"https://shopkamp.com/collections/white/greece",
+	"https://shopkamp.com/collections/white/italy",
+	"https://shopkamp.com/collections/white/oregon",
+	"https://shopkamp.com/collections/white/spain",
+	"https://shopkamp.com/collections/rose/austria",
+	"https://shopkamp.com/collections/rose/california",
+	"https://shopkamp.com/collections/rose/france",
+	"https://shopkamp.com/collections/rose/germany",
+	"https://shopkamp.com/collections/rose/greece",
+	"https://shopkamp.com/collections/rose/italy",
+	"https://shopkamp.com/collections/rose/oregon",
+	"https://shopkamp.com/collections/rose/spain",
+	"https://shopkamp.com/collections/orange/austria",
+	"https://shopkamp.com/collections/orange/california",
+	"https://shopkamp.com/collections/orange/france",
+	"https://shopkamp.com/collections/orange/germany",
+	"https://shopkamp.com/collections/orange/greece",
+	"https://shopkamp.com/collections/orange/italy",
+	"https://shopkamp.com/collections/orange/oregon",
+	"https://shopkamp.com/collections/orange/spain",
+	"https://shopkamp.com/collections/sparkling/austria",
+	"https://shopkamp.com/collections/sparkling/california",
+	"https://shopkamp.com/collections/sparkling/france",
+	"https://shopkamp.com/collections/sparkling/germany",
+	"https://shopkamp.com/collections/sparkling/greece",
+	"https://shopkamp.com/collections/sparkling/italy",
+	"https://shopkamp.com/collections/sparkling/oregon",
+	"https://shopkamp.com/collections/sparkling/spain",
 ]
 
 # code for parsing kamp urls
@@ -1064,6 +1193,24 @@ for url in kamp_urls:
 		# if 'chillable' in url:
 		# 	type = 'Chillable Red'
 		type_class = type.replace("&#233;", "e").replace(" ", "").lower()
+
+		# region
+		if 'austria' in url:
+			region = 'Austria'
+		if 'california' in url:
+			region = 'California'
+		if 'france' in url:
+			region = 'France'
+		if 'germany' in url:
+			region = 'Germany'
+		if 'greece' in url:
+			region = 'Greece'
+		if 'italy' in url:
+			region = 'Italy'
+		if 'oregon' in url:
+			region = 'Oregon'
+		if 'spain' in url:
+			region = 'Spain'
 
 		# title
 		title_name = product.find("p", class_="product--title").text.strip()
@@ -1161,24 +1308,78 @@ for url in kamp_urls:
 			'Type_class': type_class,
 			'Store': 'Kamp',
 			'Store_class': 'kamp',
+			'Region': region,
 		})
 
 
 # list of flask + field wine urls to parse
 flaskandfield_urls = [
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=2",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=3",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&page=4",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=2",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&page=3",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Ros%C3%A9+Wine&page=2",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&page=2",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine",
-	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&page=2",
+
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Italy",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=France",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Austria",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=California",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Spain",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=South+Africa",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Chile",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=USA",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Argentina",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Portugal",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Australia",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Morocco",
+
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Italy",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=France",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Austria",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=California",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Spain",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=South+Africa",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Chile",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=USA",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Argentina",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Portugal",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Australia",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Rosé+Wine&filter.p.m.custom.region=Morocco",
+
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Italy",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=France",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Austria",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=California",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Spain",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=South+Africa",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Chile",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=USA",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Argentina",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Portugal",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Australia",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Skin+Contact+Wine&filter.p.m.custom.region=Morocco",
+
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Italy",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=France",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Austria",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=California",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Spain",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=South+Africa",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Chile",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=USA",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Argentina",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Portugal",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Australia",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=Sparkling+Wine&filter.p.m.custom.region=Morocco",
+
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Italy",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=France",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Austria",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=California",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Spain",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=South+Africa",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Chile",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=USA",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Argentina",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Portugal",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Australia",
+	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Morocco",
+
 ]
 
 # code for parsing field + flask urls
@@ -1203,6 +1404,32 @@ for url in flaskandfield_urls:
 			type = 'Sparkling'
 		type_class = type.replace("&#233;", "e").lower()
 
+		# region
+		if 'Italy' in url:
+			region = 'Italy'
+		if 'France' in url:
+			region = 'France'
+		if 'Austria' in url:
+			region = 'Austria'
+		if 'California' in url:
+			region = 'California'
+		if 'Spain' in url:
+			region = 'Spain'
+		if 'South+Africa' in url:
+			region = 'South Africa'
+		if 'Chile' in url:
+			region = 'Chile'
+		if 'USA' in url:
+			region = 'United States'
+		if 'Argentina' in url:
+			region = 'Argentina'
+		if 'Portugal' in url:
+			region = 'Portugal'
+		if 'Australia' in url:
+			region = 'Australia'
+		if 'Morocco' in url:
+			region = 'Morocco'
+
 		# get title string (used for parsing)
 		title_string = product.find("h3", class_="card__heading").text.replace(" ", "").lower()
 
@@ -1222,7 +1449,6 @@ for url in flaskandfield_urls:
 			image = 'https:' + imageurl
 		else:
 			image = 'assets/placeholder.png'
-
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -1297,9 +1523,8 @@ for url in flaskandfield_urls:
 			'Type_class': type_class,
 			'Store': 'Flask + Field',
 			'Store_class': 'flaskandfield',
+			'Region': region,
 		})
-
-
 
 
 # list of helens wine urls to parse
@@ -1401,7 +1626,7 @@ for url in helens_urls:
 		if 'corsica' in url:
 			region = 'Corsica'
 		if 'domestic' in url:
-			region = 'United states'
+			region = 'United States'
 		if 'france' in url:
 			region = 'France'
 		if 'germany' in url:
