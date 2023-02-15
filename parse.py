@@ -76,6 +76,8 @@ for url in vinovoreeaglerock_urls:
 			print()
 		elif 'bouquet' in title_string:
 			print()
+		elif 'stopper' in title_string:
+			print()
 
 		# parse wine items
 		else:
