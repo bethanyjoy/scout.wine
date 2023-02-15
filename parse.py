@@ -1393,25 +1393,25 @@ for url in helens_urls:
 
 		# region
 		if 'australia' in url:
-			region = 'australia'
+			region = 'Australia'
 		if 'austria' in url:
-			region = 'austria'
+			region = 'Austria'
 		if 'chile' in url:
-			region = 'chile'
+			region = 'Chile'
 		if 'corsica' in url:
-			region = 'corsica'
+			region = 'Corsica'
 		if 'domestic' in url:
-			region = 'united states'
+			region = 'United states'
 		if 'france' in url:
-			region = 'france'
+			region = 'France'
 		if 'germany' in url:
-			region = 'germany'
+			region = 'Germany'
 		if 'italy' in url:
-			region = 'italy'
+			region = 'Italy'
 		if 'portugal' in url:
-			region = 'portugal'
+			region = 'Portugal'
 		if 'spain' in url:
-			region = 'spain'
+			region = 'Spain'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="grid-product__title--body").text.replace(" ", "").lower()
