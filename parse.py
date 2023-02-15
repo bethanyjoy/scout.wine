@@ -290,18 +290,20 @@ for url in highlandpark_urls:
 		# region
 		if 'usa' in url:
 			region = 'United States'
-		if 'french' in url:
+		elif 'french' in url:
 			region = 'France'
-		if 'italian' in url:
+		elif 'italian' in url:
 			region = 'Italy'
-		if 'spanish' in url:
+		elif 'spanish' in url:
 			region = 'Spain + Portugal'
-		if 'portuguese' in url:
+		elif 'portuguese' in url:
 			region = 'Spain + Portugal'
-		if 'eastern' in url:
+		elif 'eastern' in url:
 			region = 'Eastern Europe'
-		if 'hemisphere' in url:
+		elif 'hemisphere' in url:
 			region = 'Southern Hemisphere'
+		else:
+			region = 'undefined'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
@@ -1007,18 +1009,20 @@ for url in eversonroyce_urls:
 		# region
 		if 'usa' in url:
 			region = 'United States'
-		if 'french' in url:
+		elif 'french' in url:
 			region = 'France'
-		if 'italian' in url:
+		elif 'italian' in url:
 			region = 'Italy'
-		if 'spanish' in url:
-			region = 'Spain Portugal'
-		if 'portuguese' in url:
-			region = 'Spain Portugal'
-		if 'eastern' in url:
+		elif 'spanish' in url:
+			region = 'Spain + Portugal'
+		elif 'portuguese' in url:
+			region = 'Spain + Portugal'
+		elif 'eastern' in url:
 			region = 'Eastern Europe'
-		if 'hemisphere' in url:
+		elif 'hemisphere' in url:
 			region = 'Southern Hemisphere'
+		else:
+			region = 'undefined'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
@@ -1197,20 +1201,23 @@ for url in kamp_urls:
 		# region
 		if 'austria' in url:
 			region = 'Austria'
-		if 'california' in url:
+		elif 'california' in url:
 			region = 'California'
-		if 'france' in url:
+		elif 'france' in url:
 			region = 'France'
-		if 'germany' in url:
+		elif 'germany' in url:
 			region = 'Germany'
-		if 'greece' in url:
+		elif 'greece' in url:
 			region = 'Greece'
-		if 'italy' in url:
+		elif 'italy' in url:
 			region = 'Italy'
-		if 'oregon' in url:
+		elif 'oregon' in url:
 			region = 'Oregon'
-		if 'spain' in url:
-			region = 'Spain'
+		elif 'spain' in url:
+			region = 'Spain + Portugal'
+		else:
+			region = 'undefined'
+
 
 		# title
 		title_name = product.find("p", class_="product--title").text.strip()
@@ -1407,28 +1414,30 @@ for url in flaskandfield_urls:
 		# region
 		if 'Italy' in url:
 			region = 'Italy'
-		if 'France' in url:
+		elif 'France' in url:
 			region = 'France'
-		if 'Austria' in url:
+		elif 'Austria' in url:
 			region = 'Austria'
-		if 'California' in url:
+		elif 'California' in url:
 			region = 'California'
-		if 'Spain' in url:
-			region = 'Spain'
-		if 'South+Africa' in url:
+		elif 'Spain' in url:
+			region = 'Spain + Portugal'
+		elif 'South+Africa' in url:
 			region = 'South Africa'
-		if 'Chile' in url:
+		elif 'Chile' in url:
 			region = 'Chile'
-		if 'USA' in url:
+		elif 'USA' in url:
 			region = 'United States'
-		if 'Argentina' in url:
+		elif 'Argentina' in url:
 			region = 'Argentina'
-		if 'Portugal' in url:
-			region = 'Portugal'
-		if 'Australia' in url:
+		elif 'Portugal' in url:
+			region = 'Spain + Portugal'
+		elif 'Australia' in url:
 			region = 'Australia'
-		if 'Morocco' in url:
+		elif 'Morocco' in url:
 			region = 'Morocco'
+		else:
+			region = 'undefined'
 
 		# get title string (used for parsing)
 		title_string = product.find("h3", class_="card__heading").text.replace(" ", "").lower()
@@ -1619,24 +1628,26 @@ for url in helens_urls:
 		# region
 		if 'australia' in url:
 			region = 'Australia'
-		if 'austria' in url:
+		elif 'austria' in url:
 			region = 'Austria'
-		if 'chile' in url:
+		elif 'chile' in url:
 			region = 'Chile'
-		if 'corsica' in url:
+		elif 'corsica' in url:
 			region = 'Corsica'
-		if 'domestic' in url:
+		elif 'domestic' in url:
 			region = 'United States'
-		if 'france' in url:
+		elif 'france' in url:
 			region = 'France'
-		if 'germany' in url:
+		elif 'germany' in url:
 			region = 'Germany'
-		if 'italy' in url:
+		elif 'italy' in url:
 			region = 'Italy'
-		if 'portugal' in url:
-			region = 'Portugal'
-		if 'spain' in url:
-			region = 'Spain'
+		elif 'portugal' in url:
+			region = 'Spain + Portugal'
+		elif 'spain' in url:
+			region = 'Spain + Portugal'
+		else:
+			region = 'undefined'
 
 		# get title string (used for parsing)
 		title_string = product.find("div", class_="grid-product__title--body").text.replace(" ", "").lower()

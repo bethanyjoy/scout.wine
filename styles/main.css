@@ -388,7 +388,7 @@ nav {
   -ms-transform: rotate(45deg);
 }
 
-/* Hide checkbox filter for 'undefined' store */
+/* Hide checkbox filter for 'undefined' labels */
 label:has(> input[value="undefined"]) {
 	display: none;
 }
