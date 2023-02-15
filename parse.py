@@ -113,10 +113,14 @@ for url in vinovoreeaglerock_urls:
 				maker = 'Amplify'
 			elif 'broc' in title_string:
 				maker = 'Broc Cellars'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
 			elif 'cirelli' in title_string:
 				maker = 'Cirelli'
 			elif 'dueterre' in title_string:
 				maker = 'Due Terre'
+			elif 'florez' in title_string:
+				maker = 'Florez'
 			elif 'folkmachine' in title_string:
 				maker = 'Folk Machine'
 			elif 'furlani' in title_string:
@@ -127,6 +131,8 @@ for url in vinovoreeaglerock_urls:
 				maker = 'Good Boy Wine'
 			elif 'gutoggau' in title_string:
 				maker = 'Gut Oggau'
+			elif 'jumbotime' in title_string:
+				maker = 'Jumbo Time Wines'
 			elif 'kopptisch' in title_string:
 				maker = 'Kopptisch'
 			elif 'koehnen' in title_string:
@@ -143,6 +149,8 @@ for url in vinovoreeaglerock_urls:
 				maker = 'Nestarec'
 			elif 'oldwestminster' in title_string:
 				maker = 'Old Westminster'
+			elif 'patricksullivan' in title_string:
+				maker = 'Patrick Sullivan'
 			elif 'purity' in title_string:
 				maker = 'Purity'
 			elif 'stagiaire' in title_string:
@@ -337,10 +345,14 @@ for url in highlandpark_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -351,6 +363,8 @@ for url in highlandpark_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -367,6 +381,8 @@ for url in highlandpark_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -493,10 +509,14 @@ for url in heavensmarket_urls:
 				maker = 'Amplify'
 			elif 'broc' in title_string:
 				maker = 'Broc Cellars'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
 			elif 'cirelli' in title_string:
 				maker = 'Cirelli'
 			elif 'dueterre' in title_string:
 				maker = 'Due Terre'
+			elif 'florez' in title_string:
+				maker = 'Florez'
 			elif 'folkmachine' in title_string:
 				maker = 'Folk Machine'
 			elif 'furlani' in title_string:
@@ -507,6 +527,8 @@ for url in heavensmarket_urls:
 				maker = 'Good Boy Wine'
 			elif 'gutoggau' in title_string:
 				maker = 'Gut Oggau'
+			elif 'jumbotime' in title_string:
+				maker = 'Jumbo Time Wines'
 			elif 'kopptisch' in title_string:
 				maker = 'Kopptisch'
 			elif 'koehnen' in title_string:
@@ -523,6 +545,8 @@ for url in heavensmarket_urls:
 				maker = 'Nestarec'
 			elif 'oldwestminster' in title_string:
 				maker = 'Old Westminster'
+			elif 'patricksullivan' in title_string:
+				maker = 'Patrick Sullivan'
 			elif 'purity' in title_string:
 				maker = 'Purity'
 			elif 'stagiaire' in title_string:
@@ -631,10 +655,14 @@ for url in wineandeggs_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -645,6 +673,8 @@ for url in wineandeggs_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -661,6 +691,8 @@ for url in wineandeggs_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -824,10 +856,14 @@ for url in silverlake_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -838,6 +874,8 @@ for url in silverlake_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -854,6 +892,8 @@ for url in silverlake_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -1056,10 +1096,14 @@ for url in eversonroyce_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -1070,6 +1114,8 @@ for url in eversonroyce_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -1086,6 +1132,8 @@ for url in eversonroyce_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -1253,10 +1301,14 @@ for url in kamp_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -1267,6 +1319,8 @@ for url in kamp_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -1283,6 +1337,8 @@ for url in kamp_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -1470,10 +1526,14 @@ for url in flaskandfield_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -1484,6 +1544,8 @@ for url in flaskandfield_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -1500,6 +1562,8 @@ for url in flaskandfield_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
@@ -1681,10 +1745,14 @@ for url in helens_urls:
 			maker = 'Amplify'
 		elif 'broc' in title_string:
 			maker = 'Broc Cellars'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		elif 'cirelli' in title_string:
 			maker = 'Cirelli'
 		elif 'dueterre' in title_string:
 			maker = 'Due Terre'
+		elif 'florez' in title_string:
+			maker = 'Florez'
 		elif 'folkmachine' in title_string:
 			maker = 'Folk Machine'
 		elif 'furlani' in title_string:
@@ -1695,6 +1763,8 @@ for url in helens_urls:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
 			maker = 'Gut Oggau'
+		elif 'jumbotime' in title_string:
+			maker = 'Jumbo Time Wines'
 		elif 'kopptisch' in title_string:
 			maker = 'Kopptisch'
 		elif 'koehnen' in title_string:
@@ -1711,6 +1781,8 @@ for url in helens_urls:
 			maker = 'Nestarec'
 		elif 'oldwestminster' in title_string:
 			maker = 'Old Westminster'
+		elif 'patricksullivan' in title_string:
+			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
 		elif 'stagiaire' in title_string:
