@@ -1302,6 +1302,218 @@ for url in flaskandfield_urls:
 
 
 
+# list of helens wine urls to parse
+helens_urls = [
+	"https://helenswines.com/collections/sparkling/australia",
+	"https://helenswines.com/collections/sparkling/austria",
+	"https://helenswines.com/collections/sparkling/chile",
+	"https://helenswines.com/collections/sparkling/corsica",
+	"https://helenswines.com/collections/sparkling/domestic",
+	"https://helenswines.com/collections/sparkling/france",
+	"https://helenswines.com/collections/sparkling/france?page=2",
+	"https://helenswines.com/collections/sparkling/germany",
+	"https://helenswines.com/collections/sparkling/italy",
+	"https://helenswines.com/collections/sparkling/portugal",
+	"https://helenswines.com/collections/sparkling/spain",
+	"https://helenswines.com/collections/white/australia",
+	"https://helenswines.com/collections/white/austria",
+	"https://helenswines.com/collections/white/austria?page=2",
+	"https://helenswines.com/collections/white/chile",
+	"https://helenswines.com/collections/white/corsica",
+	"https://helenswines.com/collections/white/domestic",
+	"https://helenswines.com/collections/white/domestic?page=2",
+	"https://helenswines.com/collections/white/france",
+	"https://helenswines.com/collections/white/france?page=2",
+	"https://helenswines.com/collections/white/france?page=3",
+	"https://helenswines.com/collections/white/germany",
+	"https://helenswines.com/collections/white/italy",
+	"https://helenswines.com/collections/white/italy?page=2",
+	"https://helenswines.com/collections/white/portugal",
+	"https://helenswines.com/collections/white/spain",
+	"https://helenswines.com/collections/rose/australia",
+	"https://helenswines.com/collections/rose/austria",
+	"https://helenswines.com/collections/rose/chile",
+	"https://helenswines.com/collections/rose/corsica",
+	"https://helenswines.com/collections/rose/domestic",
+	"https://helenswines.com/collections/rose/france",
+	"https://helenswines.com/collections/rose/germany",
+	"https://helenswines.com/collections/rose/italy",
+	"https://helenswines.com/collections/rose/portugal",
+	"https://helenswines.com/collections/rose/spain",
+	"https://helenswines.com/collections/red/australia",
+	"https://helenswines.com/collections/red/austria",
+	"https://helenswines.com/collections/red/chile",
+	"https://helenswines.com/collections/red/corsica",
+	"https://helenswines.com/collections/red/domestic",
+	"https://helenswines.com/collections/red/domestic?page=2",
+	"https://helenswines.com/collections/red/france",
+	"https://helenswines.com/collections/red/france?page=2",
+	"https://helenswines.com/collections/red/france?page=3",
+	"https://helenswines.com/collections/red/germany",
+	"https://helenswines.com/collections/red/italy",
+	"https://helenswines.com/collections/red/italy?page=2",
+	"https://helenswines.com/collections/red/italy?page=3",
+	"https://helenswines.com/collections/red/portugal",
+	"https://helenswines.com/collections/red/spain",
+	"https://helenswines.com/collections/orange/australia",
+	"https://helenswines.com/collections/orange/austria",
+	"https://helenswines.com/collections/orange/chile",
+	"https://helenswines.com/collections/orange/corsica",
+	"https://helenswines.com/collections/orange/domestic",
+	"https://helenswines.com/collections/orange/france",
+	"https://helenswines.com/collections/orange/france?page=2",
+	"https://helenswines.com/collections/orange/germany",
+	"https://helenswines.com/collections/orange/italy?page=2",
+	"https://helenswines.com/collections/orange/italy",
+	"https://helenswines.com/collections/orange/portugal",
+	"https://helenswines.com/collections/orange/spain",
+]
+
+# code for parsing helens wine urls
+for url in helens_urls:
+
+	# set up soup
+	soup = BeautifulSoup(requests.get(url).content, 'html.parser')
+	products = soup.find_all("div", class_="grid-product")
+
+	for product in products:
+
+		# type
+		if 'red' in url:
+			type = 'Red'
+		if 'white' in url:
+			type = 'White'
+		if 'orange' in url:
+			type = 'Orange'
+		if 'rose' in url:
+			type = 'Ros&#233;'
+		if 'sparkling' in url:
+			type = 'Sparkling'
+		type_class = type.replace("&#233;", "e").lower()
+
+		# region
+		if 'australia' in url:
+			region = 'australia'
+		if 'austria' in url:
+			region = 'austria'
+		if 'chile' in url:
+			region = 'chile'
+		if 'corsica' in url:
+			region = 'corsica'
+		if 'domestic' in url:
+			region = 'united states'
+		if 'france' in url:
+			region = 'france'
+		if 'germany' in url:
+			region = 'germany'
+		if 'italy' in url:
+			region = 'italy'
+		if 'portugal' in url:
+			region = 'portugal'
+		if 'spain' in url:
+			region = 'spain'
+
+		# get title string (used for parsing)
+		title_string = product.find("div", class_="grid-product__title--body").text.replace(" ", "").lower()
+
+		# title
+		title = product.find("div", class_="grid-product__title--body").text.strip()
+
+		# price
+		price = product.find("div", class_="grid-product__price").text.strip()
+
+		# link
+		link = 'http://helenswines.com' + product.find("a")['href']
+
+		# image
+		imagesoup = product.find('noscript')
+		imagecheck = imagesoup.find("img", class_="grid-product__image")
+		if imagecheck is not None:
+			imageurl = imagesoup.find("img", class_="grid-product__image")['src']
+			image = 'https:' + imageurl
+		else:
+			image = 'assets/placeholder.png'
+
+		# maker
+		if 'lewandowski' in title_string:
+			maker = 'Ruth Lewandowski'
+		elif 'amevive' in title_string:
+			maker = 'Amevive'
+		elif 'amplify' in title_string:
+			maker = 'Amplify'
+		elif 'broc' in title_string:
+			maker = 'Broc Cellars'
+		elif 'cirelli' in title_string:
+			maker = 'Cirelli'
+		elif 'dueterre' in title_string:
+			maker = 'Due Terre'
+		elif 'folkmachine' in title_string:
+			maker = 'Folk Machine'
+		elif 'furlani' in title_string:
+			maker = 'Furlani'
+		elif 'gentle folk' in title_string:
+			maker = 'Gentle Folk'
+		elif 'goodboywine' in title_string:
+			maker = 'Good Boy Wine'
+		elif 'gutoggau' in title_string:
+			maker = 'Gut Oggau'
+		elif 'kopptisch' in title_string:
+			maker = 'Kopptisch'
+		elif 'koehnen' in title_string:
+			maker = 'Koehnen'
+		elif 'lasjaras' in title_string:
+			maker = 'Las Jaras'
+		elif 'marigny' in title_string:
+			maker = 'Marigny'
+		elif 'marthastoumen' in title_string:
+			maker = 'Martha Stoumen'
+		elif 'meinklang' in title_string:
+			maker = 'Meinklang'
+		elif 'nestarec' in title_string:
+			maker = 'Nestarec'
+		elif 'oldwestminster' in title_string:
+			maker = 'Old Westminster'
+		elif 'purity' in title_string:
+			maker = 'Purity'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'scottyboy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'scotty-boy' in title_string:
+			maker = 'Scotty Boy'
+		elif 'stagiaire' in title_string:
+			maker = 'Stagiaire'
+		elif 'subjecttochange' in title_string:
+			maker = 'Subject to Change'
+		elif 'swick' in title_string:
+			maker = 'Swick'
+		elif 'wavywines' in title_string:
+			maker = 'Wavy Wines'
+		elif 'wildarcfarm' in title_string:
+			maker = 'Wild Arc Farm'
+		elif 'wonderwerk' in title_string:
+			maker = 'Wonderwerk'
+		else:
+			maker ='undefined'
+
+		# add wine to list
+		wines.append({
+			'Title': title,
+			'Maker': maker,
+			'Price': price,
+			'Link': link,
+			'Image': image,
+			'Type': type,
+			'Type_class': type_class,
+			'Store': 'Helen&#39;s Wines',
+			'Store_class': 'helens',
+			'Region': region,
+		})
+
+
+
+
+
 random.shuffle(wines)
 
 # Write JSON file

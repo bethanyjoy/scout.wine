@@ -186,7 +186,8 @@ article .text {
 	margin-top: var(--space-3);
 }
 
-article .maker {
+article .maker,
+article .region, {
   display: none;
 }
 
