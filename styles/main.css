@@ -184,6 +184,7 @@ article .text {
 	flex-direction: column;
 	gap: var(--space-1-5);
 	margin-top: var(--space-3);
+	overflow: hidden;
 }
 
 p.maker,
