@@ -1686,7 +1686,9 @@ for url in sipsnack_urls:
 		price = product.find("span", class_="product--price").text.strip()
 
 		# link
-		link = 'http://www.sipsnackshop.com.com' + product.find("a")['href']
+		link = 'http://www.sipsnackshop.com' + product.find("a")['href']
+
+		print(link)
 
 		# image
 		imagesoup = product.find('noscript')
