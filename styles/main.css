@@ -61,6 +61,12 @@ h3 {
   margin: 0 0 var(--space-3) 0;
 }
 
+@media only screen and (max-width: 800px) {
+  h3 {
+    margin: 0 0 var(--space-3-5) 0;
+  }
+}
+
 ul {
   padding-inline-start: 0;
 }
@@ -68,7 +74,7 @@ ul {
 
 
 /*----------------------------------------------------*/
-/*  Main/grid styles                                  */
+/*  Page Layout                                       */
 /*----------------------------------------------------*/
 
 
@@ -77,7 +83,6 @@ main {
 	overflow: auto;
 	overscroll-behavior: contain;
   padding: var(--space-10);
-/*	padding: var(--space-10) var(--space-10) var(--space-10) var(--space-5);*/
 	position: sticky;
 	text-align: left;
 	top: var(--space-0);
@@ -92,6 +97,50 @@ main {
 	overflow: hidden;
 	width: auto;
 }
+
+nav {
+	align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+	float: left;
+  gap: var(--space-6);
+	height: 100vh;
+	overflow: auto;
+	overscroll-behavior: contain;
+  padding: var(--space-12) var(--space-10);
+	position: sticky;
+	top: 0;
+	width: 18.05rem;
+}
+
+@media only screen and (max-width: 800px) {
+	body {
+		display: block;
+	}
+	nav {
+		height: auto;
+		padding: var(--space-4);
+		position: fixed;
+		width: 100%;
+		z-index: 100;
+	}
+	main {
+		margin-top: 3.222rem;
+		padding: var(--space-4);
+	}
+	.list {
+		gap: var(--space-4);
+	}
+}
+
+
+
+/*----------------------------------------------------*/
+/*  Main/grid styles                                  */
+/*----------------------------------------------------*/
+
+
+/* Pagination */
 
 .pagination {
   margin-top: var(--space-14);
@@ -143,6 +192,11 @@ article img {
   width: 100%;
 }
 
+article .noimage img,
+article .hasimage svg {
+  display: none;
+}
+
 article svg {
   object-fit: scale-down;
   padding: 2.5vw 0;
@@ -155,11 +209,6 @@ article svg {
 	article svg {
 		padding: 4vw 0;
 	}
-}
-
-article .noimage img,
-article .hasimage svg {
-  display: none;
 }
 
 
@@ -214,26 +263,24 @@ article > .type {
 }
 
 
+/* Wine cards mobile styles */
+
+@media only screen and (max-width: 800px) {
+	article {
+		padding-bottom: var(--space-2);
+	}
+	article > a {
+		height: 42vw !important;
+	}
+}
+
+
 
 
 /*----------------------------------------------------*/
 /*  Sidebar styles                                    */
 /*----------------------------------------------------*/
 
-nav {
-	align-self: flex-start;
-  display: flex;
-  flex-direction: column;
-	float: left;
-  gap: var(--space-6);
-	height: 100vh;
-	overflow: auto;
-	overscroll-behavior: contain;
-  padding: var(--space-12) var(--space-10);
-	position: sticky;
-	top: 0;
-	width: 18.05rem;
-}
 
 .logo svg {
 	max-width: 8.2rem;
@@ -243,8 +290,37 @@ nav {
 	display: block;
 }
 
+/* Hide logo & tagline on mobile */
+@media only screen and (max-width: 800px) {
+	.logo, .tagline {
+	  display: none !important;
+	}
+}
+
 #filters {
   display: block;
+}
+
+/* Set filters to always appear on desktop */
+@media only screen and (min-width: 800px) {
+	#filters {
+		display: block !important;
+	}
+}
+
+/* Style filters panel for mobile */
+@media only screen and (max-width: 800px) {
+	#filters {
+		margin-bottom: 4.5rem;
+		width: calc(100% - var(--space-10));
+	}
+}
+
+/* Hide filters panel initially on mobile */
+@media only screen and (max-width: 800px) {
+	#filters {
+		display: none;
+	}
 }
 
 .filter {
@@ -276,10 +352,32 @@ nav {
 	width: 2rem;
 }
 
+/* Hide "hide" button initially */
+#hideButton {
+	display: none;
+}
+
+/* Hide mobile buttons & results button on desktop */
+@media only screen and (min-width: 800px) {
+	.mobileButtons {
+	  display: none;
+	}
+  .resultsButton {
+    display: none;
+  }
+}
+
+/* Show mobile buttons & results button on mobile */
+@media only screen and (max-width: 800px) {
+	.mobileButtons, .resultsButton {
+	  display: block;
+	}
+}
+
 
 
 /*----------------------------------------------------*/
-/*  Search bar styles                                 */
+/*  Text Input & Selct Styles                         */
 /*----------------------------------------------------*/
 
 
@@ -289,12 +387,8 @@ nav {
   outline: 0;
 	padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
 	appearance: none;
-	/* border: 1px solid var(--gray-400);
-	border-radius: var(--border-radius-1); */
 	box-sizing: border-box;
-	/* color: var(--gray-800); */
 	display: inline-block;
-	/* padding: var(--space-2) var(--space-3); */
 	-webkit-appearance: none;
 }
 
@@ -302,40 +396,9 @@ nav {
   width: 100%;
 }
 
-select {
-
-}
-
 /* input[type=text]:hover, select:hover, textarea:hover {
 	border-color: var(--gray-500);
 } */
-
-
-/* Icon text field */
-
-.icon input[type=text] {
-	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%23C9CBCD' class='w-5 h-5' height='16px' width='16px'%3E%3Cpath fill-rule='evenodd' d='M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z' clip-rule='evenodd' /%3E%3C/svg%3E") no-repeat;
-	background-position: left var(--space-2) top 50%;
-	padding-left: var(--space-8);
-}
-
-/* Select only */
-
-select {
-	background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.88668 5.00001L3.11353 5.00002C2.6821 5.00002 2.4532 4.49028 2.73982 4.16783L5.40218 1.17268C5.72041 0.814672 6.2798 0.814671 6.59803 1.17268L9.26039 4.16783C9.54701 4.49028 9.31811 5.00001 8.88668 5.00001ZM3.11353 7.00001H8.88668C9.31811 7.00001 9.54701 7.50975 9.26039 7.8322L6.59803 10.8273C6.2798 11.1854 5.72041 11.1854 5.40218 10.8273L2.73982 7.8322C2.4532 7.50975 2.6821 7.00001 3.11353 7.00001Z' fill='%236C6F75'/%3E%3C/svg%3E") no-repeat;
-	background-position: right var(--space-3) top 50%;
-	/* box-shadow: var(--shadow-button); */
-}
-
-
-
-
-
-
-
-
-
-
 
 ::placeholder {
   opacity: 1; /* Firefox */
@@ -360,6 +423,25 @@ select {
 /*		cursor: pointer;*/
 }
 
+/* Search bar mobile styles */
+
+@media only screen and (max-width: 800px) {
+	.searchWrapper {
+		display: flex;
+		gap: var(--space-2);
+	}
+	.search {
+		width: calc(100% - var(--space-12));
+	}
+}
+
+/* Select only */
+
+select {
+	background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.88668 5.00001L3.11353 5.00002C2.6821 5.00002 2.4532 4.49028 2.73982 4.16783L5.40218 1.17268C5.72041 0.814672 6.2798 0.814671 6.59803 1.17268L9.26039 4.16783C9.54701 4.49028 9.31811 5.00001 8.88668 5.00001ZM3.11353 7.00001H8.88668C9.31811 7.00001 9.54701 7.50975 9.26039 7.8322L6.59803 10.8273C6.2798 11.1854 5.72041 11.1854 5.40218 10.8273L2.73982 7.8322C2.4532 7.50975 2.6821 7.00001 3.11353 7.00001Z' fill='%236C6F75'/%3E%3C/svg%3E") no-repeat;
+	background-position: right var(--space-3) top 50%;
+	/* box-shadow: var(--shadow-button); */
+}
 
 
 /*----------------------------------------------------*/
@@ -507,121 +589,3 @@ label:has(> input[value="undefined"]) {
 .buttonFilter input:checked + label {
 }
 */
-
-
-
-/*----------------------------------------------------*/
-/*  Mobile styles                                     */
-/*----------------------------------------------------*/
-
-
-/* Layout */
-
-@media only screen and (max-width: 800px) {
-	body {
-		display: block;
-	}
-	nav {
-		height: auto;
-		padding: var(--space-4);
-		position: fixed;
-		width: 100%;
-		z-index: 100;
-	}
-	main {
-		margin-top: 3.222rem;
-		padding: var(--space-4);
-	}
-	.list {
-		gap: var(--space-4);
-	}
-}
-
-
-/* Set initial visibility of sidebar elements */
-
-
-/* Hide logo & tagline on mobile */
-@media only screen and (max-width: 800px) {
-	.logo, .tagline {
-	  display: none !important;
-	}
-}
-
-/* Hide mobile buttons & results button on desktop */
-@media only screen and (min-width: 800px) {
-	.mobileButtons {
-	  display: none;
-	}
-  .resultsButton {
-    display: none;
-  }
-}
-
-/* Show mobile buttons & results button on mobile */
-@media only screen and (max-width: 800px) {
-	.mobileButtons, .resultsButton {
-	  display: block;
-	}
-}
-
-/* Hide "hide" button initially on mobile */
-#hideButton {
-	display: none;
-}
-
-
-/* Search bar mobile styles */
-
-@media only screen and (max-width: 800px) {
-	.searchWrapper {
-		display: flex;
-		gap: var(--space-2);
-	}
-	.search {
-		width: calc(100% - var(--space-12));
-	}
-}
-
-
-/* Wine cards mobile styles */
-
-@media only screen and (max-width: 800px) {
-	article {
-		padding-bottom: var(--space-2);
-	}
-	article > a {
-		height: 42vw !important;
-	}
-}
-
-
-/* Filters panel mobile styles */
-
-/* Set filters to always appear on desktop */
-@media only screen and (min-width: 800px) {
-	#filters {
-		display: block !important;
-	}
-}
-
-/* Style filters panel for mobile */
-@media only screen and (max-width: 800px) {
-	#filters {
-		margin-bottom: 4.5rem;
-		width: calc(100% - var(--space-10));
-	}
-}
-
-/* Hide filters panel initially on mobile */
-@media only screen and (max-width: 800px) {
-	#filters {
-		display: none;
-	}
-}
-
-@media only screen and (max-width: 800px) {
-  h3 {
-    margin: 0 0 var(--space-3-5) 0;
-  }
-}

@@ -46,7 +46,7 @@
 
 
 :root {
-	
+
 	/*	Font size */
 	--body: 1rem;
 	--small: 0.875rem;
@@ -92,7 +92,7 @@ article .price {
 	font-family: var(--mono);
 }
 
-article > .type {
+article .type {
 	font-family: var(--mono);
 	font-size: var(--small);
 	line-height: 1.125rem;
@@ -119,7 +119,7 @@ article .store {
 
  .buttonFilter label {
 	font-family: var(--mono);
-} 
+}
 
 .credits {
 	font-size: var(--small);

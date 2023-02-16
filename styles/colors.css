@@ -118,6 +118,11 @@ article > a:hover {
 	box-shadow: 0 0.188rem 0.5rem 0 var(--primary-5);
 }
 
+/*	Style the placeholder image */
+article svg {
+	fill: var(--primary-4);
+}
+
 article .store {
 	color: var(--primary-2);
 }
@@ -168,10 +173,6 @@ article.co-fermented  > div.type {
 	fill: var(--primary);
 }
 
-article svg {
-	fill: var(--primary-4);
-}
-
 .tagline {
 	color: var(--primary-2);
 }
@@ -190,7 +191,7 @@ article svg {
 }
 
 
-/*	Search */
+/*	Text Input & Select */
 
 .search, select {
 	background-color: var(--primary-5);
