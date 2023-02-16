@@ -248,7 +248,7 @@ for url in eversonroyce_urls:
 			'Region': region,
 		})
 
-##### Fancy Free
+# Fancy Free
 fancyfree_urls = [
 	"https://www.fancyfreeliquor.com/sparkling",
 	"https://www.fancyfreeliquor.com/white",
@@ -384,7 +384,7 @@ for url in fancyfree_urls:
 			'Image_type': image_type,
 		})
 
-##### Flask & Field
+# Flask & Field
 flaskandfield_urls = [
 
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Italy",
@@ -611,7 +611,7 @@ for url in flaskandfield_urls:
 			'Image_type': image_type,
 		})
 
-##### Heaven's Market
+# Heaven's Market
 heavensmarket_urls = [
 
 	"https://www.heavensmarketla.com/collections/red",
