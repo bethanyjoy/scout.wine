@@ -15,10 +15,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link href="styles/normalize.css" rel="stylesheet">
-	<link href="styles/main.css" rel="stylesheet">
-  <link href="styles/fonts.css" rel="stylesheet">
-	<link href="styles/colors.css" rel="stylesheet">
+  <link href="/styles/normalize.css" rel="stylesheet">
+	<link href="/styles/main.css" rel="stylesheet">
+  <link href="/styles/fonts.css" rel="stylesheet">
+	<link href="/styles/colors.css" rel="stylesheet">
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16.png">
@@ -39,16 +39,12 @@
 			</svg>
     </a>
 
-    <!-- <span class="tagline">
-			Find natural &amp biodynamic wine in Los Angeles 🍷 ✌️
-		</span> -->
-
     <div class="searchWrapper">
-      <!-- <select onchange="location = this.value">
-        <option value="#">Los Angeles</option>
-        <option value="newyork">New York</option>
-      </select> -->
-      <input type="search" class="search" placeholder="Search" />
+      <select onchange="location = this.value">
+        <option value="#">New York</option>
+        <option value="/index.html">Los Angeles</option>
+      </select>
+      <!-- <input type="search" class="search" placeholder="Search" /> -->
       <div class="mobileButtons">
 				<a href="javascript:void(0);" class="navButton" id="showButton" onclick="showSidebar()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
@@ -64,18 +60,18 @@
     </div>
 
     <span class="tagline">
-			Find natural &amp biodynamic wine in Los Angeles 🍷 ✌️
+			Find natural &amp biodynamic wine in New York City 🍷🗽
 		</span>
 
     <div id="filters">
       <div>
-        <!-- <div class="filter"><h3>Search</h3>
+        <div class="filter"><h3>Search</h3>
           <input type="search" class="search" placeholder="Search" />
-        </div> -->
+        </div>
         <!-- <div class="filter"><h3>City</h3>
           <select onchange="location = this.value">
-            <option value="#">Los Angeles</option>
-            <option value="newyork">New York</option>
+            <option value="index.html">New York</option>
+            <option value="/index.html">Los Angeles</option>
           </select>
         </div> -->
         <div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
@@ -102,7 +98,7 @@
 <!--	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
 
-	<script src="script.js"></script>
+	<script src="/script.js"></script>
 
   <script>
 

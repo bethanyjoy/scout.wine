@@ -156,12 +156,11 @@ for url in eversonroyce_urls:
 		imagesoup = product.find('noscript')
 		imageurl = imagesoup.find("img", class_="rimage__image")['src']
 		if 'no-image' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -240,7 +239,6 @@ for url in eversonroyce_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Everson Royce',
@@ -248,7 +246,7 @@ for url in eversonroyce_urls:
 			'Region': region,
 		})
 
-##### Fancy Free
+# Fancy Free
 fancyfree_urls = [
 	"https://www.fancyfreeliquor.com/sparkling",
 	"https://www.fancyfreeliquor.com/white",
@@ -292,12 +290,11 @@ for url in fancyfree_urls:
 		# image
 		imageurl = product.find("img")['data-src']
 		if 'Temporary' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -376,15 +373,13 @@ for url in fancyfree_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Fancy Free',
 			'Store_class': 'fancyfree',
-			'Image_type': image_type,
 		})
 
-##### Flask & Field
+# Flask & Field
 flaskandfield_urls = [
 
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=Red+Wine&filter.p.m.custom.region=Italy",
@@ -518,12 +513,11 @@ for url in flaskandfield_urls:
 		imagecheck = product.find("img")
 		imageurl = product.find("img")['src']
 		if 'placeholder' in imageurl:
-			image_type = 'noimage'
-		elif imageurl is not None:
+			image = 'assets/placeholder.png'
+		elif imagecheck is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -602,16 +596,14 @@ for url in flaskandfield_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Flask + Field',
 			'Store_class': 'flaskandfield',
 			'Region': region,
-			'Image_type': image_type,
 		})
 
-##### Heaven's Market
+# Heaven's Market
 heavensmarket_urls = [
 
 	"https://www.heavensmarketla.com/collections/red",
@@ -683,12 +675,11 @@ for url in heavensmarket_urls:
 			imagesoup = product.find('noscript')
 			imageurl = imagesoup.find("img", class_="grid-view-item__image")['src']
 			if 'no-image' in imageurl:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 			elif imageurl is not None:
 				image = 'https:' + imageurl
-				image_type = 'hasimage'
 			else:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 
 			# maker
 			if 'lewandowski' in title_string:
@@ -767,8 +758,6 @@ for url in heavensmarket_urls:
 				'Price': price,
 				'Link': link,
 				'Image': image,
-				'Image_type': image_type,
-				'Image_type': image_type,
 				'Type': type,
 				'Type_class': type_class,
 				'Store': 'Heaven&#39;s Market',
@@ -902,12 +891,11 @@ for url in helens_urls:
 		imagesoup = product.find('noscript')
 		imageurl = imagesoup.find("img", class_="grid-product__image")['src']
 		if 'comingsoon' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -986,7 +974,6 @@ for url in helens_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Helen&#39;s Wines',
@@ -1135,12 +1122,11 @@ for url in highlandpark_urls:
 		imagesoup = product.find('noscript')
 		imageurl = imagesoup.find("img", class_="rimage__image")['src']
 		if 'no-image' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -1219,7 +1205,6 @@ for url in highlandpark_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Highland Park Wine',
@@ -1341,9 +1326,8 @@ for url in kamp_urls:
 		if imagecheck is not None:
 			imageurl = imagesoup.find("img")['src']
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -1422,7 +1406,6 @@ for url in kamp_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Kamp',
@@ -1544,12 +1527,11 @@ for url in silverlake_urls:
 		imagesoup = product.find('noscript')
 		imageurl = imagesoup.find("img", class_="rimage__image")['src']
 		if 'no-image' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 
 		# maker
@@ -1629,7 +1611,6 @@ for url in silverlake_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Silverlake Wine',
@@ -1707,16 +1688,17 @@ for url in sipsnack_urls:
 		# link
 		link = 'http://www.sipsnackshop.com' + product.find("a")['href']
 
+		print(link)
+
 		# image
 		imagesoup = product.find('noscript')
 		imageurl = imagesoup.find("img")['src']
 		if 'no-image' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -1795,7 +1777,6 @@ for url in sipsnack_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Sip Snack',
@@ -1891,12 +1872,11 @@ for url in vinovoreeaglerock_urls:
 			imagesoup = product.find('noscript')
 			imageurl = imagesoup.find("img", class_="grid-product__image")['src']
 			if 'no-image' in imageurl:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 			elif imageurl is not None:
 				image = 'https:' + imageurl
-				image_type = 'hasimage'
 			else:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 
 			# maker
 			if 'lewandowski' in title_string:
@@ -1975,7 +1955,6 @@ for url in vinovoreeaglerock_urls:
 				'Price': price,
 				'Link': link,
 				'Image': image,
-				'Image_type': image_type,
 				'Type': type,
 				'Type_class': type_class,
 				'Store': 'Vinovore Eagle Rock',
@@ -2070,12 +2049,11 @@ for url in vinovoresilverlake_urls:
 			imagesoup = product.find('noscript')
 			imageurl = imagesoup.find("img", class_="product__img")['src']
 			if 'no-image' in imageurl:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 			elif imageurl is not None:
 				image = 'https:' + imageurl
-				image_type = 'hasimage'
 			else:
-				image_type = 'noimage'
+				image = 'assets/placeholder.png'
 
 			# maker
 			if 'lewandowski' in title_string:
@@ -2154,7 +2132,6 @@ for url in vinovoresilverlake_urls:
 				'Price': price,
 				'Link': link,
 				'Image': image,
-				'Image_type': image_type,
 				'Type': type,
 				'Type_class': type_class,
 				'Store': 'Vinovore Silverlake',
@@ -2217,12 +2194,11 @@ for url in wineandeggs_urls:
 		imagecode = imagesoup.find("div", class_="product-block__image")['style']
 		imageurl = imagecode.strip("background-image:url('").strip("');")
 		if 'no-image' in imageurl:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 		elif imageurl is not None:
 			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
+			image = 'assets/placeholder.png'
 
 		# maker
 		if 'lewandowski' in title_string:
@@ -2301,7 +2277,6 @@ for url in wineandeggs_urls:
 			'Price': price,
 			'Link': link,
 			'Image': image,
-			'Image_type': image_type,
 			'Type': type,
 			'Type_class': type_class,
 			'Store': 'Wine + Eggs',

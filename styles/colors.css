@@ -8,17 +8,18 @@
 	/*	Core colors */
 	--primary-value: 91, 66, 43;
 	--background: rgb(249, 245, 234);
-	
+
 	/*	Valentine's Day Theme */
 /*	--primary-value: 226, 68, 20;*/
-	
+
 	/*	Primary shades */
 	--primary: rgb(var(--primary-value));
 	--primary-2: rgba(var(--primary-value), 0.7);
 	--primary-3: rgba(var(--primary-value), 0.4);
-	--primary-4: rgba(var(--primary-value), 0.12);
-	--primary-5: rgba(var(--primary-value), 0.08);
-	
+	--primary-4: rgba(var(--primary-value), 0.2);
+	--primary-5: rgba(var(--primary-value), 0.12);
+	--primary-6: rgba(var(--primary-value), 0.08);
+
 	/*	Type color values */
 	--red-value: 255, 166, 138;
 	--white-value: 227, 218, 186;
@@ -27,7 +28,7 @@
 	--sparkling-value: 168, 207, 224;
   --piquette-value: 212, 188, 232;
   --co-fermented-value: 164, 219, 173;
-	
+
 	/*	Tag background colors */
 	--red: rgb(var(--red-value));
 	--white: rgb(var(--white-value));
@@ -61,7 +62,7 @@ body {
 }
 
 main {
-	background-color: var(--primary-5);
+	background-color: var(--primary-6);
 }
 
 @media only screen and (max-width: 800px) {
@@ -84,7 +85,7 @@ nav {
 /*	Pagination */
 
 .pagination li {
-  background-color: var(--primary-4);
+  background-color: var(--primary-5);
 }
 
 .pagination li:hover {
@@ -109,12 +110,12 @@ nav {
 /*----------------------------------------------------*/
 
 
-article a.image {
-	background: var(--primary-5);
+article > a {
+	background: var(--primary-6);
 }
 
-article a.image:hover {
-	box-shadow: 0 0.188rem 0.5rem 0 var(--primary-4);
+article > a:hover {
+	box-shadow: 0 0.188rem 0.5rem 0 var(--primary-5);
 }
 
 article .store {
@@ -122,7 +123,7 @@ article .store {
 }
 
 article > .type {
-	background-color: var(--primary-4);
+	background-color: var(--primary-5);
 }
 
 
@@ -167,6 +168,10 @@ article.co-fermented  > div.type {
 	fill: var(--primary);
 }
 
+article svg {
+	fill: var(--primary-4);
+}
+
 .tagline {
 	color: var(--primary-2);
 }
@@ -187,8 +192,8 @@ article.co-fermented  > div.type {
 
 /*	Search */
 
-.search {
-	background-color: var(--primary-4);
+.search, select {
+	background-color: var(--primary-5);
 	color: var(--primary);
 }
 
@@ -215,8 +220,8 @@ article.co-fermented  > div.type {
 /*  Button Filters  */
 
  .buttonFilter label {
-	background-color: var(--primary-4);
-} 
+	background-color: var(--primary-5);
+}
 
 /* Styles for individual wine type filters */
 
@@ -240,7 +245,7 @@ article.co-fermented  > div.type {
 }
 .buttonFilter input[value="Co-Fermented"]:checked + label {
   background-color: var(--co-fermented);
-} 
+}
 
 /* Hover styles for individual wine type filters */
 
@@ -266,7 +271,7 @@ article.co-fermented  > div.type {
   .buttonFilter input[value="Co-Fermented"]:hover + label {
 	  background-color: var(--co-fermented-hover);
 	}
-} 
+}
 
 @media (pointer:fine) {
 	.buttonFilter input[value="Orange"]:checked:hover + label {
@@ -289,5 +294,5 @@ article.co-fermented  > div.type {
 	}
 	.buttonFilter input[value="Co-Fermented"]:checked:hover + label {
 		background-color: var(--co-fermented);
-	} 
-} 
+	}
+}
