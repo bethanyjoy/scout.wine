@@ -9,8 +9,7 @@ wines = []
 
 # Everson Royce
 eversonroyce_urls = [
-	"https://www.eversonroyce.com/collections/orange-wine",
-	"https://www.eversonroyce.com/collections/orange-wine?page=2"
+	"https://www.eversonroyce.com/collections/rose"
 ]
 for url in eversonroyce_urls:
 
