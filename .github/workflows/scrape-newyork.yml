@@ -1,4 +1,4 @@
-name: scrape
+name: scrape-newyork
 on:
   schedule:
     - cron: '*/5 * * * *' # runs every five minutes
