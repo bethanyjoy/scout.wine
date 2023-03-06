@@ -2311,7 +2311,7 @@ for url in wineandeggs_urls:
 random.shuffle(wines)
 
 # Write JSON file
-with open("data.json", "w") as writeJSON:
+with open("losangeles/data.json", "w") as writeJSON:
 	json.dump({'wine': wines}, writeJSON, ensure_ascii=False)
 
 # prints data to terminal (only needed for troubleshooting)

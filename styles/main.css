@@ -110,7 +110,7 @@ nav {
   padding: var(--space-12) var(--space-10);
 	position: sticky;
 	top: 0;
-	width: 18.29rem;
+	width: 17.5rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -385,7 +385,7 @@ article > .type {
   border: none;
   border-radius: 0.5rem !important;
   outline: 0;
-	padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
+	padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3-5);
 	appearance: none;
 	box-sizing: border-box;
 	display: inline-block;
