@@ -21,7 +21,10 @@ jobs:
           pip install -r requirements.txt
     
       - name: execute py script # run parse.py to get the latest data
-        run: python parse.py
+        run: |
+          python parse.py
+          python losangeles/parse.py
+          python newyork/parse.py
           
       - name: commit files
         run: |
