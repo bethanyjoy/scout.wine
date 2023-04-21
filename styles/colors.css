@@ -7,10 +7,7 @@
 
 	/*	Core colors */
 	--primary-value: 91, 66, 43;
-	--background: rgb(249, 245, 234);
-
-	/*	Valentine's Day Theme */
-/*	--primary-value: 226, 68, 20;*/
+	--background: rgba(236, 231, 219, 1);
 
 	/*	Primary shades */
 	--primary: rgb(var(--primary-value));
@@ -59,16 +56,6 @@
 body {
   background-color: var(--background);
 	color: var(--primary);
-}
-
-main {
-	background-color: var(--primary-6);
-}
-
-@media only screen and (max-width: 800px) {
-	main {
-		background-color: var(--background);
-	}
 }
 
 nav {
