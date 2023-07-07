@@ -103,7 +103,7 @@ nav {
   display: flex;
   flex-direction: column;
 	float: left;
-  gap: var(--space-6);
+  gap: var(--space-8);
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
@@ -330,7 +330,7 @@ article > .type {
 }
 
 .filter {
-	margin-bottom: var(--space-6);;
+	margin-bottom: var(--space-8);;
 }
 
 .resultsButton {
