@@ -52,6 +52,9 @@
 /*  Core styles                                       */
 /*----------------------------------------------------*/
 
+html {
+	background-color: var(--background);
+}
 
 body {
   background-color: var(--background);
