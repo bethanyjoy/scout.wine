@@ -118,6 +118,12 @@ article .name {
 
 article .store {
 	font-size: var(--medium);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 
