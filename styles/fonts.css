@@ -49,7 +49,8 @@
 
 	/*	Font size */
 	--body: 1rem;
-	--small: 0.875rem;
+	--medium: 0.95rem;
+  --small: 0.875rem;
 
 	/*	Font stacks */
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -74,10 +75,16 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+h2 {
+
+}
+
 h3 {
 	font-family: var(--sans);
-	font-size: var(--body);
+	font-size: var(--small);
 	font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
 }
 
 
@@ -89,7 +96,8 @@ article .name {
 }
 
 article .price {
-	font-family: var(--mono);
+	/* font-family: var(--mono); */
+  font-size: var(--medium);
 }
 
 article .type {
@@ -100,18 +108,30 @@ article .type {
 
 article .name {
 	line-height: 1.2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
 }
 
 article .store {
-	font-size: var(--small);
+	font-size: var(--medium);
 }
 
 
 /*  Sidebar styles  */
 
-.tagline {
-	line-height: 1.6rem;
+h2 {
+	line-height: 1.9rem;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
+
+/* h2 span {
+  font-weight: 500;
+} */
 
 .search {
 	font-weight: 300;

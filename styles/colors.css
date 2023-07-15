@@ -13,8 +13,8 @@
 	--primary: rgb(var(--primary-value));
 	--primary-2: rgba(var(--primary-value), 0.7);
 	--primary-3: rgba(var(--primary-value), 0.4);
-	--primary-4: rgba(var(--primary-value), 0.2);
-	--primary-5: rgba(var(--primary-value), 0.12);
+	--primary-4: rgba(var(--primary-value), 0.15);
+	--primary-5: rgba(var(--primary-value), 0.1);
 	--primary-6: rgba(var(--primary-value), 0.08);
 
 	/*	Type color values */
@@ -75,12 +75,13 @@ nav {
 /*	Pagination */
 
 .pagination li {
-  background-color: var(--primary-5);
+  /* background-color: var(--primary-5); */
+	border-color: var(--primary-3);
 }
 
 .pagination li:hover {
-  background-color: var(--primary-3);
-	cursor: pointer;
+  /* background-color: var(--primary-3); */
+	border-color: var(--primary-2);
 }
 
 .pagination li.active {
@@ -163,8 +164,8 @@ article.co-fermented  > div.type {
 	fill: var(--primary);
 }
 
-.tagline {
-	color: var(--primary-2);
+h2 {
+	color: var(--primary);
 }
 
 .credits {
@@ -183,20 +184,34 @@ article.co-fermented  > div.type {
 
 /*	Text Input & Select */
 
-.search, select {
-	background-color: var(--primary-5);
+.search {
+	/* background-color: var(--primary-5); */
 	color: var(--primary);
+	background-color: var(--background);
+	border-color: var(--primary-3);
+}
+
+.search:hover, .search:focus {
+	border-color: var(--primary-2) !important;
 }
 
 ::placeholder {
   color: var(--primary-2);
 }
 
+select {
+	background: none;
+	color: var(--primary);
+}
 
 /*	Chekbox Filters */
 
 .checkmark {
 	border-color: var(--primary-3);
+}
+
+.checkmark:hover {
+	border-color: var(--primary-2);
 }
 
 .checkboxFilter input:checked ~ .checkmark {
