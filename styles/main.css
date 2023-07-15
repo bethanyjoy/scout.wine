@@ -172,11 +172,11 @@ nav {
 	cursor: default;
 }
 
-@media only screen and (max-width: 800px) {
+/* @media only screen and (max-width: 800px) {
   .pagination li {
     border-width: 0.125rem;
   }
-}
+} */
 
 
 
@@ -453,7 +453,7 @@ article > .type {
 	}
 	.search {
 		width: calc(100% - var(--space-12));
-    border-width: 0.125rem;
+    /* border-width: 0.125rem; */
 	}
 
   .searchWrapper h3 {
@@ -597,7 +597,7 @@ label:has(> input[value="undefined"]) {
     padding-left: var(--space-7);
 	}
   .checkmark {
-    border-width: 0.125rem;
+    /* border-width: 0.125rem; */
     height: 1.25rem;
     width: 1.25rem;
   }
