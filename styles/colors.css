@@ -56,6 +56,9 @@
 		--background: rgba(55, 50, 45, 1);
 		--primary-value: 236, 231, 219;
 	}
+	.search::-webkit-search-cancel-button{
+		background-image: url('/assets/svgs/x-mark-outline-dark.svg');
+	}
 }
 :root[data-force-color-mode="dark"] {
 	--background: rgba(55, 50, 45, 1);
