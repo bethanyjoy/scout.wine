@@ -16,14 +16,13 @@
 	--primary: rgb(var(--primary-value));
 	--primary-2: rgba(var(--primary-value), 0.7);
 	--primary-3: rgba(var(--primary-value), 0.4);
-	--primary-4: rgba(var(--primary-value), 0.15);
+	--primary-4: rgba(var(--primary-value), 0.2);
 	--primary-5: rgba(var(--primary-value), 0.1);
 	--primary-6: rgba(var(--primary-value), 0.08);
 
 	/*	Other colors */
 	--type-text: var(--primary);
-	/* --shadow: var(--primary-5); */
-	--shadow: rgba(0, 0, 0, 0.15);
+	--shadow: rgba(55, 45, 36, 0.2);
 
 	/*	Type color values */
 	--red-value: 255, 166, 138;
@@ -60,7 +59,7 @@
 		--background: rgb(43, 40, 37);
 		--primary-value: 236, 231, 219;
 		--type-text: var(--background);
-		--shadow: rgba(0, 0, 0, 0.4);
+		--shadow: rgba(0, 0, 0, 0.3);
 	}
 	.search::-webkit-search-cancel-button{
 		background-image: url('/assets/svgs/x-mark-outline-dark.svg');
@@ -70,7 +69,7 @@
 	--background: rgb(43, 40, 37);
 	--primary-value: 236, 231, 219;
 	--type-text: var(--background);
-	--shadow: rgba(0, 0, 0, 0.4);
+	--shadow: rgba(0, 0, 0, 0.2);
 }
 
 
