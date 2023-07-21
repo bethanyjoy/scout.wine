@@ -101,7 +101,7 @@ main {
 	display: grid;
 	grid-gap: var(--space-10);
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-	overflow: hidden;
+	/* overflow: hidden; */
 	width: auto;
 }
 
