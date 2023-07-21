@@ -304,6 +304,47 @@ article > .type {
 /*  Sidebar styles                                    */
 /*----------------------------------------------------*/
 
+#darkmode-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5000;
+  background-color: #fff;
+  border-radius: 100em;
+  padding: 15px;
+}
+
+/* Visually hide the label text and Inject Light/Dark Mode Icon (based on checkbox value) */
+#toggle-darkmode {
+	display: none;
+  /* position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 5000; */
+}
+#toggle-darkmode + label > span {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+  /* background-color: var(--primary);
+  border-radius: 100em;
+  padding: 10px; */
+}
+#toggle-darkmode + label:after {
+	font-size: 2rem;
+	content: "🌝";
+	cursor: pointer;
+}
+#toggle-darkmode:checked + label:after {
+	content: "🌚";
+}
+
+
 
 .logo svg {
 	max-width: 8.2rem;
@@ -410,7 +451,8 @@ article > .type {
   border: solid;
   border-radius: 0.25rem;
   border-width: 0.1rem;
-  transition: 0.3s;
+  transition-duration: 0.3s;
+  transition-property: border-color;
 }
 
 .search {

@@ -23,9 +23,31 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
 
+  <script>
+			// Check if there's any override. If so, let the markup know by setting an attribute on the <html> element
+			const colorModeOverride = window.localStorage.getItem('color-mode');
+			const hasColorModeOverride = typeof colorModeOverride === 'string';
+			if (hasColorModeOverride) {
+				document.documentElement.setAttribute('data-force-color-mode', colorModeOverride);
+			}
+		</script>
+
 </head>
 
 <body id="body">
+
+  <!-- <div id="darkmode-button">
+    <input type="checkbox" id="toggle-darkmode" />
+    <label for="toggle-darkmode"><span>Toggle Light/Dark Mode</span></label>
+    <script>
+      // Check the dark-mode checkbox if
+      // - The override is set to dark
+      // - No override is set but the system prefers dark mode
+      if ((colorModeOverride == 'dark') || (!hasColorModeOverride && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('#toggle-darkmode').checked = true;
+      }
+    </script>
+  </div> -->
 
   <nav id="sidebar">
 

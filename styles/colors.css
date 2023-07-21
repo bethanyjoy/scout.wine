@@ -3,10 +3,14 @@
 /*----------------------------------------------------*/
 
 
-:root {
+:root,
+:root[data-force-color-mode="light"] {
+
+	color-scheme: light dark;
 
 	/*	Core colors */
 	--primary-value: 91, 66, 43;
+	--primary-fixed: rgba(91, 66, 43, 1);
 	--background: rgba(236, 231, 219, 1);
 
 	/*	Primary shades */
@@ -44,6 +48,18 @@
   --piquette-hover: rgba(var(--piquette-value), 0.5);
   --co-fermented-hover: rgba(var(--co-fermented-value), 0.5);
 
+}
+
+/* Dark Color Scheme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: rgba(55, 50, 45, 1);
+		--primary-value: 236, 231, 219;
+	}
+}
+:root[data-force-color-mode="dark"] {
+	--background: rgba(55, 50, 45, 1);
+	--primary-value: 236, 231, 219;
 }
 
 
@@ -120,6 +136,7 @@ article .store {
 
 article > .type {
 	background-color: var(--primary-5);
+	color: var(--primary-fixed);
 }
 
 
@@ -227,6 +244,10 @@ select {
 
  .buttonFilter label {
 	background-color: var(--primary-5);
+}
+
+.buttonFilter input:checked + label {
+  color: var(--primary-fixed);
 }
 
 /* Styles for individual wine type filters */
