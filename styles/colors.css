@@ -2,74 +2,104 @@
 /*  Variables                                         */
 /*----------------------------------------------------*/
 
-
-:root,
-:root[data-force-color-mode="light"] {
+:root {
 
 	color-scheme: light dark;
 
-	/*	Core colors */
-	--primary-value: 91, 66, 43;
-	--background: rgba(236, 231, 219, 1);
-
-	/*	Primary shades */
-	--primary: rgb(var(--primary-value));
-	--primary-2: rgba(var(--primary-value), 0.7);
-	--primary-3: rgba(var(--primary-value), 0.4);
-	--primary-4: rgba(var(--primary-value), 0.2);
-	--primary-5: rgba(var(--primary-value), 0.1);
-	--primary-6: rgba(var(--primary-value), 0.08);
-
-	/*	Other colors */
-	--type-text: var(--primary);
-	--shadow: rgba(55, 45, 36, 0.2);
+	/*	Core color values */
+	--core-black-value: 91, 66, 43;
+	--core-white-value: 236, 231, 219;
 
 	/*	Type color values */
-	--red-value: 255, 166, 138;
-	--white-value: 227, 218, 186;
-	--rose-value: 255, 185, 185;
-	--orange-value: 243, 206, 134;
-	--sparkling-value: 168, 207, 224;
-  --piquette-value: 212, 188, 232;
-  --co-fermented-value: 164, 219, 173;
+	--type-red-value: 255, 166, 138;
+	--type-white-value: 227, 218, 186;
+	--type-rose-value: 255, 185, 185;
+	--type-orange-value: 243, 206, 134;
+	--type-sparkling-value: 168, 207, 224;
+	--type-piquette-value: 212, 188, 232;
+	--type-co-fermented-value: 164, 219, 173;
 
 	/*	Tag background colors */
-	--red: rgb(var(--red-value));
-	--white: rgb(var(--white-value));
-	--rose: rgb(var(--rose-value));
-	--orange: rgb(var(--orange-value));
-	--sparkling: rgb(var(--sparkling-value));
-  --piquette: rgb(var(--piquette-value));
-  --co-fermented: rgb(var(--co-fermented-value));
+	--tag-red: rgb(var(--type-red-value));
+	--tag-white: rgb(var(--type-white-value));
+	--tag-rose: rgb(var(--type-rose-value));
+	--tag-orange: rgb(var(--type-orange-value));
+	--tag-sparkling: rgb(var(--type-sparkling-value));
+	--tag-piquette: rgb(var(--type-piquette-value));
+	--tag-co-fermented: rgb(var(--type-co-fermented-value));
 
-	/*	Tag hover colors */
-	--red-hover: rgba(var(--red-value), 0.5);
-	--white-hover: rgba(var(--white-value), 0.5);
-	--rose-hover: rgba(var(--rose-value), 0.5);
-	--orange-hover: rgba(var(--orange-value), 0.5);
-	--sparkling-hover: rgba(var(--sparkling-value), 0.5);
-  --piquette-hover: rgba(var(--piquette-value), 0.5);
-  --co-fermented-hover: rgba(var(--co-fermented-value), 0.5);
+	/*	Tag background hover colors */
+	--tag-red-hover: rgba(var(--type-red-value), 0.5);
+	--tag-white-hover: rgba(var(--type-white-value), 0.5);
+	--tag-rose-hover: rgba(var(--type-rose-value), 0.5);
+	--tag-orange-hover: rgba(var(--type-orange-value), 0.5);
+	--tag-sparkling-hover: rgba(var(--type-sparkling-value), 0.5);
+	--tag-piquette-hover: rgba(var(--type-piquette-value), 0.5);
+	--tag-co-fermented-hover: rgba(var(--type-co-fermented-value), 0.5);
 
 }
 
-/* Dark Color Scheme */
-@media (prefers-color-scheme: dark) {
+
+/* Light color scheme */
+
+@media screen and (prefers-color-scheme: light) {
+
 	:root {
-		--background: rgb(43, 40, 37);
-		--primary-value: 236, 231, 219;
+
+		/*	Core color values */
+		--background-value: var(--core-white-value);
+		--foreground-value: var(--core-black-value);
+
+		/*	Core colors */
+		--background: rgb(var(--background-value));
+		--foreground: rgb(var(--foreground-value));
+		--foreground-2: rgba(var(--foreground-value), 0.7);
+		--foreground-3: rgba(var(--foreground-value), 0.4);
+		--foreground-4: rgba(var(--foreground-value), 0.2);
+		--foreground-5: rgba(var(--foreground-value), 0.1);
+		--foreground-6: rgba(var(--foreground-value), 0.08);
+
+		/*	Other colors */
+		--type-text: var(--foreground);
+		--shadow: rgba(55, 45, 36, 0.2);
+
+		/* Search field cancel button color is set in the svg code */
+
+	}
+
+}
+
+/* Dark color scheme */
+
+@media screen and (prefers-color-scheme: dark) {
+
+	:root {
+
+		/*	Core color values */
+		--core-black-value: 43, 40, 37;
+		--background-value: var(--core-black-value);
+		--foreground-value: var(--core-white-value);
+
+		/*	Core colors */
+		--background: rgb(var(--background-value));
+		--foreground: rgb(var(--foreground-value));
+		--foreground-2: rgba(var(--foreground-value), 0.6);
+		--foreground-3: rgba(var(--foreground-value), 0.3);
+		--foreground-4: rgba(var(--foreground-value), 0.2);
+		--foreground-5: rgba(var(--foreground-value), 0.08);
+		--foreground-6: rgba(var(--foreground-value), 0.05);
+
+		/*	Other colors */
 		--type-text: var(--background);
 		--shadow: rgba(0, 0, 0, 0.3);
+
 	}
-	.search::-webkit-search-cancel-button{
+
+	.search::-webkit-search-cancel-button {
 		background-image: url('/assets/svgs/x-mark-outline-dark.svg');
+		/* Color value is set in the svg code */
 	}
-}
-:root[data-force-color-mode="dark"] {
-	--background: rgb(43, 40, 37);
-	--primary-value: 236, 231, 219;
-	--type-text: var(--background);
-	--shadow: rgba(0, 0, 0, 0.2);
+
 }
 
 
@@ -84,7 +114,7 @@ html {
 
 body {
   background-color: var(--background);
-	color: var(--primary);
+	color: var(--foreground);
 }
 
 nav {
@@ -101,22 +131,22 @@ nav {
 /*	Pagination */
 
 .pagination li {
-  /* background-color: var(--primary-5); */
-	border-color: var(--primary-3);
+  /* background-color: var(--foreground-5); */
+	border-color: var(--foreground-3);
 }
 
 .pagination li:hover {
-  /* background-color: var(--primary-3); */
-	border-color: var(--primary-2);
+  /* background-color: var(--foreground-3); */
+	border-color: var(--foreground-2);
 }
 
 .pagination li.active {
-  background-color: var(--primary);
+  background-color: var(--foreground);
 	color: var(--background);
 }
 
 .pagination li.active:hover {
-  background-color: var(--primary);
+  background-color: var(--foreground);
 	color: var(--background);
 }
 
@@ -128,7 +158,7 @@ nav {
 
 
 article > a {
-	background: var(--primary-6);
+	background: var(--foreground-6);
 }
 
 article > a:hover {
@@ -137,15 +167,15 @@ article > a:hover {
 
 /*	Style the placeholder image */
 article svg {
-	fill: var(--primary-4);
+	fill: var(--foreground-4);
 }
 
 article .store {
-	color: var(--primary-2);
+	color: var(--foreground-2);
 }
 
 article > .type {
-	background-color: var(--primary-5);
+	background-color: var(--foreground-5);
 	color: var(--type-text);
 }
 
@@ -153,31 +183,31 @@ article > .type {
 /*	Style type tags */
 
 article.red  > div.type {
-  background-color: var(--red)!important;
+  background-color: var(--tag-red)!important;
 }
 
 article.white  > div.type{
-  background-color: var(--white)!important;
+  background-color: var(--tag-white)!important;
 }
 
 article.rose > div.type{
-  background-color: var(--rose)!important;
+  background-color: var(--tag-rose)!important;
 }
 
 article.orange > div.type {
-  background-color: var(--orange)!important;
+  background-color: var(--tag-orange)!important;
 }
 
 article.sparkling  > div.type {
-  background-color: var(--sparkling)!important;
+  background-color: var(--tag-sparkling)!important;
 }
 
 article.piquette  > div.type {
-  background-color: var(--piquette)!important;
+  background-color: var(--tag-piquette)!important;
 }
 
 article.co-fermented  > div.type {
-  background-color: var(--co-fermented)!important;
+  background-color: var(--tag-co-fermented)!important;
 }
 
 
@@ -188,23 +218,23 @@ article.co-fermented  > div.type {
 
 
 .logo svg {
-	fill: var(--primary);
+	fill: var(--foreground);
 }
 
 h2 {
-	color: var(--primary);
+	color: var(--foreground);
 }
 
 .credits {
-	color: var(--primary-2);
+	color: var(--foreground-2);
 }
 
 .mobileButtons svg {
-	stroke: var(--primary);
+	stroke: var(--foreground);
 }
 
 .resultsButton {
-	background-color: var(--primary);
+	background-color: var(--foreground);
 	color: var(--background);
 }
 
@@ -212,37 +242,37 @@ h2 {
 /*	Text Input & Select */
 
 .search {
-	/* background-color: var(--primary-5); */
-	color: var(--primary);
+	/* background-color: var(--foreground-5); */
+	color: var(--foreground);
 	background-color: var(--background);
-	border-color: var(--primary-3);
+	border-color: var(--foreground-3);
 }
 
 .search:hover, .search:focus {
-	border-color: var(--primary-2) !important;
+	border-color: var(--foreground-2) !important;
 }
 
 ::placeholder {
-  color: var(--primary-2);
+  color: var(--foreground-2);
 }
 
 select {
 	background: none;
-	color: var(--primary);
+	color: var(--foreground);
 }
 
 /*	Chekbox Filters */
 
 .checkmark {
-	border-color: var(--primary-3);
+	border-color: var(--foreground-3);
 }
 
 .checkmark:hover {
-	border-color: var(--primary-2);
+	border-color: var(--foreground-2);
 }
 
 .checkboxFilter input:checked ~ .checkmark {
-  background-color: var(--primary);
+  background-color: var(--foreground);
 }
 
 .checkboxFilter .checkmark:after {
@@ -253,7 +283,7 @@ select {
 /*  Button Filters  */
 
  .buttonFilter label {
-	background-color: var(--primary-5);
+	background-color: var(--foreground-5);
 }
 
 .buttonFilter input:checked + label {
@@ -263,73 +293,73 @@ select {
 /* Styles for individual wine type filters */
 
 .buttonFilter input[value="Orange"]:checked + label {
-  background-color: var(--orange);
+  background-color: var(--tag-orange);
 }
 .buttonFilter input[value="Rosé"]:checked + label {
-  background-color: var(--rose);
+  background-color: var(--tag-rose);
 }
 .buttonFilter input[value="Red"]:checked + label {
-  background-color: var(--red);
+  background-color: var(--tag-red);
 }
 .buttonFilter input[value="White"]:checked + label {
-  background-color: var(--white);
+  background-color: var(--tag-white);
 }
 .buttonFilter input[value="Sparkling"]:checked + label {
-  background-color: var(--sparkling);
+  background-color: var(--tag-sparkling);
 }
 .buttonFilter input[value="Piquette"]:checked + label {
-  background-color: var(--piquette);
+  background-color: var(--tag-piquette);
 }
 .buttonFilter input[value="Co-Fermented"]:checked + label {
-  background-color: var(--co-fermented);
+  background-color: var(--tag-co-fermented);
 }
 
 /* Hover styles for individual wine type filters */
 
  @media (pointer:fine) {
 	.buttonFilter input[value="Orange"]:hover + label {
-	  background-color: var(--orange-hover);
+	  background-color: var(--tag-orange-hover);
 	}
 	.buttonFilter input[value="Rosé"]:hover + label {
-	  background-color: var(--rose-hover);
+	  background-color: var(--tag-rose-hover);
 	}
 	.buttonFilter input[value="Red"]:hover + label {
-	  background-color: var(--red-hover);
+	  background-color: var(--tag-red-hover);
 	}
 	.buttonFilter input[value="White"]:hover + label {
-	  background-color: var(--white-hover);
+	  background-color: var(--tag-white-hover);
 	}
 	.buttonFilter input[value="Sparkling"]:hover + label {
-	  background-color: var(--sparkling-hover);
+	  background-color: var(--tag-sparkling-hover);
 	}
   .buttonFilter input[value="Piquette"]:hover + label {
-	  background-color: var(--piquette-hover);
+	  background-color: var(--tag-piquette-hover);
 	}
   .buttonFilter input[value="Co-Fermented"]:hover + label {
-	  background-color: var(--co-fermented-hover);
+	  background-color: var(--tag-co-fermented-hover);
 	}
 }
 
 @media (pointer:fine) {
 	.buttonFilter input[value="Orange"]:checked:hover + label {
-		background-color: var(--orange);
+		background-color: var(--tag-orange);
 	}
 	.buttonFilter input[value="Rosé"]:checked:hover + label {
-		background-color: var(--rose);
+		background-color: var(--tag-rose);
 	}
 	.buttonFilter input[value="Red"]:checked:hover + label {
-		background-color: var(--red);
+		background-color: var(--tag-red);
 	}
 	.buttonFilter input[value="White"]:checked:hover + label {
-		background-color: var(--white);
+		background-color: var(--tag-white);
 	}
 	.buttonFilter input[value="Sparkling"]:checked:hover + label {
-		background-color: var(--sparkling);
+		background-color: var(--tag-sparkling);
 	}
 	.buttonFilter input[value="Piquette"]:checked:hover + label {
-		background-color: var(--piquette);
+		background-color: var(--tag-piquette);
 	}
 	.buttonFilter input[value="Co-Fermented"]:checked:hover + label {
-		background-color: var(--co-fermented);
+		background-color: var(--tag-co-fermented);
 	}
 }
