@@ -71,6 +71,14 @@ h3 {
   margin-bottom: var(--space-3);
 }
 
+@media only screen and (min-width: 800px) {
+
+  main {
+    padding-left: var(--space-3);
+  }
+
+}
+
 @media only screen and (max-width: 800px) {
 
   nav {
@@ -78,7 +86,6 @@ h3 {
 	}
 
   main {
-    /* padding-left: var(--space-3); */
     margin-top: 4rem;
 		padding: 1.125rem;
   }
