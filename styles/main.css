@@ -398,7 +398,7 @@ article > .type {
 /* Style filters panel for mobile */
 @media only screen and (max-width: 800px) {
 	#filters {
-		margin-bottom: 6rem;
+		padding-bottom: 6rem;
 		width: calc(100% - var(--space-10));
 	}
 }

@@ -97,15 +97,6 @@ html {
 	font-size: 16px;
 }
 
-@media only screen and (max-width: 800px) {
-  /* html {
-  	font-size: 18px;
-  } */
-  /* main {
-  	font-size: 16px;
-  } */
-}
-
 body {
 	font-family: var(--sans);
   font-weight: var(--regular);
