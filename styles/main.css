@@ -117,9 +117,9 @@ nav {
   /* nav {
     padding-right: var(--space-2);
   } */
-  /* main {
-    padding-left: var(--space-4);
-  } */
+  main {
+    padding-left: var(--space-3);
+  }
 }
 
 @media only screen and (max-width: 800px) {
