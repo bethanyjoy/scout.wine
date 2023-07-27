@@ -74,7 +74,7 @@ h3 {
 @media only screen and (min-width: 800px) {
 
   nav {
-		padding-right: var(--space-8);
+		padding-right: var(--space-9);
 	}
 
   main {
@@ -141,7 +141,7 @@ nav {
 	overscroll-behavior: contain;
 	position: sticky;
 	top: 0;
-  width: 18.75rem;
+  width: 19rem;
 }
 
 @media only screen and (max-width: 800px) {
