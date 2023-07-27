@@ -675,14 +675,14 @@ label:has(> input[value="undefined"]) {
 @media only screen and (max-width: 800px) {
 	.checkboxFilter label {
 		line-height: 1.4rem;
-    margin-bottom: var(--space-2);
-    padding: var(--space-1) 0 var(--space-1) var(--space-8);
+    margin-bottom: var(--space-1-5);
+    padding: var(--space-2) 0 var(--space-2) var(--space-8);
 	}
   .checkmark {
     /* border-width: 0.125rem; */
     height: 1.25rem;
     width: 1.25rem;
-    margin: 0.3rem 0;
+    margin: 0.55rem 0;
   }
   .checkboxFilter .checkmark:after {
     /* border-width: 0 0.15rem 0.15rem 0; */
@@ -721,7 +721,7 @@ label:has(> input[value="undefined"]) {
   .buttonFilter label {
   	border-radius: 5rem;
   	margin: var(--space-1-5) var(--space-2-5) var(--space-1-5) 0;
-  	padding: var(--space-2-5) var(--space-3-5);
+  	padding: var(--space-2-5) var(--space-3-5);``
   }
 }
 
