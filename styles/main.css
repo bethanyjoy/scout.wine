@@ -73,8 +73,12 @@ h3 {
 
 @media only screen and (min-width: 800px) {
 
+  nav {
+		padding-right: var(--space-8);
+	}
+
   main {
-    padding-left: var(--space-3);
+    padding-left: var(--space-2);
   }
 
 }
@@ -137,7 +141,7 @@ nav {
 	overscroll-behavior: contain;
 	position: sticky;
 	top: 0;
-  width: 19.25rem;
+  width: 19rem;
 }
 
 @media only screen and (max-width: 800px) {
