@@ -114,9 +114,6 @@ nav {
 }
 
 @media only screen and (min-width: 800px) {
-  /* nav {
-    padding-right: var(--space-2);
-  } */
   main {
     padding-left: var(--space-3);
   }
@@ -164,7 +161,6 @@ nav {
   padding: var(--space-2) var(--space-3);
 	text-decoration: none;
   border: solid;
-  /* border-width: 0.1rem; */
   border-width: 2px;
   cursor: pointer;
 }
@@ -177,11 +173,6 @@ nav {
 	cursor: default;
 }
 
-/* @media only screen and (max-width: 800px) {
-  .pagination li {
-    border-width: 0.125rem;
-  }
-} */
 
 @media only screen and (max-width: 800px) {
   .pagination {
@@ -331,46 +322,6 @@ article > .type {
 /*  Sidebar styles                                    */
 /*----------------------------------------------------*/
 
-#darkmode-button {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 5000;
-  background-color: #fff;
-  border-radius: 100em;
-  padding: 15px;
-}
-
-/* Visually hide the label text and Inject Light/Dark Mode Icon (based on checkbox value) */
-#toggle-darkmode {
-	display: none;
-  /* position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 5000; */
-}
-#toggle-darkmode + label > span {
-	position: absolute;
-	overflow: hidden;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	width: 1px;
-	margin: -1px;
-	padding: 0;
-	border: 0;
-  /* background-color: var(--primary);
-  border-radius: 100em;
-  padding: 10px; */
-}
-#toggle-darkmode + label:after {
-	font-size: 2rem;
-	content: "🌝";
-	cursor: pointer;
-}
-#toggle-darkmode:checked + label:after {
-	content: "🌚";
-}
-
 
 
 .logo svg {
@@ -398,7 +349,7 @@ article > .type {
 /* Style filters panel for mobile */
 @media only screen and (max-width: 800px) {
 	#filters {
-		padding-bottom: 6rem;
+		/* padding-bottom: 6rem; */
 		width: calc(100% - var(--space-10));
 	}
 }
@@ -408,6 +359,13 @@ article > .type {
 	#filters {
 		display: none;
 	}
+}
+
+@media only screen and (max-width: 800px) {
+  .credits {
+    display: block;
+    height: 7rem;
+  }
 }
 
 .filter {
