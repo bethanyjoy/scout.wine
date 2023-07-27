@@ -23,6 +23,7 @@
   --space-9: 2.25rem;    /* 36px */
   --space-10: 2.5rem;    /* 40px */
   --space-12: 3rem;      /* 48px */
+  --space-11: 3.25rem;   /* 52px */
   --space-14: 3.5rem;    /* 56px */
 
 }
@@ -36,6 +37,12 @@
 
 html {
 	font-size: 16px;
+}
+
+h1 {
+	display: block;
+  padding: 0;
+  margin: 0;
 }
 
 @media only screen and (max-width: 800px) {
@@ -55,13 +62,6 @@ a {
 
 p {
 	margin: 0;
-}
-
-h2 {
-	display: block;
-  padding: 0;
-  /* margin: 0.5rem 0; */
-  margin: 0;
 }
 
 h3 {
@@ -114,7 +114,7 @@ nav {
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-12) var(--space-10);
+  padding: var(--space-12) var(--space-10) var(--space-14) var(--space-10);
 	position: sticky;
 	top: 0;
   /* Relative */
@@ -369,7 +369,7 @@ article > .type {
 
 /* Hide logo & tagline on mobile */
 @media only screen and (max-width: 800px) {
-	.logo, h2 {
+	.logo, h1 {
 	  display: none !important;
 	}
 }
