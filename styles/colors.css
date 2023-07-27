@@ -63,7 +63,8 @@
 		--type-text: var(--foreground);
 		--shadow: rgba(55, 45, 36, 0.2);
 
-		/* Search field cancel button color is set in the svg code */
+		/*	SVG elements */
+		--x-mark: url('/assets/svgs/x-mark-outline-light.svg');
 
 	}
 
@@ -93,11 +94,9 @@
 		--type-text: var(--background);
 		--shadow: rgba(0, 0, 0, 0.3);
 
-	}
+		/*	SVG elements */
+		--x-mark: url('/assets/svgs/x-mark-outline-dark.svg');
 
-	.search::-webkit-search-cancel-button {
-		background-image: url('/assets/svgs/x-mark-outline-dark.svg');
-		/* Color value is set in the svg code */
 	}
 
 }
@@ -254,6 +253,10 @@ h2 {
 
 ::placeholder {
   color: var(--foreground-2);
+}
+
+.search::-webkit-search-cancel-button {
+	background-image: var(--x-mark);
 }
 
 select {

@@ -501,7 +501,6 @@ article > .type {
     -webkit-appearance: none;
     height: 1.25rem;
     width: 1.25rem;
-    background-image: url('/assets/svgs/x-mark-outline.svg');
     cursor: pointer;
 }
 
