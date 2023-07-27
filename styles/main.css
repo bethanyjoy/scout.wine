@@ -35,20 +35,10 @@
 /*----------------------------------------------------*/
 
 
-html {
-	font-size: 16px;
-}
-
 h1 {
 	display: block;
   padding: 0;
   margin: 0;
-}
-
-@media only screen and (max-width: 800px) {
-  html {
-  	font-size: 18px;
-  }
 }
 
 body {
@@ -318,7 +308,7 @@ article > .type {
   article > .type {
     left: var(--space-2-5);
     top: var(--space-2-5);
-    height: 1rem;
+    /* height: 1rem; */
   }
 
 }

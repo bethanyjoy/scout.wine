@@ -98,9 +98,12 @@ html {
 }
 
 @media only screen and (max-width: 800px) {
-  html {
+  /* html {
   	font-size: 18px;
-  }
+  } */
+  /* main {
+  	font-size: 16px;
+  } */
 }
 
 body {
@@ -180,14 +183,14 @@ article .type {
 
 @media only screen and (max-width: 800px) {
 
-  article .type {
+  /* article .type {
     font-family: var(--sans-wide);
     font-size: 0.725rem;
     line-height: 1rem;
-  }
+  } */
 
-  article .name {
-    -webkit-line-clamp: 3; /* number of lines to show */
-  }
+  /* article .name {
+    -webkit-line-clamp: 3;
+  } */
 
 }
