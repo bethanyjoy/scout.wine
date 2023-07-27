@@ -116,6 +116,10 @@ h3 {
   font-size: var(--size-body);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Sidebar */
 
 .buttonFilter label {

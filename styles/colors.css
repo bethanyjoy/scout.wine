@@ -116,6 +116,10 @@ body {
 	color: var(--foreground);
 }
 
+a {
+	color: inherit;
+}
+
 nav {
 	background-color: var(--background);
 }

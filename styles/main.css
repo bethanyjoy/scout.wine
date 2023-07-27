@@ -34,34 +34,14 @@
 /*  Core styles                                       */
 /*----------------------------------------------------*/
 
-
-h1 {
-	display: block;
-  padding: 0;
-  margin: 0;
-}
-
 body {
 	display: flex;
 }
 
-a {
-	color: inherit;
-	text-decoration: none;
-}
-
-p {
+p, h1, h3 {
+  display: block;
 	margin: 0;
-}
-
-h3 {
-  margin: 0 0 var(--space-3) 0;
-}
-
-@media only screen and (max-width: 800px) {
-  h3 {
-    margin: 0 0 var(--space-3-5) 0;
-  }
+  padding: 0;
 }
 
 ul {
@@ -69,9 +49,57 @@ ul {
 }
 
 
+/*----------------------------------------------------*/
+/*  Page spacing                                      */
+/*----------------------------------------------------*/
+
+nav {
+  gap: var(--space-8);
+  padding: var(--space-12) var(--space-10) var(--space-14) var(--space-10);
+}
+
+main {
+  padding: var(--space-10);
+	top: var(--space-0);
+}
+
+.list {
+	grid-gap: var(--space-10);
+}
+
+h3 {
+  margin-bottom: var(--space-3);
+}
+
+@media only screen and (max-width: 800px) {
+
+  nav {
+		padding: 1.125rem;
+	}
+
+  main {
+    /* padding-left: var(--space-3); */
+    margin-top: 4rem;
+		padding: 1.125rem;
+  }
+
+  .list {
+    gap: 1.125rem;
+  }
+
+  h3 {
+    margin-bottom: var(--space-3-5);
+  }
+
+}
+
+
+
+
+
 
 /*----------------------------------------------------*/
-/*  Page Layout                                       */
+/*  Core structure                                    */
 /*----------------------------------------------------*/
 
 
@@ -79,17 +107,14 @@ main {
 	flex: 1;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-10);
 	position: sticky;
 	text-align: left;
-	top: var(--space-0);
-	width: 100%;
+	/* width: 100%; */
 }
 
 .list {
 	align-items: stretch;
 	display: grid;
-	grid-gap: var(--space-10);
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 	/* overflow: hidden; */
 	width: auto;
@@ -100,23 +125,12 @@ nav {
   display: flex;
   flex-direction: column;
 	float: left;
-  gap: var(--space-8);
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
-  padding: var(--space-12) var(--space-10) var(--space-14) var(--space-10);
 	position: sticky;
 	top: 0;
-  /* Relative */
-	width: 17.5rem;
-  /* Freitzeit */
-  width: 19rem;
-}
-
-@media only screen and (min-width: 800px) {
-  main {
-    padding-left: var(--space-3);
-  }
+  width: 19.25rem;
 }
 
 @media only screen and (max-width: 800px) {
@@ -129,14 +143,6 @@ nav {
 		position: fixed;
 		width: 100%;
 		z-index: 100;
-	}
-	main {
-		margin-top: 4rem;
-    /* margin-top: 3.5rem; */
-		padding: 1.125rem;
-	}
-	.list {
-		gap: 1.125rem;
 	}
 }
 
@@ -453,21 +459,9 @@ article > .type {
   }
 }
 
-/* input[type=text]:hover, select:hover, textarea:hover {
-	border-color: var(--gray-500);
-} */
-
 ::placeholder {
   opacity: 1; /* Firefox */
 }
-
-/* Style the hover state */
-/*
-.search:hover, .search:focus {
-   border: 1px solid #009688;
-   background-color: white;
-}
-*/
 
 /* Style the clear icon */
 .search::-webkit-search-cancel-button{
@@ -496,50 +490,6 @@ article > .type {
     display: none;
   }
 }
-
-/* Select only */
-
-select {
-  outline: 0;
-	appearance: none;
-  -webkit-appearance: none;
-  border: none;
-  cursor: pointer;
-  /* padding-right: 8px; */
-  /* border-bottom: solid;
-  border-width: 0.125rem;
-  border-radius: 0px;
-  padding-bottom: 1px; */
-}
-
-select span {
-  border-bottom: solid;
-  /* border-width: 0.125rem; */
-  border-width: 2px;
-  border-radius: 0px;
-  padding-bottom: 1px;
-  border-color: var(--primary);
-  display: inline-block;
-}
-
-/* select {
-  padding: var(--space-2) var(--space-8) var(--space-2) var(--space-3-5);
-  border-radius: 0.5rem !important;
-  outline: 0;
-	appearance: none;
-	box-sizing: border-box;
-	display: inline-block;
-	-webkit-appearance: none;
-  border: solid;
-  border-radius: 0.25rem;
-  border-width: 0.1rem;
-  transition: 0.3s;
-} */
-
-/* select {
-	background: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.88668 5.00001L3.11353 5.00002C2.6821 5.00002 2.4532 4.49028 2.73982 4.16783L5.40218 1.17268C5.72041 0.814672 6.2798 0.814671 6.59803 1.17268L9.26039 4.16783C9.54701 4.49028 9.31811 5.00001 8.88668 5.00001ZM3.11353 7.00001H8.88668C9.31811 7.00001 9.54701 7.50975 9.26039 7.8322L6.59803 10.8273C6.2798 11.1854 5.72041 11.1854 5.40218 10.8273L2.73982 7.8322C2.4532 7.50975 2.6821 7.00001 3.11353 7.00001Z' fill='%236C6F75'/%3E%3C/svg%3E") no-repeat;
-	background-position: right var(--space-3) top 60%;
-} */
 
 
 /*----------------------------------------------------*/
@@ -663,7 +613,7 @@ label:has(> input[value="undefined"]) {
 	border-radius: 5rem;
 	cursor: pointer;
 	display: inline-block;
-	margin: var(--space-1) var(--space-0-5) var(--space-1) 0;
+	margin: var(--space-1) 0.325rem var(--space-1) 0;
 	padding: var(--space-1) var(--space-2);
 	user-select: none;
   white-space: nowrap;
@@ -678,7 +628,7 @@ label:has(> input[value="undefined"]) {
 @media only screen and (max-width: 800px) {
   .buttonFilter label {
   	border-radius: 5rem;
-  	margin: var(--space-1-5) var(--space-2-5) var(--space-1-5) 0;
+  	margin: var(--space-1-5) var(--space-2) var(--space-1-5) 0;
   	padding: var(--space-2-5) var(--space-3-5);``
   }
 }
@@ -688,9 +638,3 @@ label:has(> input[value="undefined"]) {
 	opacity: 0;
   position: absolute;
 }
-
-/*Style default active button state*/
-/*
-.buttonFilter input:checked + label {
-}
-*/
