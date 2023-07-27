@@ -128,7 +128,7 @@ nav {
 	}
 	nav {
 		height: auto;
-		padding: 1.125rem;;
+		padding: 1.125rem;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
@@ -398,7 +398,7 @@ article > .type {
 /* Style filters panel for mobile */
 @media only screen and (max-width: 800px) {
 	#filters {
-		margin-bottom: 4.5rem;
+		margin-bottom: 6rem;
 		width: calc(100% - var(--space-10));
 	}
 }
@@ -491,7 +491,7 @@ article > .type {
 @media only screen and (max-width: 800px) {
   .search {
     /* height: 48px; */
-    padding: var(--space-2-5) var(--space-3) var(--space-2-5) var(--space-3-5);
+    padding: var(--space-2-5) var(--space-3) var(--space-2-5) var(--space-4);
   }
 }
 
