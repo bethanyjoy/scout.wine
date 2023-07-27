@@ -23,11 +23,11 @@ jobs:
       - name: execute py script # run parse.py to get the latest data
         run: python parse.py
           
-      - name: execute los angeles py script # run parse.py to get the latest data
-        run: python losangeles/parse.py
+      # - name: execute los angeles py script # run parse.py to get the latest data
+      #   run: python losangeles/parse.py
           
-      - name: execute new york py script # run parse.py to get the latest data
-        run: python newyork/parse.py
+      # - name: execute new york py script # run parse.py to get the latest data
+      #  run: python newyork/parse.py
           
       - name: commit files
         run: |
