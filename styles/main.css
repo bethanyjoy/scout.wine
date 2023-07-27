@@ -224,10 +224,10 @@ article > a {
 	width: 100%;
 }
 
-@media only screen and (min-width: 1112px) {
-	/* article > a {
-		max-height: 300px;
-	} */
+@media only screen and (max-width: 1112px) {
+	article > a {
+		height: clamp(200px, 36vw, 260px);
+	}
 }
 
 article img {
