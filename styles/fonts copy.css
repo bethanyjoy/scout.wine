@@ -5,7 +5,7 @@
 
 /*	Relative */
 
-/* @font-face {
+@font-face {
   font-family: 'Relative';
   src:  url('../fonts/Relative/Relative-Book.woff2') format('woff2'),
         url('../fonts/Relative/Relative-Book.woff') format('woff'),
@@ -36,62 +36,17 @@
 				url('../fonts/Relative/Relative-12Pitch.tff') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-} */
+}
 
 
 /*	Freizeit */
 
-/* @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-ExtraBold.otf') format('opentype');
-	font-weight: 700;
-	font-style: normal;
-} */
 @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Bold.otf') format('opentype');
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Medium.otf') format('opentype');
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Regular.otf') format('opentype');
-	font-weight: 400;
-	font-style: normal;
-}
-/* @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Light.otf') format('opentype');
-	font-weight: 300;
-	font-style: normal;
-}
-@font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-ExtraLight.otf') format('opentype');
-	font-weight: 200;
-	font-style: normal;
-}
-@font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Thin.otf') format('opentype');
-	font-weight: 100;
-	font-style: normal;
-} */
-
-
-
-/* @font-face {
   font-family: 'Freizeit 120';
   src:  url('../fonts/Freizeit/Freizeit120-ExtraBold.otf') format('opentype');
 	font-weight: 700;
 	font-style: normal;
-} */
+}
 @font-face {
   font-family: 'Freizeit 120';
   src:  url('../fonts/Freizeit/Freizeit120-Bold.otf') format('opentype');
@@ -110,7 +65,7 @@
 	font-weight: 400;
 	font-style: normal;
 }
-/* @font-face {
+@font-face {
   font-family: 'Freizeit 120';
   src:  url('../fonts/Freizeit/Freizeit120-Light.otf') format('opentype');
 	font-weight: 300;
@@ -127,10 +82,10 @@
   src:  url('../fonts/Freizeit/Freizeit120-Thin.otf') format('opentype');
 	font-weight: 100;
 	font-style: normal;
-} */
+}
 
 
-/* @font-face {
+@font-face {
   font-family: 'Freizeit 140';
   src:  url('../fonts/Freizeit/Freizeit140-ExtraBold.otf') format('opentype');
 	font-weight: 700;
@@ -171,11 +126,52 @@
   src:  url('../fonts/Freizeit/Freizeit140-Thin.otf') format('opentype');
 	font-weight: 100;
 	font-style: normal;
-} */
+}
 
 
 
-
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-ExtraBold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-Bold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-ExtraLight.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+@font-face {
+  font-family: 'Freizeit';
+  src:  url('../fonts/Freizeit/FreizeitTrial-Thin.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
 
 
 /*----------------------------------------------------*/
@@ -185,6 +181,11 @@
 
 :root {
 
+	/*	Font size */
+	--body: 1rem;
+	--medium: 0.95rem;
+  --small: 0.875rem;
+
 	/*	Font stacks */
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--sans: 'Relative', var(--fallback);
@@ -192,23 +193,7 @@
 
   --sans-100: 'Freizeit', var(--fallback);
   --sans-120: 'Freizeit 120', var(--fallback);
-  --sans-140: 'Freizeit 140', var(--fallback);
-
-  /*	Font weight */
-  /* --bold: 700;
-  --medium: 300;
-	--regular: 300; */
-
-  --weight-bold: 600;
-  --weight-medium: 500;
-	--weight-regular: 400;
-
-  /*	Font size */
-	--size-body: 1rem;
-	--size-medium: 0.95rem;
-  --size-small: 0.875rem;
-  --size-xsmall: 0.85rem;
-  --size-xxsmall: 0.8rem;
+  --sans-140: 'Freizeit 120', var(--fallback);
 
 }
 
@@ -219,100 +204,52 @@
 /*----------------------------------------------------*/
 
 
-/* Fonts */
-
-body {
-	font-family: var(--sans-100);
-}
-
-h2, h3, .buttonFilter label, article .type, article .price {
-  font-family: var(--sans-120);
-}
-
-/* Font weights */
-
-body {
-  font-weight: var(--weight-regular);
-}
-
-article .name, h2 {
-  font-weight: var(--weight-medium);
-}
-
-h3 {
-  font-weight: var(--weight-bold);
-}
-
-/* Font sizes */
-
-body, h3 {
-	font-size: var(--size-body);
-}
-
-h2 {
-  font-size: 1.45rem;
-}
-
-article .store {
-  font-size: var(--size-medium);
-}
-
-.credits, .buttonFilter label {
-	font-size: var(--size-small);
-}
-
-article .price {
-  font-size: var(--size-xsmall);
-}
-
-article .type {
-  font-size: var(--size-xxsmall);
-}
-
-
-
-/* Line height */
-
-h2 {
-	line-height: 1.9rem;
-}
-
-article .type {
-	line-height: 1.125rem;
-}
-
-article .name {
-	line-height: 1.3rem;
-}
-
-/* label {
-  line-height: 1rem;
-} */
-
 /* Core styles */
 
 body {
+	font-family: var(--sans-100);
+	font-size: var(--body);
+	font-weight: 400;
 	/* -webkit-font-smoothing: antialiased; */
 }
 
+h2 {
+  font-family: var(--sans-120);
+	line-height: 1.9rem;
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
 h3 {
+	font-family: var(--sans-120);
+	font-size: 1rem;
+	font-weight: 600;
   /* text-transform: uppercase;
   letter-spacing: .05em; */
 }
 
 
-
-
-
-
-
 /* Wine card styles */
 
+article .name {
+	font-family: var(--sans-100);
+	font-weight: 500;
+}
+
 article .price {
-  padding-top: 0.125rem;
+	font-family: var(--sans-140);
+  font-size: var(--medium);
+  font-size: 0.8rem;
+}
+
+article .type {
+	font-family: var(--sans-140);
+	font-size: 0.8rem;
+	line-height: 1.125rem;
 }
 
 article .name {
+	line-height: 1.2rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2; /* number of lines to show */
@@ -322,12 +259,35 @@ article .name {
 }
 
 article .store {
+	font-size: var(--medium);
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 1; /* number of lines to show */
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  font-weight: 400;
+}
+
+
+/*  Sidebar styles  */
+
+/* h2 span {
+  font-weight: 500;
+} */
+
+.search {
+	font-weight: 400;
+}
+
+ .buttonFilter label {
+	font-family: var(--sans-140);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.credits {
+	font-size: var(--small);
 }
 
 .credits a {

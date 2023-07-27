@@ -117,7 +117,19 @@ nav {
   padding: var(--space-12) var(--space-10);
 	position: sticky;
 	top: 0;
+  /* Relative */
 	width: 17.5rem;
+  /* Freitzeit */
+  width: 19rem;
+}
+
+@media only screen and (min-width: 800px) {
+  /* nav {
+    padding-right: var(--space-2);
+  } */
+  main {
+    padding-left: var(--space-3);
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -161,7 +173,8 @@ nav {
   padding: var(--space-2) var(--space-3);
 	text-decoration: none;
   border: solid;
-  border-width: 0.1rem;
+  /* border-width: 0.1rem; */
+  border-width: 2px;
   cursor: pointer;
 }
 
@@ -264,6 +277,10 @@ article .text {
 	margin-top: var(--space-3);
 	overflow: hidden;
 }
+
+/* article .price {
+  padding-top: 0.2rem;
+} */
 
 p.maker,
 p.region {
@@ -450,7 +467,8 @@ article > .type {
 	-webkit-appearance: none;
   border: solid;
   border-radius: 0.25rem;
-  border-width: 0.1rem;
+  /* border-width: 0.1rem; */
+  border-width: 2px;
   transition-duration: 0.3s;
   transition-property: border-color;
 }
@@ -521,7 +539,8 @@ select {
 
 select span {
   border-bottom: solid;
-  border-width: 0.125rem;
+  /* border-width: 0.125rem; */
+  border-width: 2px;
   border-radius: 0px;
   padding-bottom: 1px;
   border-color: var(--primary);
@@ -577,7 +596,8 @@ select span {
 .checkmark {
 	border: solid;
 	border-radius: 0.25rem;
-	border-width: 0.1rem;
+	/* border-width: 0.1rem; */
+  border-width: 2px;
 	box-sizing: border-box;
 	height: 1rem;
 	left: 0;
@@ -587,6 +607,7 @@ select span {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   transition: 0.3s;
+  margin: 1px 0;
 }
 
 .checkboxFilter .checkmark:after {
@@ -618,7 +639,8 @@ select span {
 
 /* Style the checkmark/indicator */
 .checkboxFilter .checkmark:after {
-  border-width: 0 0.1rem 0.1rem 0;
+  /* border-width: 0 0.1rem 0.1rem 0; */
+  border-width: 0 2px 2px 0;
 	height: 0.625rem;
   left: 0.3rem;
   top: 0.063rem;
@@ -645,7 +667,8 @@ label:has(> input[value="undefined"]) {
     width: 1.25rem;
   }
   .checkboxFilter .checkmark:after {
-    border-width: 0 0.15rem 0.15rem 0;
+    /* border-width: 0 0.15rem 0.15rem 0; */
+    border-width: 0 2px 2px 0;
   	height: 0.8rem;
     left: 0.365rem;
     top: 0.077rem;

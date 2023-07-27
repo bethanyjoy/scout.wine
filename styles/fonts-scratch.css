@@ -1,0 +1,71 @@
+/*----------------------------------------------------*/
+/*  Styles                                            */
+/*----------------------------------------------------*/
+
+
+/* Fonts */
+
+body {
+	font-family: var(--sans-100);
+}
+
+article .type,  .buttonFilter label {
+  font-family: var(--sans-120);
+}
+
+/* Font weights */
+
+body, h2 {
+  font-weight: var(--regular);
+}
+
+h3 {
+  font-weight: var(--bold);
+}
+
+article .name {
+  font-weight: var(--medium);
+}
+
+/* Font sizes */
+
+body {
+	font-size: var(--body);
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3, article .type, .credits {
+	font-size: var(--small);
+}
+
+article .store, article .price {
+  font-size: var(--medium);
+}
+
+/* Line height */
+
+h2 {
+	line-height: 1.9rem;
+}
+
+article .type {
+	line-height: 1.125rem;
+}
+
+article .name {
+	line-height: 1.2rem;
+}
+
+/* Core styles */
+
+body {
+	/* -webkit-font-smoothing: antialiased; */
+}
+
+h3 {
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
