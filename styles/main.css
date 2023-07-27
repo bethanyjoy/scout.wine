@@ -128,7 +128,7 @@ nav {
 	}
 	nav {
 		height: auto;
-		padding: 1.12rem;;
+		padding: 1.125rem;;
 		position: fixed;
 		width: 100%;
 		z-index: 100;
@@ -136,10 +136,10 @@ nav {
 	main {
 		margin-top: 4rem;
     /* margin-top: 3.5rem; */
-		padding: 1.12rem;
+		padding: 1.125rem;
 	}
 	.list {
-		gap: 1.12rem;
+		gap: 1.125rem;
 	}
 }
 
