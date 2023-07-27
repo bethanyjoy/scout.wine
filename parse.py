@@ -172,8 +172,8 @@ for url in eversonroyce_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -311,8 +311,8 @@ for url in fancyfree_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -540,8 +540,8 @@ for url in flaskandfield_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -708,8 +708,8 @@ for url in heavensmarket_urls:
 			# 	maker = 'Amplify'
 			# elif 'broc' in title_string:
 				# 	maker = 'Broc Cellars'
-			# elif 'cantinagiardino' in title_string:
-			# 	maker = 'Cantina Giardino'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
 			# elif 'cirelli' in title_string:
 			# 	maker = 'Cirelli'
 			# elif 'dueterre' in title_string:
@@ -930,8 +930,8 @@ for url in helens_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -1166,8 +1166,8 @@ for url in highlandpark_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -1372,8 +1372,8 @@ for url in kamp_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -1582,8 +1582,8 @@ for url in silverlake_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -1751,8 +1751,8 @@ for url in sipsnack_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
@@ -1934,8 +1934,8 @@ for url in vinovoreeaglerock_urls:
 			# 	maker = 'Amplify'
 			# elif 'broc' in title_string:
 				# 	maker = 'Broc Cellars'
-			# elif 'cantinagiardino' in title_string:
-			# 	maker = 'Cantina Giardino'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
 			# elif 'cirelli' in title_string:
 			# 	maker = 'Cirelli'
 			# elif 'dueterre' in title_string:
@@ -2116,8 +2116,8 @@ for url in vinovoresilverlake_urls:
 			# 	maker = 'Amplify'
 			# elif 'broc' in title_string:
 				# 	maker = 'Broc Cellars'
-			# elif 'cantinagiardino' in title_string:
-			# 	maker = 'Cantina Giardino'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
 			# elif 'cirelli' in title_string:
 			# 	maker = 'Cirelli'
 			# elif 'dueterre' in title_string:
@@ -2266,8 +2266,8 @@ for url in wineandeggs_urls:
 		# 	maker = 'Amplify'
 		# elif 'broc' in title_string:
 			# 	maker = 'Broc Cellars'
-		# elif 'cantinagiardino' in title_string:
-		# 	maker = 'Cantina Giardino'
+		elif 'cantinagiardino' in title_string:
+			maker = 'Cantina Giardino'
 		# elif 'cirelli' in title_string:
 		# 	maker = 'Cirelli'
 		# elif 'dueterre' in title_string:
