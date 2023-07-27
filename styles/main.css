@@ -141,7 +141,7 @@ nav {
 	overscroll-behavior: contain;
 	position: sticky;
 	top: 0;
-  width: 19rem;
+  width: 18.75rem;
 }
 
 @media only screen and (max-width: 800px) {
