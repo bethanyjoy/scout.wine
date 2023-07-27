@@ -166,26 +166,26 @@ for url in eversonroyce_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -206,37 +206,40 @@ for url in eversonroyce_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -302,26 +305,26 @@ for url in fancyfree_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -342,37 +345,40 @@ for url in fancyfree_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -528,26 +534,26 @@ for url in flaskandfield_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -568,37 +574,40 @@ for url in flaskandfield_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -693,26 +702,26 @@ for url in heavensmarket_urls:
 			# maker
 			if 'lewandowski' in title_string:
 				maker = 'Ruth Lewandowski'
-			elif 'amevive' in title_string:
-				maker = 'Amevive'
-			elif 'amplify' in title_string:
-				maker = 'Amplify'
-			elif 'broc' in title_string:
-				maker = 'Broc Cellars'
-			elif 'cantinagiardino' in title_string:
-				maker = 'Cantina Giardino'
-			elif 'cirelli' in title_string:
-				maker = 'Cirelli'
-			elif 'dueterre' in title_string:
-				maker = 'Due Terre'
-			elif 'florez' in title_string:
-				maker = 'Florez'
-			elif 'folkmachine' in title_string:
-				maker = 'Folk Machine'
+			# elif 'amevive' in title_string:
+			# 	maker = 'Amevive'
+			# elif 'amplify' in title_string:
+			# 	maker = 'Amplify'
+			# elif 'broc' in title_string:
+				# 	maker = 'Broc Cellars'
+			# elif 'cantinagiardino' in title_string:
+			# 	maker = 'Cantina Giardino'
+			# elif 'cirelli' in title_string:
+			# 	maker = 'Cirelli'
+			# elif 'dueterre' in title_string:
+			# 	maker = 'Due Terre'
+			# elif 'florez' in title_string:
+			# 	maker = 'Florez'
+			# elif 'folkmachine' in title_string:
+			# 	maker = 'Folk Machine'
 			elif 'furlani' in title_string:
 				maker = 'Furlani'
-			elif 'gentle folk' in title_string:
-				maker = 'Gentle Folk'
+			# elif 'gentle folk' in title_string:
+			# 	maker = 'Gentle Folk'
 			elif 'goodboywine' in title_string:
 				maker = 'Good Boy Wine'
 			elif 'gutoggau' in title_string:
@@ -733,37 +742,40 @@ for url in heavensmarket_urls:
 				maker = 'Meinklang'
 			elif 'nestarec' in title_string:
 				maker = 'Nestarec'
-			elif 'oldwestminster' in title_string:
-				maker = 'Old Westminster'
+			# elif 'oldwestminster' in title_string:
+			# 	maker = 'Old Westminster'
 			elif 'patricksullivan' in title_string:
 				maker = 'Patrick Sullivan'
 			elif 'purity' in title_string:
 				maker = 'Purity'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
 			elif 'scottyboy' in title_string:
 				maker = 'Scotty Boy'
 			elif 'scotty-boy' in title_string:
 				maker = 'Scotty Boy'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
-			elif 'subjecttochange' in title_string:
-				maker = 'Subject to Change'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
+			# elif 'subjecttochange' in title_string:
+			# 	maker = 'Subject to Change'
 			elif 'swick' in title_string:
 				maker = 'Swick'
 			elif 'wavywines' in title_string:
 				maker = 'Wavy Wines'
-			elif 'wildarcfarm' in title_string:
-				maker = 'Wild Arc Farm'
+			# elif 'wildarcfarm' in title_string:
+				# 	maker = 'Wild Arc Farm'
 			elif 'wonderwerk' in title_string:
 				maker = 'Wonderwerk'
 			else:
 				maker ='undefined'
 
+			maker_class = maker.strip().lower()
+
 			# add wine to list
 			wines.append({
 				'Title': title,
 				'Maker': maker,
+				'Maker_class': maker_class,
 				'Price': price,
 				'Link': link,
 				'Image': image,
@@ -912,26 +924,26 @@ for url in helens_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -952,37 +964,40 @@ for url in helens_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -1145,26 +1160,26 @@ for url in highlandpark_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -1185,37 +1200,40 @@ for url in highlandpark_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -1348,26 +1366,26 @@ for url in kamp_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -1388,37 +1406,40 @@ for url in kamp_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -1555,26 +1576,26 @@ for url in silverlake_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -1595,37 +1616,40 @@ for url in silverlake_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -1721,26 +1745,26 @@ for url in sipsnack_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -1761,37 +1785,40 @@ for url in sipsnack_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,
@@ -1901,26 +1928,26 @@ for url in vinovoreeaglerock_urls:
 			# maker
 			if 'lewandowski' in title_string:
 				maker = 'Ruth Lewandowski'
-			elif 'amevive' in title_string:
-				maker = 'Amevive'
-			elif 'amplify' in title_string:
-				maker = 'Amplify'
-			elif 'broc' in title_string:
-				maker = 'Broc Cellars'
-			elif 'cantinagiardino' in title_string:
-				maker = 'Cantina Giardino'
-			elif 'cirelli' in title_string:
-				maker = 'Cirelli'
-			elif 'dueterre' in title_string:
-				maker = 'Due Terre'
-			elif 'florez' in title_string:
-				maker = 'Florez'
-			elif 'folkmachine' in title_string:
-				maker = 'Folk Machine'
+			# elif 'amevive' in title_string:
+			# 	maker = 'Amevive'
+			# elif 'amplify' in title_string:
+			# 	maker = 'Amplify'
+			# elif 'broc' in title_string:
+				# 	maker = 'Broc Cellars'
+			# elif 'cantinagiardino' in title_string:
+			# 	maker = 'Cantina Giardino'
+			# elif 'cirelli' in title_string:
+			# 	maker = 'Cirelli'
+			# elif 'dueterre' in title_string:
+			# 	maker = 'Due Terre'
+			# elif 'florez' in title_string:
+			# 	maker = 'Florez'
+			# elif 'folkmachine' in title_string:
+			# 	maker = 'Folk Machine'
 			elif 'furlani' in title_string:
 				maker = 'Furlani'
-			elif 'gentle folk' in title_string:
-				maker = 'Gentle Folk'
+			# elif 'gentle folk' in title_string:
+			# 	maker = 'Gentle Folk'
 			elif 'goodboywine' in title_string:
 				maker = 'Good Boy Wine'
 			elif 'gutoggau' in title_string:
@@ -1941,37 +1968,40 @@ for url in vinovoreeaglerock_urls:
 				maker = 'Meinklang'
 			elif 'nestarec' in title_string:
 				maker = 'Nestarec'
-			elif 'oldwestminster' in title_string:
-				maker = 'Old Westminster'
+			# elif 'oldwestminster' in title_string:
+			# 	maker = 'Old Westminster'
 			elif 'patricksullivan' in title_string:
 				maker = 'Patrick Sullivan'
 			elif 'purity' in title_string:
 				maker = 'Purity'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
 			elif 'scottyboy' in title_string:
 				maker = 'Scotty Boy'
 			elif 'scotty-boy' in title_string:
 				maker = 'Scotty Boy'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
-			elif 'subjecttochange' in title_string:
-				maker = 'Subject to Change'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
+			# elif 'subjecttochange' in title_string:
+			# 	maker = 'Subject to Change'
 			elif 'swick' in title_string:
 				maker = 'Swick'
 			elif 'wavywines' in title_string:
 				maker = 'Wavy Wines'
-			elif 'wildarcfarm' in title_string:
-				maker = 'Wild Arc Farm'
+			# elif 'wildarcfarm' in title_string:
+				# 	maker = 'Wild Arc Farm'
 			elif 'wonderwerk' in title_string:
 				maker = 'Wonderwerk'
 			else:
 				maker ='undefined'
 
+			maker_class = maker.strip().lower()
+
 			# add wine to list
 			wines.append({
 				'Title': title,
 				'Maker': maker,
+				'Maker_class': maker_class,
 				'Price': price,
 				'Link': link,
 				'Image': image,
@@ -2080,26 +2110,26 @@ for url in vinovoresilverlake_urls:
 			# maker
 			if 'lewandowski' in title_string:
 				maker = 'Ruth Lewandowski'
-			elif 'amevive' in title_string:
-				maker = 'Amevive'
-			elif 'amplify' in title_string:
-				maker = 'Amplify'
-			elif 'broc' in title_string:
-				maker = 'Broc Cellars'
-			elif 'cantinagiardino' in title_string:
-				maker = 'Cantina Giardino'
-			elif 'cirelli' in title_string:
-				maker = 'Cirelli'
-			elif 'dueterre' in title_string:
-				maker = 'Due Terre'
-			elif 'florez' in title_string:
-				maker = 'Florez'
-			elif 'folkmachine' in title_string:
-				maker = 'Folk Machine'
+			# elif 'amevive' in title_string:
+			# 	maker = 'Amevive'
+			# elif 'amplify' in title_string:
+			# 	maker = 'Amplify'
+			# elif 'broc' in title_string:
+				# 	maker = 'Broc Cellars'
+			# elif 'cantinagiardino' in title_string:
+			# 	maker = 'Cantina Giardino'
+			# elif 'cirelli' in title_string:
+			# 	maker = 'Cirelli'
+			# elif 'dueterre' in title_string:
+			# 	maker = 'Due Terre'
+			# elif 'florez' in title_string:
+			# 	maker = 'Florez'
+			# elif 'folkmachine' in title_string:
+			# 	maker = 'Folk Machine'
 			elif 'furlani' in title_string:
 				maker = 'Furlani'
-			elif 'gentle folk' in title_string:
-				maker = 'Gentle Folk'
+			# elif 'gentle folk' in title_string:
+			# 	maker = 'Gentle Folk'
 			elif 'goodboywine' in title_string:
 				maker = 'Good Boy Wine'
 			elif 'gutoggau' in title_string:
@@ -2120,37 +2150,40 @@ for url in vinovoresilverlake_urls:
 				maker = 'Meinklang'
 			elif 'nestarec' in title_string:
 				maker = 'Nestarec'
-			elif 'oldwestminster' in title_string:
-				maker = 'Old Westminster'
+			# elif 'oldwestminster' in title_string:
+			# 	maker = 'Old Westminster'
 			elif 'patricksullivan' in title_string:
 				maker = 'Patrick Sullivan'
 			elif 'purity' in title_string:
 				maker = 'Purity'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
 			elif 'scottyboy' in title_string:
 				maker = 'Scotty Boy'
 			elif 'scotty-boy' in title_string:
 				maker = 'Scotty Boy'
-			elif 'stagiaire' in title_string:
-				maker = 'Stagiaire'
-			elif 'subjecttochange' in title_string:
-				maker = 'Subject to Change'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
+			# elif 'subjecttochange' in title_string:
+			# 	maker = 'Subject to Change'
 			elif 'swick' in title_string:
 				maker = 'Swick'
 			elif 'wavywines' in title_string:
 				maker = 'Wavy Wines'
-			elif 'wildarcfarm' in title_string:
-				maker = 'Wild Arc Farm'
+			# elif 'wildarcfarm' in title_string:
+				# 	maker = 'Wild Arc Farm'
 			elif 'wonderwerk' in title_string:
 				maker = 'Wonderwerk'
 			else:
 				maker ='undefined'
 
+			maker_class = maker.strip().lower()
+
 			# add wine to list
 			wines.append({
 				'Title': title,
 				'Maker': maker,
+				'Maker_class': maker_class,
 				'Price': price,
 				'Link': link,
 				'Image': image,
@@ -2227,26 +2260,26 @@ for url in wineandeggs_urls:
 		# maker
 		if 'lewandowski' in title_string:
 			maker = 'Ruth Lewandowski'
-		elif 'amevive' in title_string:
-			maker = 'Amevive'
-		elif 'amplify' in title_string:
-			maker = 'Amplify'
-		elif 'broc' in title_string:
-			maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		elif 'cirelli' in title_string:
-			maker = 'Cirelli'
-		elif 'dueterre' in title_string:
-			maker = 'Due Terre'
-		elif 'florez' in title_string:
-			maker = 'Florez'
-		elif 'folkmachine' in title_string:
-			maker = 'Folk Machine'
+		# elif 'amevive' in title_string:
+		# 	maker = 'Amevive'
+		# elif 'amplify' in title_string:
+		# 	maker = 'Amplify'
+		# elif 'broc' in title_string:
+			# 	maker = 'Broc Cellars'
+		# elif 'cantinagiardino' in title_string:
+		# 	maker = 'Cantina Giardino'
+		# elif 'cirelli' in title_string:
+		# 	maker = 'Cirelli'
+		# elif 'dueterre' in title_string:
+		# 	maker = 'Due Terre'
+		# elif 'florez' in title_string:
+		# 	maker = 'Florez'
+		# elif 'folkmachine' in title_string:
+		# 	maker = 'Folk Machine'
 		elif 'furlani' in title_string:
 			maker = 'Furlani'
-		elif 'gentle folk' in title_string:
-			maker = 'Gentle Folk'
+		# elif 'gentle folk' in title_string:
+		# 	maker = 'Gentle Folk'
 		elif 'goodboywine' in title_string:
 			maker = 'Good Boy Wine'
 		elif 'gutoggau' in title_string:
@@ -2267,37 +2300,40 @@ for url in wineandeggs_urls:
 			maker = 'Meinklang'
 		elif 'nestarec' in title_string:
 			maker = 'Nestarec'
-		elif 'oldwestminster' in title_string:
-			maker = 'Old Westminster'
+		# elif 'oldwestminster' in title_string:
+		# 	maker = 'Old Westminster'
 		elif 'patricksullivan' in title_string:
 			maker = 'Patrick Sullivan'
 		elif 'purity' in title_string:
 			maker = 'Purity'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
 		elif 'scottyboy' in title_string:
 			maker = 'Scotty Boy'
 		elif 'scotty-boy' in title_string:
 			maker = 'Scotty Boy'
-		elif 'stagiaire' in title_string:
-			maker = 'Stagiaire'
-		elif 'subjecttochange' in title_string:
-			maker = 'Subject to Change'
+		# elif 'stagiaire' in title_string:
+			# 	maker = 'Stagiaire'
+		# elif 'subjecttochange' in title_string:
+		# 	maker = 'Subject to Change'
 		elif 'swick' in title_string:
 			maker = 'Swick'
 		elif 'wavywines' in title_string:
 			maker = 'Wavy Wines'
-		elif 'wildarcfarm' in title_string:
-			maker = 'Wild Arc Farm'
+		# elif 'wildarcfarm' in title_string:
+			# 	maker = 'Wild Arc Farm'
 		elif 'wonderwerk' in title_string:
 			maker = 'Wonderwerk'
 		else:
 			maker ='undefined'
 
+		maker_class = maker.strip().lower()
+
 		# add wine to list
 		wines.append({
 			'Title': title,
 			'Maker': maker,
+			'Maker_class': maker_class,
 			'Price': price,
 			'Link': link,
 			'Image': image,

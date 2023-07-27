@@ -10,7 +10,7 @@
       $.each(data.wine, function(i, f) {
 
         var tblRow =
-        "<article class=" + "'" + f.Type_class + " " + f.Store_class + "'>" +
+        "<article class=" + "'" + f.Type_class + " " + f.Store_class + " " + f.Maker_class + "'>" +
           "<a class=" + f.Image_type + " href=" + f.Link + ">" +
             "<img src=" + f.Image + ">" +
             "<svg width='230' height='800' viewBox='0 0 230 800' xmlns='http://www.w3.org/2000/svg'>" +
