@@ -92,8 +92,15 @@
      var x = document.getElementById("sidebar");
        x.style.height = "100vh";
      var x = document.getElementById("main");
-       x.style.display = "hidden"
+        // x.style.position = 'fixed';
+        // x.style.top = `-${window.scrollY}px`;
+
+       x.style.visibility = "hidden"
+       // x.style.height = "0"
+       // x.style.overflow = "hidden"
+       // x.style.display = "hidden"
    }
+
 
    function hideSidebar() {
      var x = document.getElementById("filters");
@@ -105,7 +112,14 @@
        var x = document.getElementById("sidebar");
          x.style.height = "auto";
      var x = document.getElementById("main");
-         x.style.display = "block"
+        // const scrollY = x.style.top;
+        // x.style.position = '';
+        // x.style.top = '';
+        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+         x.style.visibility = "visible"
+         // x.style.height = "auto"
+         // x.style.overflow = "auto"
      }
 
   </script>

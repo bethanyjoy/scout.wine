@@ -338,14 +338,9 @@ article > .type {
 /*----------------------------------------------------*/
 
 
-
-.logo svg {
-	max-width: 8.2rem;
-}
-
 /* Hide logo & tagline on mobile */
 @media only screen and (max-width: 1112px) {
-	.logo, h1 {
+	h1 {
 	  display: none !important;
 	}
 }
@@ -376,12 +371,12 @@ article > .type {
 	}
 }
 
-@media only screen and (max-width: 1112px) {
+/* @media only screen and (max-width: 1112px) {
   .credits {
     display: block;
     height: 7rem;
   }
-}
+} */
 
 .filter {
 	margin-bottom: var(--space-8);;
