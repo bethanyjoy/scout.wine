@@ -239,12 +239,12 @@ article img {
   width: 100%;
 }
 
-article .noimage img,
-article .hasimage svg {
+article .noimage img.photo,
+article .hasimage img.placeholder {
   display: none;
 }
 
-article svg {
+img.placeholder {
   object-fit: scale-down;
   padding: 2.5vw 0;
   width: 100%;
@@ -253,7 +253,7 @@ article svg {
 }
 
 @media only screen and (max-width: 1112px) {
-	article svg {
+	article img.placeholder  {
 		padding: 4vw 0;
 	}
 }

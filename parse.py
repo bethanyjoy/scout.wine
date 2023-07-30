@@ -1897,6 +1897,8 @@ for url in vinovoreeaglerock_urls:
 			print()
 		elif 'stopper' in title_string:
 			print()
+		elif 'tasting' in title_string:
+			print()
 
 		# parse wine items
 		else:
@@ -2079,6 +2081,8 @@ for url in vinovoresilverlake_urls:
 			print()
 		elif 'stopper' in title_string:
 			print()
+		elif 'tasting' in title_string:
+			print()
 
 		# parse wine items
 		else:
@@ -2087,11 +2091,15 @@ for url in vinovoresilverlake_urls:
 			title = product.find("h3", class_="product__title").text.strip()
 
 			# price
+			# pricesoup = product.find("p", class_="product__price")
+			# if pricesoup.span:
+			# 	price = 'On Sale'
+			# else:
+			# 	price = pricesoup.text.strip()
+
+			# price
 			pricesoup = product.find("p", class_="product__price")
-			if pricesoup.span:
-				price = 'On Sale'
-			else:
-				price = pricesoup.text.strip()
+			price = pricesoup.text.strip()
 
 			# link
 			link = 'http://vinovoresilverlake.com' + product.find("a")['href']
