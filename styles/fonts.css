@@ -148,6 +148,8 @@ article .name {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  /* text-transform: lowercase; */
+  text-transform: capitalize;
 }
 
 article .store {

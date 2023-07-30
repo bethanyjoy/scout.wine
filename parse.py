@@ -144,7 +144,7 @@ for url in eversonroyce_urls:
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("div", class_="title").text.strip()
+		title = product.find("div", class_="title").text.strip().lower()
 
 		# price
 		price = product.find("div", class_="product-price").text.strip()
@@ -284,7 +284,7 @@ for url in fancyfree_urls:
 		title_string = product.find("div", class_="grid-title").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("div", class_="grid-title").text.strip()
+		title = product.find("div", class_="grid-title").text.strip().lower()
 
 		# price
 		price = product.find("div", class_="product-price").text.strip()
@@ -511,114 +511,129 @@ for url in flaskandfield_urls:
 		# get title string (used for parsing)
 		title_string = product.find("h3", class_="card__heading").text.replace(" ", "").lower()
 
-		# title
-		title = product.find("h3", class_="card__heading").text.strip()
+		badge_check = product.find("div", class_="card__badge").find("img")
 
-		# price
-		price = product.find("span", class_="price-item").text.strip()
+		if 'selects' in title_string:
+			print()
+		if badge_check:
+			print()
 
-		# link
-		link = 'http://flaskandfield.com' + product.find("a")['href']
-
-		# image
-		imagecheck = product.find("img")
-		imageurl = product.find("img")['src']
-		if 'placeholder' in imageurl:
-			image_type = 'noimage'
-		elif imageurl is not None:
-			image = 'https:' + imageurl
-			image_type = 'hasimage'
 		else:
-			image_type = 'noimage'
 
-		# maker
-		if 'lewandowski' in title_string:
-			maker = 'Ruth Lewandowski'
-		# elif 'amevive' in title_string:
-		# 	maker = 'Amevive'
-		# elif 'amplify' in title_string:
-		# 	maker = 'Amplify'
-		# elif 'broc' in title_string:
-			# 	maker = 'Broc Cellars'
-		elif 'cantinagiardino' in title_string:
-			maker = 'Cantina Giardino'
-		# elif 'cirelli' in title_string:
-		# 	maker = 'Cirelli'
-		# elif 'dueterre' in title_string:
-		# 	maker = 'Due Terre'
-		# elif 'florez' in title_string:
-		# 	maker = 'Florez'
-		# elif 'folkmachine' in title_string:
-		# 	maker = 'Folk Machine'
-		elif 'furlani' in title_string:
-			maker = 'Furlani'
-		# elif 'gentle folk' in title_string:
-		# 	maker = 'Gentle Folk'
-		elif 'goodboywine' in title_string:
-			maker = 'Good Boy Wine'
-		elif 'gutoggau' in title_string:
-			maker = 'Gut Oggau'
-		elif 'jumbotime' in title_string:
-			maker = 'Jumbo Time Wines'
-		elif 'kopptisch' in title_string:
-			maker = 'Kopptisch'
-		elif 'koehnen' in title_string:
-			maker = 'Koehnen'
-		elif 'lasjaras' in title_string:
-			maker = 'Las Jaras'
-		elif 'marigny' in title_string:
-			maker = 'Marigny'
-		elif 'marthastoumen' in title_string:
-			maker = 'Martha Stoumen'
-		elif 'meinklang' in title_string:
-			maker = 'Meinklang'
-		elif 'nestarec' in title_string:
-			maker = 'Nestarec'
-		# elif 'oldwestminster' in title_string:
-		# 	maker = 'Old Westminster'
-		elif 'patricksullivan' in title_string:
-			maker = 'Patrick Sullivan'
-		elif 'purity' in title_string:
-			maker = 'Purity'
-		# elif 'stagiaire' in title_string:
-			# 	maker = 'Stagiaire'
-		elif 'scottyboy' in title_string:
-			maker = 'Scotty Boy'
-		elif 'scotty-boy' in title_string:
-			maker = 'Scotty Boy'
-		# elif 'stagiaire' in title_string:
-			# 	maker = 'Stagiaire'
-		# elif 'subjecttochange' in title_string:
-		# 	maker = 'Subject to Change'
-		elif 'swick' in title_string:
-			maker = 'Swick'
-		elif 'wavywines' in title_string:
-			maker = 'Wavy Wines'
-		# elif 'wildarcfarm' in title_string:
-			# 	maker = 'Wild Arc Farm'
-		elif 'wonderwerk' in title_string:
-			maker = 'Wonderwerk'
-		else:
-			maker ='undefined'
+			# title
+			title = product.find("h3", class_="card__heading").text.strip().lower()
 
-		maker_class = maker.strip().lower()
+			# price
+			pricesoup = product.find("span", class_="price-item").text.strip()
 
-		# add wine to list
-		wines.append({
-			'Title': title,
-			'Maker': maker,
-			'Maker_class': maker_class,
-			'Price': price,
-			'Link': link,
-			'Image': image,
-			'Image_type': image_type,
-			'Type': type,
-			'Type_class': type_class,
-			'Store': 'Flask + Field',
-			'Store_class': 'flaskandfield',
-			'Region': region,
-			'Image_type': image_type,
-		})
+			# format price
+			if '.' in pricesoup:
+				price = pricesoup
+			else:
+				price = pricesoup + '.00'
+
+			# link
+			link = 'http://flaskandfield.com' + product.find("a")['href']
+
+			# image
+			imagecheck = product.find("img")
+			imageurl = product.find("img")['src']
+			if 'placeholder' in imageurl:
+				image_type = 'noimage'
+			elif imageurl is not None:
+				image = 'https:' + imageurl
+				image_type = 'hasimage'
+			else:
+				image_type = 'noimage'
+
+			# maker
+			if 'lewandowski' in title_string:
+				maker = 'Ruth Lewandowski'
+			# elif 'amevive' in title_string:
+			# 	maker = 'Amevive'
+			# elif 'amplify' in title_string:
+			# 	maker = 'Amplify'
+			# elif 'broc' in title_string:
+				# 	maker = 'Broc Cellars'
+			elif 'cantinagiardino' in title_string:
+				maker = 'Cantina Giardino'
+			# elif 'cirelli' in title_string:
+			# 	maker = 'Cirelli'
+			# elif 'dueterre' in title_string:
+			# 	maker = 'Due Terre'
+			# elif 'florez' in title_string:
+			# 	maker = 'Florez'
+			# elif 'folkmachine' in title_string:
+			# 	maker = 'Folk Machine'
+			elif 'furlani' in title_string:
+				maker = 'Furlani'
+			# elif 'gentle folk' in title_string:
+			# 	maker = 'Gentle Folk'
+			elif 'goodboywine' in title_string:
+				maker = 'Good Boy Wine'
+			elif 'gutoggau' in title_string:
+				maker = 'Gut Oggau'
+			elif 'jumbotime' in title_string:
+				maker = 'Jumbo Time Wines'
+			elif 'kopptisch' in title_string:
+				maker = 'Kopptisch'
+			elif 'koehnen' in title_string:
+				maker = 'Koehnen'
+			elif 'lasjaras' in title_string:
+				maker = 'Las Jaras'
+			elif 'marigny' in title_string:
+				maker = 'Marigny'
+			elif 'marthastoumen' in title_string:
+				maker = 'Martha Stoumen'
+			elif 'meinklang' in title_string:
+				maker = 'Meinklang'
+			elif 'nestarec' in title_string:
+				maker = 'Nestarec'
+			# elif 'oldwestminster' in title_string:
+			# 	maker = 'Old Westminster'
+			elif 'patricksullivan' in title_string:
+				maker = 'Patrick Sullivan'
+			elif 'purity' in title_string:
+				maker = 'Purity'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
+			elif 'scottyboy' in title_string:
+				maker = 'Scotty Boy'
+			elif 'scotty-boy' in title_string:
+				maker = 'Scotty Boy'
+			# elif 'stagiaire' in title_string:
+				# 	maker = 'Stagiaire'
+			# elif 'subjecttochange' in title_string:
+			# 	maker = 'Subject to Change'
+			elif 'swick' in title_string:
+				maker = 'Swick'
+			elif 'wavywines' in title_string:
+				maker = 'Wavy Wines'
+			# elif 'wildarcfarm' in title_string:
+				# 	maker = 'Wild Arc Farm'
+			elif 'wonderwerk' in title_string:
+				maker = 'Wonderwerk'
+			else:
+				maker ='undefined'
+
+			maker_class = maker.strip().lower()
+
+			# add wine to list
+			wines.append({
+				'Title': title,
+				'Maker': maker,
+				'Maker_class': maker_class,
+				'Price': price,
+				'Link': link,
+				'Image': image,
+				'Image_type': image_type,
+				'Type': type,
+				'Type_class': type_class,
+				'Store': 'Flask + Field',
+				'Store_class': 'flaskandfield',
+				'Region': region,
+				'Image_type': image_type,
+			})
 
 # Heaven's Market
 heavensmarket_urls = [
@@ -673,7 +688,7 @@ for url in heavensmarket_urls:
 		title_string = product.find("span", class_="visually-hidden").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("span", class_="visually-hidden").text.strip()
+		title = product.find("span", class_="visually-hidden").text.strip().lower()
 
 		# ignore non-wine items
 		if 'wineclass' in title_string:
@@ -902,7 +917,7 @@ for url in helens_urls:
 		title_string = product.find("div", class_="grid-product__title--body").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("div", class_="grid-product__title--body").text.strip()
+		title = product.find("div", class_="grid-product__title--body").text.strip().lower()
 
 		# price
 		price = product.find("div", class_="grid-product__price").text.strip()
@@ -1138,7 +1153,7 @@ for url in highlandpark_urls:
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("div", class_="title").text.strip()
+		title = product.find("div", class_="title").text.strip().lower()
 
 		# price
 		price = product.find("div", class_="product-price").text.strip()
@@ -1340,8 +1355,8 @@ for url in kamp_urls:
 			region = 'undefined'
 
 		# title
-		title_name = product.find("p", class_="product--title").text.strip()
-		title_maker = product.find("div", class_="product--vendor").text.strip()
+		title_name = product.find("p", class_="product--title").text.strip().lower()
+		title_maker = product.find("div", class_="product--vendor").text.strip().lower()
 		title = title_maker + " " + title_name
 
 		# get title string (used for parsing)
@@ -1553,7 +1568,7 @@ for url in silverlake_urls:
 		title_string = product.find("div", class_="title").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("div", class_="title").text.strip()
+		title = product.find("div", class_="title").text.strip().lower()
 
 		# price
 		price = product.find("div", class_="product-price").text.strip()
@@ -1723,7 +1738,7 @@ for url in sipsnack_urls:
 		title_string = product.find("h3", class_="product--title").text.replace(" ", "").lower()
 
 		# title
-		title = product.find("h3", class_="product--title").text.strip()
+		title = product.find("h3", class_="product--title").text.strip().lower()
 
 		# price
 		price = product.find("span", class_="product--price").text.strip()
@@ -1904,7 +1919,7 @@ for url in vinovoreeaglerock_urls:
 		else:
 
 			# title
-			title = product.find("div", class_="grid-product__title").text.strip()
+			title = product.find("div", class_="grid-product__title").text.strip().lower()
 
 			# price
 			pricesoup = product.find("div", class_="grid-product__price")
@@ -2088,18 +2103,22 @@ for url in vinovoresilverlake_urls:
 		else:
 
 			# title
-			title = product.find("h3", class_="product__title").text.strip()
+			title = product.find("h3", class_="product__title").text.strip().lower()
+
+			# check if sold out
+			stocksoup = product.find("p", class_="product__price")
+			stock = stocksoup.text.strip()
+
+			# price
+			if stock !='Sold Out':
+				pricesoup = product.find("span", class_="money")
+				price = pricesoup.text.strip()
+			else:
+				price = 'null'
 
 			# price
 			# pricesoup = product.find("p", class_="product__price")
-			# if pricesoup.span:
-			# 	price = 'On Sale'
-			# else:
-			# 	price = pricesoup.text.strip()
-
-			# price
-			pricesoup = product.find("p", class_="product__price")
-			price = pricesoup.text.strip()
+			# price = pricesoup.text.strip()
 
 			# link
 			link = 'http://vinovoresilverlake.com' + product.find("a")['href']
@@ -2188,19 +2207,20 @@ for url in vinovoresilverlake_urls:
 			maker_class = maker.strip().lower()
 
 			# add wine to list
-			wines.append({
-				'Title': title,
-				'Maker': maker,
-				'Maker_class': maker_class,
-				'Price': price,
-				'Link': link,
-				'Image': image,
-				'Image_type': image_type,
-				'Type': type,
-				'Type_class': type_class,
-				'Store': 'Vinovore Silverlake',
-				'Store_class': 'vinovoresilverlake',
-			})
+			if stock !='Sold Out':
+				wines.append({
+					'Title': title,
+					'Maker': maker,
+					'Maker_class': maker_class,
+					'Price': price,
+					'Link': link,
+					'Image': image,
+					'Image_type': image_type,
+					'Type': type,
+					'Type_class': type_class,
+					'Store': 'Vinovore Silverlake',
+					'Store_class': 'vinovoresilverlake',
+				})
 
 # Wine + Eggs
 wineandeggs_urls = [
@@ -2240,8 +2260,8 @@ for url in wineandeggs_urls:
 		type_class = type.replace("&#233;", "e").lower()
 
 		# title
-		title_name = product.find("h3", class_="product-block__title").text.strip()
-		title_maker = product.find("div", class_="italicized-text").text.strip()
+		title_name = product.find("h3", class_="product-block__title").text.strip().lower()
+		title_maker = product.find("div", class_="italicized-text").text.strip().lower()
 		title = title_maker + " " + title_name
 
 		# get title string (used for parsing)
