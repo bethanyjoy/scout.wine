@@ -25,20 +25,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
 
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32-light.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32-dark.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16-light.png" media="(prefers-color-scheme: light)">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16-dark.png" media="(prefers-color-scheme: dark)"> -->
-
-  <script>
-			// Check if there's any override. If so, let the markup know by setting an attribute on the <html> element
-			const colorModeOverride = window.localStorage.getItem('color-mode');
-			const hasColorModeOverride = typeof colorModeOverride === 'string';
-			if (hasColorModeOverride) {
-				document.documentElement.setAttribute('data-force-color-mode', colorModeOverride);
-			}
-		</script>
-
 </head>
 
 <body id="body">
@@ -86,22 +72,13 @@
 
   </main>
 
-<!--	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
-<!--	<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
-  <!-- <script src="/pagination.js"></script> -->
 
 	<script src="/script.js"></script>
 
   <script>
-
-    // afterRender: function() {
-    //     $('html').animate({
-    //           scrollTop: ($("body").offset().top)
-    //      }, 150);
-    // }
 
 		// Hide/show sidebar on mobile
 

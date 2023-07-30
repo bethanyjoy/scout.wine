@@ -123,6 +123,10 @@ body {
 	color: var(--foreground);
 }
 
+h1 {
+	color: var(--foreground);
+}
+
 a {
 	color: inherit;
 }
@@ -166,10 +170,6 @@ nav {
 /*  Wine card styles                                  */
 /*----------------------------------------------------*/
 
-article img {
-	mix-blend-mode: multiply;
-}
-
 article > a {
 	background: var(--image-background);
 }
@@ -178,9 +178,8 @@ article > a:hover {
 	box-shadow: 0 0.188rem 0.5rem 0 var(--shadow);
 }
 
-/*	Style the placeholder image */
-article svg {
-	fill: var(--wine-svg);
+article img {
+	mix-blend-mode: multiply;
 }
 
 article .store {
@@ -188,7 +187,6 @@ article .store {
 }
 
 article > .type {
-	background-color: var(--foreground-5);
 	color: var(--type-text);
 }
 
@@ -196,31 +194,31 @@ article > .type {
 /*	Style type tags */
 
 article.red  > div.type {
-  background-color: var(--tag-red)!important;
+  background-color: var(--tag-red);
 }
 
 article.white  > div.type{
-  background-color: var(--tag-white)!important;
+  background-color: var(--tag-white);
 }
 
 article.rose > div.type{
-  background-color: var(--tag-rose)!important;
+  background-color: var(--tag-rose);
 }
 
 article.orange > div.type {
-  background-color: var(--tag-orange)!important;
+  background-color: var(--tag-orange);
 }
 
 article.sparkling  > div.type {
-  background-color: var(--tag-sparkling)!important;
+  background-color: var(--tag-sparkling);
 }
 
 article.piquette  > div.type {
-  background-color: var(--tag-piquette)!important;
+  background-color: var(--tag-piquette);
 }
 
 article.co-fermented  > div.type {
-  background-color: var(--tag-co-fermented)!important;
+  background-color: var(--tag-co-fermented);
 }
 
 
@@ -229,14 +227,6 @@ article.co-fermented  > div.type {
 /*  Sidebar styles                                    */
 /*----------------------------------------------------*/
 
-
-.logo svg {
-	fill: var(--foreground);
-}
-
-h1 {
-	color: var(--foreground);
-}
 
 .credits {
 	color: var(--foreground-2);
@@ -255,14 +245,13 @@ h1 {
 /*	Text Input & Select */
 
 .search {
-	/* background-color: var(--foreground-5); */
 	color: var(--foreground);
 	background-color: var(--background);
 	border-color: var(--foreground-3);
 }
 
 .search:hover, .search:focus {
-	border-color: var(--foreground-2) !important;
+	border-color: var(--foreground-2);
 }
 
 ::placeholder {
@@ -273,10 +262,6 @@ h1 {
 	background-image: var(--x-mark);
 }
 
-select {
-	background: none;
-	color: var(--foreground);
-}
 
 /*	Chekbox Filters */
 
@@ -299,7 +284,7 @@ select {
 
 /*  Button Filters  */
 
- .buttonFilter label {
+.buttonFilter label {
 	background-color: var(--foreground-5);
 }
 
