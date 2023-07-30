@@ -420,6 +420,9 @@ article > .type {
   .resultsButton {
     display: none;
   }
+  main {
+    visibility: visible !important;
+  }
 }
 
 /* Show mobile buttons & results button on mobile */
