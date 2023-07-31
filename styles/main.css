@@ -55,7 +55,7 @@ ul {
 
 nav {
   gap: var(--space-8);
-  padding: var(--space-12) var(--space-10) var(--space-14) var(--space-10);
+  padding: var(--space-10) var(--space-10) var(--space-14) var(--space-10);
 }
 
 main {
