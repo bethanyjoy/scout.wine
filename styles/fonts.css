@@ -101,6 +101,7 @@ body {
 	font-family: var(--sans);
   font-weight: var(--regular);
   font-size: var(--size-body);
+  /* -webkit-font-smoothing: antialiased; */
 }
 
 h1 {
@@ -108,12 +109,16 @@ h1 {
   font-weight: var(--medium);
   font-size: var(--size-large);
   line-height: 1.9rem;
+  /* -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.02em;
+  font-weight: var(--bold); */
 }
 
 h3 {
   font-family: var(--sans-wide);
   font-weight: var(--bold);
   font-size: var(--size-body);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -124,7 +129,7 @@ a {
 
 .buttonFilter label {
   font-family: var(--sans-wide);
-  font-size: var(--size-small)
+  font-size: var(--size-small);
 }
 
 .credits {
@@ -134,6 +139,7 @@ a {
 .credits a {
 	text-decoration: underline;
 }
+
 
 
 
@@ -150,6 +156,7 @@ article .name {
   word-wrap: break-word;
   /* text-transform: lowercase; */
   text-transform: capitalize;
+  -webkit-font-smoothing: antialiased;
 }
 
 article .store {
@@ -162,6 +169,7 @@ article .store {
   -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
 }
 
 article .price {
