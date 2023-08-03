@@ -379,11 +379,11 @@ article > .type {
 }
 
 /* Add spacing below filters */
-@media only screen and (max-width: 1112px) and (pointer: fine) {
+/* @media only screen and (max-width: 1112px) and (pointer: fine) {
 	#filters {
     margin-bottom: 7rem;
 	}
-}
+} */
 
 /* @media only screen and (max-width: 1112px) {
   .credits {
