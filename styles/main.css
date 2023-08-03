@@ -371,6 +371,13 @@ article > .type {
 	}
 }
 
+/* Add spacing below filters */
+@media only screen and (max-width: 1112px) {
+	#filters {
+		margin-bottom: 100px;
+	}
+}
+
 /* @media only screen and (max-width: 1112px) {
   .credits {
     display: block;
