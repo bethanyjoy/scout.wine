@@ -375,7 +375,7 @@ article > .type {
 @media only screen and (max-width: 1112px) {
 	#filters {
 		/* margin-bottom: 6.25rem; */
-    margin-bottom: 8rem;
+    margin-bottom: 16rem;
 	}
 }
 
