@@ -180,6 +180,8 @@ nav {
   border: solid;
   border-width: 2px;
   cursor: pointer;
+  transition-duration: 0.3s;
+  transition-property: border-color, background-color, color;
 }
 
 .pagination li.active:hover {
@@ -222,6 +224,7 @@ article > a {
   height: clamp(200px, 22vw, 280px);
   /* max-height: 280px; */
 	width: 100%;
+  transition: box-shadow 0.3s;
 }
 
 @media only screen and (max-width: 1112px) {
@@ -379,11 +382,11 @@ article > .type {
 }
 
 /* Add spacing below filters */
-/* @media only screen and (max-width: 1112px) and (pointer: fine) {
+@media only screen and (max-width: 1112px) and (pointer: fine) {
 	#filters {
     margin-bottom: 7rem;
 	}
-} */
+}
 
 /* @media only screen and (max-width: 1112px) {
   .credits {
@@ -492,6 +495,7 @@ article > .type {
     height: 1.25rem;
     width: 1.25rem;
     cursor: pointer;
+    transition: 0.1s;
 }
 
 /* Search bar mobile styles */
@@ -552,7 +556,8 @@ article > .type {
   width: 1rem;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  transition: 0.3s;
+  transition-duration: 0.3s;
+  transition-property: border-color, background-color;
   margin: 1px 0;
 }
 
@@ -594,6 +599,7 @@ article > .type {
   width: 0.375rem;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
+  transition: 0.3s;
 }
 
 /* Hide checkbox filter for 'undefined' labels */
@@ -643,7 +649,7 @@ label:has(> input[value="undefined"]) {
   -webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
   -webkit-user-select: none;
-  transition: 0.3s;
+  transition: 0.3s background-color, 0.2s color;
 }
 
 @media only screen and (max-width: 1112px) {
