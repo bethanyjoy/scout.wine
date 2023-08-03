@@ -374,7 +374,7 @@ article > .type {
 /* Add spacing below filters */
 @media only screen and (max-width: 1112px) {
 	#filters {
-    margin-bottom: 11rem;
+    margin-bottom: 12rem;
 	}
 }
 
