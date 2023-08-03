@@ -101,6 +101,7 @@ eversonroyce_urls = [
 	"https://www.eversonroyce.com/collections/sparklin-wine?page=6",
 
 ]
+
 for url in eversonroyce_urls:
 
 	# set up soup
@@ -259,6 +260,7 @@ fancyfree_urls = [
 	"https://www.fancyfreeliquor.com/rose",
 	"https://www.fancyfreeliquor.com/red",
 ]
+
 for url in fancyfree_urls:
 
 	# set up soup
@@ -459,6 +461,7 @@ flaskandfield_urls = [
 	"https://flaskandfield.com/collections/wine?filter.p.product_type=White+Wine&filter.p.m.custom.region=Morocco",
 
 ]
+
 for url in flaskandfield_urls:
 
 	# set up soup
@@ -663,6 +666,7 @@ heavensmarket_urls = [
 	"https://www.heavensmarketla.com/collections/sparkling?page=4",
 
 ]
+
 for url in heavensmarket_urls:
 
 	# set up soup
@@ -868,6 +872,7 @@ helens_urls = [
 	"https://helenswines.com/collections/orange/portugal",
 	"https://helenswines.com/collections/orange/spain",
 ]
+
 for url in helens_urls:
 
 	# set up soup
@@ -1110,6 +1115,7 @@ highlandpark_urls = [
 	"https://www.highlandparkwine.com/collections/sparkling-wine?page=6",
 
 ]
+
 for url in highlandpark_urls:
 
 	# set up soup
@@ -1311,6 +1317,7 @@ kamp_urls = [
 	"https://shopkamp.com/collections/sparkling/oregon",
 	"https://shopkamp.com/collections/sparkling/spain",
 ]
+
 for url in kamp_urls:
 
 	# set up soup
@@ -1539,6 +1546,7 @@ silverlake_urls = [
 	"https://silverlakewine.com/collections/piquette",
 
 ]
+
 for url in silverlake_urls:
 
 	# set up soup
@@ -1709,6 +1717,7 @@ sipsnack_urls = [
 	"https://www.sipsnackshop.com/collections/red-wine-white-wine-bubbles/white-wine?page=2",
 
 ]
+
 for url in sipsnack_urls:
 
 	# set up soup
@@ -1881,6 +1890,7 @@ vinovoreeaglerock_urls = [
 	"https://vinovoreeaglerock.com/collections/sparkling?page=6",
 
 ]
+
 for url in vinovoreeaglerock_urls:
 
 	# set up soup
@@ -2063,6 +2073,7 @@ vinovoresilverlake_urls = [
 	"https://vinovoresilverlake.com/collections/sparkling?page=5",
 
 ]
+
 for url in vinovoresilverlake_urls:
 
 	# set up soup
@@ -2234,6 +2245,7 @@ wineandeggs_urls = [
 	"https://wineandeggs.com/collections/piquette-wine",
 
 ]
+
 for url in wineandeggs_urls:
 
 	# set up soup

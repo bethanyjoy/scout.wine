@@ -4,51 +4,51 @@
 
 <head>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GHMVF4BW7W"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GHMVF4BW7W"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-    gtag('config', 'G-GHMVF4BW7W');
-  </script>
+		gtag('config', 'G-GHMVF4BW7W');
+	</script>
 
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
 
-  <title>Juice</title>
+	<title>Juice</title>
 
-  <meta name="description" content="Find natural &amp biodynamic wine in Los Angeles 🍷 ✌️">
-  <meta name="author" content="Bethany Nuechterlein">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="color-scheme" content="light dark">
+	<meta name="description" content="Find natural &amp biodynamic wine in Los Angeles 🍷 ✌️">
+	<meta name="author" content="Bethany Nuechterlein">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="color-scheme" content="light dark">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <link href="/styles/normalize.css" rel="stylesheet">
+	<link href="/styles/normalize.css" rel="stylesheet">
 	<link href="/styles/main.css" rel="stylesheet">
-  <link href="/styles/fonts.css" rel="stylesheet">
+	<link href="/styles/fonts.css" rel="stylesheet">
 	<link href="/styles/colors.css" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
 
 </head>
 
 <body id="body">
 
-  <nav id="sidebar">
+	<nav id="sidebar">
 
-    <h1>
+		<h1>
 			Find natural &amp biodynamic wine in <span>Los Angeles</span>
 		</h1>
 
-    <div class="searchWrapper">
-      <h3>Search</h3>
-      <input type="search" class="search" placeholder="pinot etc..." />
-      <div class="mobileButtons">
+		<div class="searchWrapper">
+			<h3>Search</h3>
+			<input type="search" class="search" placeholder="pinot etc..." />
+			<div class="mobileButtons">
 				<a href="javascript:void(0);" class="navButton" id="showButton" onclick="showSidebar()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -59,28 +59,28 @@
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</a>
-      </div>
-    </div>
+			</div>
+		</div>
 
-    <div id="filters">
-      <div>
-        <div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
-        <div class="makerContainer checkboxFilter filter"><h3>Featured Makers</h3></div>
-        <div class="regionContainer checkboxFilter filter"><h3>Region</h3></div>
-        <div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
-        <span class="credits">Made by <a href="https://bethany.design/">bethany.design</a></span>
+		<div id="filters">
+			<div>
+				<div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
+				<div class="makerContainer checkboxFilter filter"><h3>Featured Makers</h3></div>
+				<div class="regionContainer checkboxFilter filter"><h3>Region</h3></div>
+				<div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
+				<span class="credits">Made by <a href="https://bethany.design/">bethany.design</a></span>
 				<a href="javascript:void(0);" class="resultsButton" onclick="hideSidebar()">Show results</a>
-      </div>
-    </div>
+			</div>
+		</div>
 
-  </nav>
+	</nav>
 
-  <main id="main">
+	<main id="main">
 
-    <div class="list" id="grid"></div>
-    <ul class="pagination"></ul>
+		<div class="list" id="grid"></div>
+		<ul class="pagination"></ul>
 
-  </main>
+	</main>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
@@ -88,50 +88,47 @@
 
 	<script src="/script.js"></script>
 
-  <script>
+	<script>
 
-		// Hide/show sidebar on mobile
+	// Hide/show sidebar on mobile
 
-   function showSidebar() {
-     var x = document.getElementById("filters");
-       x.style.display = "flex";
-     var x = document.getElementById("showButton");
-       x.style.display = "none";
-     var x = document.getElementById("hideButton");
-       x.style.display = "block";
-     var x = document.getElementById("sidebar");
-       x.style.height = "100vh";
-     var x = document.getElementById("main");
-        // x.style.position = 'fixed';
-        // x.style.top = `-${window.scrollY}px`;
+	function showSidebar() {
+		var x = document.getElementById("filters");
+			x.style.display = "flex";
+		var x = document.getElementById("showButton");
+			x.style.display = "none";
+		var x = document.getElementById("hideButton");
+			x.style.display = "block";
+		var x = document.getElementById("sidebar");
+			x.style.height = "100vh";
+		var x = document.getElementById("main");
+			// x.style.position = 'fixed';
+			// x.style.top = `-${window.scrollY}px`;
+			x.style.visibility = "hidden"
+			// x.style.height = "0"
+			// x.style.overflow = "hidden"
+			// x.style.display = "hidden"
+	}
 
-       x.style.visibility = "hidden"
-       // x.style.height = "0"
-       // x.style.overflow = "hidden"
-       // x.style.display = "hidden"
-   }
+	function hideSidebar() {
+		var x = document.getElementById("filters");
+			x.style.display = "none";
+		var x = document.getElementById("showButton");
+			x.style.display = "block";
+		var x = document.getElementById("hideButton");
+			x.style.display = "none";
+		var x = document.getElementById("sidebar");
+			x.style.height = "auto";
+		var x = document.getElementById("main");
+			// const scrollY = x.style.top;
+			// x.style.position = '';
+			// x.style.top = '';
+			// window.scrollTo(0, parseInt(scrollY || '0') * -1);
+			x.style.visibility = "visible"
+			// x.style.height = "auto"
+			// x.style.overflow = "auto"
+	}
 
-
-   function hideSidebar() {
-     var x = document.getElementById("filters");
-       x.style.display = "none";
-     var x = document.getElementById("showButton");
-       x.style.display = "block";
-     var x = document.getElementById("hideButton");
-       x.style.display = "none";
-       var x = document.getElementById("sidebar");
-         x.style.height = "auto";
-     var x = document.getElementById("main");
-        // const scrollY = x.style.top;
-        // x.style.position = '';
-        // x.style.top = '';
-        // window.scrollTo(0, parseInt(scrollY || '0') * -1);
-
-         x.style.visibility = "visible"
-         // x.style.height = "auto"
-         // x.style.overflow = "auto"
-     }
-
-  </script>
+	</script>
 
 </body>
