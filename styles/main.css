@@ -374,8 +374,14 @@ article > .type {
 /* Add spacing below filters */
 @media only screen and (max-width: 1112px) {
 	#filters {
-		/* margin-bottom: 6.25rem; */
-    margin-bottom: 9rem;
+    margin-bottom: 9.5rem;
+	}
+}
+
+/* Add spacing below filters */
+@media only screen and (max-width: 1112px) and (pointer: fine) {
+	#filters {
+    margin-bottom: 7rem;
 	}
 }
 
