@@ -6,26 +6,26 @@
 /*	Freizeit */
 
 @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Bold.otf') format('opentype');
+	font-family: 'Freizeit';
+	src:  url('../fonts/Freizeit/FreizeitTrial-Bold.otf') format('opentype');
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Medium.otf') format('opentype');
+	font-family: 'Freizeit';
+	src:  url('../fonts/Freizeit/FreizeitTrial-Medium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Regular.otf') format('opentype');
+	font-family: 'Freizeit';
+	src:  url('../fonts/Freizeit/FreizeitTrial-Regular.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Freizeit';
-  src:  url('../fonts/Freizeit/FreizeitTrial-Light.otf') format('opentype');
+	font-family: 'Freizeit';
+	src:  url('../fonts/Freizeit/FreizeitTrial-Light.otf') format('opentype');
 	font-weight: 300;
 	font-style: normal;
 }
@@ -34,20 +34,20 @@
 /*	Freizeit 120 */
 
 @font-face {
-  font-family: 'Freizeit 120';
-  src:  url('../fonts/Freizeit/Freizeit120-Bold.otf') format('opentype');
+	font-family: 'Freizeit 120';
+	src:  url('../fonts/Freizeit/Freizeit120-Bold.otf') format('opentype');
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Freizeit 120';
-  src:  url('../fonts/Freizeit/Freizeit120-Medium.otf') format('opentype');
+	font-family: 'Freizeit 120';
+	src:  url('../fonts/Freizeit/Freizeit120-Medium.otf') format('opentype');
 	font-weight: 500;
 	font-style: normal;
 }
 @font-face {
-  font-family: 'Freizeit 120';
-  src:  url('../fonts/Freizeit/Freizeit120-Regular.otf') format('opentype');
+	font-family: 'Freizeit 120';
+	src:  url('../fonts/Freizeit/Freizeit120-Regular.otf') format('opentype');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -67,20 +67,20 @@
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	--sans: 'Freizeit', var(--fallback);
 
-  --sans: 'Freizeit', var(--fallback);
-  --sans-wide: 'Freizeit 120', var(--fallback);
+	--sans: 'Freizeit', var(--fallback);
+	--sans-wide: 'Freizeit 120', var(--fallback);
 
-  --bold: 600;
-  --medium: 500;
+	--bold: 600;
+	--medium: 500;
 	--regular: 400;
-  --light: 300;
+	--light: 300;
 
-  /*	Font size */
+	/*	Font size */
 	--size-body: 1rem;
-  --size-large: 1.425rem;
+	--size-large: 1.425rem;
 	--size-medium: 0.96rem;
-  --size-small: 0.875rem;
-  --size-xsmall: 0.825rem;
+	--size-small: 0.875rem;
+	--size-xsmall: 0.825rem;
 
 }
 
@@ -99,38 +99,38 @@ html {
 
 body {
 	font-family: var(--sans);
-  font-weight: var(--regular);
-  font-size: var(--size-body);
-  /* -webkit-font-smoothing: antialiased; */
+	font-weight: var(--regular);
+	font-size: var(--size-body);
+	/* -webkit-font-smoothing: antialiased; */
 }
 
 h1 {
-  font-family: var(--sans-wide);
-  font-weight: var(--medium);
-  font-size: var(--size-large);
-  line-height: 1.9rem;
-  /* -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.02em;
-  font-weight: var(--bold); */
+	font-family: var(--sans-wide);
+	font-weight: var(--medium);
+	font-size: var(--size-large);
+	line-height: 1.9rem;
+	/* -webkit-font-smoothing: antialiased;
+	letter-spacing: -0.02em;
+	font-weight: var(--bold); */
 }
 
 h3 {
-  font-family: var(--sans-wide);
-  font-weight: var(--bold);
-  font-size: var(--size-body);
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.015em;
+	font-family: var(--sans-wide);
+	font-weight: var(--bold);
+	font-size: var(--size-body);
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: -0.015em;
 }
 
 a {
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* Sidebar */
 
 .buttonFilter label {
-  font-family: var(--sans-wide);
-  font-size: var(--size-small);
+	font-family: var(--sans-wide);
+	font-size: var(--size-small);
 }
 
 .credits {
@@ -147,57 +147,57 @@ a {
 /* Sidebar */
 
 article .name {
-  font-weight: var(--medium);
-  line-height: 1.3rem;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2; /* number of lines to show */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  /* text-transform: lowercase; */
-  text-transform: capitalize;
-  -webkit-font-smoothing: antialiased;
-  letter-spacing: -0.005em;
+	font-weight: var(--medium);
+	line-height: 1.3rem;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2; /* number of lines to show */
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	/* text-transform: lowercase; */
+	text-transform: capitalize;
+	-webkit-font-smoothing: antialiased;
+	letter-spacing: -0.005em;
 }
 
 article .store {
-  /* font-weight: var(--light); */
-  font-size: var(--size-medium);
-  /* -webkit-font-smoothing: antialiased; */
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1; /* number of lines to show */
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  -webkit-font-smoothing: antialiased;
+	/* font-weight: var(--light); */
+	font-size: var(--size-medium);
+	/* -webkit-font-smoothing: antialiased; */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1; /* number of lines to show */
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-font-smoothing: antialiased;
 }
 
 article .price {
-  font-family: var(--sans-wide);
-  /* font-weight: var(--medium); */
-  font-size: var(--size-xsmall);
-  padding-top: 0.125rem;
+	font-family: var(--sans-wide);
+	/* font-weight: var(--medium); */
+	font-size: var(--size-xsmall);
+	padding-top: 0.125rem;
 }
 
 article .type {
-  font-family: var(--sans-wide);
-  font-size: var(--size-xsmall);
-  line-height: 1.125rem;
+	font-family: var(--sans-wide);
+	font-size: var(--size-xsmall);
+	line-height: 1.125rem;
 }
 
 
 @media only screen and (max-width: 800px) {
 
-  /* article .type {
-    font-family: var(--sans-wide);
-    font-size: 0.725rem;
-    line-height: 1rem;
-  } */
+	/* article .type {
+		font-family: var(--sans-wide);
+		font-size: 0.725rem;
+		line-height: 1rem;
+	} */
 
-  /* article .name {
-    -webkit-line-clamp: 3;
-  } */
+	/* article .name {
+		-webkit-line-clamp: 3;
+	} */
 
 }

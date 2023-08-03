@@ -5,26 +5,26 @@
 
 :root {
 
-  /*	Spacing */
-  --space-0: 0px;
-  --space-px: 1px;
-  --space-0-5: 0.125rem; /* 2px */
-  --space-1: 0.25rem;    /* 4px */
-  --space-1-5: 0.375rem; /* 6px */
-  --space-2: 0.5rem;     /* 8px */
-  --space-2-5: 0.625rem; /* 10px */
-  --space-3: 0.75rem;    /* 12px */
-  --space-3-5: 0.875rem; /* 14px */
-  --space-4: 1rem;       /* 16px */
-  --space-5: 1.25rem;    /* 20px */
-  --space-6: 1.5rem;     /* 24px */
-  --space-7: 1.75rem;    /* 28px */
-  --space-8: 2rem;       /* 32px */
-  --space-9: 2.25rem;    /* 36px */
-  --space-10: 2.5rem;    /* 40px */
-  --space-12: 3rem;      /* 48px */
-  --space-11: 3.25rem;   /* 52px */
-  --space-14: 3.5rem;    /* 56px */
+	/*	Spacing */
+	--space-0: 0px;
+	--space-px: 1px;
+	--space-0-5: 0.125rem; /* 2px */
+	--space-1: 0.25rem;    /* 4px */
+	--space-1-5: 0.375rem; /* 6px */
+	--space-2: 0.5rem;     /* 8px */
+	--space-2-5: 0.625rem; /* 10px */
+	--space-3: 0.75rem;    /* 12px */
+	--space-3-5: 0.875rem; /* 14px */
+	--space-4: 1rem;       /* 16px */
+	--space-5: 1.25rem;    /* 20px */
+	--space-6: 1.5rem;     /* 24px */
+	--space-7: 1.75rem;    /* 28px */
+	--space-8: 2rem;       /* 32px */
+	--space-9: 2.25rem;    /* 36px */
+	--space-10: 2.5rem;    /* 40px */
+	--space-12: 3rem;      /* 48px */
+	--space-11: 3.25rem;   /* 52px */
+	--space-14: 3.5rem;    /* 56px */
 
 }
 
@@ -39,13 +39,13 @@ body {
 }
 
 p, h1, h3 {
-  display: block;
+	display: block;
 	margin: 0;
-  padding: 0;
+	padding: 0;
 }
 
 ul {
-  padding-inline-start: 0;
+	padding-inline-start: 0;
 }
 
 
@@ -54,12 +54,12 @@ ul {
 /*----------------------------------------------------*/
 
 nav {
-  gap: var(--space-8);
-  padding: var(--space-10) var(--space-10) var(--space-14) var(--space-10);
+	gap: var(--space-8);
+	padding: var(--space-10) var(--space-10) var(--space-14) var(--space-10);
 }
 
 main {
-  padding: var(--space-10);
+	padding: var(--space-10);
 	top: var(--space-0);
 }
 
@@ -68,39 +68,39 @@ main {
 }
 
 h3 {
-  margin-bottom: var(--space-3);
+	margin-bottom: var(--space-3);
 }
 
 @media only screen and (min-width: 1112px) {
 
-  nav {
+	nav {
 		padding-right: var(--space-9);
 	}
 
-  main {
-    padding-left: var(--space-2);
-  }
+	main {
+		padding-left: var(--space-2);
+	}
 
 }
 
 @media only screen and (max-width: 1112px) {
 
-  nav {
+	nav {
 		padding: 1.125rem;
 	}
 
-  main {
-    margin-top: 4rem;
+	main {
+		margin-top: 4rem;
 		padding: 1.125rem;
-  }
+	}
 
-  .list {
-    gap: 1.125rem;
-  }
+	.list {
+		gap: 1.125rem;
+	}
 
-  h3 {
-    margin-bottom: var(--space-3-5);
-  }
+	h3 {
+		margin-bottom: var(--space-3-5);
+	}
 
 }
 
@@ -133,15 +133,15 @@ main {
 
 nav {
 	align-self: flex-start;
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 	float: left;
 	height: 100vh;
 	overflow: auto;
 	overscroll-behavior: contain;
 	position: sticky;
 	top: 0;
-  width: 19rem;
+	width: 19rem;
 }
 
 @media only screen and (max-width: 1112px) {
@@ -167,21 +167,21 @@ nav {
 /* Pagination */
 
 .pagination {
-  margin-top: var(--space-14);
-  display: block;
+	margin-top: var(--space-14);
+	display: block;
 }
 
 .pagination li {
 	border-radius: 0.25rem;
-  display: inline;
+	display: inline;
 	margin-right: var(--space-2);
-  padding: var(--space-2) var(--space-3);
+	padding: var(--space-2) var(--space-3);
 	text-decoration: none;
-  border: solid;
-  border-width: 2px;
-  cursor: pointer;
-  transition-duration: 0.3s;
-  transition-property: border-color, background-color, color;
+	border: solid;
+	border-width: 2px;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	transition-property: border-color, background-color, color;
 }
 
 .pagination li.active:hover {
@@ -194,13 +194,13 @@ nav {
 
 
 @media only screen and (max-width: 1112px) {
-  .pagination {
-    height: 40px;
-  }
-  .pagination li {
-    margin-right: var(--space-2-5);
-    padding: var(--space-2-5) var(--space-3-5);
-  }
+	.pagination {
+		height: 40px;
+	}
+	.pagination li {
+		margin-right: var(--space-2-5);
+		padding: var(--space-2-5) var(--space-3-5);
+	}
 }
 
 
@@ -221,10 +221,10 @@ article > a {
 	border-radius: 0.5rem;
 	display: block;
 	/* height: 20vw; */
-  height: clamp(200px, 22vw, 280px);
-  /* max-height: 280px; */
+	height: clamp(200px, 22vw, 280px);
+	/* max-height: 280px; */
 	width: 100%;
-  transition: box-shadow 0.3s;
+	transition: box-shadow 0.3s;
 }
 
 @media only screen and (max-width: 1112px) {
@@ -239,20 +239,20 @@ article img {
 	max-width: 100%;
 	object-fit: cover;
 	object-position: 50% 50%;
-  width: 100%;
+	width: 100%;
 }
 
 article .noimage img.photo,
 article .hasimage img.placeholder {
-  display: none;
+	display: none;
 }
 
 img.placeholder {
-  object-fit: scale-down;
-  padding: 2.5vw 0;
-  width: 100%;
-  object-position: 50% 50%;
-  height: 100%;
+	object-fit: scale-down;
+	padding: 2.5vw 0;
+	width: 100%;
+	object-position: 50% 50%;
+	height: 100%;
 }
 
 @media only screen and (max-width: 1112px) {
@@ -266,7 +266,7 @@ img.placeholder {
 
 article.heavensmarket img {
 	object-fit: scale-down;
-  padding: 1.2vw 0;
+	padding: 1.2vw 0;
 }
 
 @media only screen and (max-width: 1112px) {
@@ -293,12 +293,12 @@ article .text {
 }
 
 /* article .price {
-  padding-top: 0.2rem;
+	padding-top: 0.2rem;
 } */
 
 p.maker,
 p.region {
-  display: none;
+	display: none;
 }
 
 
@@ -325,11 +325,11 @@ article > .type {
 		padding-bottom: var(--space-4);
 	}
 
-  article > .type {
-    left: var(--space-2-5);
-    top: var(--space-2-5);
-    /* height: 1rem; */
-  }
+	article > .type {
+		left: var(--space-2-5);
+		top: var(--space-2-5);
+		/* height: 1rem; */
+	}
 
 }
 
@@ -344,12 +344,12 @@ article > .type {
 /* Hide logo & tagline on mobile */
 @media only screen and (max-width: 1112px) {
 	h1 {
-	  display: none !important;
+		display: none !important;
 	}
 }
 
 #filters {
-  display: block;
+	display: block;
 }
 
 /* Set filters to always appear on desktop */
@@ -377,22 +377,22 @@ article > .type {
 /* Add spacing below filters */
 @media only screen and (max-width: 1112px) {
 	#filters {
-    margin-bottom: 13rem;
+		margin-bottom: 13rem;
 	}
 }
 
 /* Add spacing below filters */
 @media only screen and (max-width: 1112px) and (pointer: fine) {
 	#filters {
-    margin-bottom: 7rem;
+		margin-bottom: 7rem;
 	}
 }
 
 /* @media only screen and (max-width: 1112px) {
-  .credits {
-    display: block;
-    height: 7rem;
-  }
+	.credits {
+		display: block;
+		height: 7rem;
+	}
 } */
 
 .filter {
@@ -432,20 +432,20 @@ article > .type {
 /* Hide mobile buttons & results button on desktop */
 @media only screen and (min-width: 1112px) {
 	.mobileButtons {
-	  display: none;
+		display: none;
 	}
-  .resultsButton {
-    display: none;
-  }
-  main {
-    visibility: visible !important;
-  }
+	.resultsButton {
+		display: none;
+	}
+	main {
+		visibility: visible !important;
+	}
 }
 
 /* Show mobile buttons & results button on mobile */
 @media only screen and (max-width: 1112px) {
 	.mobileButtons, .resultsButton {
-	  display: block;
+		display: block;
 	}
 }
 
@@ -457,45 +457,45 @@ article > .type {
 
 
 .search {
-  border-radius: 0.5rem !important;
-  outline: 0;
+	border-radius: 0.5rem !important;
+	outline: 0;
 	appearance: none;
 	box-sizing: border-box;
 	display: inline-block;
 	-webkit-appearance: none;
-  border: solid;
-  border-radius: 0.25rem;
-  /* border-width: 0.1rem; */
-  border-width: 2px;
-  transition-duration: 0.3s;
-  transition-property: border-color;
+	border: solid;
+	border-radius: 0.25rem;
+	/* border-width: 0.1rem; */
+	border-width: 2px;
+	transition-duration: 0.3s;
+	transition-property: border-color;
 }
 
 .search {
-  padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
-  width: 100%;
+	padding: var(--space-2) var(--space-2-5) var(--space-2) var(--space-3-5);
+	width: 100%;
 }
 
 @media only screen and (max-width: 1112px) {
-  .search {
-    /* height: 48px; */
-    padding: var(--space-2-5) var(--space-3) var(--space-2-5) var(--space-4);
-  }
+	.search {
+		/* height: 48px; */
+		padding: var(--space-2-5) var(--space-3) var(--space-2-5) var(--space-4);
+	}
 }
 
 ::placeholder {
-  opacity: 1; /* Firefox */
+	opacity: 1; /* Firefox */
 }
 
 /* Style the clear icon */
 .search::-webkit-search-cancel-button{
-    position: relative;
-    right: -0.25rem;
-    -webkit-appearance: none;
-    height: 1.25rem;
-    width: 1.25rem;
-    cursor: pointer;
-    transition: 0.1s;
+		position: relative;
+		right: -0.25rem;
+		-webkit-appearance: none;
+		height: 1.25rem;
+		width: 1.25rem;
+		cursor: pointer;
+		transition: 0.1s;
 }
 
 /* Search bar mobile styles */
@@ -504,16 +504,16 @@ article > .type {
 	.searchWrapper {
 		display: flex;
 		gap: var(--space-2);
-    align-items: center;
+		align-items: center;
 	}
 	.search {
 		width: calc(100% - var(--space-14));
-    /* border-width: 0.125rem; */
+		/* border-width: 0.125rem; */
 	}
 
-  .searchWrapper h3 {
-    display: none;
-  }
+	.searchWrapper h3 {
+		display: none;
+	}
 }
 
 
@@ -523,23 +523,23 @@ article > .type {
 
 .checkboxFilter label {
 	cursor: pointer;
-  display: block;
+	display: block;
 	margin-bottom: var(--space-3);
-  padding-left: var(--space-6);
+	padding-left: var(--space-6);
 	position: relative;
 	user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	-webkit-user-select: none;
 }
 
 /* Hide the browser's default checkbox */
 .checkboxFilter input {
 	cursor: pointer;
-  height: 0;
-  opacity: 0;
+	height: 0;
+	opacity: 0;
 	position: absolute;
-  width: 0;
+	width: 0;
 }
 
 /* Create a custom checkbox */
@@ -547,18 +547,18 @@ article > .type {
 	border: solid;
 	border-radius: 0.25rem;
 	/* border-width: 0.1rem; */
-  border-width: 2px;
+	border-width: 2px;
 	box-sizing: border-box;
 	height: 1rem;
 	left: 0;
-  position: absolute;
-  top: 0;
-  width: 1rem;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  transition-duration: 0.3s;
-  transition-property: border-color, background-color;
-  margin: 1px 0;
+	position: absolute;
+	top: 0;
+	width: 1rem;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	transition-duration: 0.3s;
+	transition-property: border-color, background-color;
+	margin: 1px 0;
 }
 
 .checkboxFilter .checkmark:after {
@@ -578,28 +578,28 @@ article > .type {
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-  content: "";
+	content: "";
 	display: none;
-  position: absolute;
+	position: absolute;
 }
 
 /* Show the checkmark when checked */
 .checkboxFilter input:checked ~ .checkmark:after {
-  display: block;
+	display: block;
 }
 
 /* Style the checkmark/indicator */
 .checkboxFilter .checkmark:after {
-  /* border-width: 0 0.1rem 0.1rem 0; */
-  border-width: 0 2px 2px 0;
+	/* border-width: 0 0.1rem 0.1rem 0; */
+	border-width: 0 2px 2px 0;
 	height: 0.625rem;
-  left: 0.3rem;
-  top: 0.063rem;
+	left: 0.3rem;
+	top: 0.063rem;
 	transform: rotate(45deg);
-  width: 0.375rem;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transition: 0.3s;
+	width: 0.375rem;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transition: 0.3s;
 }
 
 /* Hide checkbox filter for 'undefined' labels */
@@ -610,23 +610,23 @@ label:has(> input[value="undefined"]) {
 @media only screen and (max-width: 1112px) {
 	.checkboxFilter label {
 		line-height: 1.4rem;
-    margin-bottom: var(--space-1-5);
-    padding: var(--space-2) 0 var(--space-2) var(--space-8);
+		margin-bottom: var(--space-1-5);
+		padding: var(--space-2) 0 var(--space-2) var(--space-8);
 	}
-  .checkmark {
-    /* border-width: 0.125rem; */
-    height: 1.25rem;
-    width: 1.25rem;
-    margin: 0.55rem 0;
-  }
-  .checkboxFilter .checkmark:after {
-    /* border-width: 0 0.15rem 0.15rem 0; */
-    border-width: 0 2px 2px 0;
-  	height: 0.8rem;
-    left: 0.365rem;
-    top: 0.077rem;
-    width: 0.46rem;
-  }
+	.checkmark {
+		/* border-width: 0.125rem; */
+		height: 1.25rem;
+		width: 1.25rem;
+		margin: 0.55rem 0;
+	}
+	.checkboxFilter .checkmark:after {
+		/* border-width: 0 0.15rem 0.15rem 0; */
+		border-width: 0 2px 2px 0;
+		height: 0.8rem;
+		left: 0.365rem;
+		top: 0.077rem;
+		width: 0.46rem;
+	}
 }
 
 
@@ -643,25 +643,25 @@ label:has(> input[value="undefined"]) {
 	margin: var(--space-1) 0.325rem var(--space-1) 0;
 	padding: var(--space-1) var(--space-2);
 	user-select: none;
-  white-space: nowrap;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-tap-highlight-color: transparent;
+	white-space: nowrap;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-tap-highlight-color: transparent;
 	-webkit-touch-callout: none;
-  -webkit-user-select: none;
-  transition: 0.3s background-color, 0.2s color;
+	-webkit-user-select: none;
+	transition: 0.3s background-color, 0.2s color;
 }
 
 @media only screen and (max-width: 1112px) {
-  .buttonFilter label {
-  	border-radius: 5rem;
-  	margin: var(--space-1-5) var(--space-2) var(--space-1-5) 0;
-  	padding: var(--space-2-5) var(--space-3-5);``
-  }
+	.buttonFilter label {
+		border-radius: 5rem;
+		margin: var(--space-1-5) var(--space-2) var(--space-1-5) 0;
+		padding: var(--space-2-5) var(--space-3-5);``
+	}
 }
 
 .buttonFilter input {
-  display: absolute;
+	display: absolute;
 	opacity: 0;
-  position: absolute;
+	position: absolute;
 }
