@@ -186,18 +186,3 @@ article .type {
 	font-size: var(--size-xsmall);
 	line-height: 1.125rem;
 }
-
-
-@media only screen and (max-width: 800px) {
-
-	/* article .type {
-		font-family: var(--sans-wide);
-		font-size: 0.725rem;
-		line-height: 1rem;
-	} */
-
-	/* article .name {
-		-webkit-line-clamp: 3;
-	} */
-
-}

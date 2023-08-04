@@ -220,9 +220,7 @@ article {
 article > a {
 	border-radius: 0.5rem;
 	display: block;
-	/* height: 20vw; */
 	height: clamp(200px, 22vw, 280px);
-	/* max-height: 280px; */
 	width: 100%;
 	transition: box-shadow 0.3s;
 }
@@ -292,10 +290,6 @@ article .text {
 	overflow: hidden;
 }
 
-/* article .price {
-	padding-top: 0.2rem;
-} */
-
 p.maker,
 p.region {
 	display: none;
@@ -328,7 +322,6 @@ article > .type {
 	article > .type {
 		left: var(--space-2-5);
 		top: var(--space-2-5);
-		/* height: 1rem; */
 	}
 
 }
@@ -362,7 +355,6 @@ article > .type {
 /* Style filters panel for mobile */
 @media only screen and (max-width: 1112px) {
 	#filters {
-		/* padding-bottom: 6rem; */
 		width: calc(100% - var(--space-10));
 	}
 }
@@ -388,12 +380,9 @@ article > .type {
 	}
 }
 
-/* @media only screen and (max-width: 1112px) {
-	.credits {
-		display: block;
-		height: 7rem;
-	}
-} */
+
+
+
 
 .filter {
 	margin-bottom: var(--space-8);;
@@ -590,7 +579,6 @@ article > .type {
 
 /* Style the checkmark/indicator */
 .checkboxFilter .checkmark:after {
-	/* border-width: 0 0.1rem 0.1rem 0; */
 	border-width: 0 2px 2px 0;
 	height: 0.625rem;
 	left: 0.3rem;
@@ -614,13 +602,11 @@ label:has(> input[value="undefined"]) {
 		padding: var(--space-2) 0 var(--space-2) var(--space-8);
 	}
 	.checkmark {
-		/* border-width: 0.125rem; */
 		height: 1.25rem;
 		width: 1.25rem;
 		margin: 0.55rem 0;
 	}
 	.checkboxFilter .checkmark:after {
-		/* border-width: 0 0.15rem 0.15rem 0; */
 		border-width: 0 2px 2px 0;
 		height: 0.8rem;
 		left: 0.365rem;
