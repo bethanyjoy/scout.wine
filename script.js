@@ -46,7 +46,7 @@ function b() {
 
 	var options = {
 		valueNames: ['type', 'category', 'store', 'name', 'maker', 'region'],
-		page: 60,
+		page: 30,
 		innerWindow: 3,
 		right: 2,
 		plugins: [
