@@ -10,6 +10,7 @@ $(function a() {
 		$.each(data.wine, function(i, f) {
 
 			var tblRow =
+			// "<article>" +
 			"<article class=" + "'" + f.Type_class + " " + f.Store_class + " " + f.Maker_class + "'>" +
 				"<a class=" + f.Image_type + " href=" + f.Link + ">" +
 					"<img class='photo' src=" + f.Image + ">" +
@@ -138,11 +139,8 @@ function b() {
 				$(this).find(".fa").hide();
 			}
 		});
-		// window.scrollTo(0, 0);
 		window.scroll({
 			top: 0,
-			// left: 0,
-			// behavior: "smooth",
 		});
 	});
 
