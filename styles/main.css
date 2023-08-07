@@ -517,6 +517,7 @@ main {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
 	width: auto;
+	max-width: 2159px;
 }
 
 
