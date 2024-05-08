@@ -76,10 +76,9 @@
 
 	/*	Font size */
 	--size-body: 1rem;
-	--size-large: 1.425rem;
+/*	--size-large: 1.425rem;*/
 	--size-medium: 0.96rem;
-	--size-small: 0.875rem;
-	--size-xsmall: 0.825rem;
+	--size-small: 0.85rem;
 
 }
 

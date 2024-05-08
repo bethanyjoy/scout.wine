@@ -138,7 +138,7 @@ h1 {
 h3 {
 	margin-bottom: var(--space-3);
 	font-weight: 500;
-	font-size:1.1rem;
+	font-size:1.095rem;
 	font-family: 'gooper';
 	font-weight: 400;
 	-webkit-font-smoothing: auto;
@@ -776,13 +776,13 @@ article .text {
 .price {
 /*	font-family: var(--sans-wide);*/
 	/* font-weight: var(--medium); */
-	font-size: var(--size-xsmall);
+	font-size: var(--size-small);
 	padding-top: 0.125rem;
 }
 
 .type {
 /*	font-family: var(--sans-wide);*/
-	font-size: var(--size-xsmall);
+	font-size: var(--size-small);
 	line-height: 1.125rem;
 	color: var(--type-text);
 }
