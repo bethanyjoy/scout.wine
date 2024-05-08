@@ -19,6 +19,13 @@
 }
 
 @font-face {
+  font-family: 'Matter';
+  src:  url('../fonts/Matter-SemiBold.woff2') format('woff2');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
   font-family: 'Gooper';
   src:  url('../fonts/VCGooper-Regular.woff') format('woff');
 	font-weight: 400;
