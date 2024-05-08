@@ -1,3 +1,7 @@
+:root {
+	--border: ;
+}
+
 /*----------------------------------------------------*/
 /*  General styles                                    */
 /*----------------------------------------------------*/
@@ -14,6 +18,7 @@ body {
 	font-family: var(--sans);
 	font-weight: var(--regular);
 	font-size: var(--size-body);
+	-webkit-font-smoothing: antialiased;
 }
 
 p, h1, h3 {
@@ -41,24 +46,116 @@ ul {
 
 h1 {
 	color: var(--foreground);
-	font-family: var(--sans-wide);
-	font-weight: var(--medium);
-	font-size: var(--size-large);
-	line-height: 1.9rem;
+/*	font-family: var(--sans-wide);*/
+/*	font-family: 'gooper-semicondensed';*/
+/*	font-family: 'Gooper';*/
+/*	font-family: 'Nib';*/
+/*	font-weight: var(--medium);*/
+/*	font-size: var(--size-large);*/
+/*	font-size: 1.6rem;*/
+	/*font-size: 2rem;
+	line-height: 1.3em;
+	font-weight: 500;
+	-webkit-font-smoothing: auto;*/
 }
+
+/*h1 {
+	font-family: 'nib';
+	font-size: 2.1em;
+	line-height: 1.3em;
+	font-weight: 400;
+	-webkit-font-smoothing: auto;
+}*/
+
+/*h1 {
+	font-family: 'gooper';
+	font-size: 1.95rem;
+	line-height: 1.3em;
+	font-weight: 300;
+	-webkit-font-smoothing: auto;
+	& span {
+		font-family: 'Matter';
+		font-weight: 500;
+	}
+}*/
+
+/*h1 {
+	font-size: 1.9rem;
+	line-height: 1.3em;
+	font-weight: 400;
+	& span {
+		font-family: 'gooper';
+		font-weight: 400;
+		font-size: 1.02em;
+	}
+}*/
+
+/*h1 {
+	font-size: 2rem;
+	line-height: 1.3em;
+	font-weight: 400;
+	font-family: 'reckless';
+	-webkit-font-smoothing: auto;
+	& span {
+		font-family: 'matter';
+		font-weight: 500;
+		font-size: 1em;
+	}
+}*/
+
+h1 {
+	font-size: 1.9rem;
+	line-height: 1.3em;
+	font-weight: 400;
+	font-family: 'gooper';
+	.alt-font {
+		font-family: 'matter';
+		font-weight: 500;
+		font-size: 1.05em;
+	}
+	.emoji {
+	  font-family: "Noto Emoji", sans-serif !important;
+	  font-optical-sizing: auto;
+	  font-style: normal;
+	  font-weight: 600;
+/*	  font-size: 0.95em;*/
+	  margin-left: 2px;
+	  -webkit-font-smoothing: auto;
+	}
+}
+
+
+
+/*h1 {
+	font-family: 'gooper-semicondensed';
+	font-size: 2.3rem;
+	line-height: 1.2em;
+	font-weight: 400;
+	-webkit-font-smoothing: auto;
+}*/
+
 
 h3 {
 	margin-bottom: var(--space-3);
-	font-family: var(--sans-wide);
-	font-weight: var(--bold);
-	font-size: var(--size-body);
-	-webkit-font-smoothing: antialiased;
-	letter-spacing: -0.015em;
+	font-weight: 500;
+	font-size:1.1rem;
+	font-family: 'gooper';
+	font-weight: 400;
+	-webkit-font-smoothing: auto;
 }
 
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+.emoji {
+  font-family: "Noto Emoji", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.95em;
+  margin-left:2px;
 }
 
 
@@ -108,7 +205,7 @@ button {
 	-webkit-appearance: none;
 	border: solid;
 	border-radius: 0.25rem;
-	border-width: 2px;
+	border-width: 1.5px;
 	transition-duration: 0.3s;
 	transition-property: border-color;
 	color: var(--foreground);
@@ -160,8 +257,9 @@ button {
 .checkboxFilter label {
 	cursor: pointer;
 	display: block;
-	margin-bottom: var(--space-3);
+	margin-bottom: var(--space-2);
 	padding-left: var(--space-6);
+	padding-top: 0.115em;
 	position: relative;
 	user-select: none;
 	-moz-user-select: none;
@@ -182,7 +280,7 @@ button {
 .checkmark {
 	border: solid;
 	border-radius: 0.25rem;
-	border-width: 2px;
+	border-width: 1.5px;
 	box-sizing: border-box;
 	height: 1rem;
 	left: 0;
@@ -263,11 +361,13 @@ label:has(> input[value="undefined"]) {
 /*	---- Label ---- */
 
 .buttonFilter label {
+/*	font-family: 'gooper';*/
 	border-radius: 5rem;
 	cursor: pointer;
 	display: inline-block;
 	margin: var(--space-1) 0.325rem var(--space-1) 0;
-	padding: var(--space-1) var(--space-2);
+/*	padding: var(--space-1) var(--space-2);*/
+	padding: 0.3em var(--space-2) 0.2em;
 	user-select: none;
 	white-space: nowrap;
 	-moz-user-select: none;
@@ -277,8 +377,8 @@ label:has(> input[value="undefined"]) {
 	-webkit-user-select: none;
 	transition: 0.3s background-color, 0.2s color;
 	background-color: var(--foreground-5);
-	font-family: var(--sans-wide);
-	font-size: var(--size-small);
+/*	font-family: var(--sans-wide);*/
+/*	font-size: var(--size-small);*/
 }
 
 .buttonFilter input:checked + label {
@@ -535,7 +635,7 @@ main {
 	padding: var(--space-2) var(--space-3);
 	text-decoration: none;
 	border: solid;
-	border-width: 2px;
+	border-width: 1.5px;
 	border-color: var(--foreground-3);
 	cursor: pointer;
 	transition-duration: 0.3s;
@@ -656,7 +756,7 @@ article .text {
 	/* text-transform: lowercase; */
 	text-transform: capitalize;
 	-webkit-font-smoothing: antialiased;
-	letter-spacing: -0.005em;
+/*	letter-spacing: -0.005em;*/
 }
 
 .store {
@@ -674,14 +774,14 @@ article .text {
 }
 
 .price {
-	font-family: var(--sans-wide);
+/*	font-family: var(--sans-wide);*/
 	/* font-weight: var(--medium); */
 	font-size: var(--size-xsmall);
 	padding-top: 0.125rem;
 }
 
 .type {
-	font-family: var(--sans-wide);
+/*	font-family: var(--sans-wide);*/
 	font-size: var(--size-xsmall);
 	line-height: 1.125rem;
 	color: var(--type-text);

@@ -2,52 +2,25 @@
 /*  Import fonts                                      */
 /*----------------------------------------------------*/
 
+/*	Matter */
 
-/*	Freizeit */
-
 @font-face {
-	font-family: 'Freizeit';
-	src:  url('../fonts/Freizeit/FreizeitTrial-Bold.otf') format('opentype');
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Freizeit';
-	src:  url('../fonts/Freizeit/FreizeitTrial-Medium.otf') format('opentype');
-	font-weight: 500;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Freizeit';
-	src:  url('../fonts/Freizeit/FreizeitTrial-Regular.otf') format('opentype');
+  font-family: 'Matter';
+  src:  url('../fonts/Matter-Regular.woff2') format('woff2');
 	font-weight: 400;
 	font-style: normal;
 }
-@font-face {
-	font-family: 'Freizeit';
-	src:  url('../fonts/Freizeit/FreizeitTrial-Light.otf') format('opentype');
-	font-weight: 300;
-	font-style: normal;
-}
-
-
-/*	Freizeit 120 */
 
 @font-face {
-	font-family: 'Freizeit 120';
-	src:  url('../fonts/Freizeit/Freizeit120-Bold.otf') format('opentype');
-	font-weight: 600;
-	font-style: normal;
-}
-@font-face {
-	font-family: 'Freizeit 120';
-	src:  url('../fonts/Freizeit/Freizeit120-Medium.otf') format('opentype');
+  font-family: 'Matter';
+  src:  url('../fonts/Matter-Medium.woff2') format('woff2');
 	font-weight: 500;
 	font-style: normal;
 }
+
 @font-face {
-	font-family: 'Freizeit 120';
-	src:  url('../fonts/Freizeit/Freizeit120-Regular.otf') format('opentype');
+  font-family: 'Gooper';
+  src:  url('../fonts/VCGooper-Regular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 }
@@ -93,10 +66,8 @@
 
 	/*	Font stacks */
 	--fallback: -apple-system, BlinkMacSystemFont, 'Inter', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	--sans: 'Freizeit', var(--fallback);
-
-	--sans: 'Freizeit', var(--fallback);
-	--sans-wide: 'Freizeit 120', var(--fallback);
+	--sans: 'Matter', var(--fallback);
+	--display: 'Gooper', var(--fallback);
 
 	--bold: 600;
 	--medium: 500;
