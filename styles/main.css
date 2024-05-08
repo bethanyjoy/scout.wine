@@ -311,7 +311,7 @@ button {
 	position: absolute;
 	border: solid;
 	border-color: var(--background);
-	border-width: 0 2px 2px 0;
+	border-width: 0 1.75px 1.75px 0;
 	height: 0.625rem;
 	left: 0.3rem;
 	top: 0.063rem;
