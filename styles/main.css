@@ -280,12 +280,10 @@ label:has(> input[value="undefined"]) {
 /*	---- Label ---- */
 
 .buttonFilter label {
-/*	font-family: 'gooper';*/
 	border-radius: 5rem;
 	cursor: pointer;
 	display: inline-block;
 	margin: var(--space-1) 0.325rem var(--space-1) 0;
-/*	padding: var(--space-1) var(--space-2);*/
 	padding: 0.3em var(--space-2) 0.2em;
 	user-select: none;
 	white-space: nowrap;
@@ -296,8 +294,6 @@ label:has(> input[value="undefined"]) {
 	-webkit-user-select: none;
 	transition: 0.3s background-color, 0.2s color;
 	background-color: var(--foreground-5);
-/*	font-family: var(--sans-wide);*/
-/*	font-size: var(--size-small);*/
 }
 
 .buttonFilter input:checked + label {
