@@ -52,7 +52,7 @@ body {
 
 body {
 	display: flex;
-	margin: 0 var(--space-m-l);
+	margin: 0 0 0 var(--space-s-l);
 /*	gap: var(--space-l);*/
 }
 main {
@@ -60,11 +60,11 @@ main {
 }
 
 @media only screen and (min-width: 1112px) {
-	main, nav {
-		padding: var(--space-m-l) 0;
+	nav {
+		padding: var(--space-s-l) 0;
 	}
 	main {
-		padding-left: var(--space-m-l);
+		padding: var(--space-s-l);
 	}
 }
 
@@ -73,12 +73,13 @@ main {
 		display: flex;
 		flex-direction: column;
 		gap: 0;
+		margin: 0;
 	}
 	main {
-		padding-top: 0;
+		padding: var(--space-3xs) var(--space-s-l) var(--space-s-l) var(--space-s-l);
 	}
 	nav {
-		padding: var(--space-s-m) 0;
+		padding: var(--space-xs) var(--space-s-l) var(--space-s-m) var(--space-s-l);
 	}
 }
 

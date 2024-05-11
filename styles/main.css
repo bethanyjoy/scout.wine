@@ -5,7 +5,7 @@ main {
 	.list {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(16ch, 1fr));
-		grid-gap: var(--space-m-l);
+		grid-gap: var(--space-s-l);
 	}
 
 	@media only screen and (max-width: 830px) {

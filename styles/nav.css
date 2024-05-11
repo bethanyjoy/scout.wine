@@ -28,18 +28,21 @@ h3 {
 	.credits {
 		font-size: var(--step-0);
 	}
+	h3 {
+		font-size: var(--step-2)!important;
+	}
 }
 
 .button-wrapper {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	padding: var(--space-xs) var(--space-m-l);
+	padding: var(--space-xs) var(--space-s-l);
 	background-color: var(--background);
 	border-top: solid;
 	width: 100%;
 	border-width: 1px;
-	border-color: var(--border-color);
+	border-color: var(--foreground-4);
 /*	height: 90px;*/
 }
 
@@ -55,7 +58,9 @@ button {
 	border: none;
 	cursor: pointer;
 	width: 100%;
-	height: 56px;
+	height: 48px;
+	font-weight: 500;
+/*	-webkit-font-smoothing: auto; */
 }
 
 
@@ -76,8 +81,8 @@ button {
 	&#hideButton {
 		display: none;
 		position: fixed;
-		right: var(--space-m-l);
-		top: calc(var(--space-s-m) + 3px);
+		right: var(--space-s-l);
+		top: calc(var(--space-xs) + 3px);
 	}
 }
 
@@ -105,7 +110,8 @@ button {
 	}
 	#filterWrapper {
 /*		width: calc(100% - var(--space-2xs));*/
-		margin-bottom: 100px;
+		margin-bottom: 160px;
+		width: calc(100% - 50px);
 	}
 }
 
