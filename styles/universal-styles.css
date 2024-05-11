@@ -76,10 +76,10 @@ main {
 		margin: 0;
 	}
 	main {
-		padding: var(--space-3xs) var(--space-s-l) var(--space-s-l) var(--space-s-l);
+		padding: var(--space-2xs) var(--space-s-l) var(--space-s-l) var(--space-s-l);
 	}
 	nav {
-		padding: var(--space-xs) var(--space-s-l) var(--space-s-m) var(--space-s-l);
+		padding: var(--space-xs) var(--space-s-l);
 	}
 }
 

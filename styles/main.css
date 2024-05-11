@@ -11,6 +11,7 @@ main {
 	@media only screen and (max-width: 830px) {
 		.list {
 			grid-template-columns: repeat(auto-fill, minmax(14ch, 1fr));
+			row-gap: var(--space-m);
 		}
 	}
 
