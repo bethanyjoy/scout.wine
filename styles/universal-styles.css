@@ -1,0 +1,183 @@
+/*----------------------------------------------------*/
+/*  General styles                                    */
+/*----------------------------------------------------*/
+
+/* Global styles */
+
+:root {
+  font-size: 1rem;
+  font-family: 'Matter', system-ui,
+             -apple-system, BlinkMacSystemFont,
+             "Segoe UI",
+             "Roboto",
+             "Oxygen",
+             "Ubuntu",
+             "Cantarell",
+             "Fira Sans",
+             "Droid Sans",
+             "Helvetica Neue",
+             Arial, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-weight: 400;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+:root {
+
+	--bold: 600;
+	--medium: 500;
+	--regular: 400;
+	--light: 300;
+
+	--border-width: 1.5px;
+/*	--border-width: 2px;*/
+	--border-color: var(--foreground-3);
+}
+
+body {
+	background-color: var(--background);
+	color: var(--foreground);
+	font-size: var(--step-0);
+	line-height: 1.2;
+}
+
+/*input {
+	box-sizing: border-box!important;
+}*/
+
+/*----------------------------------------------------*/
+/*  Layout                                            */
+/*----------------------------------------------------*/
+
+body {
+	display: flex;
+	margin: 0 var(--space-m-l);
+/*	gap: var(--space-l);*/
+}
+main {
+	flex: 1;
+}
+
+@media only screen and (min-width: 1112px) {
+	main, nav {
+		padding: var(--space-m-l) 0;
+	}
+	main {
+		padding-left: var(--space-m-l);
+	}
+}
+
+@media only screen and (max-width: 1112px) {
+	body {
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+	main {
+		padding-top: 0;
+	}
+	nav {
+		padding: var(--space-s-m) 0;
+	}
+}
+
+nav {
+	width: 22ch;
+	height: 100vh;
+	top: 0;
+}
+
+/* Set default visibility for desktop 
+- fixes bug in desktop view after accessing mobile sidebar */
+
+@media only screen and (min-width: 1112px) {
+	body {
+		overflow: auto!important;
+	}
+	main {
+		visibility: visible!important;
+	}
+	nav {
+		height: 100vh!important;
+	}
+}
+
+/* Scrolling behavior */
+
+nav, main {
+	overflow: auto;
+	overscroll-behavior: contain;
+	position: sticky;
+}
+
+nav {
+	/* Hide scrollbar for IE, Edge and Firefox */
+	-ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+
+/*----------------------------------------------------*/
+/*  Type styles                                       */
+/*----------------------------------------------------*/
+
+
+p, h1, h3 {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	padding-inline-start: 0;
+}
+
+
+h1 {
+	font-size: var(--h1);
+	line-height: 1.2em;
+	font-weight: 400;
+	-webkit-font-smoothing: auto;
+
+	.alt-font {
+		font-family: 'Cooper';
+		letter-spacing: 0.01em;
+	}
+	.emoji {
+	  font-family: "Noto Emoji", sans-serif !important;
+	  font-optical-sizing: auto;
+	  font-style: normal;
+	  font-weight: 500;
+	  margin-left: 5px;
+	}
+}
+
+h2 {
+	font-family: 'Cooper';
+	font-size: var(--step-4);
+}
+
+h3 {
+	font-weight: 500;
+	font-size: var(--step-0);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+/*	---- Responsive styles ---- */
+
+@media only screen and (max-width: 1112px) {
+	input, label, button, h3 {
+		font-size: var(--step-1)!important;
+	}
+}
