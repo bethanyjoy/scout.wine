@@ -110,7 +110,7 @@ button {
 	}
 	#filterWrapper {
 /*		width: calc(100% - var(--space-2xs));*/
-		padding-bottom: 160px;
+		padding-bottom: 170px;
 		width: calc(100% - 50px);
 	}
 }
