@@ -142,9 +142,12 @@ button {
 		display: block !important;
 	}
 	.navButton#showButton, .navButton#hideButton, .button-wrapper {
-		display: none;
+		display: none!important;
 	}
 	h2 {
-		display: none;
+		display: none!important;;
+	}
+	#searchWrapper {
+		display: block!important;
 	}
 }
