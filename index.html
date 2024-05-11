@@ -29,9 +29,22 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link href="/styles/normalize.css" rel="stylesheet">
-	<link href="/styles/root.css" rel="stylesheet">
+	<link href="/styles/--reset.css" rel="stylesheet">
+	<link href="/styles/--size-space.css" rel="stylesheet">
+	<link href="/styles/--colors.css" rel="stylesheet">
+	<link href="/styles/--fonts.css" rel="stylesheet">
+
+	<link href="/styles/universal-styles.css" rel="stylesheet">
+	<link href="/styles/nav.css" rel="stylesheet">
 	<link href="/styles/main.css" rel="stylesheet">
+
+	<link href="/styles/text-input.css" rel="stylesheet">
+	<link href="/styles/button-filter.css" rel="stylesheet">
+	<link href="/styles/checkbox-filter.css" rel="stylesheet">
+	<link href="/styles/wine-card.css" rel="stylesheet">
+
+	<link href="/styles/utility-classes.css" rel="stylesheet">
+
 
 	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16.png">
@@ -46,38 +59,39 @@
 
 	<nav id="sidebar">
 
-		<!-- <h1>Find <span>natural</span> &amp <span>biodynamic</span> wine in LA</h1> -->
 		<h1>Find <span class="alt-font">natural</span><br>&amp <span class="alt-font">biodynamic</span> wine in LA<span class="emoji">🌞</span></h1>
 
-		<!-- <span class="emoji">✌️</span> -->
-		<!-- <h1>Find <span>natural</span> &amp <span>biodynamic</span> wine in LA <span>☺︎</span></h1> -->
-
 		<div id="searchWrapper">
-			<h3>Search</h3>
-			<input type="search" class="textInput search" placeholder="pinot etc..." />
-			<div id="navButtons">
+			<!-- <h3>Search</h3> -->
+			<input type="search" class="textInput search" placeholder="Search for wine" />
+			<!-- <div id="navButtons"> -->
 				<a href="javascript:void(0);" class="navButton" id="showButton" onclick="showSidebar()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
 				</a>
-				<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+				<!-- <a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
 					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 					</svg>
-				</a>
-			</div>
+				</a> -->
+			<!-- </div> -->
 		</div>
 
 		<div id="filterWrapper">
-			<div>
-				<div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
-				<div class="makerContainer checkboxFilter filter"><h3>Featured Makers</h3></div>
-				<div class="regionContainer checkboxFilter filter"><h3>Region</h3></div>
-				<div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
-				<span class="credits">Made by <a href="https://bethany.io/">bethany.io</a></span>
-				<!-- <a href="javascript:void(0);" class="resultsButton" onclick="hideSidebar()">Show results</a> -->
-				<button class="resultsButton" onclick="hideSidebar()">Show results</a>
+			<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+				</svg>
+			</a>
+			<h2>Filters</h2>
+			<div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
+			<div class="makerContainer checkboxFilter filter"><h3>Featured Makers</h3></div>
+			<div class="regionContainer checkboxFilter filter"><h3>Region</h3></div>
+			<div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
+			<span class="credits block">Made by <a href="https://bethany.io/">bethany.io</a></span>
+			<div class="button-wrapper">
+				<button class="resultsButton" onclick="hideSidebar()">Show results</button>
 			</div>
 		</div>
 
@@ -101,8 +115,10 @@
 	// Hide/show sidebar on mobile
 
 	function showSidebar() {
+		var x = document.getElementById("searchWrapper");
+			x.style.display = "none";
 		var x = document.getElementById("filterWrapper");
-			x.style.display = "flex";
+			x.style.display = "block";
 		var x = document.getElementById("showButton");
 			x.style.display = "none";
 		var x = document.getElementById("hideButton");
@@ -110,15 +126,14 @@
 		var x = document.getElementById("sidebar");
 			x.style.height = "100vh";
 		var x = document.getElementById("main");
-			// x.style.position = 'fixed';
-			// x.style.top = `-${window.scrollY}px`;
 			x.style.visibility = "hidden"
-			// x.style.height = "0"
-			// x.style.overflow = "hidden"
-			// x.style.display = "hidden"
+		var x = document.getElementById("body");
+			x.style.overflow = "hidden"
 	}
 
 	function hideSidebar() {
+		var x = document.getElementById("searchWrapper");
+			x.style.display = "flex";
 		var x = document.getElementById("filterWrapper");
 			x.style.display = "none";
 		var x = document.getElementById("showButton");
@@ -128,13 +143,9 @@
 		var x = document.getElementById("sidebar");
 			x.style.height = "auto";
 		var x = document.getElementById("main");
-			// const scrollY = x.style.top;
-			// x.style.position = '';
-			// x.style.top = '';
-			// window.scrollTo(0, parseInt(scrollY || '0') * -1);
 			x.style.visibility = "visible"
-			// x.style.height = "auto"
-			// x.style.overflow = "auto"
+		var x = document.getElementById("body");
+			x.style.overflow = "auto"
 	}
 
 	</script>

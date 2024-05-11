@@ -1,0 +1,92 @@
+.buttonFilter {
+
+	& label {
+		border-radius: 5rem;
+		cursor: pointer;
+		display: inline-block;
+/*		margin: 0.153em 0.36rem 0.153em 0;*/
+		margin: 0.36rem 0.36rem 0 0;
+		padding: 0.25em 0.5em 0.2em;
+		user-select: none;
+		white-space: nowrap;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		transition: 0.3s background-color, 0.2s color;
+		background-color: var(--foreground-5);
+	}
+
+	& h3 {
+		margin-bottom: calc(var(--space-2xs) - 0.25em);
+	}
+
+	@media only screen and (max-width: 1112px) {
+		& h3 {
+			margin-bottom: calc(var(--space-2xs) - 0.175em);
+		}
+	}
+
+	& input {
+		opacity: 0;
+		position: absolute;
+
+		&:checked + label {
+			color: var(--type-text);
+		}
+
+		/* Styles for individual wine type filters */
+
+		&[value="Orange"] {
+			&:hover + label {background-color: var(--orange-alpha)}
+			&:checked + label {background-color: var(--orange)}
+		}
+
+		&[value="Rosé"] {
+			&:hover + label {background-color: var(--pink-alpha)}
+			&:checked + label {background-color: var(--pink)}
+		}
+
+		&[value="Red"] {
+			&:hover + label {background-color: var(--red-alpha)}
+			&:checked + label {background-color: var(--red)}
+		}
+
+		&[value="White"] {
+			&:hover + label {background-color: var(--white-alpha)}
+			&:checked + label {background-color: var(--white)}
+		}
+
+		&[value="Sparkling"] {
+			&:hover + label {background-color: var(--blue-alpha)}
+			&:checked + label {background-color: var(--blue)}
+		}
+
+		&[value="Piquette"] {
+			&:hover + label {background-color: var(--violet-alpha)}
+			&:checked + label {background-color: var(--violet)}
+		}
+
+		&[value="Co-Ferment"] {
+			&:hover + label {background-color: var(--green-alpha)}
+			&:checked + label {background-color: var(--green)}
+		}
+	}
+}
+
+
+@media only screen and (max-width: 1112px) {
+	.buttonFilter label {
+		margin: 0.5rem 0.5rem 0 0;
+		padding: 0.5em 0.7em 0.4em;
+	}
+}
+
+/* Disable hover state on mobile */
+
+@media (pointer:coarse) {
+	.buttonFilter input:hover + label {
+		 color: inherit!important;
+	}
+}

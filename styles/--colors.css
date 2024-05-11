@@ -1,0 +1,98 @@
+:root {
+
+	color-scheme: light dark;
+
+	/*	Core color values */
+	--core-black-value: 91, 66, 43;
+/*	--core-black-value: 38, 38, 38;*/
+/*	--core-white-value: 236, 231, 219;*/
+	--core-white-value: 240, 235, 224;
+
+	/*	Accent colors */
+	--white: rgb(227, 218, 186);
+	--pink: rgb(255, 185, 185);
+	--red: rgb(255, 166, 138);
+	--orange: rgb(243, 206, 134);
+	--green: rgb(164, 219, 173);
+	--blue: rgb(168, 207, 224);
+	--violet: rgb(212, 188, 232);
+
+	/*	Accent colors - alpha */
+	--white-alpha: rgba(227, 218, 186, 0.5);
+	--pink-alpha: rgba(255, 185, 185, 0.5);
+	--red-alpha: rgba(255, 166, 138, 0.5);
+	--orange-alpha: rgba(243, 206, 134, 0.5);
+	--green-alpha: rgba(164, 219, 173, 0.5);
+	--blue-alpha: rgba(168, 207, 224, 0.5);
+	--violet-alpha: rgba(212, 188, 232, 0.5);
+
+}
+
+
+/* Light color scheme */
+
+@media screen and (prefers-color-scheme: light) {
+
+	:root {
+
+		/*	Core color values */
+		--background-value: var(--core-white-value);
+		--foreground-value: var(--core-black-value);
+
+		/*	Core colors */
+		--background: rgb(var(--background-value));
+		--foreground: rgb(var(--foreground-value));
+		--foreground-2: rgba(var(--foreground-value), 0.7);
+		--foreground-3: rgba(var(--foreground-value), 0.4);
+		--foreground-4: rgba(var(--foreground-value), 0.2);
+		--foreground-5: rgba(var(--foreground-value), 0.1);
+		--foreground-6: rgba(var(--foreground-value), 0.08);
+
+		/*	Other colors */
+		--type-text: var(--foreground);
+		--image-background: rgb(245 243 237);
+		/* --image-background: var(--foreground-6); */
+		/* --image-background: #fff; */
+		--wine-svg: var(--foreground-4);
+		--shadow: rgba(55, 45, 36, 0.2);
+
+		/*	SVG elements */
+		--x-mark: url('/assets/svgs/x-mark-outline-light.svg');
+
+	}
+
+}
+
+/* Dark color scheme */
+
+@media screen and (prefers-color-scheme: dark) {
+
+	:root {
+
+		/*	Core color values */
+		--core-black-value: 43, 40, 37;
+		--background-value: var(--core-black-value);
+		--foreground-value: var(--core-white-value);
+
+		/*	Core colors */
+		--background: rgb(var(--background-value));
+		--foreground: rgb(var(--foreground-value));
+		--foreground-2: rgba(var(--foreground-value), 0.6);
+		--foreground-3: rgba(var(--foreground-value), 0.3);
+		--foreground-4: rgba(var(--foreground-value), 0.2);
+		--foreground-5: rgba(var(--foreground-value), 0.08);
+		--foreground-6: rgba(var(--foreground-value), 0.05);
+
+		/*	Other colors */
+		--type-text: var(--background);
+		/* --image-background: var(--foreground-6); */
+		--image-background: var(--foreground);
+		--wine-svg: var(--foreground-4);
+		--shadow: rgba(0, 0, 0, 0.3);
+
+		/*	SVG elements */
+		--x-mark: url('/assets/svgs/x-mark-outline-dark.svg');
+
+	}
+
+}

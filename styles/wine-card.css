@@ -1,0 +1,140 @@
+article {
+
+	/* Image Link */
+
+	> a {
+		display: block;
+		position: relative;
+/*		aspect-ratio: 2 / 3;*/
+		aspect-ratio: 7 / 10;
+		background: var(--image-background);
+		border-radius: 0.5rem;
+		transition: box-shadow 0.3s;
+		&:hover {
+			box-shadow: 0 0.188rem 0.5rem 0 var(--shadow);
+		}
+
+		/* Color tag */
+
+		.type {
+			position: absolute;
+			left: var(--space-2xs);
+			top: var(--space-2xs);
+			z-index: 900;
+			padding: 0.05em 0.35em 0 0.35em;
+			border-radius: 10rem;
+			font-size: var(--step--1);
+			color: var(--type-text);
+
+			&:is(.co-ferment *) {background-color: var(--green);}
+			&:is(.orange *) {background-color: var(--orange);}
+			&:is(.piquette *) {background-color: var(--violet);}
+			&:is(.red *) {background-color: var(--red);}
+			&:is(.rose *) {background-color: var(--pink);}
+			&:is(.sparkling *) {background-color: var(--blue);}
+			&:is(.white *) {background-color: var(--white);}
+		}
+
+		/* Image */
+
+		& img {
+			height: 100%;
+			width: 100%;
+/*			object-position: 50% 50%;*/
+			mix-blend-mode: multiply;
+			border-radius: 0.5rem;
+
+			/* Placeholder image */
+			&.placeholder {
+				object-fit: scale-down;
+				padding: 2.5vw 0;
+				/* Hide placeholder image if there is a photo */
+				&:is(.hasimage *) {
+					display: none;
+				}
+			}
+
+			/* Photo of product */
+			&.photo {
+				object-fit: cover;
+				/* Hide store's placeholder images */
+				&:is(.noimage *) {
+					display: none;
+				}
+				/* Custom styling for specific stores */
+				&:is(.heavensmarket *) {
+					object-fit: scale-down;
+					padding: 1.2vw 0;
+				}
+				&:is(.wineandeggs *) {
+					object-fit: scale-down;
+				}
+
+			}
+		}
+	}
+
+	/* Text */
+
+	.text {
+
+		* {
+			overflow: hidden;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			word-wrap: break-word;
+			text-transform: capitalize;
+		}
+
+		.name {
+			margin-top: var(--space-xs);
+			font-weight: var(--medium);
+			-webkit-line-clamp: 2; /* number of lines to show */
+		}
+
+		.store {
+			margin-top: var(--space-3xs);
+			font-size: var(--step--1);
+			color: var(--foreground-2);
+			-webkit-line-clamp: 1; /* number of lines to show */
+		}
+
+		.price {
+			margin-top: var(--space-4xs);
+			font-size: var(--step--1);
+			padding-top: var(--space-4xs);
+		}
+
+		/* Hide maker and region from wine card */
+		.maker, .region {
+			display: none;
+		}
+	}
+
+}
+
+/*	---- Responsive styles ---- */
+
+@media only screen and (max-width: 1112px) {
+
+	article {
+/*		padding-bottom: var(--space-s);*/
+		
+		/*.type {
+			left: var(--space-xs)!important;
+			top: var(--space-xs)!important;
+		}*/
+
+		& img {
+
+			.placeholder  {
+				padding: 4vw 0;
+			}
+
+			.photo:is(.heavensmarket *) {
+				padding: 2.5vw 0;
+			}
+		}
+	}
+}
