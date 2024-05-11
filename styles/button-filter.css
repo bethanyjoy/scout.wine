@@ -62,11 +62,12 @@
 			&:hover + label {background-color: var(--green-alpha)}
 			&:checked + label {background-color: var(--green)}
 		}
+		
 
 
 		/* Colored backgrounds */
 
-		&[value="Orange"] {
+/*		&[value="Orange"] {
 			+ label {background-color: var(--orange-alpha)}
 			&:hover + label {background-color: var(--orange)}
 			&:checked + label {background-color: var(--orange)}
@@ -93,7 +94,6 @@
 		}
 		&[value="Piquette"] {
 			+ label {background-color: var(--violet-alpha)}
-			&:hover + label {background-color: var(--violet-alpha)}
 			&:hover + label {background-color: var(--violet)}
 			&:checked + label {background-color: var(--violet)}
 		}
@@ -101,7 +101,7 @@
 			+ label {background-color: var(--green-alpha)}
 			&:hover + label {background-color: var(--green)}
 			&:checked + label {background-color: var(--green)}
-		}
+		}*/
 
 
 
