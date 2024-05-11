@@ -26,43 +26,80 @@
 			color: var(--type-text);
 		}
 
-
-
-
 		/* Styles for individual wine type filters */
-
 
 		/* Grey background */
 
 		&[value="Orange"] {
-			&:hover + label {background-color: var(--orange-alpha)}
+/*			&:hover + label {background-color: var(--orange-alpha)}*/
 			&:checked + label {background-color: var(--orange)}
 		}
 		&[value="Rosé"] {
-			&:hover + label {background-color: var(--pink-alpha)}
+/*			&:hover + label {background-color: var(--pink-alpha)}*/
 			&:checked + label {background-color: var(--pink)}
 		}
 		&[value="Red"] {
-			&:hover + label {background-color: var(--red-alpha)}
+/*			&:hover + label {background-color: var(--red-alpha)}*/
 			&:checked + label {background-color: var(--red)}
 		}
 		&[value="White"] {
-			&:hover + label {background-color: var(--white-alpha)}
+/*			&:hover + label {background-color: var(--white-alpha)}*/
 			&:checked + label {background-color: var(--white)}
 		}
 		&[value="Sparkling"] {
-			&:hover + label {background-color: var(--blue-alpha)}
+/*			&:hover + label {background-color: var(--blue-alpha)}*/
 			&:checked + label {background-color: var(--blue)}
 		}
 		&[value="Piquette"] {
-			&:hover + label {background-color: var(--violet-alpha)}
+/*			&:hover + label {background-color: var(--violet-alpha)}*/
 			&:checked + label {background-color: var(--violet)}
 		}
 		&[value="Co-Ferment"] {
-			&:hover + label {background-color: var(--green-alpha)}
-			&:checked + label {background-color: var(--green)}
+/*			&:hover + label {background-color: var(--green-alpha)}*/
+			&:checked + label {background-color: var(--green!important)}
 		}
-		
+	}
+}
+
+@media (pointer:fine) {
+	.buttonFilter input {
+		&[value="Orange"] {
+			&:hover + label {background-color: var(--orange-alpha)}
+			&:checked:hover + label {background-color: var(--orange)}
+		}
+		&[value="Rosé"] {
+			&:hover + label {background-color: var(--pink-alpha)}
+			&:checked:hover + label {background-color: var(--pink)}
+		}
+		&[value="Red"] {
+			&:hover + label {background-color: var(--red-alpha)}
+			&:checked:hover + label {background-color: var(--red)}
+		}
+		&[value="White"] {
+			&:hover + label {background-color: var(--white-alpha)}
+			&:checked:hover + label {background-color: var(--white)}
+		}
+		&[value="Sparkling"] {
+			&:hover + label {background-color: var(--blue-alpha)}
+			&:checked:hover + label {background-color: var(--blue)}
+		}
+		&[value="Piquette"] {
+			&:hover + label {background-color: var(--violet-alpha)}
+			&:checked:hover + label {background-color: var(--violet)}
+		}
+		&[value="Co-Ferment"] {
+			&:hover + label {background-color: var(--green-alpha)}
+			&:checked:hover + label {background-color: var(--green)}
+		}
+	}
+}
+
+
+
+/*@media (pointer:coarse) {
+			&[value="Orange"], &[value="Rosé"], &[value="Red"], &[value="White"], 
+			&[value="Sparkling"], &[value="Piquette"], &[value="Co-Ferment"] {
+			}*/
 
 
 		/* Colored backgrounds */
@@ -106,8 +143,6 @@
 
 
 
-	}
-}
 
 
 @media only screen and (max-width: 1112px) {
@@ -119,8 +154,8 @@
 
 /* Disable hover state on mobile */
 
-@media (pointer:coarse) {
+/*@media (pointer:coarse) {
 	.buttonFilter input:hover + label {
 		 color: inherit!important;
 	}
-}
+}*/
