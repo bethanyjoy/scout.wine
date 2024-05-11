@@ -56,7 +56,7 @@
 		}
 		&[value="Co-Ferment"] {
 /*			&:hover + label {background-color: var(--green-alpha)}*/
-			&:checked + label {background-color: var(--green!important)}
+			&:checked + label {background-color: var(--green)}
 		}
 	}
 }
