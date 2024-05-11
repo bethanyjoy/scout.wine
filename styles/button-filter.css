@@ -68,7 +68,7 @@
 			&:checked + label {background-color: var(--violet)}
 		}
 
-		&[value="Co-Fermented"] {
+		&[value="Co-Ferment"] {
 			&:hover + label {background-color: var(--green-alpha)}
 			&:checked + label {background-color: var(--green)}
 		}

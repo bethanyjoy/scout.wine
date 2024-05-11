@@ -1322,7 +1322,7 @@ for url in silverlake_urls:
 		if 'sparkling' in url:
 			type = 'Sparkling'
 		if 'fruit' in url:
-			type = 'Co-Fermented'
+			type = 'Co-Ferment'
 		if 'piquette' in url:
 			type = 'Piquette'
 		type_class = type.replace("&#233;", "e").lower()
@@ -1996,7 +1996,7 @@ wineandeggs_urls = [
 	"https://wineandeggs.com/collections/wine-rose",
 	"https://wineandeggs.com/collections/skin-contact-wine",
 	"https://wineandeggs.com/collections/sparkling-wine",
-	"https://wineandeggs.com/collections/co-fermented",
+	"https://wineandeggs.com/collections/co-ferment",
 	"https://wineandeggs.com/collections/piquette-wine",
 
 ]
@@ -2020,8 +2020,8 @@ for url in wineandeggs_urls:
 			type = 'Ros&#233;'
 		if 'sparkling' in url:
 			type = 'Sparkling'
-		if 'fermented' in url:
-			type = 'Co-Fermented'
+		if 'ferment' in url:
+			type = 'Co-Ferment'
 		if 'piquette' in url:
 			type = 'Piquette'
 		type_class = type.replace("&#233;", "e").lower()
