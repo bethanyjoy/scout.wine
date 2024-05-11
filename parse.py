@@ -1996,7 +1996,7 @@ wineandeggs_urls = [
 	"https://wineandeggs.com/collections/wine-rose",
 	"https://wineandeggs.com/collections/skin-contact-wine",
 	"https://wineandeggs.com/collections/sparkling-wine",
-	"https://wineandeggs.com/collections/co-ferment",
+	"https://wineandeggs.com/collections/co-fermented",
 	"https://wineandeggs.com/collections/piquette-wine",
 
 ]
