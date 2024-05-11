@@ -5,7 +5,7 @@
 		cursor: pointer;
 		display: inline-block;
 /*		margin: 0.153em 0.36rem 0.153em 0;*/
-		margin: 0.36rem 0.36rem 0 0;
+		margin: 0.375rem 0.375rem 0 0;
 		padding: 0.25em 0.5em 0.2em;
 		user-select: none;
 		white-space: nowrap;
@@ -18,16 +18,6 @@
 		background-color: var(--foreground-5);
 	}
 
-	& h3 {
-		margin-bottom: calc(var(--space-2xs) - 0.25em);
-	}
-
-	@media only screen and (max-width: 1112px) {
-		& h3 {
-			margin-bottom: calc(var(--space-2xs) - 0.175em);
-		}
-	}
-
 	& input {
 		opacity: 0;
 		position: absolute;
@@ -36,42 +26,86 @@
 			color: var(--type-text);
 		}
 
+
+
+
 		/* Styles for individual wine type filters */
+
+
+		/* Grey background */
 
 		&[value="Orange"] {
 			&:hover + label {background-color: var(--orange-alpha)}
 			&:checked + label {background-color: var(--orange)}
 		}
-
 		&[value="Rosé"] {
 			&:hover + label {background-color: var(--pink-alpha)}
 			&:checked + label {background-color: var(--pink)}
 		}
-
 		&[value="Red"] {
 			&:hover + label {background-color: var(--red-alpha)}
 			&:checked + label {background-color: var(--red)}
 		}
-
 		&[value="White"] {
 			&:hover + label {background-color: var(--white-alpha)}
 			&:checked + label {background-color: var(--white)}
 		}
-
 		&[value="Sparkling"] {
 			&:hover + label {background-color: var(--blue-alpha)}
 			&:checked + label {background-color: var(--blue)}
 		}
-
 		&[value="Piquette"] {
 			&:hover + label {background-color: var(--violet-alpha)}
 			&:checked + label {background-color: var(--violet)}
 		}
-
 		&[value="Co-Ferment"] {
 			&:hover + label {background-color: var(--green-alpha)}
 			&:checked + label {background-color: var(--green)}
 		}
+
+
+		/* Colored backgrounds */
+
+		&[value="Orange"] {
+			+ label {background-color: var(--orange-alpha)}
+			&:hover + label {background-color: var(--orange)}
+			&:checked + label {background-color: var(--orange)}
+		}
+		&[value="Rosé"] {
+			+ label {background-color: var(--pink-alpha)}
+			&:hover + label {background-color: var(--pink)}
+			&:checked + label {background-color: var(--pink)}
+		}
+		&[value="Red"] {
+			+ label {background-color: var(--red-alpha)}
+			&:hover + label {background-color: var(--red)}
+			&:checked + label {background-color: var(--red)}
+		}
+		&[value="White"] {
+			+ label {background-color: var(--white-alpha)}
+			&:hover + label {background-color: var(--white)}
+			&:checked + label {background-color: var(--white)}
+		}
+		&[value="Sparkling"] {
+			+ label {background-color: var(--blue-alpha)}
+			&:hover + label {background-color: var(--blue)}
+			&:checked + label {background-color: var(--blue)}
+		}
+		&[value="Piquette"] {
+			+ label {background-color: var(--violet-alpha)}
+			&:hover + label {background-color: var(--violet-alpha)}
+			&:hover + label {background-color: var(--violet)}
+			&:checked + label {background-color: var(--violet)}
+		}
+		&[value="Co-Ferment"] {
+			+ label {background-color: var(--green-alpha)}
+			&:hover + label {background-color: var(--green)}
+			&:checked + label {background-color: var(--green)}
+		}
+
+
+
+
 	}
 }
 

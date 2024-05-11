@@ -20,8 +20,12 @@
 	transition-duration: 0.3s;
 	transition-property: border-color;
 
+	background-color: var(--foreground-6);
+	border: none;
+
 	&:hover, &:focus {
-		border-color: var(--foreground-2);
+/*		border-color: var(--foreground-2);*/
+background-color: var(--foreground-5);
 	}
 
 	&::placeholder {

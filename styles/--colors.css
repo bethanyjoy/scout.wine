@@ -18,7 +18,7 @@
 	--violet: rgb(212, 188, 232);
 
 	/*	Accent colors - alpha */
-	--white-alpha: rgba(227, 218, 186, 0.5);
+	--white-alpha: rgba(227, 218, 186, 0.5 );
 	--pink-alpha: rgba(255, 185, 185, 0.5);
 	--red-alpha: rgba(255, 166, 138, 0.5);
 	--orange-alpha: rgba(243, 206, 134, 0.5);

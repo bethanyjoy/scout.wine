@@ -1,3 +1,15 @@
 .block {
 	display: block!important;
 }
+
+/*.small {
+	font-size: var(--step--1)!important;
+}
+*/
+.subdued {
+	color: var(--foreground-2)!important;
+}
+
+.serif {
+	font-family: 'Cooper'!important;
+}
