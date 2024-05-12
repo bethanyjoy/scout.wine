@@ -9,13 +9,13 @@
 	--core-white-value: 240, 235, 224;
 
 	/*	Accent colors */
-	--white: rgb(227, 218, 186);
-	--pink: rgb(255, 185, 185);
-	--red: rgb(255, 166, 138);
-	--orange: rgb(243, 206, 134);
-	--green: rgb(164, 219, 173);
-	--blue: rgb(168, 207, 224);
-	--violet: rgb(212, 188, 232);
+	--white: rgba(227, 218, 186, 0.95);
+	--pink: rgba(255, 185, 185, 0.95);
+	--red: rgba(255, 166, 138, 0.95);
+	--orange: rgba(243, 206, 134, 0.95);
+	--green: rgba(164, 219, 173, 0.95);
+	--blue: rgba(168, 207, 224, 0.95);
+	--violet: rgba(212, 188, 232, 0.95);
 
 	/*	Accent colors - alpha */
 	--white-alpha: rgba(227, 218, 186, 0.5);
