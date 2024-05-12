@@ -5,7 +5,8 @@ $(function a() {
 
 	var wine = [];
 
-	$.getJSON('data.json', function(data) {
+	// $.getJSON('data.json', function(data) {
+		$.getJSON('data-mockup.json', function(data) {
 	// $.getJSON('data-testing.json', function(data) {
 
 
