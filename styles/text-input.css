@@ -11,9 +11,6 @@
 	appearance: none;
 	-webkit-appearance: none;
 
-	transition-duration: 0.3s;
-	transition-property: background-color;
-
 	background-color: var(--foreground-6);
 /*background-color: rgba(var(--foreground-value), 0.095);*/
 	border: none;
@@ -30,6 +27,8 @@
 
 @media (any-hover: hover) {
 	.textInput {
+		transition-duration: 0.3s;
+		transition-property: background-color;
 		&:hover, &:focus {
 			background-color: var(--foreground-5);
 		}
