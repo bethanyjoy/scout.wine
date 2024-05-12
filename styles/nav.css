@@ -107,7 +107,8 @@ button {
 	width: 2.25rem;
 
 	& svg {
-		stroke: var(--foreground);
+/*		padding: var(--space-4xs);*/
+		padding: var(--space-4xs) 0 var(--space-4xs) calc(var(--space-4xs) * 2);
 	}
 
 	&#showButton {
@@ -135,7 +136,7 @@ button {
 	}
 	#searchWrapper {
 		display: flex;
-		gap: var(--space-2xs);
+		gap: var(--space-3xs);
 		align-items: center;
 	}
 	.search {
