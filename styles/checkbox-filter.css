@@ -62,9 +62,9 @@
 /*		margin: 1px 0;*/
 		border-color: var(--border-color);
 
-		&:hover {
+		/*&:hover {
 			border-color: var(--foreground-2);
-		}
+		}*/
 
 		/* Style the checkmark/indicator */
 		&:after {
@@ -93,6 +93,16 @@
 		}
 	}
 }
+
+
+@media (any-hover: hover) {
+	.checkboxFilter .checkmark:hover {
+		border-color: var(--foreground-2);
+	}
+}
+
+
+
 
 @media only screen and (max-width: 1112px) {
 	.checkboxFilter {

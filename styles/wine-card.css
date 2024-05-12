@@ -113,63 +113,6 @@ article {
 
 @media (any-hover: hover) {
 	article > a:hover {
-    /*box-shadow: 
-	    0 1px 2px rgba(var(--shadow-value), 0.2), 
-      0 2px 4px rgba(var(--shadow-value), 0.2), 
-      0 4px 8px rgba(var(--shadow-value), 0.2), 
-      0 8px 16px rgba(var(--shadow-value), 0.2), 
-      0 16px 32px rgba(var(--shadow-value), 0.2), 
-      0 32px 40px rgba(var(--shadow-value), 0.05);*/
-    /*box-shadow:
-		  0.6px 1px 2.2px rgba(0, 0, 0, 0.02),
-		  1.4px 2.4px 5.3px rgba(0, 0, 0, 0.028),
-		  2.6px 4.5px 10px rgba(0, 0, 0, 0.035),
-		  4.7px 8px 17.9px rgba(0, 0, 0, 0.042),
-		  8.8px 15px 33.4px rgba(0, 0, 0, 0.05),
-		  21px 36px 80px rgba(0, 0, 0, 0.07);*/
-/*		 Theirs*/
-		 /*box-shadow:
-			  0.6px 1px 2.2px rgba(0, 0, 0, 0.027),
-			  1.4px 2.4px 5.3px rgba(0, 0, 0, 0.038),
-			  2.6px 4.5px 10px rgba(0, 0, 0, 0.04),
-			  4.7px 8px 17.9px rgba(0, 0, 0, 0.041),
-			  8.8px 15px 33.4px rgba(0, 0, 0, 0.048),
-			  21px 36px 60px rgba(0, 0, 0, 0.07)
-			;*/
-/*			Variation - decreased blue + distance*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(0, 0, 0, 0.027),
-			  1.4px 2.4px 5.3px rgba(0, 0, 0, 0.038),
-			  2.6px 4.5px 10px rgba(0, 0, 0, 0.04),
-			  4.7px 8px 17.9px rgba(0, 0, 0, 0.041),
-			  8.8px 15px 33.4px rgba(0, 0, 0, 0.048),
-			  15px 20px 60px rgba(0, 0, 0, 0.07)
-			;*/
-/*			Variation - decreased spread/opactiy of final layer*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(0, 0, 0, 0.027),
-			  1.4px 2.4px 5.3px rgba(0, 0, 0, 0.038),
-			  2.6px 4.5px 10px rgba(0, 0, 0, 0.04),
-			  4.7px 8px 17.9px rgba(0, 0, 0, 0.041),
-			  8.8px 15px 33.4px rgba(0, 0, 0, 0.048),
-			  21px 36px 60px rgba(0, 0, 0, 0.04)
-			;*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(var(--shadow-value), 0.027),
-			  1.4px 2.4px 5.3px rgba(var(--shadow-value), 0.038),
-			  2.6px 4.5px 10px rgba(var(--shadow-value), 0.04),
-			  4.7px 8px 17.9px rgba(var(--shadow-value), 0.041),
-			  8.8px 15px 33.4px rgba(var(--shadow-value), 0.048),
-			  21px 36px 60px rgba(var(--shadow-value), 0.05)
-			;*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(var(--shadow-value), 0.02),
-			  1.4px 2.4px 5.3px rgba(var(--shadow-value), 0.028),
-			  2.6px 4.5px 10px rgba(var(--shadow-value), 0.035),
-			  4.7px 8px 17.9px rgba(var(--shadow-value), 0.042),
-			  8.8px 15px 33.4px rgba(var(--shadow-value), 0.05),
-			  21px 36px 60px rgba(var(--shadow-value), 0.07)
-			;*/
 			box-shadow:
 			  1px 1px 2.2px rgba(var(--shadow-value), 0.02),
 			  2.4px 2.4px 5.3px rgba(var(--shadow-value), 0.028),
@@ -178,24 +121,6 @@ article {
 			  15px 15px 33.4px rgba(var(--shadow-value), 0.05),
 			  24px 24px 75px rgba(var(--shadow-value), 0.07)
 			;
-/*			Variation - increase low to mid opacity*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(var(--shadow-value), 0.03),
-			  1.4px 2.4px 5.3px rgba(var(--shadow-value), 0.04),
-			  2.6px 4.5px 10px rgba(var(--shadow-value), 0.042),
-			  4.7px 8px 17.9px rgba(var(--shadow-value), 0.041),
-			  8.8px 15px 33.4px rgba(var(--shadow-value), 0.048),
-			  21px 36px 60px rgba(var(--shadow-value), 0.04)
-			;*/
-/*			My variation - increaded low to mid opacity*/
-			/*box-shadow:
-			  0.6px 1px 2.2px rgba(0, 0, 0, 0.033),
-			  1.4px 2.4px 5.3px rgba(0, 0, 0, 0.047),
-			  2.6px 4.5px 10px rgba(0, 0, 0, 0.051),
-			  4.7px 8px 17.9px rgba(0, 0, 0, 0.04),
-			  8.8px 15px 33.4px rgba(0, 0, 0, 0.048),
-			  21px 36px 60px rgba(0, 0, 0, 0.07)
-			;*/
 		}
 	}
 
