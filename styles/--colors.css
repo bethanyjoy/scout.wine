@@ -54,7 +54,8 @@
 		/* --image-background: var(--foreground-6); */
 		/* --image-background: #fff; */
 		--wine-svg: var(--foreground-4);
-		--shadow: rgba(55, 45, 36, 0.2);
+		--shadow: rgba(55, 45, 36, 0.1);
+		--shadow-value: 55, 45, 36;
 
 		/*	SVG elements */
 		--x-mark: url('/assets/svgs/x-mark-outline-light.svg');

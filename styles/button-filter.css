@@ -61,7 +61,7 @@
 	}
 }
 
-@media (pointer:fine) {
+@media (any-hover:hover) {
 	.buttonFilter input {
 		&[value="Orange"] {
 			&:hover + label {background-color: var(--orange-alpha)}
