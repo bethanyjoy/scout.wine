@@ -15,7 +15,7 @@
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		transition: 0.3s background-color, 0.2s color;
-		background-color: var(--foreground-5);
+		background-color: var(--foreground-6);
 	}
 
 	& input {

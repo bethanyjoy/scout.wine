@@ -45,15 +45,12 @@
 		--foreground-2: rgba(var(--foreground-value), 0.7);
 		--foreground-3: rgba(var(--foreground-value), 0.4);
 		--foreground-4: rgba(var(--foreground-value), 0.2);
-		--foreground-5: rgba(var(--foreground-value), 0.1);
-		--foreground-6: rgba(var(--foreground-value), 0.08);
+		--foreground-5: rgba(var(--foreground-value), 0.13);
+		--foreground-6: rgba(var(--foreground-value), 0.095);
 
 		/*	Other colors */
 		--type-text: var(--foreground);
 		--image-background: rgb(245 243 237);
-		/* --image-background: var(--foreground-6); */
-		/* --image-background: #fff; */
-		--wine-svg: var(--foreground-4);
 		--shadow: rgba(55, 45, 36, 0.1);
 		--shadow-value: 55, 45, 36;
 
@@ -81,14 +78,12 @@
 		--foreground-2: rgba(var(--foreground-value), 0.6);
 		--foreground-3: rgba(var(--foreground-value), 0.3);
 		--foreground-4: rgba(var(--foreground-value), 0.2);
-		--foreground-5: rgba(var(--foreground-value), 0.08);
-		--foreground-6: rgba(var(--foreground-value), 0.05);
+		--foreground-5: rgba(var(--foreground-value), 0.10);
+		--foreground-6: rgba(var(--foreground-value), 0.08);
 
 		/*	Other colors */
 		--type-text: var(--background);
-		/* --image-background: var(--foreground-6); */
 		--image-background: var(--foreground);
-		--wine-svg: var(--foreground-4);
 		--shadow: rgba(0, 0, 0, 0.3);
 
 		/*	SVG elements */

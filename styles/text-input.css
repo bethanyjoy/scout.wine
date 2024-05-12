@@ -3,14 +3,8 @@
 	padding: var(--space-2xs) var(--space-xs) var(--space-2xs) var(--space-xs);
 	border-radius: 0.5rem;
 	width: 98%;
-
-	border: solid;
-	border-width: var(--border-width);
-	border-color: var(--border-color);
-	background-color: var(--background);
 	color: var(--foreground);
 	
-	border-radius: 0.5rem;
 	border-radius: 100px;
 
 	outline: 0;
@@ -18,14 +12,14 @@
 	-webkit-appearance: none;
 
 	transition-duration: 0.3s;
-	transition-property: border-color;
+	transition-property: background-color;
 
 	background-color: var(--foreground-6);
+/*background-color: rgba(var(--foreground-value), 0.095);*/
 	border: none;
 
-	&:hover, &:focus {
-/*		border-color: var(--foreground-2);*/
-background-color: var(--foreground-5);
+	&:focus {
+		background-color: var(--foreground-5);
 	}
 
 	&::placeholder {
@@ -34,12 +28,16 @@ background-color: var(--foreground-5);
 	}
 }
 
+@media (any-hover: hover) {
+	.textInput:hover {
+		background-color: var(--foreground-5);
+	}
+}
+
 @media only screen and (max-width: 1112px) {
 	.textInput {
 		padding: var(--space-xs) var(--space-s) var(--space-xs) var(--space-s);
 		width: 100%;
-		background-color: var(--foreground-5);
-		border: none;
 	}
 }
 
