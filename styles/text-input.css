@@ -18,9 +18,9 @@
 /*background-color: rgba(var(--foreground-value), 0.095);*/
 	border: none;
 
-	&:focus {
+	/*&:focus {
 		background-color: var(--foreground-5);
-	}
+	}*/
 
 	&::placeholder {
 		opacity: 1;
@@ -29,8 +29,10 @@
 }
 
 @media (any-hover: hover) {
-	.textInput:hover {
-		background-color: var(--foreground-5);
+	.textInput {
+		&:hover, &:focus {
+			background-color: var(--foreground-5);
+		}
 	}
 }
 
