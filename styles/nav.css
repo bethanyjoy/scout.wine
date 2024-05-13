@@ -227,6 +227,7 @@ button {
 	}
 	#filterWrapper {
 		margin-block-start: 0;
+		height: -webkit-fill-available;
 	}
 }
 
