@@ -2,93 +2,116 @@
 
 .checkboxFilter { 
 
-	> * + * {
-		margin-top: var(--space-2xs)
-	}
+	.collapsible-content {
 
-	& label {
-		/*display: flex;
-		flex-direction: row;
-		justify-content: center;*/
-		align-items: center;
-		cursor: pointer;
-		display: block;
-		padding-top: 0.01em;
-/*		margin-bottom: var(--space-2xs);*/
-		padding-left: 1.475em;
-		position: relative;
-		user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		-webkit-user-select: none;
-		height: 1em;
-
-		/* Hide checkbox filter for 'undefined' labels */
-		&:has(> input[value="undefined"]) {
-			display: none;
-		}
-	}
-
-	/*@media only screen and (min-width: 1112px) {
-		& label {
-			padding-top: 0.0925em;
-		}
-	}*/
-
-	/* Hide the browser's default checkbox */
-	& input {
-		cursor: pointer;
-		height: 0;
-		opacity: 0;
-		position: absolute;
-		width: 0;
-	}
-
-	/* Create a custom checkbox */
-	.checkmark {
-		position: absolute;
-		height: 1em;
-		width: 1em;
-		left: 0;
-		top: 0;
-		border: solid;
-		border-radius: 0.25rem;
-		border-width: var(--border-width);
-		box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		transition-duration: 0.3s;
-		transition-property: border-color, background-color;
-/*		margin: 1px 0;*/
-		border-color: var(--border-color);
-
-		/*&:hover {
-			border-color: var(--foreground-2);
+		/*> * {
+			margin-top: var(--space-2xs)
 		}*/
 
-		/* Style the checkmark/indicator */
-		&:after {
-			content: "";
-			display: none;
-			position: absolute;
-			border: solid;
-			border-color: var(--background);
-			border-width: 0 var(--border-width) var(--border-width) 0;
-			height: 0.625em;
-			width: 0.373em;
-			left: 0.3em;
-			top: 0.06em;
-			transform: rotate(45deg);
-			-webkit-transform: rotate(45deg);
-			-ms-transform: rotate(45deg);
-			transition: 0.3s;
+		/*> *:first-of-type {
+			margin-top: var(--space-xs)
 		}
 
-		&:is(input:checked ~ *) {
-			border: none;
-			background-color: var(--foreground);
+		> *:last-of-type, > * ~ .undefined {
+			margin-bottom: var(--space-xs)
+		}*/
+
+		& label {
+			/*display: flex;
+			flex-direction: row;
+			justify-content: center;*/
+			align-items: center;
+			cursor: pointer;
+			display: block;
+			padding-top: 0.01em;
+	/*		margin-bottom: var(--space-2xs);*/
+			padding-left: 1.475em;
+			position: relative;
+			user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			-webkit-user-select: none;
+			height: 1em;
+
+			margin-top: var(--space-2xs);
+
+			/* Hide checkbox filter for 'undefined' labels */
+			&:has(> input[value="undefined"]) {
+				display: none;
+			}
+
+			&:first-of-type {
+				margin-top: var(--space-xs);
+			}
+
+			&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
+				margin-bottom: var(--space-4xs);
+			}
+
+
+		}
+
+		/*@media only screen and (min-width: 1112px) {
+			& label {
+				padding-top: 0.0925em;
+			}
+		}*/
+
+		/* Hide the browser's default checkbox */
+		& input {
+			cursor: pointer;
+			height: 0;
+			opacity: 0;
+			position: absolute;
+			width: 0;
+		}
+
+		/* Create a custom checkbox */
+		.checkmark {
+			position: absolute;
+			height: 1em;
+			width: 1em;
+			left: 0;
+			top: 0;
+			border: solid;
+			border-radius: 0.25rem;
+			border-width: var(--border-width);
+			box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			transition-duration: 0.3s;
+			transition-property: border-color, background-color;
+	/*		margin: 1px 0;*/
+			border-color: var(--border-color);
+
+			/*&:hover {
+				border-color: var(--foreground-2);
+			}*/
+
+			/* Style the checkmark/indicator */
 			&:after {
-				display: block;
+				content: "";
+				display: none;
+				position: absolute;
+				border: solid;
+				border-color: var(--background);
+				border-width: 0 var(--border-width) var(--border-width) 0;
+				height: 0.625em;
+				width: 0.373em;
+				left: 0.3em;
+				top: 0.06em;
+				transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				transition: 0.3s;
+			}
+
+			&:is(input:checked ~ *) {
+				border: none;
+				background-color: var(--foreground);
+				&:after {
+					display: block;
+				}
 			}
 		}
 	}
@@ -96,7 +119,7 @@
 
 
 @media (any-hover: hover) {
-	.checkboxFilter .checkmark:hover {
+	.checkboxFilter .collapsible-content  .checkmark:hover {
 		border-color: var(--foreground-2);
 	}
 }
@@ -105,13 +128,16 @@
 
 
 @media only screen and (max-width: 1112px) {
-	.checkboxFilter {
+	.checkboxFilter .collapsible-content {
 		> * + * {
 			margin-top: var(--space-xs)
 		}
 		& label {
 			height: 1.25em;
-			padding: 0.2em 0 0.125em 1.75em;
+			padding: 0.2em 0 0.125em 0em;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: row;
 /*			line-height: 1.4rem;*/
 /*			margin-bottom: var(--space-1-5);*/
 /*			padding: var(--space-2) 0 var(--space-2) var(--space-8);*/
@@ -119,6 +145,8 @@
 		.checkmark {
 			height: 1.25em;
 			width: 1.25em;
+			right: var(--space-4xs);
+			left: unset;
 			&:after {
 				height: 0.9rem;
 				width: 0.5rem;

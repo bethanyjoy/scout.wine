@@ -72,19 +72,53 @@
 
 
 		<div id="filterWrapper">
-			<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
-				<!-- heroicons - outline -->
-				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-				<!-- tabler -->
-				<!-- <svg cxmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="1.75"  stroke-linecap="round"  stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12" /><path d="M6 6l12 12" /></svg> -->
-				<!-- flowbite -->
-				<!-- <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" d="M6 18 17.94 6M18 18 6.06 6"/></svg> -->
-			</a>
-			<h2>Filters</h2>
-			<div class="typeContainer buttonFilter filter"><h3>Type</h3></div>
-			<div class="makerContainer checkboxFilter filter"><h3>Featured Makers</h3></div>
-			<div class="regionContainer checkboxFilter filter"><h3>Region</h3></div>
-			<div class="storeContainer checkboxFilter filter"><h3>Store</h3></div>
+			<div class="header">
+				<h2>Filters</h2>
+				<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+					<!-- heroicons - outline -->
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
+				</a>
+			</div>
+			<div class="typeContainer buttonFilter filter wrap-collapsible">
+				<input id="collapsible-type" class="toggle" type="checkbox" checked>
+				<label for="collapsible-type" class="lbl-toggle">
+					Type
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+					</svg>
+				</label>
+				<div class="collapsible-content"></div>
+			</div>
+			<div class="makerContainer checkboxFilter filter wrap-collapsible">
+				<input id="collapsible-maker" class="toggle" type="checkbox" checked>
+				<label for="collapsible-maker" class="lbl-toggle">
+					Featured Makers
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+					</svg>
+				</label>
+				<div class="collapsible-content"></div>
+			</div>
+			<div class="regionContainer checkboxFilter filter wrap-collapsible">
+				<input id="collapsible-region" class="toggle" type="checkbox" checked>
+				<label for="collapsible-region" class="lbl-toggle">
+					Region
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+					</svg>
+				</label>
+				<div class="collapsible-content"></div>
+			</div>
+			<div class="storeContainer checkboxFilter filter wrap-collapsible">
+				<input id="collapsible-store" class="toggle" type="checkbox" checked>
+				<label for="collapsible-store" class="lbl-toggle">
+					Store
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+					</svg>
+				</label>
+				<div class="collapsible-content"></div>
+			</div>
 			<span class="credits block">Made by <a href="https://bethany.io/">bethany.io</a></span>
 			<div class="button-wrapper">
 				<button class="resultsButton" onclick="hideSidebar()">Show results</button>
@@ -105,6 +139,23 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/list.pagination.js/0.1.1/list.pagination.min.js"></script>
 
 	<script src="/script.js"></script>
+
+<!-- 	<script>
+	var coll = document.getElementsByClassName("collapsible");
+	var i;
+
+	for (i = 0; i < coll.length; i++) {
+	  coll[i].addEventListener("click", function() {
+	    this.classList.toggle("active");
+	    var content = this.nextElementSibling;
+	    if (content.style.maxHeight){
+	      content.style.maxHeight = null;
+	    } else {
+	      content.style.maxHeight = content.scrollHeight + "px";
+	    } 
+	  });
+	}
+	</script> -->
 
 	<script>
 

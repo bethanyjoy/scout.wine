@@ -1,10 +1,9 @@
 .buttonFilter {
 
-	& label {
+	& label:not(.lbl-toggle) {
 		border-radius: 5rem;
 		cursor: pointer;
 		display: inline-block;
-/*		margin: 0.153em 0.36rem 0.153em 0;*/
 		margin: 0.375rem 0.375rem 0 0;
 		padding: 0.25em 0.5em 0.2em;
 		user-select: none;
@@ -16,6 +15,12 @@
 		-webkit-user-select: none;
 		transition: 0.3s background-color, 0.2s color;
 		background-color: var(--foreground-6);
+		&:first-of-type {
+			margin-top: var(--space-2xs)
+		}
+		&:last-of-type {
+			margin-bottom: var(--space-4xs)
+		}
 	}
 
 	& input {
@@ -96,66 +101,13 @@
 
 
 
-/*@media (pointer:coarse) {
-			&[value="Orange"], &[value="Rosé"], &[value="Red"], &[value="White"], 
-			&[value="Sparkling"], &[value="Piquette"], &[value="Co-Ferment"] {
-			}*/
-
-
-		/* Colored backgrounds */
-
-/*		&[value="Orange"] {
-			+ label {background-color: var(--orange-alpha)}
-			&:hover + label {background-color: var(--orange)}
-			&:checked + label {background-color: var(--orange)}
-		}
-		&[value="Rosé"] {
-			+ label {background-color: var(--pink-alpha)}
-			&:hover + label {background-color: var(--pink)}
-			&:checked + label {background-color: var(--pink)}
-		}
-		&[value="Red"] {
-			+ label {background-color: var(--red-alpha)}
-			&:hover + label {background-color: var(--red)}
-			&:checked + label {background-color: var(--red)}
-		}
-		&[value="White"] {
-			+ label {background-color: var(--white-alpha)}
-			&:hover + label {background-color: var(--white)}
-			&:checked + label {background-color: var(--white)}
-		}
-		&[value="Sparkling"] {
-			+ label {background-color: var(--blue-alpha)}
-			&:hover + label {background-color: var(--blue)}
-			&:checked + label {background-color: var(--blue)}
-		}
-		&[value="Piquette"] {
-			+ label {background-color: var(--violet-alpha)}
-			&:hover + label {background-color: var(--violet)}
-			&:checked + label {background-color: var(--violet)}
-		}
-		&[value="Co-Ferment"] {
-			+ label {background-color: var(--green-alpha)}
-			&:hover + label {background-color: var(--green)}
-			&:checked + label {background-color: var(--green)}
-		}*/
-
-
 
 
 
 
 @media only screen and (max-width: 1112px) {
-	.buttonFilter label {
+	.buttonFilter label:not(.lbl-toggle) {
 		margin: 0.5rem 0.5rem 0 0;
 		padding: 0.5em 0.7em 0.4em;
 	}
 }
-
-/* Disable hover state on mobile */
-
-/*@media (pointer:coarse) {
-	.buttonFilter input:hover + label {
-		 color: inherit!important;
-	}
-}*/

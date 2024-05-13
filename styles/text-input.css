@@ -1,6 +1,5 @@
 .textInput {
-/*	width: 100%;*/
-	padding: var(--space-2xs) var(--space-xs) var(--space-2xs) var(--space-xs);
+	padding: var(--space-3xs) var(--space-xs) var(--space-3xs) var(--space-xs);
 	border-radius: 0.5rem;
 	width: 98%;
 	color: var(--foreground);
@@ -12,12 +11,7 @@
 	-webkit-appearance: none;
 
 	background-color: var(--foreground-6);
-/*background-color: rgba(var(--foreground-value), 0.095);*/
 	border: none;
-
-	/*&:focus {
-		background-color: var(--foreground-5);
-	}*/
 
 	&::placeholder {
 		opacity: 1;

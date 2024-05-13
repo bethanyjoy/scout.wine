@@ -79,3 +79,7 @@ textarea:not([rows]) {
 body {
   margin: 0;
 }
+
+h2 {
+  margin-block-start: 0;
+}
