@@ -69,7 +69,6 @@ nav {
 
 .credits {
 	padding-top: var(--space-l);
-	flex-grow: 1;
 	display: flex;
 /*	height: 100%;*/
 	.text {
@@ -81,7 +80,7 @@ nav {
 @media only screen and (max-width: 1112px) {
 	.credits {
 			padding: var(--space-m) 0 ;
-			padding-bottom: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m));;
+			padding-bottom: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m) + env(safe-area-inset-bottom));
 	}
 }
 
