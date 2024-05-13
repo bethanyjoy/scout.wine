@@ -17,7 +17,9 @@ nav > * + * {
 	display: flex;
 	justify-content: space-between;
 	& h2 {
-		margin-block-start: var(--space-l);
+		/*margin-block-start: var(--space-l);
+		margin-block-end: var(--space-m);*/
+		margin-block-start: var(--space-xs);
 		margin-block-end: var(--space-m);
 	}
 }
