@@ -47,8 +47,6 @@
 			&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
 				margin-bottom: var(--space-4xs);
 			}
-
-
 		}
 
 		/*@media only screen and (min-width: 1112px) {
@@ -124,7 +122,13 @@
 	}
 }
 
-
+@media only screen and (max-width: 1112px) {
+	.checkboxFilter .collapsible-content label {
+		&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
+			margin-block-end: var(--space-3xs);
+		}
+	}
+}
 
 
 @media only screen and (max-width: 1112px) {

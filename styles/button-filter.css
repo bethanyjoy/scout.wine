@@ -102,8 +102,11 @@
 
 
 
-
-
+@media only screen and (max-width: 1112px) {
+	.buttonFilter label:not(.lbl-toggle):last-of-type {
+		margin-bottom: var(--space-3xs);
+	}
+}
 
 @media only screen and (max-width: 1112px) {
 	.buttonFilter label:not(.lbl-toggle) {
