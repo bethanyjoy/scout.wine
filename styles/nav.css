@@ -71,6 +71,7 @@ nav {
 .credits {
 	padding-top: var(--space-l);
 	display: flex;
+	flex-grow: 1;
 /*	height: 100%;*/
 	.text {
 		display: inline-block;
