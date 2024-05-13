@@ -117,6 +117,9 @@ nav, main {
 	position: sticky;
 }
 
+
+@media only screen and (min-width: 1112px) {
+
 nav {
 	/* Hide scrollbar for IE, Edge and Firefox */
 	-ms-overflow-style: none;  /* IE and Edge */
@@ -126,6 +129,8 @@ nav {
 	&::-webkit-scrollbar {
 		display: none;
 	}
+}
+
 }
 
 
