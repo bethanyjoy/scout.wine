@@ -19,8 +19,8 @@ nav > * + * {
 	& h2 {
 		/*margin-block-start: var(--space-l);
 		margin-block-end: var(--space-m);*/
-		margin-block-start: var(--space-xs);
-		margin-block-end: var(--space-m);
+		margin-block-start: var(--space-l);
+		margin-block-end: var(--space-s);
 	}
 }
 
@@ -51,7 +51,7 @@ input.toggle[type='checkbox'] {
 @media only screen and (max-width: 1112px) {
 	.lbl-toggle {
 /*		justify-content: left;*/
-padding: var(--space-5xs);
+padding: var(--space-5xs) 0;
 		gap: 0.25em;
 		& svg {
 	  	width: 26px;
