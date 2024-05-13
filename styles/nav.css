@@ -43,6 +43,7 @@ nav {
 
 	.button-wrapper {
 		bottom: 0;
+		top: calc(100dvh - calc(48px + calc(var(--space-xs) * 2)));
 		bottom: env(safe-area-inset-bottom);
 /*		position: fixed;*/
 		border-top-style: solid;
@@ -80,7 +81,7 @@ nav {
 @media only screen and (max-width: 1112px) {
 	.credits {
 			padding: var(--space-m) 0 ;
-			padding-bottom: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m) + env(safe-area-inset-bottom));
+/*			padding-bottom: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m) + env(safe-area-inset-bottom));*/
 	}
 }
 
