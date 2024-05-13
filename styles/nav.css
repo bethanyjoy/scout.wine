@@ -1,28 +1,105 @@
+/* Layout */
+
 nav > * + * {
-/*	margin-block-start: var(--space-xs);*/
 	margin-block-start: var(--space-s);
 }
 
-/*#filterWrapper > * + * {
-	margin-block-start: var(--space-s);
-}*/
+nav {
+	background-color: var(--background);
+	display: flex;
+	flex-direction: column;
+}
 
-.wrap-collapsible, .credits {
+/* Set layout and styles for sticky elements */
+@media only screen and (max-width: 1112px) {
+
+	#searchWrapper, #filterWrapper .header, .button-wrapper {
+		position: sticky;
+		padding: var(--space-xs) var(--space-s-l);
+		background-color: var(--background);
+		height: auto;
+		z-index: 999;
+	}
+
+	#searchWrapper, #filterWrapper .header {
+		display: flex;
+		align-items: center;
+		top: 0;
+	}
+
+	#filterWrapper .header, .button-wrapper {
+		border-width: 1px;
+		border-color: var(--foreground-4);
+	}
+
+	#searchWrapper {
+		gap: var(--space-5xs);
+	}
+
+	#filterWrapper .header {
+		justify-content: space-between;
+		border-bottom-style: solid;
+	}
+
+	.button-wrapper {
+		bottom: 0;
+		border-top-style: solid;
+		padding: var(--space-xs) var(--space-xs);
+	}
+}
+
+
+/* Filter sections*/
+
+#filterWrapper {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}
+
+/* Set vertical padding for filter sections */
+.wrap-collapsible {
 	padding: var(--space-xs) 0;
-	border-top: 1px solid;
+	border-bottom: 1px solid;
 	border-color: var(--foreground-5);
 }
 
-#filterWrapper .header {
+.credits {
+	padding-top: var(--space-l);
+	flex-grow: 1;
 	display: flex;
-	justify-content: space-between;
-	& h2 {
-		/*margin-block-start: var(--space-l);
-		margin-block-end: var(--space-m);*/
-		margin-block-start: var(--space-l);
-		margin-block-end: var(--space-s);
+/*	height: 100%;*/
+	.text {
+		display: inline-block;
+		align-self: flex-end;
 	}
 }
+
+@media only screen and (max-width: 1112px) {
+	.credits {
+			padding: var(--space-m) 0 ;
+	}
+}
+
+/* Add top border for 1st section on desktop */
+@media only screen and (min-width: 1112px) {
+	.header + .wrap-collapsible {
+		border-top: 1px solid;
+		border-color: var(--foreground-5);
+	}
+}
+
+/* Set L + R margins for filter sections */
+@media only screen and (max-width: 1112px) {
+	.wrap-collapsible, .credits {
+		margin: 0 var(--space-s-l);
+	}
+}
+
+
+
+
+
 
 
 input.toggle[type='checkbox'] {
@@ -51,11 +128,12 @@ input.toggle[type='checkbox'] {
 @media only screen and (max-width: 1112px) {
 	.lbl-toggle {
 /*		justify-content: left;*/
-padding: var(--space-5xs) 0;
+		padding: var(--space-5xs) 0;
 		gap: 0.25em;
 		& svg {
 	  	width: 26px;
 	  	height: 26px;
+	  	margin-right: 0.15rem;
 	  }
 	}
 }
@@ -74,21 +152,9 @@ padding: var(--space-5xs) 0;
   max-height: 100vh;
 }
 
-
-@media only screen and (max-width: 1112px) {
-	#filterWrapper > * + * {
-/*		margin-block-start: var(--space-l);*/
-	}
-}
-
-h1 {
-	margin-block-end: var(--space-4xs);
-}
-
 .credits {
 	font-size: var(--step--1);
 	color: var(--foreground-2);
-	padding-top: var(--space-m)!important;
 	& a {
 		text-decoration: underline;
 	}
@@ -99,28 +165,15 @@ h1 {
 		font-size: var(--step-0);
 	}
 	.lbl-toggle {
-		font-size: var(--step-2)!important;
+/*		font-size: var(--step-2)!important;*/
 	}
 }
 
-.button-wrapper {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	padding: var(--space-xs) var(--space-s-l);
-	background-color: var(--background);
-	border-top: solid;
-	width: 100%;
-	border-width: 1px;
-	border-color: var(--foreground-4);
-/*	height: 90px;*/
-}
 
 button {
 	background-color: var(--foreground);
 	color: var(--background);
 	border-radius: 10rem;
-	bottom: var(--space-s);
 	text-align: center;
 	border: none;
 	cursor: pointer;
@@ -140,8 +193,6 @@ button {
 /*	Mobile menu toggle */
 
 .navButton {
-	/*height: 2.25rem;
-	width: 2.25rem;*/
 	height: 42px;
 
 	& svg {
@@ -153,16 +204,8 @@ button {
 		display: block;
 	}
 
-	/*&#hideButton {
-		display: none;
-		position: fixed;
-		right: var(--space-s-l);
-		top: calc(var(--space-xs) + 3px);
-	}*/
-
 	&#hideButton {
 		display: none;
-/*		float: right;*/
 	}
 }
 
@@ -174,23 +217,13 @@ button {
 		height: auto;
 		width: 100%;
 		z-index: 100;
-		background-color: var(--background);
-		position: sticky;
-	}
-	#searchWrapper {
-		display: flex;
-		gap: var(--space-5xs);
-		align-items: center;
 	}
 	.search {
-		max-width: 100%;
 		flex: 1;
 		height: 42px;
 	}
 	#filterWrapper {
-		padding-bottom: 170px;
 		margin-block-start: 0;
-/*		width: calc(100% - 50px);*/
 	}
 }
 
@@ -219,7 +252,7 @@ button {
 
 @media only screen and (min-width: 1112px) {
 	#filterWrapper {
-		display: block !important;
+		display: flex !important;
 	}
 	.navButton#showButton, .navButton#hideButton, .button-wrapper {
 		display: none!important;

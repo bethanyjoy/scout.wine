@@ -78,9 +78,9 @@ main {
 	main {
 		padding: var(--space-2xs) var(--space-s-l) var(--space-s-l) var(--space-s-l);
 	}
-	nav {
+	/*nav {
 		padding: var(--space-xs) var(--space-s-l);
-	}
+	}*/
 }
 
 nav {
@@ -152,10 +152,10 @@ h1 {
 }
 
 h2 {
-	font-family: 'Cooper';
-	font-size: var(--step-4);
-	font-weight: 400;
-	-webkit-font-smoothing: auto;
+/*	font-family: 'Cooper';*/
+	font-size: var(--step-2);
+	font-weight: 500;
+/*	-webkit-font-smoothing: auto;*/
 }
 
 h3 {
