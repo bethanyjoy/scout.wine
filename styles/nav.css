@@ -42,7 +42,8 @@ nav {
 	}
 
 	.button-wrapper {
-		bottom: 0;
+/*		bottom: 0;*/
+		bottom: env(safe-area-inset-bottom);
 		border-top-style: solid;
 		padding: var(--space-xs) var(--space-xs);
 	}
