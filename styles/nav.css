@@ -43,8 +43,8 @@ nav {
 
 	.button-wrapper {
 		bottom: 0;
-/*		bottom: env(safe-area-inset-bottom);*/
-		position: fixed;
+		bottom: env(safe-area-inset-bottom);
+/*		position: fixed;*/
 		border-top-style: solid;
 		padding: var(--space-xs) var(--space-xs);
 		width: 100%;
