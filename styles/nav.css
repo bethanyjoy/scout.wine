@@ -218,7 +218,7 @@ button {
 	&#showButton {
 		display: block;
 		height: 42px;
-		width: 42px;
+		height: 42px;
 		& svg {
 			padding: var(--space-4xs) 0 var(--space-4xs) calc(var(--space-4xs) * 2);
 			height: 42px;
