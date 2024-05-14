@@ -38,6 +38,14 @@
 
 /* Search */
 
+.search {
+	background-image: var(--search);
+	background-position-y: center;
+	background-position-x: 12px;
+	background-repeat: no-repeat;
+	padding-inline-start: 40px;
+}
+
 .search::-webkit-search-cancel-button{
 	position: relative;
 	right: -0.25rem;
