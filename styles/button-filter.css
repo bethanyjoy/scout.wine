@@ -16,10 +16,10 @@
 		transition: 0.3s background-color, 0.2s color;
 		background-color: var(--foreground-6);
 		&:first-of-type {
-			margin-top: var(--space-2xs)
+			margin-block-start: var(--space-2xs)
 		}
 		&:last-of-type {
-			margin-bottom: var(--space-4xs)
+			margin-block-end: var(--space-4xs)
 		}
 	}
 
@@ -104,7 +104,7 @@
 
 @media only screen and (max-width: 1112px) {
 	.buttonFilter label:not(.lbl-toggle):last-of-type {
-		margin-bottom: var(--space-3xs);
+		margin-block-end: var(--space-3xs);
 	}
 }
 

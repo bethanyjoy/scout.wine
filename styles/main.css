@@ -18,13 +18,13 @@ main {
 	/* Pagination */
 
 	.pagination {
-		margin-top: var(--space-xl);
+		margin-block-start: var(--space-xl);
 
 		& li {
 			display: inline-block;
-			padding: var(--space-2xs) var(--space-xs);
+			padding: var(--space-3xs) var(--space-xs);
 			border-radius: 0.25rem;
-			margin-right: var(--space-2xs);
+			margin-inline-end: var(--space-2xs);
 			text-decoration: none;
 			border: solid;
 			border-width:  var(--border-width);

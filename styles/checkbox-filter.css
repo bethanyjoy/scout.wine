@@ -23,9 +23,8 @@
 			align-items: center;
 			cursor: pointer;
 			display: block;
-			padding-top: 0.01em;
-	/*		margin-bottom: var(--space-2xs);*/
-			padding-left: 1.475em;
+			padding-block-start: 0.01em;
+			padding-inline-start: 1.475em;
 			position: relative;
 			user-select: none;
 			-moz-user-select: none;
@@ -33,7 +32,7 @@
 			-webkit-user-select: none;
 			height: 1em;
 
-			margin-top: var(--space-2xs);
+			margin-block-start: var(--space-2xs);
 
 			/* Hide checkbox filter for 'undefined' labels */
 			&:has(> input[value="undefined"]) {
@@ -41,11 +40,11 @@
 			}
 
 			&:first-of-type {
-				margin-top: var(--space-xs);
+				margin-block-start: var(--space-xs);
 			}
 
 			&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
-				margin-bottom: var(--space-4xs);
+				margin-block-end: var(--space-4xs);
 			}
 		}
 
@@ -134,7 +133,7 @@
 @media only screen and (max-width: 1112px) {
 	.checkboxFilter .collapsible-content {
 		> * + * {
-			margin-top: var(--space-xs)
+			margin-block-start: var(--space-xs)
 		}
 		& label {
 			height: 1.4em;

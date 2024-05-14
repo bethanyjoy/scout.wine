@@ -85,22 +85,22 @@ article {
 		}
 
 		.name {
-			margin-top: var(--space-2xs);
+			margin-block-start: var(--space-2xs);
 			font-weight: var(--medium);
 			-webkit-line-clamp: 2; /* number of lines to show */
 		}
 
 		.store {
-			margin-top: var(--space-4xs);
+			margin-block-start: var(--space-4xs);
 			font-size: var(--step--1);
 			color: var(--foreground-2);
 			-webkit-line-clamp: 1; /* number of lines to show */
 		}
 
 		.price {
-			margin-top: var(--space-5xs);
+			margin-block-start: var(--space-5xs);
 			font-size: var(--step--1);
-			padding-top: var(--space-5xs);
+			padding-block-start: var(--space-5xs);
 		}
 
 		/* Hide maker and region from wine card */

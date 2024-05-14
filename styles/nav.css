@@ -21,7 +21,7 @@ nav {
 		z-index: 999;
 	}
 
-	#searchWrapper, #filterWrapper .header {
+	#searchWrapper {
 		display: flex;
 		align-items: center;
 		top: 0;
@@ -37,7 +37,7 @@ nav {
 	}
 
 	#filterWrapper .header {
-		justify-content: space-between;
+/*		justify-content: space-between;*/
 		border-bottom-style: solid;
 	}
 
@@ -49,6 +49,16 @@ nav {
 		border-top-style: solid;
 		padding: var(--space-xs) var(--space-xs);
 		width: 100%;
+	}
+
+	#filterWrapper .header {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		top: 0;
+		& h2 {
+			text-align: center;
+		}
 	}
 }
 
@@ -69,7 +79,7 @@ nav {
 }
 
 .credits {
-	padding-top: var(--space-l);
+	padding-block-start: var(--space-l);
 	display: flex;
 	flex-grow: 1;
 /*	height: 100%;*/
@@ -82,7 +92,7 @@ nav {
 @media only screen and (max-width: 1112px) {
 	.credits {
 			padding: var(--space-m) 0 ;
-			padding-bottom: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m ));
+			padding-block-end: calc(calc(48px + calc(var(--space-xs) * 2)) + var(--space-m ));
 	}
 }
 
@@ -138,7 +148,7 @@ input.toggle[type='checkbox'] {
 		& svg {
 	  	width: 26px;
 	  	height: 26px;
-	  	margin-right: 0.15rem;
+	  	margin-inline-end: 0.15rem;
 	  }
 	}
 }
@@ -198,19 +208,29 @@ button {
 /*	Mobile menu toggle */
 
 .navButton {
-	height: 42px;
+/*	height: 42px;*/
 
-	& svg {
+	/*& svg {
 		padding: var(--space-4xs) 0 var(--space-4xs) calc(var(--space-4xs) * 2);
 		height: 42px;
-	}
+	}*/
 
 	&#showButton {
 		display: block;
+		height: 42px;
+		& svg {
+			padding: var(--space-4xs) 0 var(--space-4xs) calc(var(--space-4xs) * 2);
+			height: 42px;
+		}
 	}
 
 	&#hideButton {
 		display: none;
+		height: 32px;
+		& svg {
+			padding: var(--space-4xs) calc(var(--space-4xs) * 2) var(--space-4xs) 0;
+			height: 32px;
+		}
 	}
 }
 
