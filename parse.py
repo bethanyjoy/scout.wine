@@ -182,57 +182,57 @@ def get_image_src_noscript(product, classname=None):
 
 
 
-# Helen's Wine
+# # Helen's Wine
 
-for url in helens_urls:
+# for url in helens_urls:
 
-	# Define store
-	store = 'Helen&#39;s Wines'
+# 	# Define store
+# 	store = 'Helen&#39;s Wines'
 
-	# Define how to target a product
-	products = get_products(url, "div", "grid-product")
+# 	# Define how to target a product
+# 	products = get_products(url, "div", "grid-product")
 
-	for product in products:
+# 	for product in products:
 
-		# Define how to target the title (don't need to format)
-		title_soup = get_title_soup(product, "div", "grid-product__title--body")
+# 		# Define how to target the title (don't need to format)
+# 		title_soup = get_title_soup(product, "div", "grid-product__title--body")
 
-		# Call up title string function to use for parsing (Don't need to edit)
-		title_string = get_title_string(title_soup)
+# 		# Call up title string function to use for parsing (Don't need to edit)
+# 		title_string = get_title_string(title_soup)
 
-		# Call up product type (don't need to edit)
-		product_type =  get_type(title_string, url)
+# 		# Call up product type (don't need to edit)
+# 		product_type =  get_type(title_string, url)
 
-		# Define how to target + format the price
-		price = get_price(product, "div", "grid-product__price")
+# 		# Define how to target + format the price
+# 		price = get_price(product, "div", "grid-product__price")
 
-		# Define images
-		image_src = get_image_src_noscript(product, "grid-product__image")
-		if 'comingsoon' in image_src:
-			image_type = 'noimage'
-		elif image_src is not None:
-			image = 'https:' + image_src
-			image_type = 'hasimage'
-		else:
-			image_type = 'noimage'
+# 		# Define images
+# 		image_src = get_image_src_noscript(product, "grid-product__image")
+# 		if 'comingsoon' in image_src:
+# 			image_type = 'noimage'
+# 		elif image_src is not None:
+# 			image = 'https:' + image_src
+# 			image_type = 'hasimage'
+# 		else:
+# 			image_type = 'noimage'
 		
-		### Don't need to edit code below this point ###
+# 		### Don't need to edit code below this point ###
 
-		# Add wine to list
-		wines.append({
-			'Image': image,
-			'Image_type': image_type,
-			'Link': get_link(url),
-			'Maker': lookup_maker(title_string),
-			'Maker_class': get_maker_class(title_string),
-			'Price': price,
-			'Region': lookup_region(url),
-			'Store': store,
-			'Store_class': get_store_class(store),
-			'Title': get_title(title_soup),
-			'Type': product_type,
-  		'Type_class': get_type_class(product_type)
-		})
+# 		# Add wine to list
+# 		wines.append({
+# 			'Image': image,
+# 			'Image_type': image_type,
+# 			'Link': get_link(url),
+# 			'Maker': lookup_maker(title_string),
+# 			'Maker_class': get_maker_class(title_string),
+# 			'Price': price,
+# 			'Region': lookup_region(url),
+# 			'Store': store,
+# 			'Store_class': get_store_class(store),
+# 			'Title': get_title(title_soup),
+# 			'Type': product_type,
+#   		'Type_class': get_type_class(product_type)
+# 		})
 
 
 
