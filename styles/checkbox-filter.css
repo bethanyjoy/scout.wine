@@ -35,15 +35,18 @@
 			margin-block-start: var(--space-2xs);
 
 			/* Hide checkbox filter for 'undefined' labels */
-			&:has(> input[value="undefined"]) {
+			&.undefined, &.null {
 				display: none;
 			}
+			/* &:has(> input[value="undefined"]) {
+				display: none;
+			} */
 
 			&:first-of-type {
 				margin-block-start: var(--space-xs);
 			}
 
-			&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
+			&:last-of-type:not(.undefined, .null), &:nth-last-child(2):not(.storeContainer *) {
 				margin-block-end: var(--space-4xs);
 			}
 		}
@@ -114,7 +117,6 @@
 	}
 }
 
-
 @media (any-hover: hover) {
 	.checkboxFilter .collapsible-content  .checkmark:hover {
 		border-color: var(--foreground-2);
@@ -162,3 +164,6 @@
 		}
 	}
 }
+
+
+	

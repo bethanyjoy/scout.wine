@@ -63,7 +63,7 @@ article {
 					object-fit: scale-down;
 					padding: 1.2vw 0;
 				}
-				&:is(.wineandeggs *) {
+				&:is(.wineeggs *) {
 					object-fit: scale-down;
 				}
 
