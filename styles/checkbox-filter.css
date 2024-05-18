@@ -108,12 +108,16 @@
 			display: flex;
 			justify-content: space-between;
 			flex-direction: row; */
-			margin-block-end: var(--space-xs);
+			/* margin-block-end: var(--space-xs);
+			padding-block: var(--space-2xs); */
+			margin-block-end: var(--space-4xs);
+			padding-block: var(--space-4xs);
+			width: calc(100% - 75px);
 		}
 		.checkmark {
 			height: 1.25em;
 			width: 1.25em;
-			top: 0;
+			top: var(--space-4xs);
 			/* right: var(--space-4xs);
 			left: unset; */
 			&:after {

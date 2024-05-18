@@ -373,6 +373,6 @@ button.plain {
 		padding: var(--space-s) 0;
 	}
 	h2 {
-		margin-block: var(--space-l) var(--space-xs);
+		margin-block: var(--space-l) var(--space-3xs);
 	}
 }
