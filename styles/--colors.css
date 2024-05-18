@@ -57,6 +57,7 @@
 		/*	SVG elements */
 		--x-mark: url('/assets/svgs/x-mark-outline-light.svg');
 		--search: url('/assets/svgs/search-light.svg');
+		--check: url('/assets/svgs/check-light.svg');
 
 	}
 
@@ -90,6 +91,7 @@
 		/*	SVG elements */
 		--x-mark: url('/assets/svgs/x-mark-outline-dark.svg');
 		--search: url('/assets/svgs/search-dark.svg');
+		--check: url('/assets/svgs/check-dark.svg');
 
 	}
 

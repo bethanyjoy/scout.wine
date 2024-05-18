@@ -72,61 +72,66 @@
 
 
 		<div id="filterWrapper">
-			<div class="header">
-				<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="w-6 h-6">
-					  <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-					</svg>
-					<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor" class="w-6 h-6">
-					  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
-					</svg> -->
-				</a>
-				<h2>Filters</h2>
-				<!-- <a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
-					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg>
-				</a> -->
+			<div class="filter-main">
+				<div class="header">
+					<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+						<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg> -->
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+							<path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
+						  </svg>						  
+					</a>
+				</div>
+				<div class="filters-wrap">
+					<h2>Filters</h2>
+					<div class="typeContainer buttonFilter filter wrap-collapsible">
+						<input id="collapsible-type" class="toggle" type="checkbox" checked>
+						<label for="collapsible-type" class="lbl-toggle">
+							Type
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+							</svg>	
+						</label>
+						<div class="collapsible-content"><div class="expandable-content"></div></div>
+					</div>
+					<div class="makerContainer checkboxFilter filter wrap-collapsible">
+						<input id="collapsible-maker" class="toggle" type="checkbox" checked>
+						<label for="collapsible-maker" class="lbl-toggle">
+							Featured Makers
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+							</svg>					  
+						</label>
+						<div class="collapsible-content">
+							<div class="expandable-content"></div>
+							<button id="toggleButtonMaker" class="plain">+ More</button>
+						</div>
+					</div>
+					<div class="regionContainer checkboxFilter filter wrap-collapsible">
+						<input id="collapsible-region" class="toggle" type="checkbox" checked>
+						<label for="collapsible-region" class="lbl-toggle">
+							Region
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+							</svg>	
+						</label>
+						<div class="collapsible-content">
+							<div class="expandable-content"></div>
+							<button id="toggleButtonRegion" class="plain">+ More</button>
+						</div>
+					</div>
+					<div class="storeContainer checkboxFilter filter wrap-collapsible">
+						<input id="collapsible-store" class="toggle" type="checkbox" checked>
+						<label for="collapsible-store" class="lbl-toggle">
+							Store
+							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+							</svg>	
+						</label>
+						<div class="collapsible-content"><div class="expandable-content"></div></div>
+					</div>
+					<span class="credits"><span class="text">Made by <a href="https://bethany.io/">bethany.io</a></span></span>
+				</div>
 			</div>
-			<div class="typeContainer buttonFilter filter wrap-collapsible">
-				<input id="collapsible-type" class="toggle" type="checkbox" checked>
-				<label for="collapsible-type" class="lbl-toggle">
-					Type
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-					</svg>
-				</label>
-				<div class="collapsible-content"></div>
-			</div>
-			<div class="makerContainer checkboxFilter filter wrap-collapsible">
-				<input id="collapsible-maker" class="toggle" type="checkbox" checked>
-				<label for="collapsible-maker" class="lbl-toggle">
-					Featured Makers
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-					</svg>
-				</label>
-				<div class="collapsible-content"></div>
-			</div>
-			<div class="regionContainer checkboxFilter filter wrap-collapsible">
-				<input id="collapsible-region" class="toggle" type="checkbox" checked>
-				<label for="collapsible-region" class="lbl-toggle">
-					Region
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-					</svg>
-				</label>
-				<div class="collapsible-content"></div>
-			</div>
-			<div class="storeContainer checkboxFilter filter wrap-collapsible">
-				<input id="collapsible-store" class="toggle" type="checkbox" checked>
-				<label for="collapsible-store" class="lbl-toggle">
-					Store
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
-					  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-					</svg>
-				</label>
-				<div class="collapsible-content"></div>
-			</div>
-			<span class="credits"><span class="text">Made by <a href="https://bethany.io/">bethany.io</a></span></span>
 			<div class="button-wrapper">
 				<button class="resultsButton" onclick="hideSidebar()">Show results</button>
 			</div>
@@ -147,22 +152,39 @@
 
 	<script src="/script.js"></script>
 
-<!-- 	<script>
-	var coll = document.getElementsByClassName("collapsible");
-	var i;
-
-	for (i = 0; i < coll.length; i++) {
-	  coll[i].addEventListener("click", function() {
-	    this.classList.toggle("active");
-	    var content = this.nextElementSibling;
-	    if (content.style.maxHeight){
-	      content.style.maxHeight = null;
-	    } else {
-	      content.style.maxHeight = content.scrollHeight + "px";
-	    } 
-	  });
+	<script>
+	document.getElementById('toggleButtonRegion').addEventListener('click', function() {
+	var extraChildren = Array.from(document.querySelectorAll('.regionContainer .expandable-content label:not(.null):nth-child(n+9)'));
+	if (this.textContent === '+ More') {
+		extraChildren.forEach(function(child) {
+		child.style.display = 'block';
+		});
+		this.textContent = '- Less';
+	} else {
+		extraChildren.forEach(function(child) {
+		child.style.display = 'none';
+		});
+		this.textContent = '+ More';
 	}
-	</script> -->
+	});
+	  </script>
+
+<script>
+	document.getElementById('toggleButtonMaker').addEventListener('click', function() {
+	var extraChildren = Array.from(document.querySelectorAll('.makerContainer .expandable-content label:not(.null):not(.Broc, .Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk)'));
+	if (this.textContent === '+ More') {
+		extraChildren.forEach(function(child) {
+		child.style.display = 'block';
+		});
+		this.textContent = '- Less';
+	} else {
+		extraChildren.forEach(function(child) {
+		child.style.display = 'none';
+		});
+		this.textContent = '+ More';
+	}
+	});
+	  </script>
 
 	<script>
 

@@ -4,50 +4,24 @@
 
 	.collapsible-content {
 
-		/*> * {
-			margin-top: var(--space-2xs)
-		}*/
-
-		/*> *:first-of-type {
-			margin-top: var(--space-xs)
-		}
-
-		> *:last-of-type, > * ~ .undefined {
-			margin-bottom: var(--space-xs)
-		}*/
-
 		& label {
-			/*display: flex;
-			flex-direction: row;
-			justify-content: center;*/
 			align-items: center;
 			cursor: pointer;
 			display: block;
 			padding-block-start: 0.01em;
-			padding-inline-start: 1.475em;
+			padding-inline-start: 1.5em;
 			position: relative;
 			user-select: none;
 			-moz-user-select: none;
 			-ms-user-select: none;
 			-webkit-user-select: none;
-			height: 1em;
+			line-height: 1.4;
 
-			margin-block-start: var(--space-2xs);
+			margin-block-end: var(--space-5xs);
 
 			/* Hide checkbox filter for 'undefined' labels */
 			&.undefined, &.null {
 				display: none;
-			}
-			/* &:has(> input[value="undefined"]) {
-				display: none;
-			} */
-
-			&:first-of-type {
-				margin-block-start: var(--space-xs);
-			}
-
-			&:last-of-type:not(.undefined, .null), &:nth-last-child(2):not(.storeContainer *) {
-				margin-block-end: var(--space-4xs);
 			}
 		}
 
@@ -69,10 +43,10 @@
 		/* Create a custom checkbox */
 		.checkmark {
 			position: absolute;
-			height: 1em;
-			width: 1em;
+			height: 1.1em;
+			width: 1.1em;
 			left: 0;
-			top: 0;
+			top: 0.1em;
 			border: solid;
 			border-radius: 0.25rem;
 			border-width: var(--border-width);
@@ -81,28 +55,18 @@
 			-webkit-box-sizing: border-box;
 			transition-duration: 0.3s;
 			transition-property: border-color, background-color;
-	/*		margin: 1px 0;*/
 			border-color: var(--border-color);
-
-			/*&:hover {
-				border-color: var(--foreground-2);
-			}*/
 
 			/* Style the checkmark/indicator */
 			&:after {
-				content: "";
+				content: var(--check);
+				/* content: url('../assets/svgs/check.svg'); */
 				display: none;
 				position: absolute;
-				border: solid;
-				border-color: var(--background);
-				border-width: 0 var(--border-width) var(--border-width) 0;
-				height: 0.625em;
-				width: 0.373em;
-				left: 0.3em;
-				top: 0.06em;
-				transform: rotate(45deg);
-				-webkit-transform: rotate(45deg);
-				-ms-transform: rotate(45deg);
+				height: 1.1em;
+				width: 1.05em;
+				left: 0.01em;
+				top: 0;
 				transition: 0.3s;
 			}
 
@@ -134,206 +98,47 @@
 
 @media only screen and (max-width: 1112px) {
 	.checkboxFilter .collapsible-content {
-		> * + * {
+		/* > * + * {
 			margin-block-start: var(--space-xs)
-		}
+		} */
 		& label {
-			height: 1.4em;
+			padding-inline-start: 1.75em;
+			/* height: 1.4em;
 			padding: 0 0 0.125em 0;
-/*			padding: 0.2em 0 0.125em 0em;*/
-/*			padding: 0.4em 0 0.3em 0em;*/
 			display: flex;
 			justify-content: space-between;
-			flex-direction: row;
-/*			line-height: 1.4rem;*/
-/*			margin-bottom: var(--space-1-5);*/
-/*			padding: var(--space-2) 0 var(--space-2) var(--space-8);*/
+			flex-direction: row; */
+			margin-block-end: var(--space-xs);
 		}
 		.checkmark {
 			height: 1.25em;
 			width: 1.25em;
-			right: var(--space-4xs);
-			left: unset;
+			top: 0;
+			/* right: var(--space-4xs);
+			left: unset; */
 			&:after {
-				height: 0.9rem;
-				width: 0.5rem;
-				left: 0.45rem;
-				top: 0.097rem;
-				border-width: 0 2px 2px 0;
+				height: 1.25em;
+				width: 1.2em;
+				left: 0.015em;
+				top: 0;
 			}
 		}
 	}
 }
 
-/* Hide wine makers from list that don't have many wines available */
-/* .makerContainer .collapsible-content label {
-	&.Abbondanza,
-	&.Absentee,
-	&.Accenti,
-	&.Acri,
-	&.Adelante,
-	&.Amevive,
-	&.Ampeleia,
-	&.Apeleia,
-	&.Artesano,
-	&.Augur,
-	&.Baccanti,
-	&.Barolo,
-	&.Bernardi,
-	&.Borachio,
-	&.Camuna,
-	&.Clarine,
-	&.Diamanti,
-	&.Donkey,
-	&.Flavia,
-	&.Hannes,
-	&.Inizi,
-	&.Jacky,
-	&.Lauria,
-	&.Lieu,
-	&.Limus,
-	&.Liquiere,
-	&.Negro,
-	&.Nus,
-	&.Odyssée,
-	&.Primitivus,
-	&.Rabasco,
-	&.Rarefratte,
-	&.Riccitelli,
-	&.Roussely,
-	&.Santamaria,
-	&.Scala,
-	&.Science,
-	&.Sete,
-	&.Silvio,
-	&.Southhold,
-	&.Straka,
-	&.Tetes,
-	&.Ultraviolet,
-	&.Umathum,
-	&.Viola,
-	&.Wohlgemuthheim,
-	&.Wonderwall,
-	&.Yetti,
-	&.zzz {
-		display: none;
-	}
-	&.null {
-		display: block;
-	}
-} */
+.expandable-content {
+	padding-block-start: var(--space-4xs);
+	/* padding-block-end: var(--space-2xs); */
+}
 
+.collapsible-content button {
+	margin-top: var(--space-2xs);
+}
 
-/* Hide wine makers from list that don't have many wines available */
-.makerContainer .collapsible-content label:not(
-	.Amplify,
-	.Angeleno,
-	.Science,
-	.Ashanta,
-	.Azul,
-	.Bichi,
-	.Bojo,
-	.Broc,
-	.Buddy,
-	.Canetta,
-	.Giardino,
-	.Indigeno,
-	.Cirelli,
-	.Costadilà,
-	.Levende,
-	.Delinquente,
-	.Punx,
-	.Majas,
-	.Echeverria,
-	.Ercole,
-	.Es,
-	.Recordings,
-	.Florez,
-	.Machine,
-	.Folktale,
-	.Forlorn,
-	.Furlani,
-	.Gatto,
-	.Gearhead,
-	.Gentle,
-	.Glinavos,
-	.Boy,
-	.Gotsa,
-	.Oggau,
-	.Farneto,
-	.Vinco,
-	.Iruai,
-	.Brix,
-	.Bleeke,
-	.Jolie-Laide,
-	.Jumbo,
-	.Jumping,
-	.Kindeli,
-	.Koppitsch,
-	.Lunotte,
-	.Patience,
-	.Jaras,
-	.Coste,
-	.Equilibristes,
-	.Lunes,
-	.Addition,
-	.Lo-Fi,
-	.River,
-	.Bevilacqua,
-	.Lumina,
-	.Mae,
-	.Marigny,
-	.Stoumen,
-	.Matic,
-	.Barret,
-	.Meinklang,
-	.Mersel,
-	.Nestarec,
-	.Beverage,
-	.Notre,
-	.World,
-	.Papras,
-	.Pielihueso,
-	.Pirouettes,
-	.Pollerhof,
-	.Populis,
-	.Purity,
-	.Raimones,
-	.Richvale,
-	.Ruth,
-	.Sassara,
-	.Schlossmuhlenhof,
-	.Schweizer,
-	.Scotty,
-	.Far,
-	.Stolpman,
-	.Change,
-	.Real,
-	.Swick,
-	.Tenuta,
-	.Teutonic,
-	.Marker,
-	.Sacre,
-	.Forgues,
-	.California,
-	.Pijoan,
-	.Viteadovest,
-	.Vivanterre,
-	.Wavy,
-	.Weingut,
-	.Weninger, 
-	.Wenzel,
-	.Arc,
-	.Wonderwerk,
-	.Yetti,
-	.Ziniel,
-	.Zumo,
-	.zzzzz
-	) {
+.makerContainer .expandable-content label:not(.Broc, .Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk) {
 	display: none;
 }
 
-
-/* .makerContainer .collapsible-content label.null {
-	display: block;
-} */
+.regionContainer .expandable-content label:nth-child(n+9) {
+	display: none;
+  }

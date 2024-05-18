@@ -175,29 +175,29 @@ function b() {
 //		let sort_type = all_type.sort();
 
 	_(all_type).uniq().each(function (item) {
-		$(".typeContainer").find(".collapsible-content ").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>');
+		$(".typeContainer").find(".expandable-content ").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>');
 	});
 
 	let sort_store = all_store.sort();
 
 	_(sort_store).uniq().each(function (item) {
-		$(".storeContainer").find(".collapsible-content ").append('<label><input type="checkbox" name="store" value="' + item + '">' + item + '<span class="checkmark"></label>');
+		$(".storeContainer").find(".expandable-content ").append('<label><input type="checkbox" name="store" value="' + item + '">' + item + '<span class="checkmark"></label>');
 	});
 
 	_(all_name).uniq().each(function (item) {
-		$(".nameContainer").find(".collapsible-content ").append('<label><input type="checkbox" name="name" value="' + item + '">' + item + '<span class="checkmark"></label>');
+		$(".nameContainer").find(".expandable-content ").append('<label><input type="checkbox" name="name" value="' + item + '">' + item + '<span class="checkmark"></label>');
 	});
 
 	let sort_maker = all_maker.sort();
 
 	_(sort_maker).uniq().each(function (item) {
-    $(".makerContainer").find(".collapsible-content ").append('<label class="' + item + '"><input type="checkbox" name="maker" value="' + item + '">' + item + '<span class="checkmark"></label>');
+    $(".makerContainer").find(".expandable-content ").append('<label class="' + item + '"><input type="checkbox" name="maker" value="' + item + '">' + item + '<span class="checkmark"></label>');
 });
 
 	let sort_region = all_region.sort();
 
 	_(sort_region).uniq().each(function (item) {
-		$(".regionContainer").find(".collapsible-content ").append('<label class="' + item + '"><input type="checkbox" name="region" value="' + item + '">' + item + '<span class="checkmark"></label>');
+		$(".regionContainer").find(".expandable-content ").append('<label class="' + item + '"><input type="checkbox" name="region" value="' + item + '">' + item + '<span class="checkmark"></label>');
 	});
 
 	$(document).off("change", "input:checkbox[name=category]");

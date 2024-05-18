@@ -27,7 +27,7 @@ article {
 			&:is(.orange *) {background-color: var(--orange);}
 			&:is(.piquette *) {background-color: var(--violet);}
 			&:is(.red *) {background-color: var(--red);}
-			&:is(.rose *) {background-color: var(--pink);}
+			&:is(.ros *) {background-color: var(--pink);}
 			&:is(.sparkling *) {background-color: var(--blue);}
 			&:is(.white *) {background-color: var(--white);}
 		}
