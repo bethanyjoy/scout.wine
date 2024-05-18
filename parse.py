@@ -9,27 +9,27 @@ from mappings import type_mapping, region_mapping, maker_mapping, origin_mapping
 from fancyfree import ff_urls
 from flaskandfield import faf_urls
 from heavensmarket import hm_base_urls, hm_pages
-from helens import helens_urls
+# from helens import helens_urls
 from highlandpark import hlp_base_urls, hlp_pages
 from kamp import kamp_urls
-from psychic import psychic_base_urls, psychic_pages
+# from psychic import psychic_base_urls, psychic_pages
 from silverlake import sl_base_urls, sl_pages
 from sipsnack import ss_base_urls, ss_pages
 from vinovore_eaglerock import vver_base_urls, vver_pages
 from vinovore_silverlake import vvsl_base_urls, vvsl_pages
 
-# SF
-from gemini import gemini_base_urls, gemini_pages
-from tomorrow import tw_urls
-from baygrape import bg_base_urls, bg_pages
+# # SF
+# from gemini import gemini_base_urls, gemini_pages
+# from tomorrow import tw_urls
+# from baygrape import bg_base_urls, bg_pages
 
-# NY
-from lesir import lesir_urls
-from thirst import thirst_urls
-from fiasco import fiasco_base_urls, fiasco_pages
-from leon import leon_urls
-from stranger import sw_urls
-from vanderbilt import vanderbilt_urls
+# # NY
+# from lesir import lesir_urls
+# from thirst import thirst_urls
+# from fiasco import fiasco_base_urls, fiasco_pages
+# from leon import leon_urls
+# from stranger import sw_urls
+# from vanderbilt import vanderbilt_urls
 
 
 # Sets up empty list to store wine data
