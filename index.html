@@ -169,9 +169,10 @@
 	});
 	  </script>
 
-<script>
+	<!-- Show additional Tier 2 makers on click NEED TO CUT OUT MORE!-->
+	<script>
 	document.getElementById('toggleButtonMaker').addEventListener('click', function() {
-	var extraChildren = Array.from(document.querySelectorAll('.makerContainer .expandable-content label:not(.null):not(.Broc, .Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk)'));
+	var extraChildren = Array.from(document.querySelectorAll('.makerContainer .expandable-content label:is(.Abbondanza, .Adelante, .Viola, .Amevive, .Ampeleia, .Amplify, .Angeleno, .Science, .Ashanta, .Azimut, .Garanza, .Baptiste, ,Between, .Bichi, .Birichino, .Bobinet, .Bojo, .Brea, .Buddy, .Caleb, .Canetta, .Indigeno, .Marilina, .Breton, .Cellario, .Christina, .Cirelli, .Costadilà, .Costador, .Delinquente, .Punx, .Majas, .Goat, .Echeverria, .Edgar, .Ercole, .Okay, .Etteilla, .Recordings, .Machine, .Folktale, .Forlorn, .Fossil, .Ducrot, .Früg, .Fuso, .Perez, .Gatti, .Gatto, .Gearhead, .Gentle, .Glinavos, .Gotsa, .Gulp, .Halkia, .Hammerling, .Hannes, .Herve, .Heya, .Idlewild, .Iruai, .Bleeke, .Jolie-Laide, .Croisille, .Jumping, .Keltis, .Kindeli, .Kontozisis, .Koppitsch, .Krenn49, .Lunotte, .Patience,  .Coste, .Machin, .Athletes, .Moulins, .Equilibristes, .Lunes, .Addition, .Lo-Fi, .River, .Conejos, .Luca, .Lumina, .Mae, .Maloof, .Margins, .Matic, .Barret, .Mersel, .Nestarec, .Miles, .Mori, .Beverage, .Marani, .Terre, .Ocho, .Oeno, .Oest, .Westminster, .World, .Onward, .Diamanti, .Osa, .Ovum, .Papras, .Pavette, .Pielihueso, .Pirouettes, .Pollerhof, .Populis, .Prisma, .Raimones, .Ram, .Ramón, .Richvale, .Rocco, .Rat, .Sassara, .Schlossmuhlenhof, .Schweizer, .Sheild, .Far, .Split, .Stolpman, .Real, .Tenuta, .Teutonic, .Marker, .Troupis, .Shepherds, .Sacre, .Valerie, .California, .Vinca, .Pijoan, .Viteadovest, .Weingut, .Weninger, .Wenzel, .Arc, .Yetti, .Zeit, .Ziniel, .Zumo)'));
 	if (this.textContent === '+ More') {
 		extraChildren.forEach(function(child) {
 		child.style.display = 'block';
@@ -184,7 +185,29 @@
 		this.textContent = '+ More';
 	}
 	});
-	  </script>
+	</script>
+
+	<!-- Show additional Tier 2 makers on click
+	<script>
+		document.getElementById('toggleButtonMaker').addEventListener('click', function() {
+		var extraChildren = Array.from(document.querySelectorAll('.makerContainer .expandable-content label:not(.null):not(.Broc, .Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk)'));
+		if (this.textContent === '+ More') {
+			extraChildren.forEach(function(child) {
+			child.style.display = 'block';
+			});
+			this.textContent = '- Less';
+		} else {
+			extraChildren.forEach(function(child) {
+			child.style.display = 'none';
+			});
+			this.textContent = '+ More';
+		}
+		});
+		</script> -->
+
+
+
+
 
 	<script>
 
