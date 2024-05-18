@@ -23,7 +23,7 @@ article {
 			font-size: var(--step--1);
 			color: var(--type-text);
 
-			&:is(.co-ferment *) {background-color: var(--green);}
+			&:is(.coferment *) {background-color: var(--green);}
 			&:is(.orange *) {background-color: var(--orange);}
 			&:is(.piquette *) {background-color: var(--violet);}
 			&:is(.red *) {background-color: var(--red);}
