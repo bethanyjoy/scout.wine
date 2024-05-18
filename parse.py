@@ -9,7 +9,7 @@ from mappings import type_mapping, region_mapping, maker_mapping, origin_mapping
 from fancyfree import ff_urls
 from flaskandfield import faf_urls
 from heavensmarket import hm_base_urls, hm_pages
-# from helens import helens_urls
+from helens import helens_urls
 from highlandpark import hlp_base_urls, hlp_pages
 from kamp import kamp_urls
 # from psychic import psychic_base_urls, psychic_pages
@@ -181,26 +181,50 @@ def get_image_src_noscript(product, classname=None):
 
 # New get image code
 
-# def get_image_src(product, datatype, classname=None):
-#     if product.find('noscript') is None:
-#         if classname:
-#             return product.find("img", class_=classname)[datatype]
-#         else:
-#             return product.find("img")[datatype]
-#     else:
-#         if classname:
-#             return product.find('noscript').find("img", class_=classname)[datatype]
-#         else:
-#             return product.find('noscript').find("img")[datatype]
+def get_image_src(product, datatype, classname=None):
+    if product.find('noscript') is None:
+        if classname:
+            return product.find("img", class_=classname)[datatype]
+        else:
+            return product.find("img")[datatype]
+    else:
+        if classname:
+            return product.find('noscript').find("img", class_=classname)[datatype]
+        else:
+            return product.find('noscript').find("img")[datatype]
         
 
-def get_image_src(product, datatype, classname=None):
+def get_image_src_alt(product, datatype, classname=None):
     noscript = product.find('noscript')
     if noscript is not None:
         img = noscript.find("img", class_=classname) if classname else noscript.find("img")
         if img is not None:
             return img.get(datatype)
-    return None
+    if noscript is None:
+        img = product.find("img", class_=classname)
+        if img is not None:
+            return img.get(datatype)
+        
+
+        
+    # if product.find('noscript') is None:
+    #     if classname:
+    #         return product.find("img", class_=classname)[datatype]
+    #     else:
+    #         return product.find("img")[datatype]
+    # else:
+    #     if classname:
+    #         return product.find('noscript').find("img", class_=classname)[datatype]
+    #     else:
+        
+
+# def get_image_src(product, datatype, classname=None):
+#     noscript = product.find('noscript')
+#     if noscript is not None:
+#         img = noscript.find("img", class_=classname) if classname else noscript.find("img")
+#         if img is not None:
+#             return img.get(datatype)
+#     return None
         
 # NEW NEW image function
 
@@ -656,6 +680,8 @@ for url in faf_urls:
         # Define how to target the image
         image_src = get_image_src(product, "src")
 
+        # def get_image_src_parentdiv(product, classname=None):
+
         # Define how to target the price
         price = get_price(product, "span", "price-item")
 
@@ -756,53 +782,53 @@ for url in hm_urls:
 
 
 
-# # Helen's Wine
+# Helen's Wine
 
-# for url in helens_urls:
+for url in helens_urls:
 
-#     # Define store
-#     store = 'Helen&#39;s Wines'
+    # Define store
+    store = 'Helen&#39;s Wines'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "grid-product")
+    # Define how to target a product
+    products = get_products(url, "div", "grid-product")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "grid-product__title--body")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "grid-product__title--body")
 
-#         # Define how to target the price
-#         price = get_price(product, "div", "grid-product__price")
+        # Define how to target the price
+        price = get_price(product, "div", "grid-product__price")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "grid-product__image")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "grid-product__image")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
 
-#         print(title)
+        print(title)
 
 
 
@@ -879,16 +905,7 @@ for url in kamp_urls:
         maker_soup = get_maker_soup(product, "div", "product--vendor")
 
         # Define how to target the image
-        image_src = get_image_src(product, "src")
-
-        # imagesoup = product.find('noscript')
-		# imagecheck = imagesoup.find("img")
-		# if imagecheck is not None:
-		# 	image_src = imagesoup.find("img")['src']
-		# 	image = 'https:' + imageurl
-		# 	image_type = 'hasimage'
-		# else:
-		# 	image_type = 'noimage'
+        image_src = get_image_src_alt(product, "src")
 
         # Define how to target the price
         price = get_price(product, "span", "product--price money")
