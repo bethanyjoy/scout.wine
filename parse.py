@@ -508,10 +508,6 @@ for url in faf_urls:
         # Define how to target the price
         price = get_price(product, "span", "price-item")
 
-        # Custom code for Flask & Field
-        # Define how to locate non-wine products
-        item_check = product.find("div", class_="card__badge").find("img")
-
         # --- Don't need to edit anything below this point --- #
 
         # Call up title string function to use for parsing
@@ -533,19 +529,15 @@ for url in faf_urls:
         image, image_type = process_image_src(image_src)
 
         # Custom code for Flask & Field
-        # Ignore non-wine prouducts
-        if item_check:
+        button = product.find('button')
+        if button.has_attr('disabled'):
             continue
-
-        # Continue parsing wine products
         else:
-        
             # Check if it's a wine item, if so add to wine list
             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
             if wine is not None:
                 wines.append(wine)
-
-            print(title)
+                print(title)
 
 
 
