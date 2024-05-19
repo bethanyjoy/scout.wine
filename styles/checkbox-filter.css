@@ -138,4 +138,10 @@
 
 .regionContainer .expandable-content label:nth-child(n+9) {
 	display: none;
-  }
+}
+
+/* Make null visible for troubleshooting */
+/* .makerContainer .expandable-content label.null, 
+.regionContainer .expandable-content label.null{
+	display: block;
+} */

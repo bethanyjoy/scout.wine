@@ -277,7 +277,7 @@ def get_class(input):
 
 # List of non-wine items to exclude
 
-non_wine_items = ['wineclass', 'giftbox', 'giftbag', 'giftcard', 'bouquet', 'stopper', 'tasting', 'alcoholic', 'cider', 'aperitif', 'sake', 'takju', 'selects', 'speitz']
+non_wine_items = ['alcoholic', 'aperitif', 'bouquet', 'cider', 'giftbag', 'giftbox', 'giftcard', 'sake', 'selects', 'speitz', 'stopper', 'takju', 'tasting', 'vermouth', 'wineclass']
 
 # Process Items
 
