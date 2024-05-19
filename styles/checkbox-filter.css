@@ -103,13 +103,6 @@
 		} */
 		& label {
 			padding-inline-start: 1.75em;
-			/* height: 1.4em;
-			padding: 0 0 0.125em 0;
-			display: flex;
-			justify-content: space-between;
-			flex-direction: row; */
-			/* margin-block-end: var(--space-xs);
-			padding-block: var(--space-2xs); */
 			margin-block-end: var(--space-4xs);
 			padding-block: var(--space-4xs);
 			width: calc(100% - 75px);

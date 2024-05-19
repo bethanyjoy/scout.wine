@@ -8,98 +8,62 @@ nav {
 	background-color: var(--background);
 	display: flex;
 	flex-direction: column;
+	z-index: 999;
 }
 
 /* Set layout and styles for sticky elements */
 @media only screen and (max-width: 1112px) {
 
-	#searchWrapper, #filterWrapper .button-wrapper {
-		position: sticky;
+	#searchWrapper, .filter-main, .button-wrapper {
 		padding: var(--space-xs) var(--space-s-l);
-		background-color: var(--background);
-		height: auto;
-		z-index: 999;
 	}
-
-	/* sticky header */
-	/* .header {
-		position: sticky;
-		padding: var(--space-xs) var(--space-s-l);
-		background-color: var(--background);
-		height: auto;
-		z-index: 999;
-		border-width: 1px;
-		border-color: var(--foreground-4);
-		border-bottom-style: solid;
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: center;
-		top: 0;
-		& h2 {
-			text-align: center;
-		}
-	} */
 
 	#searchWrapper {
 		display: flex;
 		align-items: center;
 		top: 0;
+		gap: var(--space-5xs);
 	}
 
-	#filterWrapper .button-wrapper {
+	.button-wrapper {
 		border-width: 1px;
 		border-color: var(--foreground-4);
 	}
 
-	#searchWrapper {
-		gap: var(--space-5xs);
-	}
-
 	#filterWrapper {
-/*		justify-content: space-between;*/
-		border-bottom-style: solid;
-	}
-
-	.button-wrapper {
-		bottom: 0;
-		bottom: env(safe-area-inset-bottom);
-		position: fixed;
-		border-top-style: solid;
-		padding: var(--space-xs);
-		width: 100%;
-	}
-
-	/* #filterWrapper {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		align-items: center;
-		top: 0;
-	} */
-
-	.filters-wrap {
-		/* padding: var(--space-s-l); */
+		height: -webkit-fill-available;
+		height: 100vh;
 	}
 
 	.filter-main {
 		flex-grow:1;
 		flex-shrink: 1;
 		height: 100%;
-		padding: var(--space-xs) var(--space-s-l);
 	}
 
-	.header a {
+	#hideButton {
 		right: var(--space-xs);
-		align-self: right;
+		top: var(--space-xs);
+		/* align-self: right; */
 		height: 42px;
 		position: fixed;
 		& svg {
 			height: 42px;
-			/* padding: var(--space-4xs) 0 var(--space-4xs) calc(var(--space-4xs) * 2); */
 		}
 	}
 
 	h2 {
 		margin-block: var(--space-l) var(--space-m);
+	}
+
+	.button-wrapper {
+		bottom: 0;
+		/* bottom: env(safe-area-inset-bottom); */
+		position: fixed;
+		border-top-style: solid;
+		padding: var(--space-xs);
+		width: 100%;
+		background-color: var(--background);
 	}
 
 
@@ -143,12 +107,12 @@ nav {
 }
 
 /* Add top border for 1st section on desktop */
-@media only screen and (min-width: 1112px) {
+/* @media only screen and (min-width: 1112px) {
 	.header + .wrap-collapsible {
 		border-top: 1px solid;
 		border-color: var(--foreground-5);
 	}
-}
+} */
 
 /* Set L + R margins for filter sections */
 /* @media only screen and (max-width: 1112px) {

@@ -73,64 +73,60 @@
 
 		<div id="filterWrapper">
 			<div class="filter-main">
-				<div class="header">
-					<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
-						<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg> -->
-						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
-							<path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
-						  </svg>						  
-					</a>
+				<a href="javascript:void(0);" class="navButton" id="hideButton" onclick="hideSidebar()">
+					<!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.75" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" /></svg> -->
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+						<path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z" clip-rule="evenodd" />
+						</svg>						  
+				</a>
+				<h2>Filters</h2>
+				<div class="typeContainer buttonFilter filter wrap-collapsible">
+					<input id="collapsible-type" class="toggle" type="checkbox" checked>
+					<label for="collapsible-type" class="lbl-toggle">
+						Type
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+						</svg>	
+					</label>
+					<div class="collapsible-content"><div class="expandable-content"></div></div>
 				</div>
-				<div class="filters-wrap">
-					<h2>Filters</h2>
-					<div class="typeContainer buttonFilter filter wrap-collapsible">
-						<input id="collapsible-type" class="toggle" type="checkbox" checked>
-						<label for="collapsible-type" class="lbl-toggle">
-							Type
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-							</svg>	
-						</label>
-						<div class="collapsible-content"><div class="expandable-content"></div></div>
+				<div class="makerContainer checkboxFilter filter wrap-collapsible">
+					<input id="collapsible-maker" class="toggle" type="checkbox" checked>
+					<label for="collapsible-maker" class="lbl-toggle">
+						Featured Makers
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+						</svg>					  
+					</label>
+					<div class="collapsible-content">
+						<div class="expandable-content"></div>
+						<button id="toggleButtonMaker" class="plain">+ More</button>
 					</div>
-					<div class="makerContainer checkboxFilter filter wrap-collapsible">
-						<input id="collapsible-maker" class="toggle" type="checkbox" checked>
-						<label for="collapsible-maker" class="lbl-toggle">
-							Featured Makers
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-							</svg>					  
-						</label>
-						<div class="collapsible-content">
-							<div class="expandable-content"></div>
-							<button id="toggleButtonMaker" class="plain">+ More</button>
-						</div>
-					</div>
-					<div class="regionContainer checkboxFilter filter wrap-collapsible">
-						<input id="collapsible-region" class="toggle" type="checkbox" checked>
-						<label for="collapsible-region" class="lbl-toggle">
-							Region
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-							</svg>	
-						</label>
-						<div class="collapsible-content">
-							<div class="expandable-content"></div>
-							<button id="toggleButtonRegion" class="plain">+ More</button>
-						</div>
-					</div>
-					<div class="storeContainer checkboxFilter filter wrap-collapsible">
-						<input id="collapsible-store" class="toggle" type="checkbox" checked>
-						<label for="collapsible-store" class="lbl-toggle">
-							Store
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
-								<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-							</svg>	
-						</label>
-						<div class="collapsible-content"><div class="expandable-content"></div></div>
-					</div>
-					<span class="credits"><span class="text">Made by <a href="https://bethany.io/">bethany.io</a></span></span>
 				</div>
+				<div class="regionContainer checkboxFilter filter wrap-collapsible">
+					<input id="collapsible-region" class="toggle" type="checkbox" checked>
+					<label for="collapsible-region" class="lbl-toggle">
+						Region
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+						</svg>	
+					</label>
+					<div class="collapsible-content">
+						<div class="expandable-content"></div>
+						<button id="toggleButtonRegion" class="plain">+ More</button>
+					</div>
+				</div>
+				<div class="storeContainer checkboxFilter filter wrap-collapsible">
+					<input id="collapsible-store" class="toggle" type="checkbox" checked>
+					<label for="collapsible-store" class="lbl-toggle">
+						Store
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+							<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+						</svg>	
+					</label>
+					<div class="collapsible-content"><div class="expandable-content"></div></div>
+				</div>
+				<span class="credits"><span class="text">Made by <a href="https://bethany.io/">bethany.io</a></span></span>
 			</div>
 			<div class="button-wrapper">
 				<button class="resultsButton" onclick="hideSidebar()">Show results</button>

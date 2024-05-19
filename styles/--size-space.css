@@ -25,9 +25,7 @@
 
 /* @link https://utopia.fyi/clamp/calculator?a=1100,1800,32—34 */
 
-:root {
-  --h1: clamp(2rem, 1.8036rem + 0.2857vi, 2.125rem);
-}
+
 
 /* Space variables */
 
