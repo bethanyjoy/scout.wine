@@ -16,7 +16,6 @@
 			-ms-user-select: none;
 			-webkit-user-select: none;
 			line-height: 1.4;
-
 			margin-block-end: var(--space-5xs);
 
 			/* Hide checkbox filter for 'undefined' labels */
@@ -133,7 +132,7 @@
 }
 
 /* Only show featured makers initially (Tier 1) */
-.makerContainer .expandable-content label:not(.Broc, .Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk) {
+.makerContainer .expandable-content label:not(.Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk) {
 	display: none;
 }
 
