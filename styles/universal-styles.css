@@ -142,8 +142,8 @@ h1 {
 
 h2 {
 	font-family: 'Cooper';
-	font-size: var(--step-4);
-	font-weight: 400;
+	font-size: var(--step-5);
+	font-weight: 300;
 	-webkit-font-smoothing: auto;
 }
 
