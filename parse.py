@@ -24,7 +24,6 @@ wines = []
 
 # Global functions
 
-
 # Generate urls with pagination
 
 def generate_urls(base_urls, pages):
