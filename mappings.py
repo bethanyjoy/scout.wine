@@ -1,9 +1,10 @@
 # Mappings
 
 type_mapping = {
-    'Co-Ferment': ['fruit', 'ferment'],
+    'Chillable': ['chillable', 'chilled'],
+    'Fruit': ['fruit', 'ferment'],
     'Orange': ['orange', 'contact'],
-    'Piquette': 'piquette',
+    # 'Piquette': 'piquette',
     'Red': 'red',
     'Ros&#233;': ['rose', 'ros'],
     'Sparkling': ['sparkling', 'champagne', 'pet-nat', 'pet+nat'],

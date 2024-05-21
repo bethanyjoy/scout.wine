@@ -22,12 +22,12 @@
 base_url = "https://www.stanleys.la/shop/wine/wine-by-type/"
 wine_types = ["sparkling", "whites", "orange", "rose", "chillable-red", "reds"]
 pages = {
-    "sparkling": 2,
-    "whites": 3,
-    "orange": 2,
-    "rose": 2,
-    "chillable-red": 2,
-    "reds": 7
+    "sparkling": 1,
+    "whites": 2,
+    "orange": 1,
+    "rose": 1,
+    "chillable-red": 1,
+    "reds": 4
 }
 
 stanley_urls = [f"{base_url}{wine_type}/page{i}.html?limit=72" for wine_type in wine_types for i in range(1, pages[wine_type] + 1)]

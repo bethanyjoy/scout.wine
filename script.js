@@ -175,7 +175,7 @@ function b() {
 //		let sort_type = all_type.sort();
 
 	_(all_type).uniq().each(function (item) {
-		$(".typeContainer").find(".expandable-content ").append('<input type="checkbox" name="type" id="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>');
+		$(".typeContainer").find(".expandable-content ").append('<input type="checkbox" name="type" id="' + item + '" class="' + item + '" value="' + item + '"><label for="' + item + '">' + item + '</label>');
 	});
 
 	let sort_store = all_store.sort();
