@@ -536,7 +536,7 @@ for url in urls:
     products = soup.find('ul', 'list-collection').find_all('li')
 
     # Define store
-    store = 'xx'
+    store = "Stanley's Wet Goods"
 
     # Print the 'src' attribute of each image
     for product in products:
@@ -584,603 +584,551 @@ driver.quit()
 
 
 
-
-
-
-
-# # Stanley's wet gooods
-
-# from selenium import webdriver
-# from selenium.webdriver.common.by import By
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-# from selenium.webdriver.common.action_chains import ActionChains
-# from bs4 import BeautifulSoup
-# import time
-
-# # List of URLs to scrape
-# urls = ["https://www.stanleys.la/shop/wine/wine-by-type/reds/?limit=72"]
-
-# driver = webdriver.Firefox()
-
-# for url in urls:
-#     driver.get(url)
-
-#     # Scroll page by page
-#     scroll_pause_time = 1  # You can set your own pause time. My laptop is a bit slow so I use 1 sec
-#     screen_height = driver.execute_script("return window.screen.height;")   # get the screen height of the web
-#     i = 1
-
-#     while True:
-#         # scroll one screen height each time
-#         driver.execute_script("window.scrollTo(0, {screen_height}*{i});".format(screen_height=screen_height, i=i))  
-#         i += 1
-#         time.sleep(scroll_pause_time)
-#         # update scroll height each time after scrolled, as the scroll height can change after we scrolled the page
-#         scroll_height = driver.execute_script("return document.body.scrollHeight;")  
-#         # Break the loop when the height we need to scroll to is larger than the total scroll height
-#         if (screen_height) * i > scroll_height:
-#             break 
-
-#     # Now you can parse the page HTML with BeautifulSoup
-#     soup = BeautifulSoup(driver.page_source, 'html.parser')
-
-#     # Find all 'img' elements with class 'first-image'
-#     images = soup.find_all('img', class_='first-image')
-
-#     # Print the 'src' attribute of each image
-#     for image in images:
-#         print(image['src'])
-
-# driver.quit()
-
-
-
 # /////////// Los Angeles /////////
 
 
 
-# # Fancy Free
+# Fancy Free
 
-# for url in ff_urls:
+for url in ff_urls:
 
-#     # Define store
-#     store = 'Fancy Free'
+    # Define store
+    store = 'Fancy Free'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "grid-item")
+    # Define how to target a product
+    products = get_products(url, "div", "grid-item")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "grid-title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "grid-title")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "data-src")
+        # Define how to target the image
+        image_src = get_image_src(product, "data-src")
 
-#         # Define how to target the price
-#         price = get_price(product, "div", "product-price")
+        # Define how to target the price
+        price = get_price(product, "div", "product-price")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
 
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
 
-# # Flask & Field
+# Flask & Field
 
-# for url in faf_urls:
+for url in faf_urls:
 
-#     # Define store
-#     store = 'Flask + Field'
+    # Define store
+    store = 'Flask + Field'
 
-#     # Define how to target a product
-#     products = get_products(url, "li", "grid__item")
+    # Define how to target a product
+    products = get_products(url, "li", "grid__item")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "h3", "card__heading")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "h3", "card__heading")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src")
+        # Define how to target the image
+        image_src = get_image_src(product, "src")
 
-#         # def get_image_src_parentdiv(product, classname=None):
+        # def get_image_src_parentdiv(product, classname=None):
 
-#         # Define how to target the price
-#         price = get_price(product, "span", "price-item")
+        # Define how to target the price
+        price = get_price(product, "span", "price-item")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
 
-#         # Custom code for Flask & Field
-#         button = product.find('button')
-#         if not button.has_attr('disabled'):
-#             # Check if it's a wine item, if so add to wine list
-#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#             if wine is not None:
-#                 wines.append(wine)
-#                 print(title)
+        # Custom code for Flask & Field
+        button = product.find('button')
+        if not button.has_attr('disabled'):
+            # Check if it's a wine item, if so add to wine list
+            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+            if wine is not None:
+                wines.append(wine)
+                print(title)
 
 
 
-# # Heaven's Market
+# Heaven's Market
 
-# hm_urls = generate_urls(hm_base_urls, hm_pages)
+hm_urls = generate_urls(hm_base_urls, hm_pages)
 
-# for url in hm_urls:
+for url in hm_urls:
 
-#     # Define store
-#     store = 'Heaven&#39;s Market'
+    # Define store
+    store = 'Heaven&#39;s Market'
 
-#     # Define how to target a product
-#     products = get_products(url, "li", "grid__item")
+    # Define how to target a product
+    products = get_products(url, "li", "grid__item")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "span", "visually-hidden")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "span", "visually-hidden")
 
-#         # Define how to target the price
-#         price = get_price(product, "span", "price-item")
+        # Define how to target the price
+        price = get_price(product, "span", "price-item")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "grid-view-item__image")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "grid-view-item__image")
         
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
 
-#         # Custom code for Heaven's Market
-#         sold_out = product.find('dl', class_="price--sold-out")
-#         if not sold_out:
-#             # Check if it's a wine item, if so add to wine list
-#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#             if wine is not None:
-#                 wines.append(wine)
-#                 print(title)
-
-
+        # Custom code for Heaven's Market
+        sold_out = product.find('dl', class_="price--sold-out")
+        if not sold_out:
+            # Check if it's a wine item, if so add to wine list
+            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+            if wine is not None:
+                wines.append(wine)
+                print(title)
 
 
 
 
-# # Helen's Wine
 
-# for url in helens_urls:
 
-#     # Define store
-#     store = 'Helen&#39;s Wines'
+# Helen's Wine
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "grid-product")
+for url in helens_urls:
 
-#     for product in products:
+    # Define store
+    store = 'Helen&#39;s Wines'
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "grid-product__title--body")
+    # Define how to target a product
+    products = get_products(url, "div", "grid-product")
 
-#         # Define how to target the price
-#         price = get_price(product, "div", "grid-product__price")
+    for product in products:
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "grid-product__image")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "grid-product__title--body")
 
-#         # --- Don't need to edit anything below this point --- #
+        # Define how to target the price
+        price = get_price(product, "div", "grid-product__price")
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "grid-product__image")
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
+
+        # Call up product type
+        product_type =  get_type(title_string, url)
+
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
 
-# # Highland Park Wine
+# Highland Park Wine
 
-# hlp_urls = generate_urls(hlp_base_urls, hlp_pages)
+hlp_urls = generate_urls(hlp_base_urls, hlp_pages)
 
-# for url in hlp_urls:
+for url in hlp_urls:
 
-#     # Define store
-#     store = 'Highland Park Wine'
+    # Define store
+    store = 'Highland Park Wine'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "prod-block")
+    # Define how to target a product
+    products = get_products(url, "div", "prod-block")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "title")
 
-#         # Define how to target the price
-#         price = get_price(product, "div", "product-price")
+        # Define how to target the price
+        price = get_price(product, "div", "product-price")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "rimage__image")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "rimage__image")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
 
-# # Kamp
+# Kamp
 
-# for url in kamp_urls:
+for url in kamp_urls:
 
-#     # Define store
-#     store = 'Kamp'
+    # Define store
+    store = 'Kamp'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "product--root")
+    # Define how to target a product
+    products = get_products(url, "div", "product--root")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the name
-#         name_soup = get_name_soup(product, "p", "product--title")
+        # Define how to target the name
+        name_soup = get_name_soup(product, "p", "product--title")
 
-#         # Define how to target the maker
-#         maker_soup = get_maker_soup(product, "div", "product--vendor")
+        # Define how to target the maker
+        maker_soup = get_maker_soup(product, "div", "product--vendor")
 
-#         # Define how to target the image
-#         image_src = get_image_src_alt(product, "src")
+        # Define how to target the image
+        image_src = get_image_src_alt(product, "src")
 
-#         # Define how to target the price
-#         price = get_price(product, "span", "product--price money")
+        # Define how to target the price
+        price = get_price(product, "span", "product--price money")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up name and maker strings + text
-#         name_string = get_name_string(name_soup)
-#         name_text = get_name(name_soup)
-#         maker_string = get_maker_string(maker_soup)
-#         maker_text = get_maker(maker_soup)
+        # Call up name and maker strings + text
+        name_string = get_name_string(name_soup)
+        name_text = get_name(name_soup)
+        maker_string = get_maker_string(maker_soup)
+        maker_text = get_maker(maker_soup)
 
-#         # Call up title string
-#         title_string = get_title_string(maker_string, name_string)
+        # Call up title string
+        title_string = get_title_string(maker_string, name_string)
 
-#         # Call up product type
-#         product_type =  get_type(name_string, url)
+        # Call up product type
+        product_type =  get_type(name_string, url)
 
-#         # Call up title
-#         title = get_title(name_text, maker_text)
+        # Call up title
+        title = get_title(name_text, maker_text)
 
-#         # Call up maker
-#         maker = lookup_maker(maker_string)
+        # Call up maker
+        maker = lookup_maker(maker_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
-# # Silverlake Wine
+# Silverlake Wine
 
-# sl_urls = generate_urls(sl_base_urls, sl_pages)
+sl_urls = generate_urls(sl_base_urls, sl_pages)
 
-# for url in sl_urls:
+for url in sl_urls:
 
-#     # Define store
-#     store = 'Silverlake Wine'
+    # Define store
+    store = 'Silverlake Wine'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "prod-block")
+    # Define how to target a product
+    products = get_products(url, "div", "prod-block")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "title")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "rimage__image")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "rimage__image")
 
-#         # Define how to target the price
-#         price = get_price(product, "div", "product-price")
+        # Define how to target the price
+        price = get_price(product, "div", "product-price")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
-# # Sip Snack
+# Sip Snack
 
-# ss_urls = generate_urls(ss_base_urls, ss_pages)
+ss_urls = generate_urls(ss_base_urls, ss_pages)
 
-# for url in ss_urls:
+for url in ss_urls:
 
-#     # Define store
-#     store = 'Sip Snack'
+    # Define store
+    store = 'Sip Snack'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "product--root")
+    # Define how to target a product
+    products = get_products(url, "div", "product--root")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "h3", "product--title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "h3", "product--title")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src")
+        # Define how to target the image
+        image_src = get_image_src(product, "src")
 
-#         # Define how to target the price
-#         price = get_price(product, "span", "product--price")
+        # Define how to target the price
+        price = get_price(product, "span", "product--price")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url.split("/")[-1])
+        # Call up product type
+        product_type =  get_type(title_string, url.split("/")[-1])
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # Check if it's a wine item, if so add to wine list
-#         wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#         if wine is not None:
-#             wines.append(wine)
-#             print(title)
+        # Check if it's a wine item, if so add to wine list
+        wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+        if wine is not None:
+            wines.append(wine)
+            print(title)
 
 
 
 
-# # Vinovore Eagle Rock
+# Vinovore Eagle Rock
 
-# vver_urls = generate_urls(vver_base_urls, vver_pages)
+vver_urls = generate_urls(vver_base_urls, vver_pages)
 
-# for url in vver_urls:
+for url in vver_urls:
 
-#     # Define store
-#     store = 'Vinovore Eagle Rock'
+    # Define store
+    store = 'Vinovore Eagle Rock'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "grid-product")
+    # Define how to target a product
+    products = get_products(url, "div", "grid-product")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "div", "grid-product__title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "div", "grid-product__title")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "grid-product__image")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "grid-product__image")
 
-#         # ----- Custom price code for Vinovore Eagle Rock -----
+        # ----- Custom price code for Vinovore Eagle Rock -----
         
-#         # Define how to target the price
-#         pricesoup = product.find("div", class_="grid-product__price")
-#         if pricesoup.span:
-#             price = 'On Sale'
-#         else:
-#             price = pricesoup.text.strip()
+        # Define how to target the price
+        pricesoup = product.find("div", class_="grid-product__price")
+        if pricesoup.span:
+            price = 'On Sale'
+        else:
+            price = pricesoup.text.strip()
 
-#         # ----- End custom code -----
+        # ----- End custom code -----
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
 
-#         # Custom code for Vinovore Eagle Rock
-#         sold_out = product.find('div', class_="grid-product__tag--sold-out")
-#         if not sold_out:
-#             # Check if it's a wine item, if so add to wine list
-#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#             if wine is not None:
-#                 wines.append(wine)
-#                 print(title)
+        # Custom code for Vinovore Eagle Rock
+        sold_out = product.find('div', class_="grid-product__tag--sold-out")
+        if not sold_out:
+            # Check if it's a wine item, if so add to wine list
+            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+            if wine is not None:
+                wines.append(wine)
+                print(title)
       
 
 
 
 
-# # Vinovore Silverlake
+# Vinovore Silverlake
 
-# vvsl_urls = generate_urls(vvsl_base_urls, vvsl_pages)
+vvsl_urls = generate_urls(vvsl_base_urls, vvsl_pages)
 
-# for url in vvsl_urls:
+for url in vvsl_urls:
 
-#     # Define store
-#     store = 'Vinovore Silverlake'
+    # Define store
+    store = 'Vinovore Silverlake'
 
-#     # Define how to target a product
-#     products = get_products(url, "div", "product")
+    # Define how to target a product
+    products = get_products(url, "div", "product")
 
-#     for product in products:
+    for product in products:
 
-#         # Define how to target the title
-#         title_soup = get_title_soup(product, "h3", "product__title")
+        # Define how to target the title
+        title_soup = get_title_soup(product, "h3", "product__title")
 
-#         # Define how to target the image
-#         image_src = get_image_src(product, "src", "product__img")
+        # Define how to target the image
+        image_src = get_image_src(product, "src", "product__img")
 
-#         # --- Don't need to edit anything below this point --- #
+        # --- Don't need to edit anything below this point --- #
 
-#         # Call up title string function to use for parsing
-#         title_string = get_title_string(title_soup)
+        # Call up title string function to use for parsing
+        title_string = get_title_string(title_soup)
 
-#         # Call up product type
-#         product_type =  get_type(title_string, url)
+        # Call up product type
+        product_type =  get_type(title_string, url)
 
-#         # Call up title
-#         title = get_title(title_soup)
+        # Call up title
+        title = get_title(title_soup)
         
-#         # Call up maker
-#         maker = lookup_maker(title_string)
+        # Call up maker
+        maker = lookup_maker(title_string)
 
-#         # Call up region
-#         region = lookup_region(maker, url, title_string)
+        # Call up region
+        region = lookup_region(maker, url, title_string)
 
-#         # Process the image source
-#         image, image_type = process_image_src(image_src)
+        # Process the image source
+        image, image_type = process_image_src(image_src)
         
-#         # ----- Custom price code for Vinovore Silverlake -----
+        # ----- Custom price code for Vinovore Silverlake -----
               
-#         # Check if sold out
-#         stock = product.find("p", class_="product__price").text.strip()
+        # Check if sold out
+        stock = product.find("p", class_="product__price").text.strip()
    
-#         # Define how to target the price
-#         if stock !='Sold Out':
-#             price = get_price(product, "span", "money")
-#             # Check if it's a wine item, if so add to wine list
-#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-#             if wine is not None:
-#                 wines.append(wine)
-#                 print(title)
+        # Define how to target the price
+        if stock !='Sold Out':
+            price = get_price(product, "span", "money")
+            # Check if it's a wine item, if so add to wine list
+            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+            if wine is not None:
+                wines.append(wine)
+                print(title)
 
 
 
