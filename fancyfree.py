@@ -1,4 +1,4 @@
-ff_urls = [
+fancyfree_urls = [
 	"https://www.fancyfreeliquor.com/sparkling",
 	"https://www.fancyfreeliquor.com/white",
 	"https://www.fancyfreeliquor.com/orange",

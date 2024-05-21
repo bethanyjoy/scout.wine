@@ -23,10 +23,11 @@ article {
 			font-size: var(--step--1);
 			color: var(--type-text);
 
-			&:is(.coferment *) {background-color: var(--green);}
+			&:is(.fruit *) {background-color: var(--green);}
 			&:is(.orange *) {background-color: var(--orange);}
-			&:is(.piquette *) {background-color: var(--violet);}
+			/* &:is(.piquette *) {background-color: var(--violet);} */
 			&:is(.red *) {background-color: var(--red);}
+			&:is(.chillable *) {background-color: var(--violet);}
 			&:is(.ros *) {background-color: var(--pink);}
 			&:is(.sparkling *) {background-color: var(--blue);}
 			&:is(.white *) {background-color: var(--white);}

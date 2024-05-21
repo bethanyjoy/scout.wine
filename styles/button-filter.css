@@ -29,60 +29,74 @@
 
 		/* Grey background */
 
-		&[value="Orange"] {
+		&.Orange {
 			&:checked + label {background-color: var(--orange)}
 		}
-		&[value="Rosé"] {
+		&.Rosé {
 			&:checked + label {background-color: var(--pink)}
 		}
-		&[value="Red"] {
+		&.Red {
 			&:checked + label {background-color: var(--red)}
 		}
-		&[value="White"] {
+		&.White {
 			&:checked + label {background-color: var(--white)}
 		}
-		&[value="Sparkling"] {
+		&.Sparkling {
 			&:checked + label {background-color: var(--blue)}
 		}
-		&[value="Piquette"] {
-			&:checked + label {background-color: var(--violet)}
-		}
-		&[value="Co-Ferment"] {
+		&.Fruit {
 			&:checked + label {background-color: var(--green)}
 		}
+		&.Chillable {
+			&:checked + label {background-color: var(--violet)}
+		}
+		/* &.Piquette {
+			&:checked + label {background-color: var(--violet)}
+		} */
+		/* &.Co-Ferment {
+			&:checked + label {background-color: var(--green)}
+		} */
 	}
 }
 
 @media (any-hover:hover) {
 	.buttonFilter input {
-		&[value="Orange"] {
+		&.Orange {
 			&:hover + label {background-color: var(--orange-alpha)}
 			&:checked:hover + label {background-color: var(--orange)}
 		}
-		&[value="Rosé"] {
+		&.Rosé {
 			&:hover + label {background-color: var(--pink-alpha)}
 			&:checked:hover + label {background-color: var(--pink)}
 		}
-		&[value="Red"] {
+		&.Red {
 			&:hover + label {background-color: var(--red-alpha)}
 			&:checked:hover + label {background-color: var(--red)}
 		}
-		&[value="White"] {
+		&.White {
 			&:hover + label {background-color: var(--white-alpha)}
 			&:checked:hover + label {background-color: var(--white)}
 		}
-		&[value="Sparkling"] {
+		&.Sparkling {
 			&:hover + label {background-color: var(--blue-alpha)}
 			&:checked:hover + label {background-color: var(--blue)}
 		}
-		&[value="Piquette"] {
-			&:hover + label {background-color: var(--violet-alpha)}
-			&:checked:hover + label {background-color: var(--violet)}
-		}
-		&[value="Co-Ferment"] {
+		&.Fruit {
 			&:hover + label {background-color: var(--green-alpha)}
 			&:checked:hover + label {background-color: var(--green)}
 		}
+		&.Chillable {
+			&:hover + label {background-color: var(--violet-alpha)}
+			&:checked:hover + label {background-color: var(--violet)}
+		}
+		/* &.Piquette {
+			&:hover + label {background-color: var(--violet-alpha)}
+			&:checked:hover + label {background-color: var(--violet)}
+		} */
+		/* &.Co-Ferment {
+			&:hover + label {background-color: var(--green-alpha)}
+			&:checked:hover + label {background-color: var(--green)}
+		} */
 	}
 }
 
