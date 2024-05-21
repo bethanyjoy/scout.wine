@@ -9,12 +9,10 @@ from mappings import type_mapping, region_mapping, maker_mapping, origin_mapping
 from fancyfree import fancyfree_urls
 from flaskandfield import flaskandfield_urls
 from heavensmarket import heavensmarket_urls
-from helens import helens_urls
 from highlandpark import highlandpark_urls
 from kamp import kamp_urls
 from silverlake import silverlake_urls
 from sipsnack import sipsnack_urls
-from stanley import stanley_urls
 from vinovore_eaglerock import vinovore_eaglerock_urls
 from vinovore_silverlake import vinovore_silverlake_urls
 
