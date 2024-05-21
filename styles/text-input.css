@@ -1,18 +1,14 @@
 .textInput {
-	padding: var(--space-3xs) var(--space-xs) var(--space-3xs) var(--space-xs);
+	padding: var(--space-3xs) var(--space-xs);
 	border-radius: 0.5rem;
 	width: 98%;
 	color: var(--foreground);
-	
 	border-radius: 100px;
-
 	outline: 0;
 	appearance: none;
 	-webkit-appearance: none;
-
 	background-color: var(--foreground-6);
 	border: none;
-
 	&::placeholder {
 		opacity: 1;
 		color: var(--foreground-2);
@@ -31,7 +27,7 @@
 
 @media only screen and (max-width: 1112px) {
 	.textInput {
-		padding: var(--space-xs) var(--space-s) var(--space-xs) var(--space-s);
+		padding: var(--space-xs) var(--space-s);
 		width: 100%;
 	}
 }

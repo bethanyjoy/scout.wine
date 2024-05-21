@@ -18,14 +18,14 @@ article {
 			left: var(--space-3xs);
 			top: var(--space-3xs);
 			z-index: 900;
-			padding: 0.05em 0.35em 0 0.35em;
+			padding-block-start: 0.05em;
+			padding-inline: 0.35em;
 			border-radius: 10rem;
 			font-size: var(--step--1);
 			color: var(--type-text);
 
 			&:is(.fruit *) {background-color: var(--green);}
 			&:is(.orange *) {background-color: var(--orange);}
-			/* &:is(.piquette *) {background-color: var(--violet);} */
 			&:is(.red *) {background-color: var(--red);}
 			&:is(.chillable *) {background-color: var(--violet);}
 			&:is(.ros *) {background-color: var(--pink);}
@@ -45,7 +45,7 @@ article {
 			/* Placeholder image */
 			&.placeholder {
 				object-fit: scale-down;
-				padding: 2.5vw 0;
+				padding-block: 1.75rem;
 				/* Hide placeholder image if there is a photo */
 				&:is(.hasimage *) {
 					display: none;
@@ -62,7 +62,7 @@ article {
 				/* Custom styling for specific stores */
 				&:is(.heavensmarket *) {
 					object-fit: scale-down;
-					padding: 1.2vw 0;
+					padding-block: 1.5rem;
 				}
 				&:is(.wineeggs *) {
 					object-fit: scale-down;
@@ -114,38 +114,13 @@ article {
 
 @media (any-hover: hover) {
 	article > a:hover {
-			box-shadow:
-			  1px 1px 2.2px rgba(var(--shadow-value), 0.02),
-			  2.4px 2.4px 5.3px rgba(var(--shadow-value), 0.028),
-			  4.5px 4.5px 10px rgba(var(--shadow-value), 0.035),
-			  8px 8px 17.9px rgba(var(--shadow-value), 0.042),
-			  15px 15px 33.4px rgba(var(--shadow-value), 0.05),
-			  24px 24px 75px rgba(var(--shadow-value), 0.07)
-			;
-		}
-	}
-
-/*	---- Responsive styles ---- */
-
-@media only screen and (max-width: 1112px) {
-
-	article {
-/*		padding-bottom: var(--space-s);*/
-		
-		/*.type {
-			left: var(--space-xs)!important;
-			top: var(--space-xs)!important;
-		}*/
-
-		& img {
-
-			.placeholder  {
-				padding: 4vw 0;
-			}
-
-			.photo:is(.heavensmarket *) {
-				padding: 2.5vw 0;
-			}
-		}
+		box-shadow:
+			1px 1px 2.2px rgba(var(--shadow-value), 0.02),
+			2.4px 2.4px 5.3px rgba(var(--shadow-value), 0.028),
+			4.5px 4.5px 10px rgba(var(--shadow-value), 0.035),
+			8px 8px 17.9px rgba(var(--shadow-value), 0.042),
+			15px 15px 33.4px rgba(var(--shadow-value), 0.05),
+			24px 24px 75px rgba(var(--shadow-value), 0.07)
+		;
 	}
 }

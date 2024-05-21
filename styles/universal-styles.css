@@ -48,7 +48,7 @@ body {
 
 body {
 	display: flex;
-	margin: 0 0 0 var(--space-s-l);
+	margin-inline-start: var(--space-s-l);
 }
 main {
 	flex: 1;
@@ -77,28 +77,14 @@ nav {
 		margin: 0;
 	}
 	main {
-		padding: var(--space-2xs) var(--space-s-l) var(--space-s-l) var(--space-s-l);
+		padding-block: var(--space-2xs) var(--space-s-l);
+		padding-inline: var(--space-s-l);
 	}
 }
 
 hr {
 	color: var(--border-color);
 	border-width: 1px;
-}
-
-/* Set default visibility for desktop 
-- fixes bug in desktop view after accessing mobile sidebar */
-
-@media only screen and (min-width: 1112px) {
-	body {
-		overflow: auto!important;
-	}
-	main {
-		visibility: visible!important;
-	}
-	nav {
-		height: 100vh!important;
-	}
 }
 
 /* Scrolling behavior */
@@ -117,6 +103,21 @@ nav {
 	/* Hide scrollbar for Chrome, Safari and Opera */
 	&::-webkit-scrollbar {
 		display: none;
+	}
+}
+
+/* Set default visibility for desktop 
+- fixes bug in desktop view after accessing mobile sidebar */
+
+@media only screen and (min-width: 1112px) {
+	body {
+		overflow: auto!important;
+	}
+	main {
+		visibility: visible!important;
+	}
+	nav {
+		height: 100vh!important;
 	}
 }
 

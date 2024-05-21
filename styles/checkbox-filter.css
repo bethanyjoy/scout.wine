@@ -1,105 +1,87 @@
 /* Checkbox filters */
 
-.checkboxFilter { 
+.checkboxFilter .collapsible-content {
 
-	.collapsible-content {
+	& label {
+		align-items: center;
+		cursor: pointer;
+		display: block;
+		padding-block-start: 0.01em;
+		padding-inline-start: 1.5em;
+		position: relative;
+		user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		-webkit-user-select: none;
+		line-height: 1.4;
+		margin-block-end: var(--space-5xs);
 
-		& label {
-			align-items: center;
-			cursor: pointer;
-			display: block;
-			padding-block-start: 0.01em;
-			padding-inline-start: 1.5em;
-			position: relative;
-			user-select: none;
-			-moz-user-select: none;
-			-ms-user-select: none;
-			-webkit-user-select: none;
-			line-height: 1.4;
-			margin-block-end: var(--space-5xs);
-
-			/* Hide checkbox filter for 'undefined' labels */
-			&.undefined, &.null {
-				display: none;
-			}
+		/* Hide checkbox filter for 'undefined' labels */
+		&.undefined, &.null {
+			display: none;
 		}
+	}
 
-		/*@media only screen and (min-width: 1112px) {
-			& label {
-				padding-top: 0.0925em;
-			}
-		}*/
+	/* Hide the browser's default checkbox */
+	& input {
+		cursor: pointer;
+		height: 0;
+		opacity: 0;
+		position: absolute;
+		width: 0;
+	}
 
-		/* Hide the browser's default checkbox */
-		& input {
-			cursor: pointer;
-			height: 0;
-			opacity: 0;
-			position: absolute;
-			width: 0;
-		}
+	/* Create a custom checkbox */
+	.checkmark {
+		position: absolute;
+		height: 1.1em;
+		width: 1.1em;
+		left: 0;
+		top: 0.1em;
+		border: solid;
+		border-radius: 0.25rem;
+		border-width: var(--border-width);
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		transition-duration: 0.3s;
+		transition-property: border-color, background-color;
+		border-color: var(--border-color);
 
-		/* Create a custom checkbox */
-		.checkmark {
+		/* Style the checkmark/indicator */
+		&:after {
+			content: var(--check);
+			display: none;
 			position: absolute;
 			height: 1.1em;
-			width: 1.1em;
-			left: 0;
-			top: 0.1em;
-			border: solid;
-			border-radius: 0.25rem;
-			border-width: var(--border-width);
-			box-sizing: border-box;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			transition-duration: 0.3s;
-			transition-property: border-color, background-color;
-			border-color: var(--border-color);
+			width: 1.05em;
+			left: 0.01em;
+			top: 0;
+			transition: 0.3s;
+		}
 
-			/* Style the checkmark/indicator */
+		/* Style the checkmark when checked */
+		&:is(input:checked ~ *) {
+			border: none;
+			background-color: var(--foreground);
 			&:after {
-				content: var(--check);
-				/* content: url('../assets/svgs/check.svg'); */
-				display: none;
-				position: absolute;
-				height: 1.1em;
-				width: 1.05em;
-				left: 0.01em;
-				top: 0;
-				transition: 0.3s;
-			}
-
-			&:is(input:checked ~ *) {
-				border: none;
-				background-color: var(--foreground);
-				&:after {
-					display: block;
-				}
+				display: block;
 			}
 		}
 	}
 }
 
+/* Hover state for checkboxes on devices that support hover states */
 @media (any-hover: hover) {
-	.checkboxFilter .collapsible-content  .checkmark:hover {
+	.checkboxFilter .checkmark:hover {
 		border-color: var(--foreground-2);
 	}
 }
 
-@media only screen and (max-width: 1112px) {
-	.checkboxFilter .collapsible-content label {
-		&:last-of-type:not(.undefined), &:nth-last-child(2):not(.storeContainer *) {
-			margin-block-end: var(--space-3xs);
-		}
-	}
-}
 
 
 @media only screen and (max-width: 1112px) {
 	.checkboxFilter .collapsible-content {
-		/* > * + * {
-			margin-block-start: var(--space-xs)
-		} */
 		& label {
 			padding-inline-start: 1.75em;
 			margin-block-end: var(--space-4xs);
@@ -110,8 +92,6 @@
 			height: 1.25em;
 			width: 1.25em;
 			top: var(--space-4xs);
-			/* right: var(--space-4xs);
-			left: unset; */
 			&:after {
 				height: 1.25em;
 				width: 1.2em;
@@ -122,20 +102,17 @@
 	}
 }
 
-.expandable-content {
-	padding-block-start: var(--space-4xs);
-	/* padding-block-end: var(--space-2xs); */
-}
 
-.collapsible-content button {
-	margin-top: var(--space-2xs);
-}
+
+
+/* Set default visibility for exapandable content sections */
 
 /* Only show featured makers initially (Tier 1) */
 .makerContainer .expandable-content label:not(.Giardino, .Levende, .Florez, .Furlani, .Boy, .Oggau, .Brix, .Jumbo, .Jaras, .Marigny, .Stoumen, .Meinklang, .Purity, .Ruth, .Scotty, .Change, .Swick, .Wavy, .Wonderwerk) {
 	display: none;
 }
 
+/* Only show first 8 regions */
 .regionContainer .expandable-content label:nth-child(n+9) {
 	display: none;
 }
