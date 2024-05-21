@@ -9,29 +9,14 @@ from mappings import type_mapping, region_mapping, maker_mapping, origin_mapping
 from fancyfree import fancyfree_urls
 from flaskandfield import flaskandfield_urls
 from heavensmarket import heavensmarket_urls
-from helens import helens_urls
+# from helens import helens_urls
 from highlandpark import highlandpark_urls
 from kamp import kamp_urls
-# from psychic import psychic_base_urls, psychic_pages
 from silverlake import silverlake_urls
 from sipsnack import sipsnack_urls
-from stanley import stanley_urls
+# from stanley import stanley_urls
 from vinovore_eaglerock import vinovore_eaglerock_urls
 from vinovore_silverlake import vinovore_silverlake_urls
-
-# # SF
-# from gemini import gemini_base_urls, gemini_pages
-# from tomorrow import tw_urls
-# from baygrape import bg_base_urls, bg_pages
-
-# # NY
-# from lesir import lesir_urls
-# from thirst import thirst_urls
-# from fiasco import fiasco_base_urls, fiasco_pages
-# from leon import leon_urls
-# from stranger import sw_urls
-# from vanderbilt import vanderbilt_urls
-
 
 # Sets up empty list to store wine data
 wines = []

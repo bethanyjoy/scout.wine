@@ -1,3 +1,19 @@
+# # SF
+# from gemini import gemini_base_urls, gemini_pages
+# from tomorrow import tw_urls
+# from baygrape import bg_base_urls, bg_pages
+
+# # NY
+# from lesir import lesir_urls
+# from thirst import thirst_urls
+# from fiasco import fiasco_base_urls, fiasco_pages
+# from leon import leon_urls
+# from stranger import sw_urls
+# from vanderbilt import vanderbilt_urls
+
+
+
+
 ###### ----- Web Scraping with Selenium ----- ######
 
 ##### Attempt #1
