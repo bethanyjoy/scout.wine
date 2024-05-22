@@ -223,7 +223,7 @@ button.plain {
 	background-color: transparent;
 	color: var(--foreground);
 	border: none;
-	padding-block: 0.25em;
+	padding: 0.25em 0;
 	font-weight: 400;
 }
 
