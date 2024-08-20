@@ -472,55 +472,55 @@ for url in fancyfree_urls:
 
 # Flask & Field
 
-for url in flaskandfield_urls:
+# for url in flaskandfield_urls:
 
-    # Define store
-    store = 'Flask + Field'
+#     # Define store
+#     store = 'Flask + Field'
 
-    # Define how to target a product
-    products = get_products(url, "li", "grid__item")
+#     # Define how to target a product
+#     products = get_products(url, "li", "grid__item")
 
-    for product in products:
+#     for product in products:
 
-        # Define how to target the title
-        title_soup = get_title_soup(product, "h3", "card__heading")
+#         # Define how to target the title
+#         title_soup = get_title_soup(product, "h3", "card__heading")
 
-        # Define how to target the image
-        image_src = get_image_src(product, "src")
+#         # Define how to target the image
+#         image_src = get_image_src(product, "src")
 
-        # def get_image_src_parentdiv(product, classname=None):
+#         # def get_image_src_parentdiv(product, classname=None):
 
-        # Define how to target the price
-        price = get_price(product, "span", "price-item")
+#         # Define how to target the price
+#         price = get_price(product, "span", "price-item")
 
-        # --- Don't need to edit anything below this point --- #
+#         # --- Don't need to edit anything below this point --- #
 
-        # Call up title string function to use for parsing
-        title_string = get_title_string(title_soup)
+#         # Call up title string function to use for parsing
+#         title_string = get_title_string(title_soup)
 
-        # Call up product type
-        product_type =  get_type(title_string, url)
+#         # Call up product type
+#         product_type =  get_type(title_string, url)
 
-        # Call up title
-        title = get_title(title_soup)
+#         # Call up title
+#         title = get_title(title_soup)
         
-        # Call up maker
-        maker = lookup_maker(title_string)
+#         # Call up maker
+#         maker = lookup_maker(title_string)
 
-        # Call up region
-        region = lookup_region(maker, url, title_string)
+#         # Call up region
+#         region = lookup_region(maker, url, title_string)
 
-        # Process the image source
-        image, image_type = process_image_src(image_src)
+#         # Process the image source
+#         image, image_type = process_image_src(image_src)
 
-        # Custom code for Flask & Field
-        button = product.find('button')
-        if not button.has_attr('disabled'):
-            # Check if it's a wine item, if so add to wine list
-            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-            if wine is not None:
-                wines.append(wine)
-                print(title)
+#         # Custom code for Flask & Field
+#         button = product.find('button')
+#         if not button.has_attr('disabled'):
+#             # Check if it's a wine item, if so add to wine list
+#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+#             if wine is not None:
+#                 wines.append(wine)
+#                 print(title)
 
 
 
