@@ -838,61 +838,61 @@ for url in sipsnack_urls:
 
 # Vinovore Eagle Rock
 
-for url in vinovore_eaglerock_urls:
+# for url in vinovore_eaglerock_urls:
 
-    # Define store
-    store = 'Vinovore Eagle Rock'
+#     # Define store
+#     store = 'Vinovore Eagle Rock'
 
-    # Define how to target a product
-    products = get_products(url, "div", "grid-product")
+#     # Define how to target a product
+#     products = get_products(url, "div", "grid-product")
 
-    for product in products:
+#     for product in products:
 
-        # Define how to target the title
-        title_soup = get_title_soup(product, "div", "grid-product__title")
+#         # Define how to target the title
+#         title_soup = get_title_soup(product, "div", "grid-product__title")
 
-        # Define how to target the image
-        image_src = get_image_src(product, "src", "grid-product__image")
+#         # Define how to target the image
+#         image_src = get_image_src(product, "src", "grid-product__image")
 
-        # ----- Custom price code for Vinovore Eagle Rock -----
+#         # ----- Custom price code for Vinovore Eagle Rock -----
         
-        # Define how to target the price
-        pricesoup = product.find("div", class_="grid-product__price")
-        if pricesoup.span:
-            price = 'On Sale'
-        else:
-            price = pricesoup.text.strip()
+#         # Define how to target the price
+#         pricesoup = product.find("div", class_="grid-product__price")
+#         if pricesoup.span:
+#             price = 'On Sale'
+#         else:
+#             price = pricesoup.text.strip()
 
-        # ----- End custom code -----
+#         # ----- End custom code -----
 
-        # --- Don't need to edit anything below this point --- #
+#         # --- Don't need to edit anything below this point --- #
 
-        # Call up title string function to use for parsing
-        title_string = get_title_string(title_soup)
+#         # Call up title string function to use for parsing
+#         title_string = get_title_string(title_soup)
 
-        # Call up product type
-        product_type =  get_type(title_string, url)
+#         # Call up product type
+#         product_type =  get_type(title_string, url)
 
-        # Call up title
-        title = get_title(title_soup)
+#         # Call up title
+#         title = get_title(title_soup)
         
-        # Call up maker
-        maker = lookup_maker(title_string)
+#         # Call up maker
+#         maker = lookup_maker(title_string)
 
-        # Call up region
-        region = lookup_region(maker, url, title_string)
+#         # Call up region
+#         region = lookup_region(maker, url, title_string)
 
-        # Process the image source
-        image, image_type = process_image_src(image_src)
+#         # Process the image source
+#         image, image_type = process_image_src(image_src)
 
-        # Custom code for Vinovore Eagle Rock
-        sold_out = product.find('div', class_="grid-product__tag--sold-out")
-        if not sold_out:
-            # Check if it's a wine item, if so add to wine list
-            wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
-            if wine is not None:
-                wines.append(wine)
-                print(title)
+#         # Custom code for Vinovore Eagle Rock
+#         sold_out = product.find('div', class_="grid-product__tag--sold-out")
+#         if not sold_out:
+#             # Check if it's a wine item, if so add to wine list
+#             wine = process_item(title_string, image, image_type, url, maker, price, region, store, title, product_type)
+#             if wine is not None:
+#                 wines.append(wine)
+#                 print(title)
       
 
 
