@@ -7,7 +7,7 @@ $(function a() {
 
 	$.getJSON('data.json', function(data) {
 	// $.getJSON('data-mockup.json', function(data) {
-	// $.getJSON('data-testing.json', function(data) {
+	// $.getJSON('data-selects.json', function(data) {
 
 
 		$.each(data.wine, function(i, f) {
